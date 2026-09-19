@@ -1,0 +1,142 @@
+{
+  "slug": "docusign-enterprise-campaign",
+  "title": "Enterprise Brand Campaigns",
+  "category": "Brand Systems",
+  "order": 3,
+  "published": true,
+  "company": "DocuSign",
+  "role": "Director of Creative Services",
+  "summary": "Enterprise campaigns built around the product and the people using it.",
+  "overview": "I led creative for demand generation, with a scope that grew to include social, events, regional marketing, and corporate communications. Campaign systems connected product features with audience-specific stories across digital and physical formats.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/31666b8be160c7b1.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/0b8d388023b31144.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/ff2b5139f1e9bfaa.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/71701f6d005fb799.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/fa6b59e1d4c9da56.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/9516a24b707bb519.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/b21399e6aa2bd182.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/85036d40360a530c.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/ea693f9168e38199.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/a4d60430f2bee091.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Enterprise Brand Campaigns video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/6BR3Ln_EpCm/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/7810d30d2da8c755.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/d22992e99fb1a5f7.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/f2b15700e0d14835.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/e8477e8bbe01e5bd.webp",
+          "alt": "Enterprise Brand Campaigns project work",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "cover": "/media/d03bc46e4cc2acdf.webp",
+  "coverAlt": "Enterprise Brand Campaigns project collage",
+  "coverPosition": "center",
+  "featured": true
+}

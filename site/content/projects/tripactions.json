@@ -1,0 +1,156 @@
+{
+  "slug": "tripactions",
+  "title": "Performance Marketing Systems",
+  "category": "Brand Systems",
+  "order": 1,
+  "published": true,
+  "company": "TripActions",
+  "role": "Director of Design",
+  "summary": "An evergreen campaign system for travel, corporate cards, and expense management.",
+  "overview": "I connected the travel and fintech brands across web, campaign landing pages, paid creative, and out-of-home placements. Working with growth teams, photographers, and production partners, I helped move the brand from stock imagery toward an owned asset library.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/3c4276a119ed3875.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Performance Marketing Systems video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/Q3XNwbupyhw/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/6a523183c389cdc5.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/6b268c7f4bcbd075.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/6d41dbaa53b328bd.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/a896ea93234fe524.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/3700b2e99fb9820b.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/3e595809c2b519bf.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/55f648eea166df2d.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/0750de535ffc6cdb.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/837ef776245886f8.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/5fe4cdb179a590dd.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/aa11020c1cf6998c.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/aa52baa50f821254.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/e1e23b2a83140b7c.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/48bdb382ef6caf63.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/04ed4222927d8031.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/568793ab15090a82.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/a0e12a7c5b0bff33.webp",
+          "alt": "Performance Marketing Systems project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Performance Marketing Systems video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/UPi6ZaGM2Ta/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "video",
+      "title": "Performance Marketing Systems video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/BE9f-MeRaJ-/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "video",
+      "title": "Performance Marketing Systems video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/EuKVrzTBE8H/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    }
+  ],
+  "cover": "/media/b9a12ff730241ab2.webp",
+  "coverAlt": "Performance Marketing Systems project collage",
+  "coverPosition": "center",
+  "featured": true
+}

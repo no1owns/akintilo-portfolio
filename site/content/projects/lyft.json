@@ -1,0 +1,37 @@
+{
+  "slug": "lyft",
+  "title": "Launch Marketing for Lyft Business",
+  "category": "Communications",
+  "order": 18,
+  "published": true,
+  "company": "Lyft Business",
+  "role": "Founder, Creative Director, Forge HQ",
+  "summary": "Marketing creative that gives an internal team more capacity.",
+  "overview": "I built landing pages and email templates for a new Lyft Business service launch, allowing their internal creative team to stay on schedule with other priorities.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/d207327d7315c84a.webp",
+          "alt": "Motion Design for Internal Communications project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Motion Design for Internal Communications video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/SMIcP4zAIjK/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    }
+  ],
+  "cover": "/media/cfaeedc1fa52addf.webp",
+  "coverAlt": "Motion Design for Internal Communications project collage",
+  "coverPosition": "center",
+  "featured": false
+}

@@ -1,0 +1,226 @@
+{
+  "slug": "mongodb-beliefs-storyboard",
+  "title": "Company Values Launch Campaign",
+  "category": "Communications",
+  "order": 16,
+  "published": false,
+  "company": "MongoDB",
+  "role": "",
+  "summary": "[CONFIRM: attribution and scope]",
+  "overview": "[CONFIRM: The supplied career file rejects mascot and character-design attribution for this project. Review the actual contribution before publishing.]",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/66bcf275e805cead.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/8dd8b7a8c562729b.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/d290dd9dbb5d934a.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/aa4ae6120537b217.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/44fe64e1e669d1b0.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/66bd4d7b43ecf85a.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/80e6e694cb28e02b.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/7cb46f3cba4a4885.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/aa7c631a7894c562.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/14756e00836c8b14.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/07d96c911f50ada2.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/f0277ef259ad2d9b.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/04fac9178780f476.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/5386fe1b438cf4d6.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/11a098a1970e5e20.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/f37003d3ab068b37.webp",
+          "alt": "Company Values Launch Campaign project work",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "cover": "/media/2a387f57bbf6de8b.webp",
+  "coverAlt": "Company Values Launch Campaign project collage",
+  "coverPosition": "center",
+  "featured": false
+}

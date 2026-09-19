@@ -1,0 +1,62 @@
+{
+  "slug": "lufthansa",
+  "title": "Airline Partnership Experience Design",
+  "category": "Partnerships",
+  "order": 9,
+  "published": true,
+  "company": "TripActions / Lufthansa",
+  "role": "Director of Design",
+  "summary": "Partner launch assets that bring two brands into one experience.",
+  "overview": "I developed Lufthansa partnership launch assets and supported the approval workflows needed to align both brands.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "video",
+      "title": "Airline Partnership Experience Design video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/7FCbbzXNSuQ/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/90bfe3bf8f205fbc.webp",
+          "alt": "Airline Partnership Experience Design project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/23c36b9224e13344.webp",
+          "alt": "Airline Partnership Experience Design project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/fd86f87f75938579.webp",
+          "alt": "Airline Partnership Experience Design project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/742c4a209ce08abd.webp",
+          "alt": "Airline Partnership Experience Design project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/6408e5a8e0bb6bbd.webp",
+          "alt": "Airline Partnership Experience Design project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/18cbfe31a0226562.webp",
+          "alt": "Airline Partnership Experience Design project work",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "cover": "/media/fa85d213148e9138.webp",
+  "coverAlt": "Airline Partnership Experience Design project collage",
+  "coverPosition": "center",
+  "featured": false
+}

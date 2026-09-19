@@ -1,0 +1,27 @@
+{
+  "name": "site",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/prepare-admin.mjs",
+    "dev": "node scripts/dev.mjs",
+    "cms": "decap-server",
+    "build": "node scripts/prepare-admin.mjs && vite build && node scripts/prerender.mjs && node scripts/prepare-sites-build.mjs",
+    "preview": "vite preview",
+    "test:sites": "node --test tests/sites-worker.test.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "5.0.4",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-icons": "5.7.0",
+    "sharp": "0.35.4",
+    "vite": "6.4.2"
+  },
+  "devDependencies": {
+    "decap-cms": "3.16.2",
+    "decap-cms-app": "^3.16.2",
+    "decap-server": "^3.11.2"
+  }
+}

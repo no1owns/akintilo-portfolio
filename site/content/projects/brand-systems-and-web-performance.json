@@ -1,0 +1,717 @@
+{
+  "slug": "brand-systems-and-web-performance",
+  "title": "Security Brand Experiences",
+  "category": "Brand Systems",
+  "order": 0,
+  "published": true,
+  "company": "AppOmni / Secureframe",
+  "role": "Senior Visual Designer / Principal Designer",
+  "summary": "Brand foundations that connect the website, product story, and the teams using them.",
+  "overview": "At AppOmni, I built reusable page components and worked with content, development, and QA to bring them into production. At Secureframe, I led the website overhaul and created a Canva-based brand system that gave marketing and sales a consistent starting point.",
+  "outcomes": [
+    {
+      "value": "10% to 76%",
+      "label": "AppOmni scroll depth"
+    },
+    {
+      "value": "10 to 3 days",
+      "label": "AppOmni page build time"
+    },
+    {
+      "value": "+30% in 3 months",
+      "label": "Secureframe landing-page conversion, with content and demand gen"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/bcdba867f901e846.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/4f439be8fcd6df0f.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/d61d3a7d76070c93.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/21ae1c345e2c4973.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/1922e3c3d25f2de0.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/6dbfef86cc028594.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/cf5ef95380fb2321.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/1ddc83fd2e581d09.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/81270f33c96aad2a.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/cec6f73db8f9d3aa.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/e6d8005ca3dc57b8.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/3ca4b2500c784e04.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/6d0604ac766f5ed6.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/590d4feca08bdf63.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/c7747d08fc3108a8.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/8d220d1ffaf41627.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/49bdbf733065b1e0.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/3f40b668f2e26e09.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/d0bc25528a296847.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/5f87e7eda9f75b04.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Security Brand Experiences video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/3o2xU6UUMUF/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "video",
+      "title": "Security Brand Experiences video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/75INxD6PyH4/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/69fd5415443d5def.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Security Brand Experiences video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/L8Z_npmx-B2/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/296d28ca9d01fa83.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Security Brand Experiences video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/7KkG5Z6m4L8/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/4674fec7ad50a061.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Security Brand Experiences video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/7iNvdLy5HAo/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/2cb5c1f1d975e47d.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/d65ce7cbd43841bf.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/00dcf2545485c1b3.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/d97bfbc3c6ca5742.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/dd54606af09f889e.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/72633835e2339a65.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/db4bd94345c9938d.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/2647885173fd79a9.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/485c35d62910b2c0.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/914d489fb76c9b67.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/5ab8998427c984e3.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/bfa6807e97826f24.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/8acd0f212dfedd46.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/eaa2afbce7250c4f.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/4c36c1243b5824b1.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/f056841dd5d3182a.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/f207f48e85b5c9b0.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/37171be44da05d2f.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/e232e4cdae473b49.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/4cbd7bafa9e811a2.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/c6c27ca9fce9d1b8.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/ef79b40d7f48085f.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/8aba420cd09b8f16.gif",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/440fd6e00a8b97ce.gif",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/59c122adbc83e0ba.gif",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/293b4b76e91a03b7.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/02406e0598303174.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/e3f453016a8eaaf8.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/e4c95b55d6412af9.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/2268baac20e8c40d.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/99a31cdf34be253e.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/e9d77b39322ea1aa.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/6e16f20f166189ac.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/f1ee297629ec0a1e.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/2bed62d83696119d.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/667750c86b7efac7.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/6d7f4887366e2a37.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/9a07a0fd2355fd34.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/ab9c6d981e1474e2.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Security Brand Experiences video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/KL_6DEIZIT8/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/63d5eb0abfb8726d.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/5485ba74a1d54d7b.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/63f1be7a4ec36640.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/6540047c55cd54bf.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/14d04e27fc6d5697.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/158fe2c992d6edde.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/7e26483ca118964c.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/6efd2190cf2c36c5.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/06420956bbaefcda.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/04cc740b0c2e2ffe.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/73210c14a4911ab5.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/3564c19109ee9aa0.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/fcdc5ac39f59eeb4.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/95582bce12409206.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/eb9f674cf179c2a7.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/054d5781fd0ffec8.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/7f89c90e4849faa4.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/fc8eb9ad2dc493b6.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/f85ecf26c587e3e3.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/c42b1a43eb1e21dc.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/c03ba1ee832d46a7.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/ae04082dbcfe7f8f.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/07c5f34840c79d55.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/9505a6f37a7c7f0a.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/521efdd63bee6b4e.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Security Brand Experiences video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/QX6Vw5MzGeT/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "video",
+      "title": "Security Brand Experiences video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/3VpckMo9eTW/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/9e40f22b122357ba.webp",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Security Brand Experiences video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/7VfCF4uxIt3/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    }
+  ],
+  "cover": "/media/9e16f9a019cb6066.webp",
+  "coverAlt": "Security Brand Experiences project collage",
+  "coverPosition": "center",
+  "featured": true
+}

@@ -1,0 +1,178 @@
+{
+  "slug": "linx-security",
+  "title": "Brand Illustration System",
+  "category": "Brand Systems",
+  "order": 6,
+  "published": false,
+  "company": "[CONFIRM: client and scope]",
+  "role": "",
+  "summary": "[CONFIRM: verify this project against career data]",
+  "overview": "[CONFIRM: Linx Security is present on the existing portfolio but is not verified in the supplied career file.]",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/5eef243c97b1ac7b.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/a2f23d8d91e27ec3.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/24e3b7edfd8f9da8.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/efdcfd98825ca0ab.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/1b8e640bcbe0d9d2.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/7b8b27509ca4bd5c.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/b709fbe0ba4ca231.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/aa16aae8e51d75a5.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/fdd8d1a7a32e5d02.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/cd33ecbd66065cd7.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/7800c511b06b9a10.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/8c12341c6fb944c7.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/82c5f5000cecfebd.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/28b562ece81f51c1.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/f822eee6c7d84241.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/fe318a43d1736815.webp",
+          "alt": "Brand Illustration System project work",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "cover": "/media/94084bdb321aba2c.webp",
+  "coverAlt": "Brand Illustration System project collage",
+  "coverPosition": "center",
+  "featured": true
+}
