@@ -4,7 +4,7 @@ import {createServer} from 'vite';
 import {renderToString} from 'react-dom/server';
 import React from 'react';
 const settings=JSON.parse(fs.readFileSync('content/settings.json'));
-const projects=fs.readdirSync('content/projects').map(f=>JSON.parse(fs.readFileSync('content/projects/'+f))).filter(p=>p.published);
+const projects=fs.readdirSync('content/projects').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(fs.readFileSync('content/projects/'+f))).filter(p=>p.published);
 const routes=['','about','resume','contact','brand-storytelling','partnership-campaigns','technical-storytelling','communications',...projects.map(p=>p.slug)];
 const template=fs.readFileSync('dist/client/index.html','utf8');
 const escape=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
