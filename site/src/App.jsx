@@ -11,12 +11,125 @@ function Arrow(){return <HiArrowLongRight aria-hidden="true" className="arrow"/>
 function Text({children}){return String(children||'').split('\n\n').filter(Boolean).map((p,i)=><p key={i}>{p}</p>);}
 function Video({block}){const [play,setPlay]=useState(false);const source=block.file||block.url||'';const media=mediaURL(source);const isVideoFile=source.startsWith('/media/')||/\.mp4(?:$|\?)/i.test(source);let host='';try{host=new URL(media).hostname;}catch{}const trusted=['www.youtube.com','www.youtube-nocookie.com','player.vimeo.com'].includes(host);const loop=block.playback!=='controls';return <section className="video-block"><h3>{block.title}</h3>{isVideoFile?<video className="project-video" autoPlay={loop} muted={loop} loop={loop} controls playsInline preload="metadata" poster={block.poster?mediaURL(block.poster):undefined}><source src={media}/></video>:trusted?play?<iframe title={block.title||'Project video'} src={media} allow="fullscreen; picture-in-picture" loading="lazy" referrerPolicy="strict-origin-when-cross-origin"/>:<button className="video-load" onClick={()=>setPlay(true)}>Load video <Arrow/><small>Video loads from {host} when you choose to play.</small></button>:media?<a className="text-link" href={media} target="_blank" rel="noreferrer">View embedded project <Arrow/></a>:null}</section>;}
 function BentoGallery({block}){const ref=useRef(null);const layout=block.layout||'bento';useEffect(()=>{const gallery=ref.current;if(!gallery||layout!=='bento')return;let frame;let layoutFrame;let lastWidth=0;const measure=()=>{cancelAnimationFrame(frame);cancelAnimationFrame(layoutFrame);frame=requestAnimationFrame(()=>{const row=parseFloat(getComputedStyle(gallery).gridAutoRows)||8;const gap=parseFloat(getComputedStyle(gallery).rowGap)||0;gallery.querySelectorAll('figure').forEach(figure=>{const image=figure.querySelector('img');if(!image)return;const requested=figure.dataset.size||'auto';let columns={small:4,medium:6,large:8,wide:12}[requested];if(!columns){const ratio=image.naturalWidth&&image.naturalHeight?image.naturalWidth/image.naturalHeight:1.5;columns=ratio>2?12:ratio<1.15?4:6;}figure.style.gridColumnEnd=`span ${columns}`;figure.style.gridRowEnd='auto';});layoutFrame=requestAnimationFrame(()=>gallery.querySelectorAll('figure').forEach(figure=>{const height=figure.getBoundingClientRect().height;figure.style.gridRowEnd=`span ${Math.max(1,Math.ceil((height+gap)/(row+gap)))}`;}));});};const galleryObserver=new ResizeObserver(([entry])=>{const width=entry?.contentRect.width||0;if(Math.abs(width-lastWidth)>.5){lastWidth=width;measure();}});const imageObserver=new ResizeObserver(()=>measure());galleryObserver.observe(gallery);gallery.querySelectorAll('img').forEach(image=>imageObserver.observe(image));measure();return()=>{cancelAnimationFrame(frame);cancelAnimationFrame(layoutFrame);galleryObserver.disconnect();imageObserver.disconnect();};},[layout,block.images]);return <div ref={ref} className={`gallery layout-${layout} columns-${block.columns||'2'}`}>{(block.images||[]).map((im,j)=><figure key={j} data-size={im.size||'auto'}><img src={mediaURL(im.image)} alt={im.alt||''} loading="lazy"/><figcaption>{im.caption}</figcaption></figure>)}</div>;}
-function groupGalleries(blocks){return blocks.reduce((result,block)=>{const previous=result[result.length-1];const layout=block.layout||'bento';if(block.type==='gallery'&&layout==='bento'&&previous?.type==='gallery'&&(previous.layout||'bento')==='bento'&&!block.title&&!previous.title){previous.images=[...(previous.images||[]),...(block.images||[])];return result;}result.push({...block,images:block.images?[...block.images]:block.images});return result;},[]);}
+// Responsive target row heights for the justified grid. Adjust these three
+// numbers to change the grid's density; the algorithm below does the rest.
+function justifiedTargetHeight(containerWidth) {
+  if (containerWidth >= 1000) return 340;
+  if (containerWidth >= 640) return 260;
+  return 190;
+}
+
+// Classic justified-layout packing: walk images left to right, accumulating
+// each one's width at the target row height, and close a row once that sum
+// (plus gaps) reaches the container width. The row is then scaled down so
+// its images fill the container exactly — never scaled up, so a row never
+// ends up taller than the target height. Images keep their real aspect
+// ratio (no cropping) and manual order is preserved. A final, incomplete
+// row is rendered at the target height and left-aligned rather than
+// stretched to fill the row, per the Adobe Portfolio-style spec.
+function computeJustifiedRows(images, containerWidth, gap) {
+  if (!containerWidth) return [];
+  const targetHeight = justifiedTargetHeight(containerWidth);
+  const rows = [];
+  let row = [];
+  let widthAtTarget = 0;
+  images.forEach((image, index) => {
+    const ratio = image.width && image.height ? image.width / image.height : 1.5;
+    row.push({ ...image, index, ratio });
+    widthAtTarget += ratio * targetHeight;
+    const isLast = index === images.length - 1;
+    const gapsWidth = (row.length - 1) * gap;
+    if (widthAtTarget + gapsWidth >= containerWidth) {
+      const totalRatio = row.reduce((sum, item) => sum + item.ratio, 0);
+      const availableWidth = containerWidth - (row.length - 1) * gap;
+      const height = availableWidth / totalRatio;
+      rows.push({ images: row, height });
+      row = [];
+      widthAtTarget = 0;
+    } else if (isLast && row.length) {
+      rows.push({ images: row, height: targetHeight, incomplete: true });
+    }
+  });
+  return rows;
+}
+
+function Lightbox({images, index, onClose, onNavigate}) {
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') onClose();
+      if (event.key === 'ArrowLeft') onNavigate(-1);
+      if (event.key === 'ArrowRight') onNavigate(1);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [onClose, onNavigate]);
+  const image = images[index];
+  return (
+    <div className="lightbox-overlay active" onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
+      <button className="lightbox-close" aria-label="Close" onClick={onClose}>&times;</button>
+      <button className="lightbox-prev" aria-label="Previous image" onClick={() => onNavigate(-1)}>&lsaquo;</button>
+      <img className="lightbox-img" src={mediaURL(image.image)} alt={image.alt || ''} />
+      <button className="lightbox-next" aria-label="Next image" onClick={() => onNavigate(1)}>&rsaquo;</button>
+    </div>
+  );
+}
+
+function JustifiedGallery({block}) {
+  const ref = useRef(null);
+  const [containerWidth, setContainerWidth] = useState(1200);
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+  const images = block.images || [];
+  useEffect(() => {
+    const gallery = ref.current;
+    if (!gallery) return;
+    const observer = new ResizeObserver(([entry]) => {
+      const width = entry?.contentRect.width;
+      if (width) setContainerWidth(width);
+    });
+    observer.observe(gallery);
+    return () => observer.disconnect();
+  }, []);
+  const gap = containerWidth >= 640 ? 12 : 8;
+  const rows = computeJustifiedRows(images, containerWidth, gap);
+  return (
+    <div ref={ref} className="gallery layout-justified">
+      {rows.map((row, i) => (
+        <div key={i} className={`justified-row${row.incomplete ? ' incomplete' : ''}`} style={{height: row.height, gap}}>
+          {row.images.map((image) => (
+            <figure key={image.index} style={{width: image.ratio * row.height}}>
+              <img
+                src={mediaURL(image.image)}
+                alt={image.alt || ''}
+                loading="lazy"
+                onClick={() => setLightboxIndex(image.index)}
+              />
+              {image.caption && <figcaption>{image.caption}</figcaption>}
+            </figure>
+          ))}
+        </div>
+      ))}
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={images}
+          index={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onNavigate={(dir) => setLightboxIndex((current) => (current + dir + images.length) % images.length)}
+        />
+      )}
+    </div>
+  );
+}
+
+function groupGalleries(blocks){return blocks.reduce((result,block)=>{const previous=result[result.length-1];const layout=block.layout||'bento';const previousLayout=previous?.layout||'bento';if(block.type==='gallery'&&previous?.type==='gallery'&&layout===previousLayout&&!block.title&&!previous.title){previous.images=[...(previous.images||[]),...(block.images||[])];return result;}result.push({...block,images:block.images?[...block.images]:block.images});return result;},[]);}
 export function Blocks({blocks=[]}){return groupGalleries(blocks).map((b,i)=><div key={i} className={`block space-${b.spacing||'regular'} type-${b.type}`}>
  {b.type==='sectionHeading'&&<h2 className="project-section-heading">{b.title}</h2>}
  {b.type==='text'&&<div className={`text-block align-${b.align||'left'}`}>{b.title&&<h2>{b.title}</h2>}<Text>{b.body}</Text></div>}
  {b.type==='image'&&<figure className={b.width==='narrow'?'narrow':''}><img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><figcaption>{b.caption}</figcaption></figure>}
- {b.type==='gallery'&&<>{b.title&&<h2>{b.title}</h2>}<BentoGallery block={b}/></>}
+ {b.type==='gallery'&&<>{b.title&&<h2>{b.title}</h2>}{(b.layout||'bento')==='justified'?<JustifiedGallery block={b}/>:<BentoGallery block={b}/>}</>}
  {b.type==='split'&&<div className={`split image-${b.side||'left'}`}><img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><div><h2>{b.title}</h2><Text>{b.body}</Text></div></div>}
  {b.type==='video'&&<Video block={b}/>}
  </div>);}

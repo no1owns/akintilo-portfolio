@@ -7,3 +7,18 @@
 .hero-link{gap:0}.arrow{flex:0 0 auto;width:1em;height:1em;margin-left:.55em;vertical-align:-.12em}.project-intro .eyebrow,.text-link,footer a:has(.arrow){display:inline-flex;align-items:center}
 .type-gallery{margin:24px 0}.type-sectionHeading{margin:100px 0 32px;border-top:1px solid #ddd;padding-top:36px}.project-section-heading{font-size:clamp(36px,4vw,58px);line-height:1.05;margin:0}.gallery.layout-bento{grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:8px;grid-auto-flow:dense}.gallery.layout-bento figure{min-width:0;overflow:hidden}.gallery.layout-bento figure[data-size="small"]{grid-column:span 4}.gallery.layout-bento figure[data-size="medium"]{grid-column:span 6}.gallery.layout-bento figure[data-size="large"]{grid-column:span 8}.gallery.layout-bento figure[data-size="wide"]{grid-column:1/-1}.gallery.layout-bento img{background:#f3f3f3}.project-video{display:block;width:100%;max-height:82vh;background:#111;object-fit:contain}
 @media(max-width:560px){.gallery.layout-uniform.columns-2,.gallery.layout-uniform.columns-3{grid-template-columns:1fr}.gallery.layout-bento{display:block}.gallery.layout-bento figure{margin-bottom:18px}}
+.gallery.layout-justified{display:block}
+.justified-row{display:flex;justify-content:flex-start;margin-bottom:12px}
+.justified-row:last-child{margin-bottom:0}
+.justified-row.incomplete{justify-content:flex-start}
+.justified-row figure{flex:none;height:100%;margin:0;overflow:hidden;background:#f3f3f3}
+.justified-row img{width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+.justified-row figcaption{display:none}
+.lightbox-overlay{position:fixed;inset:0;background:rgba(10,10,10,.92);display:flex;align-items:center;justify-content:center;z-index:1000;padding:40px}
+.lightbox-img{max-width:100%;max-height:100%;object-fit:contain}
+.lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;background:none;border:0;color:#fff;font-size:2rem;line-height:1;opacity:.8;padding:12px}
+.lightbox-close{top:16px;right:16px;font-size:1.5rem}
+.lightbox-prev{left:16px;top:50%;transform:translateY(-50%)}
+.lightbox-next{right:16px;top:50%;transform:translateY(-50%)}
+.lightbox-close:hover,.lightbox-prev:hover,.lightbox-next:hover{opacity:1}
+@media(max-width:560px){.lightbox-prev,.lightbox-next{font-size:1.5rem;padding:8px}}
