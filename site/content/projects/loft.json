@@ -1,0 +1,54 @@
+{
+  "slug": "loft",
+  "title": "Technical Concept Visualization",
+  "category": "Technical Storytelling",
+  "order": 13,
+  "published": true,
+  "company": "Loft",
+  "role": "Founder, Creative Director, Forge HQ",
+  "summary": "Visual storytelling for satellite and edge-computing audiences.",
+  "overview": "The verified deliverable for this engagement is the Rise of Virtual Missions poster, translating a technical topic into an accessible visual story.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/dd0a597a18f778d5.webp",
+          "alt": "Technical Concept Visualization project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/a5c115613cdd0426.webp",
+          "alt": "Technical Concept Visualization project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/781848589aa39ea4.webp",
+          "alt": "Technical Concept Visualization project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/a26ee5114fc51d56.webp",
+          "alt": "Technical Concept Visualization project work",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "cover": "/media/51b8944b3b9bb030.webp",
+  "coverAlt": "Technical Concept Visualization project collage",
+  "coverPosition": "center",
+  "featured": false
+}

@@ -24,6 +24,11 @@
   ],
   "blocks": [
     {
+      "type": "sectionHeading",
+      "title": "Secureframe",
+      "spacing": "generous"
+    },
+    {
       "type": "gallery",
       "title": "",
       "columns": "2",
@@ -506,6 +511,11 @@
           "caption": ""
         }
       ]
+    },
+    {
+      "type": "sectionHeading",
+      "title": "AppOmni",
+      "spacing": "generous"
     },
     {
       "type": "video",

@@ -1,0 +1,137 @@
+{
+  "slug": "mongodb-web",
+  "title": "Designing for a Developer Platform",
+  "category": "Technical Storytelling",
+  "order": 11,
+  "published": true,
+  "company": "MongoDB",
+  "role": "Creative Director",
+  "summary": "Helping developers understand and explore a growing product platform.",
+  "overview": "For the MongoDB Stitch launch, I worked with product marketing and product management on web pages, campaigns, videos, and visual assets. I also pitched and built an interactive cluster builder for the Atlas announcement so prospects could explore product features.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/ed0933c1bfb92429.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/8a1748fd114498f6.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/b21ba1bb8890a733.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/24a8bc97c5759ba9.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/27228e2e17c1a51b.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/f18d80655dcf16aa.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/624a22815369f949.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/8d01ec222e636917.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/79c6e6ffacf52d3e.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/f9605d41e98ae451.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Designing for a Developer Platform video",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/GjsQMLn3E7-/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "spacing": "regular"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/1e5dceccf338eca9.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/c77f502821a11fc6.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "1",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/20de535d5e754219.webp",
+          "alt": "Designing for a Developer Platform project work",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "cover": "/media/5d63296aaf9fa184.webp",
+  "coverAlt": "Designing for a Developer Platform project collage",
+  "coverPosition": "center",
+  "featured": false
+}
