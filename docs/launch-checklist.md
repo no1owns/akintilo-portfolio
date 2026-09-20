@@ -2,9 +2,9 @@
 
 This is the Phase 3 (Launch QA) checklist referenced by `ROADMAP.md`. Nothing below has been checked off yet unless noted — this document was created during the initial audit (2026-09-20), before the visual-refinement phase started. Update it in place as items are verified; don't create a second copy.
 
-## Before any item below: content blockers must clear first
+## Before any item below: real launch blockers must clear first
 
-See `ROADMAP.md` → "Launch blockers." Desktop/mobile QA on content that's about to change (draft projects, missing outcomes, the Event Brand and Experiential structure) is wasted effort until those are resolved.
+See `ROADMAP.md` → "Launch blockers" (as of the 2026-09-20 correction pass, just two: blank site settings, and sitewide mobile verification). The two draft projects, the outcomes-population gap, and the "Event Brand and Experiential" structure are **not** blockers — see `ROADMAP.md`'s "Deferred content" and "Launch improvements" sections — so QA does not need to wait on them.
 
 ## Build and content integrity
 
@@ -14,7 +14,7 @@ See `ROADMAP.md` → "Launch blockers." Desktop/mobile QA on content that's abou
 - [x] No tracked `.DS_Store` files anywhere in the repo (fixed 2026-09-20)
 - [x] Content-reading scripts explicitly filter for `*.json` rather than reading every file in `content/projects/` (already true in `prerender.mjs`, `optimize-media.mjs`, and `App.jsx`'s `import.meta.glob`)
 - [ ] `site/content/settings.json` has real values for `siteUrl`, `email` or `contactUrl`, and `resume` (all currently blank — see `ROADMAP.md`)
-- [ ] All 19 project JSON files reviewed for `[CONFIRM: ...]` placeholder text (2 found so far: `linx-security.json`, `mongodb-beliefs-storyboard.json`)
+- [x] All 19 project JSON files reviewed for `[CONFIRM: ...]` placeholder text — 2 found (`linx-security.json`, `mongodb-beliefs-storyboard.json`), both correctly unpublished and not linked anywhere in the app; not a launch blocker (see `ROADMAP.md`)
 
 ## Desktop rendering
 

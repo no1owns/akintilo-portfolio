@@ -53,27 +53,59 @@ function computeJustifiedRows(images, containerWidth, gap) {
   return rows;
 }
 
-function Lightbox({images, index, onClose, onNavigate}) {
+function imageAccessibleName(image, position, total) {
+  return image.caption || image.alt || `Image ${position} of ${total}`;
+}
+
+function Lightbox({images, index, onClose, onNavigate, restoreFocusRef}) {
+  const dialogRef = useRef(null);
+  const closeRef = useRef(null);
   useEffect(() => {
+    closeRef.current?.focus();
     const onKeyDown = (event) => {
-      if (event.key === 'Escape') onClose();
-      if (event.key === 'ArrowLeft') onNavigate(-1);
-      if (event.key === 'ArrowRight') onNavigate(1);
+      if (event.key === 'Escape') { onClose(); return; }
+      if (event.key === 'ArrowLeft') { onNavigate(-1); return; }
+      if (event.key === 'ArrowRight') { onNavigate(1); return; }
+      if (event.key === 'Tab') {
+        const focusable = Array.from(dialogRef.current?.querySelectorAll('button') || []);
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
     };
     document.addEventListener('keydown', onKeyDown);
     document.body.style.overflow = 'hidden';
     return () => {
       document.removeEventListener('keydown', onKeyDown);
       document.body.style.overflow = '';
+      restoreFocusRef?.current?.focus();
     };
-  }, [onClose, onNavigate]);
+  }, [onClose, onNavigate, restoreFocusRef]);
   const image = images[index];
+  const label = imageAccessibleName(image, index + 1, images.length);
   return (
-    <div className="lightbox-overlay active" onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
-      <button className="lightbox-close" aria-label="Close" onClick={onClose}>&times;</button>
-      <button className="lightbox-prev" aria-label="Previous image" onClick={() => onNavigate(-1)}>&lsaquo;</button>
-      <img className="lightbox-img" src={mediaURL(image.image)} alt={image.alt || ''} />
-      <button className="lightbox-next" aria-label="Next image" onClick={() => onNavigate(1)}>&rsaquo;</button>
+    <div
+      ref={dialogRef}
+      className="lightbox-overlay active"
+      role="dialog"
+      aria-modal="true"
+      aria-label={label}
+      onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}
+    >
+      <button ref={closeRef} className="lightbox-close" aria-label="Close image viewer" onClick={onClose}>&times;</button>
+      {images.length > 1 && <button className="lightbox-prev" aria-label="Previous image" onClick={() => onNavigate(-1)}>&lsaquo;</button>}
+      <figure className="lightbox-figure">
+        <img className="lightbox-img" src={mediaURL(image.image)} alt={image.alt || ''} />
+        {image.caption && <figcaption className="lightbox-caption">{image.caption}</figcaption>}
+      </figure>
+      {images.length > 1 && <button className="lightbox-next" aria-label="Next image" onClick={() => onNavigate(1)}>&rsaquo;</button>}
     </div>
   );
 }
@@ -82,6 +114,7 @@ function JustifiedGallery({block}) {
   const ref = useRef(null);
   const [containerWidth, setContainerWidth] = useState(1200);
   const [lightboxIndex, setLightboxIndex] = useState(null);
+  const triggerRef = useRef(null);
   const images = block.images || [];
   useEffect(() => {
     const gallery = ref.current;
@@ -95,18 +128,28 @@ function JustifiedGallery({block}) {
   }, []);
   const gap = containerWidth >= 640 ? 12 : 8;
   const rows = computeJustifiedRows(images, containerWidth, gap);
+  const openLightbox = (event, index) => {
+    triggerRef.current = event.currentTarget;
+    setLightboxIndex(index);
+  };
   return (
     <div ref={ref} className="gallery layout-justified">
       {rows.map((row, i) => (
         <div key={i} className={`justified-row${row.incomplete ? ' incomplete' : ''}`} style={{height: row.height, gap}}>
           {row.images.map((image) => (
             <figure key={image.index} style={{width: image.ratio * row.height}}>
-              <img
-                src={mediaURL(image.image)}
-                alt={image.alt || ''}
-                loading="lazy"
-                onClick={() => setLightboxIndex(image.index)}
-              />
+              <button
+                type="button"
+                className="justified-trigger"
+                aria-label={`View full size: ${imageAccessibleName(image, image.index + 1, images.length)}`}
+                onClick={(event) => openLightbox(event, image.index)}
+              >
+                <img
+                  src={mediaURL(image.image)}
+                  alt={image.alt || ''}
+                  loading="lazy"
+                />
+              </button>
               {image.caption && <figcaption>{image.caption}</figcaption>}
             </figure>
           ))}
@@ -118,6 +161,7 @@ function JustifiedGallery({block}) {
           index={lightboxIndex}
           onClose={() => setLightboxIndex(null)}
           onNavigate={(dir) => setLightboxIndex((current) => (current + dir + images.length) % images.length)}
+          restoreFocusRef={triggerRef}
         />
       )}
     </div>
