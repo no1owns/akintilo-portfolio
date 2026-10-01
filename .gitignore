@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+site/dist/
+dist/
+
+# Decap CMS vendor assets copied in by scripts/prepare-admin.mjs
+site/public/admin/vendor/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Env files
+.env
+.env.local
