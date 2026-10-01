@@ -2,6 +2,20 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-01 — Added Meta Connect 2025 Developer Keynote; media supplied directly by Ayodeji
+
+**Decision:** added a new project, `meta-connect.json` ("Meta Connect 2025 Developer Keynote"), to the Brand Systems collection at order 1 — directly after Security Brand Experiences, pushing TripActions through the Linx Security draft down by one each. Role, overview, and all other fields were specified verbatim by Ayodeji via ChatGPT's brief; no copy was invented. The overview explicitly describes the engagement growing from concept work on one speaker section into leading the design flow for the full keynote (concept, narrative structure, storyboarding, motion direction, deck design, cross-functional production alignment) — this framing was preserved exactly and not reduced to "slide theming." No outcomes/metrics were added, consistent with the no-invented-metrics policy above.
+
+**Media sourcing — a real constraint, handled transparently:** the brief asked for this project to be recreated from `https://akintilo.com/brand-storytelling`, but this session's network egress cannot reach `akintilo.com` (confirmed by a direct fetch attempt, same restriction documented for `www.akintilo.com`/`preview.akintilo.com` in the 2026-09-20 audit). Rather than fabricating placeholder slide images to fill the gap — which would mean inventing visual "work product" for a real client engagement, a line this project will not cross — the gap was raised with Ayodeji directly, who supplied the cover and all 26 gallery images as a ZIP upload. All 27 files were extracted byte-for-byte (no recompression, no re-ordering) into `site/public/media/` and referenced as-is.
+
+**Alt text:** every one of the 27 images was individually viewed and described based only on what's visibly legible on screen — slide headlines, UI text, and on-screen speaker names (e.g., "Kirk Barker," "Michael Abrash," both printed directly on their intro slides) are transcribed, not inferred. No unnamed on-stage figure was identified by guess. Two images (08 and 13) are genuine duplicates in the supplied set — both show the same "Michael Abrash" intro slide — and were preserved as provided rather than silently deduplicated, since the brief's instruction was to preserve the supplied sequence exactly.
+
+**Gallery layout:** built with `layout: "justified"` from creation, across three blocks (images 01–02, 03–08, 09–26) per the brief's grouping. This is the second project on the justified layout (after the `mongodb-the-next-generation-database` prototype) and uses the identical shared `JustifiedGallery`/`Lightbox` components — not a fork. Because this is new content rather than a conversion of an existing bento project, it doesn't conflict with the standing "don't roll justified out further without review" guidance for existing projects; it was explicitly requested as justified in the brief for this new project specifically.
+
+**Verification method, given no browser access to the source page:** real pixel dimensions were read directly from each WebP file (not assumed) — confirmed 1200×675 and 1280×720 for images 01–02, and confirmed (not merely assumed) 1920×1080 for every one of images 03–26.
+
+**Decided by:** Ayodeji, via ChatGPT's brief, with the media-sourcing gap resolved by Ayodeji directly after Claude Code flagged it rather than inventing content.
+
 ## 2026-09-20 (correction pass, reviewed with ChatGPT) — Content accuracy policy: no invented metrics, ever
 
 **Decision:** No project page gets a quantified outcome, metric, date, or attribution that hasn't been verified. A project without a verified number stays qualitative — that is a content gap to flag for Ayodeji, never something to fill in to make pages look structurally consistent with each other. This applies retroactively to the earlier claim (in this doc, prior revision) that "only 1 of 19 projects has outcomes" being framed as something to fix — it is not a defect to fix by writing numbers; it's the correct state until real numbers exist.
