@@ -1,0 +1,224 @@
+{
+  "slug": "meta-connect",
+  "title": "Meta Connect 2025 Developer Keynote",
+  "category": "Brand Systems",
+  "order": 1,
+  "published": true,
+  "company": "Meta",
+  "role": "Creative Consultant, Keynote Storytelling",
+  "summary": "Concept, visual narrative, and deck design for Meta's 2025 developer keynote.",
+  "overview": "Selected to lead the design flow for the full Meta Connect 2025 developer keynote after starting with concept work for one speaker section. The engagement expanded across concept development, narrative structure, storyboarding, motion direction, deck design, and cross-functional production alignment.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "gallery",
+      "layout": "justified",
+      "title": "",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/meta-connect-01.webp",
+          "width": 1200,
+          "height": 675,
+          "alt": "Meta Connect 2025 opening keynote stage, with a speaker introducing the event",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-02.webp",
+          "width": 1280,
+          "height": 720,
+          "alt": "Keynote slide showing an AI \"Create anything\" content-generation demo on stage",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "layout": "justified",
+      "title": "",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/meta-connect-03.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Meta Connect 2025 keynote title slide",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-04.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "\"Developer\" keynote section title slide",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-05.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Meta Connect keynote section title slide with abstract graphic",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-06.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "\"Coming up next\" keynote transition slide",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-07.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Speaker introduction slide for Kirk Barker, Product Manager, Digital and Pro Platforms, Meta",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-08.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Speaker introduction slide for Michael Abrash",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "layout": "justified",
+      "title": "",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/meta-connect-09.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Meta logo title card",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-10.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Keynote slide showcasing mobile games on Meta Horizon, with a \"5000+ new worlds\" statistic",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-11.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "On-stage product and AI feature showcase, including smart glasses, a VR headset, and AI content-generation examples",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-12.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Keynote slide showcasing mobile games on Meta Horizon, with a \"4x active users in mobile worlds\" statistic",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-13.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Speaker introduction slide for Michael Abrash",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-14.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "\"Create with AI\" keynote slide showing AI-generated world and character examples",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-15.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Hardware comparison slide for two smart-glasses prototypes, \"Tiramisu\" and \"Boba,\" under the heading \"Path to the Future\"",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-16.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "\"Contextual AI\" keynote slide showing an AI assistant identifying shopping-list items from a photo",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-17.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Concept slide showing a smartphone surfaced with contextual AI suggestions like \"Where I parked my car\" and \"To-do lists\"",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-18.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Exploded-view product diagram of Meta smart-glasses components",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-19.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Close-up exploded diagram of a smart-glasses camera and lens module",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-20.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "AR interface concept showing a hand gesture alongside a chat app mockup",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-21.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "\"Creator Fund\" keynote slide outlining monthly bonuses, milestone rewards, and organic earnings for creators",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-22.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Keynote slide on player motivation: Competence, Autonomy, and Relatedness",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-23.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "\"You set the tone\" keynote slide on setting social norms for players",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-24.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "\"Manual curation\" keynote slide listing four content-curation factors",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-25.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "\"Lay of the land sessions\" keynote agenda slide",
+          "caption": ""
+        },
+        {
+          "image": "/media/meta-connect-26.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Collage of people wearing and using Meta smart glasses and VR headsets in everyday settings",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "cover": "/media/meta-connect-cover.webp",
+  "coverAlt": "Meta Connect 2025 developer keynote slide collage",
+  "coverPosition": "center",
+  "featured": true
+}
