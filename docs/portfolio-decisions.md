@@ -2,7 +2,25 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
-## 2026-10-09 — Scroll-reveal + parallax prototyped on the homepage; minimal intensity
+## 2026-10-09 — AppOmni/Secureframe image galleries found swapped; Secureframe to lead instead of AppOmni
+
+**Finding:** Ayodeji reported the Security Brand Experiences page had Secureframe and AppOmni work "mixed together" and that the first section said AppOmni when it should say Secureframe. Investigated by viewing every image in both sections individually (not alt text — every image on this page shares the same generic alt text, "Security Brand Experiences project work," so it carries no signal). Confirmed: **all 26 images under the "AppOmni" heading are Secureframe-branded** (Secureframe AI, Risk Management dashboards, the "Welcome back, Chauncey" product screens, the mobile site, ebook covers — explicit wordmark/logo on every one), and **the first 23 images under the "Secureframe" heading are AppOmni-branded** ("Introducing AppOmni," "How AppOmni delivers," plus 3 AppOmni icon illustrations sitting between the Secureframe video blocks further down). The 39-image block at the very end of the Secureframe section was spot-checked and is correctly placed (explicit Secureframe-logo client testimonials — Sony Pictures, Historic Hotels of America). All 9 videos in both sections are correctly placed (their filenames/URLs were always company-specific).
+
+**Decision:** Secureframe becomes the first section, AppOmni the second — reversing the 2026-09-20 AppOmni-first call below, per Ayodeji's direct instruction. The swapped image galleries move to their correct sections. This is a straightforward fix (move two blocks of images, flip section order) but has not been applied yet — queued as the next content task after the video migration below.
+
+**Decided by:** Ayodeji, directly.
+
+## 2026-10-09 — Migrated all 19 `work.akintilo.com` videos to local media
+
+**Decision:** Ayodeji asked to migrate "the unblocked videos" — the 19 `work.akintilo.com`-hosted videos flagged in the 2026-09-20 audit as having confirmed-available originals in `web-portfolio/images/` (as distinct from the 4 Adobe Behance iframe embeds, which stay blocked — no source file for those). Went with the "re-compress and commit" option from the three documented in `docs/content-and-asset-inventory.md`, applied to all 19 rather than a hand-picked subset, since Ayodeji's instruction was to migrate the whole unblocked set.
+
+Each video was re-encoded from the `web-portfolio` original: H.264, width capped at 1920px (none of the sources actually exceeded it), `+faststart` for progressive download, and **audio stripped** — every one of these video blocks renders `autoplay muted loop` in `src/App.jsx`'s `Video` component (none sets `playback: "controls"`), so the audio track was always inaudible dead weight, not a user-facing feature being removed. 132 MB of originals compressed to 54 MB. Files were renamed from their source paths (which collided across folders — two different originals were both named `motion-tripactions-hero.mp4`) to distinct, descriptive names in `site/public/media/`, and each project JSON's `file` field was updated from the `work.akintilo.com` URL to the new local path via an exact string replacement (verified zero `work.akintilo.com` references remain, and that each JSON file still parses).
+
+**Verification constraint:** this session's headless Chromium build has no H.264 decoder at all (`video.canPlayType('video/mp4; codecs="avc1..."')` returns `''` universally, independent of which file is tested), so actual `<video>` playback couldn't be confirmed in-browser here. Verified instead via `ffmpeg -i ... -f null -` (full decode pass, zero errors, durations match source) on all 19 files, plus extracted-frame spot checks on 3 of them to confirm the visual content survived re-encoding correctly. H.264/MP4 is the same codec format the originals already used and is supported natively by every real-world browser (Chrome, Safari, Firefox, Edge), so this is a test-environment limitation, not a defect in the migrated files.
+
+**Decided by:** Ayodeji, directly ("Migrate the unblocked videos when you can").
+
+## 2026-10-09 — AppOmni/Secureframe image galleries found swapped; Secureframe to lead instead of AppOmni
 
 **Decision:** prototyped the first pass of scroll-triggered animation — a fade-up reveal on the hero and "Selected work" section, plus a few pixels of parallax drift on project-card cover images — on the homepage only, at Ayodeji's chosen "Minimal" intensity (no per-card stagger, small (≤14px) parallax range). Same rollout pattern as the justified-grid prototype: build on one representative page first, get Ayodeji's review, decide on wider rollout from there — not applied to any project/case-study page yet.
 

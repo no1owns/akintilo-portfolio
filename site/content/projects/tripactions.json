@@ -26,7 +26,7 @@
     {
       "type": "video",
       "title": "Performance Marketing Systems video",
-      "file": "https://work.akintilo.com/images/navan/travel-expense-video-spot/motion-tripactions-hero.mp4",
+      "file": "/media/motion-tripactions-travel-expense-hero.mp4",
       "spacing": "regular"
     },
     {
@@ -133,19 +133,19 @@
     {
       "type": "video",
       "title": "Performance Marketing Systems video",
-      "file": "https://work.akintilo.com/images/navan/ads/motion-tripactions-1.mp4",
+      "file": "/media/motion-tripactions-ad-1.mp4",
       "spacing": "regular"
     },
     {
       "type": "video",
       "title": "Performance Marketing Systems video",
-      "file": "https://work.akintilo.com/images/navan/ads/motion-tripactions-2.mp4",
+      "file": "/media/motion-tripactions-ad-2.mp4",
       "spacing": "regular"
     },
     {
       "type": "video",
       "title": "Performance Marketing Systems video",
-      "file": "https://work.akintilo.com/images/navan/ads/motion-tripactions-3.mp4",
+      "file": "/media/motion-tripactions-ad-3.mp4",
       "spacing": "regular"
     }
   ],
