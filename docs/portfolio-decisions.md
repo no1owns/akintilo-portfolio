@@ -2,6 +2,16 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-09 — Contact page gets a form; mailto-based, not a third-party form backend
+
+**Decision:** added a minimal name/email/message form to `/contact` (`ContactForm` in `src/App.jsx`). On submit it builds a `mailto:ayoakintilo@gmail.com` link (pre-filled subject and body from the entered fields) and navigates to it, handing off to the visitor's own email client — no server, no third-party form-processing service, no network request leaves the browser at submit time.
+
+This wasn't the first approach tried. The initial build used `formsubmit.co` (a zero-signup static-form-to-email service: point a plain `<form action="https://formsubmit.co/...">` at it and it forwards submissions to that address) — a common, well-established pattern for static sites with no backend. That version was reverted after this environment's own safety tooling flagged the build step itself ("Traffic Redirection") because the form posted to a third-party domain and redirected afterward. Rather than work around that signal, switched to the mailto approach, which sidesteps it entirely by never sending data anywhere outside the visitor's own browser/OS.
+
+**Trade-off, for the record:** mailto requires the visitor to have a configured email client and to hit send themselves — it's not a silent server-side delivery. If Ayodeji later wants true silent delivery (message arrives without the visitor's email client opening), a form-backend service (Formspree, FormSubmit, or similar) is the standard way to get that on a static GitHub Pages site, but needs an explicit decision to accept a third-party dependency for it.
+
+**Decided by:** Ayodeji asked for "a minimal form which posts messages to my email"; the mailto-vs-third-party-service choice was made by Claude Code after the first approach was blocked, prioritizing zero external dependencies.
+
 ## 2026-10-09 — AppOmni/Secureframe image galleries found swapped; Secureframe to lead instead of AppOmni
 
 **Finding:** Ayodeji reported the Security Brand Experiences page had Secureframe and AppOmni work "mixed together" and that the first section said AppOmni when it should say Secureframe. Investigated by viewing every image in both sections individually (not alt text — every image on this page shares the same generic alt text, "Security Brand Experiences project work," so it carries no signal). Confirmed: **all 26 images under the "AppOmni" heading are Secureframe-branded** (Secureframe AI, Risk Management dashboards, the "Welcome back, Chauncey" product screens, the mobile site, ebook covers — explicit wordmark/logo on every one), and **the first 23 images under the "Secureframe" heading are AppOmni-branded** ("Introducing AppOmni," "How AppOmni delivers," plus 3 AppOmni icon illustrations sitting between the Secureframe video blocks further down). The 39-image block at the very end of the Secureframe section was spot-checked and is correctly placed (explicit Secureframe-logo client testimonials — Sony Pictures, Historic Hotels of America). All 9 videos in both sections are correctly placed (their filenames/URLs were always company-specific).
