@@ -177,8 +177,54 @@ export function Blocks({blocks=[]}){return groupGalleries(blocks).map((b,i)=><di
  {b.type==='split'&&<div className={`split image-${b.side||'left'}`}><img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><div><h2>{b.title}</h2><Text>{b.body}</Text></div></div>}
  {b.type==='video'&&<Video block={b}/>}
  </div>);}
+// Prototype (homepage only, 2026-10-09): fades up elements marked data-reveal as they
+// scroll into view, and gives project-card covers a few px of scroll parallax. Both are
+// progressive enhancement — the SSR'd HTML is fully visible without this effect running,
+// and prefers-reduced-motion disables it entirely.
+function useReveal(){
+  const ref=useRef(null);
+  useEffect(()=>{
+    const root=ref.current;
+    if(!root||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    const targets=Array.from(root.querySelectorAll('[data-reveal]'));
+    if(!targets.length)return;
+    const vh=window.innerHeight;
+    const pending=[];
+    targets.forEach(el=>{if(el.getBoundingClientRect().top<vh)el.classList.add('is-visible');else pending.push(el);});
+    root.classList.add('js-enhanced');
+    if(!pending.length)return;
+    const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:0.15});
+    pending.forEach(el=>observer.observe(el));
+    return()=>observer.disconnect();
+  },[]);
+  return ref;
+}
+function useCoverParallax(ref){
+  useEffect(()=>{
+    const root=ref.current;
+    if(!root||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    const covers=Array.from(root.querySelectorAll('.cover img'));
+    if(!covers.length)return;
+    let frame=null;
+    const update=()=>{
+      frame=null;
+      const vh=window.innerHeight;
+      covers.forEach(img=>{
+        const rect=img.parentElement.getBoundingClientRect();
+        const center=rect.top+rect.height/2;
+        const offset=Math.max(-14,Math.min(14,((center-vh/2)/vh)*28));
+        img.style.setProperty('--parallax',offset.toFixed(1)+'px');
+      });
+    };
+    const onScroll=()=>{if(frame===null)frame=requestAnimationFrame(update);};
+    update();
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',onScroll);
+    return()=>{window.removeEventListener('scroll',onScroll);window.removeEventListener('resize',onScroll);if(frame!==null)cancelAnimationFrame(frame);};
+  },[ref]);
+}
 function Card({p}){return <article className="project-card"><a href={'/'+p.slug}><div className="cover"><img src={mediaURL(p.cover)} alt={p.coverAlt||p.title} style={{objectPosition:p.coverPosition||'center'}} loading={p.order<2?'eager':'lazy'}/></div><h3>{p.title}</h3><p>{p.company}</p></a></article>;}
-function Home({initial='All'}){const [filter,setFilter]=useState(cats.includes(initial)?initial:'All');const list=projects.filter(p=>filter==='All'||p.category===filter);return <><section className="hero"><h1>{settings.headline}</h1><p>{settings.intro}</p><a className="hero-link" href="#work">View selected work <Arrow/></a></section><section id="work" className="work"><h2>Selected work</h2><div className="filters" role="group" aria-label="Filter projects">{cats.map(c=><button key={c} aria-pressed={c===filter} className={c===filter?'active':''} onClick={()=>setFilter(c)}>{c}</button>)}</div><div className={`project-grid columns-${settings.gridColumns||'2'} gap-${settings.gridGap||'comfortable'}`}>{list.map(p=><Card key={p.slug} p={p}/>)}</div></section></>;}
+function Home({initial='All'}){const [filter,setFilter]=useState(cats.includes(initial)?initial:'All');const list=projects.filter(p=>filter==='All'||p.category===filter);const ref=useReveal();useCoverParallax(ref);return <div ref={ref}><section className="hero" data-reveal><h1>{settings.headline}</h1><p>{settings.intro}</p><a className="hero-link" href="#work">View selected work <Arrow/></a></section><section id="work" className="work" data-reveal><h2>Selected work</h2><div className="filters" role="group" aria-label="Filter projects">{cats.map(c=><button key={c} aria-pressed={c===filter} className={c===filter?'active':''} onClick={()=>setFilter(c)}>{c}</button>)}</div><div className={`project-grid columns-${settings.gridColumns||'2'} gap-${settings.gridGap||'comfortable'}`}>{list.map(p=><Card key={p.slug} p={p}/>)}</div></section></div>;}
 function Project({p}){const next=projects[(projects.indexOf(p)+1)%projects.length];return <><header className="project-intro"><a className="eyebrow" href={'/?category='+encodeURIComponent(p.category)}>All {p.category.toLowerCase()} <Arrow/></a><h1>{p.title}</h1><p className="summary">{p.summary}</p><dl><div><dt>Company</dt><dd>{p.company}</dd></div><div><dt>Role</dt><dd>{p.role}</dd></div></dl></header><figure className="project-hero"><img src={mediaURL(p.cover)} alt={p.coverAlt}/></figure><section className="overview"><h2>The work</h2><div><Text>{p.overview}</Text></div></section>{p.outcomes?.length>0&&<section className="outcomes" aria-label="Project outcomes">{p.outcomes.map((o,i)=><div key={i}><strong>{o.value}</strong><p>{o.label}</p></div>)}</section>}<Blocks blocks={p.blocks}/><nav className="project-next" aria-label="Next project"><span>Next project</span><a href={'/'+next.slug}>{next.title}<Arrow/></a></nav></>;}
 function About(){return <section className="simple-page"><p className="eyebrow">About Ayo</p><h1>The story.<br/>The system.<br/>The people using it.</h1><Text>{settings.about}</Text><a href="/resume" className="text-link">View experience <Arrow/></a></section>;}
 function Resume(){return <section className="simple-page"><p className="eyebrow">Experience</p><h1>Brand, web,<br/>and creative direction.</h1>{settings.resume&&<a className="text-link" href={mediaURL(settings.resume)} download>Download résumé <Arrow/></a>}<div className="experience">{[['AppOmni','Senior Visual Designer','Dec 2024–Present'],['Forge HQ','Founder, Creative Director','2020–Present'],['Meta, via TEKSystems','Creative Consultant, Keynote Storytelling (Contract)','2025'],['Secureframe','Principal Designer','2022–2024'],['Navan (TripActions)','Director of Design','2019–2022'],['MongoDB','Creative Director','2015–2019'],['DocuSign','Director of Creative Services','2012–2015']].map(([a,b,c])=><div key={a}><h2>{a}</h2><p>{b}</p><span>{c}</span></div>)}</div></section>;}

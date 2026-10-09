@@ -2,6 +2,19 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-09 — Scroll-reveal + parallax prototyped on the homepage; minimal intensity
+
+**Decision:** prototyped the first pass of scroll-triggered animation — a fade-up reveal on the hero and "Selected work" section, plus a few pixels of parallax drift on project-card cover images — on the homepage only, at Ayodeji's chosen "Minimal" intensity (no per-card stagger, small (≤14px) parallax range). Same rollout pattern as the justified-grid prototype: build on one representative page first, get Ayodeji's review, decide on wider rollout from there — not applied to any project/case-study page yet.
+
+**Implementation constraints that shaped the approach:**
+- **Progressive enhancement, not JS-gated content.** The site is SSR-prerendered (`scripts/prerender.mjs`) and that static HTML must stay fully visible without JS running (for no-JS clients and for the pre-hydration paint). `[data-reveal]` elements are only hidden once a `js-enhanced` class is added to their container by a `useEffect` on mount — and elements already in the viewport at mount time are marked `is-visible` immediately, before that class is even added, so there's no hide-then-reveal flash for above-the-fold content.
+- **`prefers-reduced-motion: reduce` disables the effect entirely**, not just the transition speed — both hooks (`useReveal`, `useCoverParallax`) check `matchMedia` and skip all DOM/class changes when it matches, verified via Playwright with `reducedMotion: 'reduce'` (confirmed `js-enhanced` is never added and `--parallax` is never set).
+- **Parallax doesn't crop or reveal gaps:** `.cover img` is sized to `calc(100% + 32px)` and offset `-16px`, so the ±14px translateY range always stays within the oversized image, inside the existing `overflow:hidden` container — verified visually via screenshots at scroll positions through the grid.
+
+**Verification:** `npm run build` (26 routes prerendered, clean) and `npm run test:sites` (4/4 pass) both still pass; Playwright checks at desktop (1440×900) and mobile (390×844) viewports confirm no console errors, correct opacity/parallax values at load and after scrolling, and full visibility under `prefers-reduced-motion`.
+
+**Decided by:** Ayodeji — chose "Minimal" intensity and the homepage as the first prototype page via two quick questions before any code was written.
+
 ## 2026-10-01 — Added Meta Connect 2025 Developer Keynote; media supplied directly by Ayodeji
 
 **Decision:** added a new project, `meta-connect.json` ("Meta Connect 2025 Developer Keynote"), to the Brand Systems collection at order 1 — directly after Security Brand Experiences, pushing TripActions through the Linx Security draft down by one each. Role, overview, and all other fields were specified verbatim by Ayodeji via ChatGPT's brief; no copy was invented. The overview explicitly describes the engagement growing from concept work on one speaker section into leading the design flow for the full keynote (concept, narrative structure, storyboarding, motion direction, deck design, cross-functional production alignment) — this framing was preserved exactly and not reduced to "slide theming." No outcomes/metrics were added, consistent with the no-invented-metrics policy above.

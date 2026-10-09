@@ -30,6 +30,16 @@ Worth doing before or shortly after launch, not blocking.
 - Add a lightbox for gallery images generally, not just the justified-grid prototype — currently only the justified prototype has one. (Adapted from the working, dependency-free implementation in `web-portfolio/case-study-nav.js`; the prototype's version now has full keyboard/dialog accessibility — see `docs/portfolio-decisions.md`.)
 - Fix `prefers-reduced-motion` handling for autoplaying looped videos (currently only CSS transitions respect it).
 
+## New work requested (2026-10-09)
+
+Three items Ayodeji asked to queue up next, after confirming the gallery-grid fix and Meta Connect both look correct:
+
+1. **New images for Lyft and BetterUp.** Blocked on Ayodeji — the Lyft gallery currently has 1 image and BetterUp has 18 (both already "Ready" in the inventory doc on content grounds, so this is a refresh/addition he wants, not a gap I found). Need the actual image files and, for Lyft, where they should slot in relative to the existing single image.
+2. **Replace Adobe-hosted videos with self-hosted (GitHub) or YouTube/Vimeo-hosted ones.** Two tiers, different blocking status:
+   - *19 `work.akintilo.com` videos* (`brand-systems-and-web-performance`, `docusign-enterprise-campaign`, `event-brand-experiential`, `lufthansa`, `tripactions` — ~130 MB total). **Unblocked.** Re-confirmed 2026-10-09 that all 19 source files are still present in `web-portfolio/images/`. These aren't Adobe-hosted — they're Ayodeji's own earlier site — but they're still an external single-point-of-failure dependency, and self-hosting them is prep for the same migration. Plan: optimize for web delivery, commit into `site/public/media/`, swap each project's `file` field from the `work.akintilo.com` URL to the local path.
+   - *4 Adobe Behance iframe embeds* (Visa, "Designing for a Developer Platform" / `mongodb-web`, "Innovation Without Limits" / `mongodb-for-giant-ideas-video`, Lyft). **Blocked.** No original video file for any of these four was found in either repo as of this session. Need Ayodeji to supply the original file, an existing YouTube/Vimeo link, or confirm these stay as Adobe embeds for now.
+3. **Subtle scroll-triggered text and parallax animation**, to make the site feel more "playful and advanced." **Unblocked** — doesn't depend on new media, can be prototyped now. Following the same pattern as the justified-grid rollout: build on one representative page first, get Ayodeji's review, then decide on wider rollout. See `docs/portfolio-decisions.md` for the proposed approach once it's drafted.
+
 ## Resolved this pass
 
 - ~~AppOmni/Secureframe overview-vs-body ordering inconsistency~~ — fixed 2026-09-20. AppOmni is now presented first in both the section order and the overview/outcomes text (AppOmni is Ayodeji's current work and the stronger immediate hiring signal), followed by Secureframe. All outcome attributions were preserved exactly as before — only order changed, no numbers or copy were altered.
@@ -54,3 +64,6 @@ Worth doing before or shortly after launch, not blocking.
 - If/when `linx-security` and `mongodb-beliefs-storyboard` should be finished and published: confirm client/scope/attribution.
 - Review and approve (or redirect) the justified-grid + accessibility prototype on `mongodb-the-next-generation-database` before it's rolled out to any other project.
 - Supply real values for site settings before launch: `siteUrl` (final domain), contact email or URL, résumé PDF.
+- New images for Lyft and BetterUp: supply the files, and for Lyft, where they should sit relative to the existing image.
+- For the 4 Adobe Behance embeds (Visa, `mongodb-web`, `mongodb-for-giant-ideas-video`, Lyft): original file, existing YouTube/Vimeo link, or keep as Adobe embeds for now?
+- Scroll animation prototype: which page should it land on first, and how pronounced should it be? (Proposal pending — see "New work requested" above.)
