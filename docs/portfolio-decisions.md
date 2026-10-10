@@ -2,6 +2,18 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-10 — AppOmni/Secureframe fix was incomplete; 24 more AppOmni images found and moved
+
+**What was missed:** the 2026-10-09 fix corrected the two image galleries sitting immediately after each section heading, but left the 39-image block at the very end of the Secureframe section almost untouched — it was "spot-checked" (4-5 images sampled, all genuinely Secureframe) rather than checked image-by-image like the rest of the page. Ayodeji reported AppOmni content was still showing up under Secureframe. He was right: of those 39 images, the **first 24 (not all 39) were AppOmni** — an AppOmni trade-show booth design (explicit "AppOmni" wordmark on literally every booth-wall mockup, swag bag, and tote bag render) followed by a full AppOmni executive keynote deck (explicit "AppOmni Advantage," "AskOmni," slides on AI agents and SaaS security, a presenter on stage). The remaining 15 — confirmed by explicit Secureframe wordmark/logo on each (Sony Pictures and Historic Hotels of America client testimonials, a "100+ Integrations" graphic, several "secureframe" product/compliance graphics) — were already correctly placed.
+
+**Fix:** moved those 24 images into the AppOmni section (appended to its existing 22-image gallery, so AppOmni now has 46 images there; Secureframe's tail dropped from 39 to 15). Verified the same way as the first pass: every image src and video file diffed old vs. new, exact-set match, nothing lost or duplicated.
+
+**Residual uncertainty, stated plainly:** of the 88 images on this page, all but 2-3 carry an explicit wordmark or are unambiguous from context (a client testimonial, a specific product screen). A handful of GIF first-frames and one generic lock icon in the boundary area between the two clusters have no visible brand mark either way — I classified them by which confirmed cluster they sit next to and which color palette they match (AppOmni's content here is uniformly dark-blue/navy; Secureframe's is uniformly light with teal/purple accents), not by a logo I could point to. If anything still looks wrong on a second pass, it's most likely one of those few images, not a repeat of the wholesale swap from before.
+
+**Lesson applied:** "spot-check a large block and extrapolate" is exactly the shortcut that caused this miss. Every image on this page has now actually been viewed and classified individually — not sampled.
+
+**Decided by:** Ayodeji, directly ("There's still some Appomni assets in the Secureframe section").
+
 ## 2026-10-09 — Contact page gets a form; mailto-based, not a third-party form backend
 
 **Decision:** added a minimal name/email/message form to `/contact` (`ContactForm` in `src/App.jsx`). On submit it builds a `mailto:ayoakintilo@gmail.com` link (pre-filled subject and body from the entered fields) and navigates to it, handing off to the visitor's own email client — no server, no third-party form-processing service, no network request leaves the browser at submit time.
