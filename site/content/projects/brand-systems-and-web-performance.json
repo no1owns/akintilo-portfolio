@@ -223,6 +223,11 @@
       "spacing": "regular",
       "images": [
         {
+          "image": "/media/440fd6e00a8b97ce.gif",
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
           "image": "/media/59c122adbc83e0ba.gif",
           "alt": "Security Brand Experiences project work",
           "caption": ""
@@ -553,11 +558,6 @@
         },
         {
           "image": "/media/8aba420cd09b8f16.gif",
-          "alt": "Security Brand Experiences project work",
-          "caption": ""
-        },
-        {
-          "image": "/media/440fd6e00a8b97ce.gif",
           "alt": "Security Brand Experiences project work",
           "caption": ""
         }

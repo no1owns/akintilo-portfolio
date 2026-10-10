@@ -2,6 +2,16 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-10 — Last stray asset: the "Introducing Comply AI" GIF
+
+**What was wrong:** of the two unbranded GIFs moved to AppOmni in the previous pass (first-frame-only review couldn't show their content — GIFs were only sampled as a single still), one was actually Secureframe. Extracted multiple frames from each with `ffmpeg` to check: `440fd6e00a8b97ce.gif` opens on an explicit "Introducing Comply AI" title card with the Secureframe "S" logo, then shows the Comply AI remediation flow (CLI/Terraform/CloudFormation). The other, `8aba420cd09b8f16.gif` (a Google-search/Gemini demo with no visible brand mark), stayed under AppOmni — Ayodeji confirmed everything else was correctly placed.
+
+**Fix:** moved `440fd6e00a8b97ce.gif` back to the Secureframe section, next to its sibling Comply AI GIF (`59c122adbc83e0ba.gif`, a second Comply AI remediation demo, already correctly placed). Secureframe: 41 → 42 images. AppOmni: 47 → 46. Verified the same way as both prior passes: exact-set diff on all 88 image srcs and all 9 video files, build, test:sites, and 3 repeated page loads confirming the move and zero BentoGallery stuck-figures.
+
+**Lesson applied:** a GIF's first frame is not its content. Any animated asset needs multiple frames pulled (`ffmpeg -vf select=...`) before it can be classified, not a single static read.
+
+**Decided by:** Ayodeji, directly ("There's a Secureframe asset under AppOmni. It's the ComplyAI animation. Everything else is correctly placed").
+
 ## 2026-10-10 — AppOmni/Secureframe fix was incomplete; 24 more AppOmni images found and moved
 
 **What was missed:** the 2026-10-09 fix corrected the two image galleries sitting immediately after each section heading, but left the 39-image block at the very end of the Secureframe section almost untouched — it was "spot-checked" (4-5 images sampled, all genuinely Secureframe) rather than checked image-by-image like the rest of the page. Ayodeji reported AppOmni content was still showing up under Secureframe. He was right: of those 39 images, the **first 24 (not all 39) were AppOmni** — an AppOmni trade-show booth design (explicit "AppOmni" wordmark on literally every booth-wall mockup, swag bag, and tote bag render) followed by a full AppOmni executive keynote deck (explicit "AppOmni Advantage," "AskOmni," slides on AI agents and SaaS security, a presenter on stage). The remaining 15 — confirmed by explicit Secureframe wordmark/logo on each (Sony Pictures and Historic Hotels of America client testimonials, a "100+ Integrations" graphic, several "secureframe" product/compliance graphics) — were already correctly placed.
