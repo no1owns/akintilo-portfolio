@@ -21,7 +21,7 @@ See `ROADMAP.md` → "Launch blockers" (as of the 2026-09-20 correction pass, ju
 - [x] Homepage "Selected work" curated grid (8 featured projects) and the "View all work" / "Show selected work" expand control render correctly at 1440px (verified 2026-10-10 via headless Chromium; see `docs/portfolio-decisions.md`)
 - [ ] Homepage hero, filters, and project grid render correctly at 1920px, 1440px, and 1280px widths
 - [ ] Every published project's hero image, overview, and outcomes (where present) render without layout breakage
-- [ ] Gallery blocks (bento today, justified on the prototype project) render without overlapping figures or broken aspect ratios
+- [x] Bento gallery blocks render deterministically, with fully aligned tile edges, at 1600px and 1440px (rewritten 2026-10-10 — no more runtime measurement; verified against a 12-tile mixed-shape fixture and five real projects up to 88 images, zero 0-height tiles, zero console errors; see `docs/portfolio-decisions.md`). Justified-grid gallery blocks still pending a full sitewide pass beyond the one prototype project.
 - [ ] Video blocks show controls, respect poster images, and do not autoplay with sound
 - [ ] Adobe-embedded videos (Visa, mongodb-web, mongodb-for-giant-ideas-video, Lyft) load and play
 
@@ -36,6 +36,7 @@ See `ROADMAP.md` → "Launch blockers" (as of the 2026-09-20 correction pass, ju
 - [ ] Nav menu toggle (`.menu-toggle`) opens/closes correctly and is reachable by keyboard
 - [x] Justified-grid prototype checked at 390×844 via headless Chromium (2026-09-20) — rows stay compact, no blown-out row heights, no console errors. Still needs a real-device pass, not just headless.
 - [x] Homepage curated grid + expand/collapse control checked at 390×844 and 768×1024 via headless Chromium (2026-10-10) — single-column collapse at 390px, no overlap, control remains reachable. Still needs a real-device pass.
+- [x] Bento grid checked at 390×844, 768×1024, and 1024×768 (2026-10-10) — single natural-ratio column below 560px (desktop shapes ignored, no cropping even on a tile deliberately set to `cover`), stable 2-column layout in the 561–900px tablet range, no horizontal scroll. Still needs a real-device pass.
 - [ ] Video blocks and Adobe embeds checked on mobile Safari and Chrome (iframe embeds and native `<video>` behave differently across mobile browsers)
 
 ## Accessibility
@@ -44,6 +45,7 @@ See `ROADMAP.md` → "Launch blockers" (as of the 2026-09-20 correction pass, ju
 - [ ] All images have meaningful `alt` text (currently editor-supplied per image; spot-check a sample of the 19 projects rather than assuming)
 - [ ] Category filter buttons expose `aria-pressed` correctly (implemented in code — verify in a screen reader)
 - [ ] Video "Load video" buttons for untrusted-host iframes are reachable and labeled (implemented in code — verify)
+- [x] Bento tiles open the same accessible lightbox as the justified grid (2026-10-10) — same `Lightbox` component, same `imageAccessibleName` labeling, verified Enter-to-open moves focus to the close button and Escape returns focus to the exact tile that opened it
 - [ ] `prefers-reduced-motion: reduce` is respected — currently only disables CSS transitions; autoplaying looped `<video>` elements (`autoPlay={loop} muted={loop}`) do **not** currently check for reduced-motion. Flagged as a gap, not yet fixed. (The 2026-10-10 expand/collapse interaction is a separate, JS-driven animation and does correctly check `prefers-reduced-motion` before running — verified 0 Web Animations fire under it. This existing video gap is unchanged by that work.)
 - [x] Selected-work expand/collapse control (2026-10-10): semantic `<button>`, accurate `aria-expanded`, keyboard focus stays on the control after toggling, reachable with Enter/Space as a native button — verified via headless Chromium
 - [ ] Color contrast spot-checked against WCAG AA (body text is `#555`/`#666` on white in several places — verify against the 4.5:1 threshold at the sizes used)

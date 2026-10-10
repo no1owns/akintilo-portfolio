@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef, useLayoutEffect} from 'react';
 import {flushSync} from 'react-dom';
 import {HiArrowLongRight} from 'react-icons/hi2';
 import settings from '../content/settings.json';
+import {bentoShapeFor} from './bento.js';
 const files=import.meta.glob('../content/projects/*.json',{eager:true,import:'default'});
 const projects=Object.values(files).filter(p=>p.published).sort((a,b)=>a.order-b.order);
 const experimentFiles=import.meta.glob('../content/experiments/*.json',{eager:true,import:'default'});
@@ -13,16 +14,51 @@ export function mediaURL(value){if(!value)return '';return value.startsWith('/me
 function Arrow(){return <HiArrowLongRight aria-hidden="true" className="arrow"/>;}
 function Text({children}){return String(children||'').split('\n\n').filter(Boolean).map((p,i)=><p key={i}>{p}</p>);}
 function Video({block}){const [play,setPlay]=useState(false);const source=block.file||block.url||'';const media=mediaURL(source);const isVideoFile=source.startsWith('/media/')||/\.mp4(?:$|\?)/i.test(source);let host='';try{host=new URL(media).hostname;}catch{}const trusted=['www.youtube.com','www.youtube-nocookie.com','player.vimeo.com'].includes(host);const loop=block.playback!=='controls';return <section className="video-block"><h3>{block.title}</h3>{isVideoFile?<video className="project-video" autoPlay={loop} muted={loop} loop={loop} controls playsInline preload="metadata" poster={block.poster?mediaURL(block.poster):undefined}><source src={media}/></video>:trusted?play?<iframe title={block.title||'Project video'} src={media} allow="fullscreen; picture-in-picture" loading="lazy" referrerPolicy="strict-origin-when-cross-origin"/>:<button className="video-load" onClick={()=>setPlay(true)}>Load video <Arrow/><small>Video loads from {host} when you choose to play.</small></button>:media?<a className="text-link" href={media} target="_blank" rel="noreferrer">View embedded project <Arrow/></a>:null}</section>;}
-function BentoGallery({block}){const ref=useRef(null);const layout=block.layout||'bento';useEffect(()=>{const gallery=ref.current;if(!gallery||layout!=='bento')return;let frame;let layoutFrame;let lastWidth=0;const measure=()=>{cancelAnimationFrame(frame);cancelAnimationFrame(layoutFrame);frame=requestAnimationFrame(()=>{const row=parseFloat(getComputedStyle(gallery).gridAutoRows)||8;const gap=parseFloat(getComputedStyle(gallery).rowGap)||0;gallery.querySelectorAll('figure').forEach(figure=>{const image=figure.querySelector('img');if(!image)return;const requested=figure.dataset.size||'auto';let columns={small:4,medium:6,large:8,wide:12}[requested];if(!columns){const ratio=image.naturalWidth&&image.naturalHeight?image.naturalWidth/image.naturalHeight:1.5;columns=ratio>2?12:ratio<1.15?4:6;}figure.style.gridColumnEnd=`span ${columns}`;figure.style.gridRowEnd='auto';});layoutFrame=requestAnimationFrame(()=>gallery.querySelectorAll('figure').forEach(figure=>{const height=figure.getBoundingClientRect().height;figure.style.gridRowEnd=`span ${Math.max(1,Math.ceil((height+gap)/(row+gap)))}`;}));});};const galleryObserver=new ResizeObserver(([entry])=>{const width=entry?.contentRect.width||0;if(Math.abs(width-lastWidth)>.5){lastWidth=width;measure();}});
-// Re-measure when an image's natural size becomes known (not on every box resize: setting
-// gridColumnEnd below changes the image's rendered width, which would otherwise re-trigger a
-// ResizeObserver watching the image itself, cancel the pending row-span pass, and repeat --
-// a feedback loop that, with enough images in one gallery, could leave gridRowEnd stuck at
-// 'auto' indefinitely (figures collapsed to a single 8px row). 'load'/'error' fire once per
-// image regardless of later layout-driven box changes, so they can't self-retrigger this way.
-const pendingImages=Array.from(gallery.querySelectorAll('img')).filter(image=>!image.complete);
-pendingImages.forEach(image=>{image.addEventListener('load',measure);image.addEventListener('error',measure);});
-galleryObserver.observe(gallery);measure();return()=>{cancelAnimationFrame(frame);cancelAnimationFrame(layoutFrame);galleryObserver.disconnect();pendingImages.forEach(image=>{image.removeEventListener('load',measure);image.removeEventListener('error',measure);});};},[layout,block.images]);return <div ref={ref} className={`gallery layout-${layout} columns-${block.columns||'2'}`}>{(block.images||[]).map((im,j)=><figure key={j} data-size={im.size||'auto'}><img src={mediaURL(im.image)} alt={im.alt||''} loading="lazy"/><figcaption>{im.caption}</figcaption></figure>)}</div>;}
+// Deterministic bento grid (2026-10): tile shapes are a fixed 12-column CSS Grid with
+// constant row-spans per shape -- see .gallery.layout-bento in styles.css. There is no
+// runtime measurement here (no ResizeObserver, no getBoundingClientRect, no rAF, no
+// image-load listener, no dynamically assigned gridRowEnd/gridColumnEnd): a tile's size
+// comes entirely from its `size` value and the CSS rule for that shape, so it can never
+// get stuck mid-calculation the way the old measured version did. New shape names are
+// square/landscape/portrait/feature/wide; the old small/medium/large/wide/auto values
+// from existing content keep working via bentoShapeFor's alias map (src/bento.js,
+// unit-tested directly in tests/bento.test.mjs).
+function BentoGallery({block}){
+  const images=block.images||[];
+  const [lightboxIndex,setLightboxIndex]=useState(null);
+  const triggerRef=useRef(null);
+  const openLightbox=(event,index)=>{triggerRef.current=event.currentTarget;setLightboxIndex(index);};
+  return <div className="gallery layout-bento">
+    {images.map((im,j)=>{
+      const shape=bentoShapeFor(im.size||'auto');
+      const fit=im.fit==='cover'?'cover':'contain';
+      const position=['top','bottom','left','right'].includes(im.position)?im.position:'center';
+      return <figure key={j} className="bento-tile" data-shape={shape}>
+        <button
+          type="button"
+          className="bento-trigger"
+          aria-label={`View full size: ${imageAccessibleName(im,j+1,images.length)}`}
+          onClick={(event)=>openLightbox(event,j)}
+        >
+          <img src={mediaURL(im.image)} alt={im.alt||''} loading="lazy" style={{objectFit:fit,objectPosition:position}}/>
+        </button>
+        {im.caption&&<figcaption className="bento-caption">{im.caption}</figcaption>}
+      </figure>;
+    })}
+    {lightboxIndex!==null&&(
+      <Lightbox
+        images={images}
+        index={lightboxIndex}
+        onClose={()=>setLightboxIndex(null)}
+        onNavigate={(dir)=>setLightboxIndex((current)=>(current+dir+images.length)%images.length)}
+        restoreFocusRef={triggerRef}
+      />
+    )}
+  </div>;
+}
+// Plain same-size grid for images that already share a common aspect ratio -- no shape
+// logic, reuses the generic .gallery.columns-N rules.
+function UniformGallery({block}){const images=block.images||[];return <div className={`gallery layout-uniform columns-${block.columns||'2'}`}>{images.map((im,j)=><figure key={j}><img src={mediaURL(im.image)} alt={im.alt||''} loading="lazy"/>{im.caption&&<figcaption>{im.caption}</figcaption>}</figure>)}</div>;}
 // Responsive target row heights for the justified grid. Adjust these three
 // numbers to change the grid's density; the algorithm below does the rest.
 function justifiedTargetHeight(containerWidth) {
@@ -185,7 +221,7 @@ export function Blocks({blocks=[]}){return groupGalleries(blocks).map((b,i)=><di
  {b.type==='sectionHeading'&&<h2 className="project-section-heading">{b.title}</h2>}
  {b.type==='text'&&<div className={`text-block align-${b.align||'left'}`}>{b.title&&<h2>{b.title}</h2>}<Text>{b.body}</Text></div>}
  {b.type==='image'&&<figure className={b.width==='narrow'?'narrow':''}><img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><figcaption>{b.caption}</figcaption></figure>}
- {b.type==='gallery'&&<>{b.title&&<h2>{b.title}</h2>}{(b.layout||'bento')==='justified'?<JustifiedGallery block={b}/>:<BentoGallery block={b}/>}</>}
+ {b.type==='gallery'&&<>{b.title&&<h2>{b.title}</h2>}{(b.layout||'bento')==='justified'?<JustifiedGallery block={b}/>:b.layout==='uniform'?<UniformGallery block={b}/>:<BentoGallery block={b}/>}</>}
  {b.type==='split'&&<div className={`split image-${b.side||'left'}`}><img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><div><h2>{b.title}</h2><Text>{b.body}</Text></div></div>}
  {b.type==='video'&&<Video block={b}/>}
  </div>);}

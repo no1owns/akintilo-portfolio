@@ -8,7 +8,11 @@ const optional=(label,name,widget='string',extra={})=>field(label,name,widget,{r
 const title=optional('Section heading','title');
 const spacing=field('Section spacing','spacing','select',{options:['tight','regular','generous'],default:'regular'});
 const image=[field('Image','image','image'),field('Image description','alt'),optional('Caption','caption')];
-const galleryImage=[...image,field('Tile size','size','select',{options:[{label:'Automatic',value:'auto'},{label:'Small',value:'small'},{label:'Medium',value:'medium'},{label:'Large',value:'large'},{label:'Full width',value:'wide'}],default:'auto'})];
+// 'size' keeps its old field name for backward compatibility with existing content
+// (small/medium/large/wide/auto) -- the app maps those to the new shape names at
+// render time (see bentoShapeFor in src/App.jsx). New items authored here store the
+// shape name directly. Only used when the gallery's layout is "Bento grid".
+const galleryImage=[...image,field('Bento tile shape','size','select',{options:[{label:'Square',value:'square'},{label:'Landscape',value:'landscape'},{label:'Portrait',value:'portrait'},{label:'Feature (large)',value:'feature'},{label:'Wide (full row)',value:'wide'}],default:'landscape',hint:"Only applies when this gallery's layout is Bento grid."}),field('Image fit','fit','select',{options:[{label:'Contain (show the full image)',value:'contain'},{label:'Cover (crop to fill the tile)',value:'cover'}],default:'contain',hint:'Bento only. Cover crops -- choose it deliberately per image, not as a default.'}),field('Image position','position','select',{options:['center','top','bottom','left','right'],default:'center',hint:'Bento only. Where to anchor the image when Cover crops it.'})];
 const categories=['Brand Systems','Partnerships','Technical Storytelling','Communications'];
 const blocks=field('Page sections','blocks','list',{required:false,collapsed:true,summary:'{{type}} · {{title}}',types:[
  {label:'Project group heading',name:'sectionHeading',widget:'object',fields:[field('Heading','title'),spacing]},

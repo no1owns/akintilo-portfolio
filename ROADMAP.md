@@ -52,6 +52,10 @@ A four-part batch Ayodeji pasted directly, all **done** this pass — see `docs/
 
 Not done, out of scope for this batch per explicit instruction: adding "Experiments" to the main nav, merging to `main`, or touching `akintilo.com` DNS/deployment.
 
+## New work requested (2026-10-10, second batch) — bento grid rewrite
+
+Ayodeji's instruction: stop patching `BentoGallery`'s runtime-measured layout (it kept causing desktop alignment problems) and replace it with a deterministic CSS grid. **Done** — see `docs/portfolio-decisions.md` for the full before/after, including a real 0-height-tile bug (`align-items:start` + flex content-sizing + lazy-loaded images) caught and fixed during validation, not before. Five fixed tile shapes (square/landscape/portrait/feature/wide), old `small`/`medium`/`large`/`wide`/`auto` values still work via an alias map, new per-image `fit`/`position` fields, a lightbox reusing the same accessible component the justified grid already has. No project's `layout` field was changed — see the audit table in `docs/portfolio-decisions.md` and "Items requiring Ayodeji's decision" below for what's recommended next.
+
 ## Resolved this pass
 
 - ~~AppOmni/Secureframe overview-vs-body ordering inconsistency~~ — fixed 2026-09-20. AppOmni is now presented first in both the section order and the overview/outcomes text (AppOmni is Ayodeji's current work and the stronger immediate hiring signal), followed by Secureframe. All outcome attributions were preserved exactly as before — only order changed, no numbers or copy were altered.
@@ -84,3 +88,4 @@ Not done, out of scope for this batch per explicit instruction: adding "Experime
 - Real cover screenshots for the two published Experiments (Multistep Form Generator, Stephen King's Universe) — neither exists in `web-portfolio`, which only has an icon/gradient placeholder for each. Source repo link(s) too, if wanted, since none was identified this session (`no1owns/ForgeHQ` wasn't in this session's repo scope).
 - Whether to add more Experiment records from `web-portfolio`'s "Lab" section (Scene Generator, Brand Content Flywheel, Event Deck Generator, EPS-Agent, and the "coming soon" cards) — all are in-development/coming-soon, not live, so they weren't published this pass. Confirm which should become `published: false` drafts now vs. wait.
 - When to add "Experiments" to the main nav (currently reachable only via the homepage section itself, per this batch's explicit instruction not to add it yet).
+- Approve (or redirect) converting 8 bento projects to `layout: "uniform"` — Visa, Enterprise Integration Campaigns, Lufthansa, Designing for a Developer Platform, Loft, LILT eBook, MongoDB Internal, BetterUp. Each is a one-line JSON change, unambiguous recommendation, zero open content question — see the audit table in `docs/portfolio-decisions.md`. 2 more (Dream Big; Frictionless Product Onboarding) need Ayodeji's pick between two options rather than a default. The rest stay bento for now (either blocked on other content work, or too large/recently-corrected to bundle a layout change into this pass) — same table has the full reasoning per project.
