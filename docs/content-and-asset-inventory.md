@@ -5,6 +5,8 @@ Audited by: Claude Code, working from `no1owns/akintilo-portfolio` (branch `clau
 
 **Current totals (2026-10-01): 20 project files, 18 published.** The original Adobe migration brought in 19 projects (17 published); Meta Connect 2025 Developer Keynote was added afterward as new content, not part of that migration — see its row below and the sourcing note beneath the table.
 
+**Update (2026-10-10):** a separate `site/content/experiments/*.json` content type was added — 2 files, both published (Multistep Form Generator, Stephen King's Universe) — see "Experiments" section below. It is not part of the 20-project count above. The homepage's "Selected work" grid also now defaults to a curated 8-project subset of the 18 published projects (via the `featured` field); the full 18 remain reachable via the new expand control — see "Selected Work curation" below.
+
 ## How this audit was done, and its limits
 
 This session's network egress is restricted to GitHub, npm/PyPI-class registries, and a few other allow-listed hosts. Direct requests to `www.akintilo.com` and `preview.akintilo.com` were blocked by the environment's proxy (`EGRESS_BLOCKED`), so **the live Adobe Portfolio site and the live preview were not fetched or re-verified in this session.** Where the task asked for a live side-by-side comparison, this document instead relies on:
@@ -45,6 +47,23 @@ Legend — **Media**: Local = served from `site/public/media/*.webp` (already in
 | 20 | Launch Marketing for Lyft Business | not verified | `/lyft` | Yes | Not present | Good, small (1 image) | Local; hero video via Adobe Behance embed | **1 Adobe-hosted embed** | bento | full-width | Near-ready | Same embed decision as row 9 | Same as row 9 |
 
 **Meta Connect sourcing note:** this project's cover and 26 gallery images were supplied directly by Ayodeji (uploaded to the session as a ZIP archive) after this environment's network egress proved unable to reach `akintilo.com` to pull the Adobe reference page's media. All 27 files were extracted as-is (no recompression) and their dimensions inspected directly — the first two images are 1200×675 and 1280×720, images 03–26 are all confirmed 1920×1080. Image sequence from the archive was preserved exactly; nothing was reordered, cropped, or invented. Alt text was written by viewing each image individually and describing only what's visibly legible on screen (on-screen speaker names are transcribed as shown; no speaker is named where the slide itself doesn't name them).
+
+## Experiments (new content type, 2026-10-10)
+
+A separate content source from the project table above — `site/content/experiments/*.json`, its own Decap collection, rendered in a homepage section (`id="experiments"`) after Selected Work, not mixed into the project list or its curation logic. See `docs/portfolio-decisions.md` for the full reasoning (why "Experiments" not "Lab," why a separate content type, the no-cover-image gap).
+
+Sourced from `web-portfolio/portfolio.html`'s "The Lab" section — the only place either was found; neither has any representation in `akintilo-portfolio` prior to this pass.
+
+| Slug | Title (this site) | Source title (web-portfolio) | Status in source | Live URL | Cover image | Published |
+|---|---|---|---|---|---|---|
+| `multistep-form-generator` | Multistep Form Generator | "Form Studio" (`lab-type`: Web Tool) | `data-status="live"` | `https://no1owns.github.io/ForgeHQ/projects/multistep-form-generator/` | **None found** — source renders an icon/gradient placeholder, not a screenshot | Yes |
+| `stephen-kings-universe` | Stephen King's Universe | "The Dark Universe" (`lab-type`: Browser Game Portal) | `data-status="live"` | `https://games.theforgehq.com` | **None found** — same placeholder treatment in source | Yes |
+
+Both are rendered with a text/format-pill placeholder tile instead of a fabricated screenshot (see `ExperimentCard` in `src/App.jsx`). The remaining `web-portfolio` Lab cards (Scene Generator, Brand Content Flywheel, Event Deck Generator, EPS-Agent, Booth Visualizer, and others) are all `data-status="in-development"` or `"coming-soon"` — none were published this pass; see `ROADMAP.md`'s "Items requiring Ayodeji's decision" for whether any should be added as unpublished drafts.
+
+## Selected Work curation (2026-10-10)
+
+The homepage "Selected work" grid now defaults to 8 `featured: true` projects (rows 1–7 and 12 below), with the rest reachable via the new "View all work" expand control. Two `featured` flags changed this pass to match Ayodeji's named list: **row 12 (Frictionless Product Onboarding)** `featured: false → true`, and **row 8 (Brand Illustration System / Linx Security)** `featured: true → false` (it isn't one of the 8 named projects, and it's unpublished besides — the field was stale). All other rows' `featured` values were already correct and untouched. See `docs/portfolio-decisions.md` for the full reasoning, including why no `order` values needed to change.
 
 ### Present in web-portfolio only (not yet in akintilo-portfolio, or only partially represented)
 

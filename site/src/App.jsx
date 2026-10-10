@@ -1,8 +1,11 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useLayoutEffect} from 'react';
+import {flushSync} from 'react-dom';
 import {HiArrowLongRight} from 'react-icons/hi2';
 import settings from '../content/settings.json';
 const files=import.meta.glob('../content/projects/*.json',{eager:true,import:'default'});
 const projects=Object.values(files).filter(p=>p.published).sort((a,b)=>a.order-b.order);
+const experimentFiles=import.meta.glob('../content/experiments/*.json',{eager:true,import:'default'});
+const experiments=Object.values(experimentFiles).filter(e=>e.published).sort((a,b)=>a.order-b.order);
 const cats=['All','Brand Systems','Partnerships','Technical Storytelling','Communications'];
 const aliases={'brand-storytelling':'Brand Systems','partnership-campaigns':'Partnerships','technical-storytelling':'Technical Storytelling','communications':'Communications'};
 export function safeURL(value){try {const u=new URL(value,location.origin);return ['http:','https:'].includes(u.protocol)?u.href:'';}catch{return '';}}
@@ -232,8 +235,86 @@ function useCoverParallax(ref){
     return()=>{window.removeEventListener('scroll',onScroll);window.removeEventListener('resize',onScroll);if(frame!==null)cancelAnimationFrame(frame);};
   },[ref]);
 }
-function Card({p}){return <article className="project-card"><a href={'/'+p.slug}><div className="cover"><img src={mediaURL(p.cover)} alt={p.coverAlt||p.title} style={{objectPosition:p.coverPosition||'center'}} loading={p.order<2?'eager':'lazy'}/></div><h3>{p.title}</h3><p>{p.company}</p></a></article>;}
-function Home({initial='All'}){const [filter,setFilter]=useState(cats.includes(initial)?initial:'All');const list=projects.filter(p=>filter==='All'||p.category===filter);const ref=useReveal();useCoverParallax(ref);return <div ref={ref}><section className="hero" data-reveal><h1>{settings.headline}</h1><p>{settings.intro}</p><a className="hero-link" href="#work">View selected work <Arrow/></a></section><section id="work" className="work" data-reveal><h2>Selected work</h2><div className="filters" role="group" aria-label="Filter projects">{cats.map(c=><button key={c} aria-pressed={c===filter} className={c===filter?'active':''} onClick={()=>setFilter(c)}>{c}</button>)}</div><div className={`project-grid columns-${settings.gridColumns||'2'} gap-${settings.gridGap||'comfortable'}`}>{list.map(p=><Card key={p.slug} p={p}/>)}</div></section></div>;}
+function prefersReducedMotion(){return window.matchMedia('(prefers-reduced-motion: reduce)').matches;}
+function Card({p}){return <article className="project-card" data-slug={p.slug} style={{viewTransitionName:'card-'+p.slug}}><a href={'/'+p.slug}><div className="cover"><img src={mediaURL(p.cover)} alt={p.coverAlt||p.title} style={{objectPosition:p.coverPosition||'center'}} loading={p.order<2?'eager':'lazy'}/></div><h3>{p.title}</h3><p>{p.company}</p></a></article>;}
+// Signature interaction (2026-10): the Selected Work grid starts curated to `featured`
+// projects and expands in place to the full category-filtered list. Prefers the View
+// Transitions API (named per card, so the browser morphs position/size itself); falls
+// back to a dependency-free FLIP animation (measure before, measure after, animate the
+// delta) when VT isn't supported. Both are skipped under prefers-reduced-motion, which
+// leaves the grid to reflow instantly.
+function useExpandTransition(gridRef){
+  const prevRectsRef=useRef(null);
+  const captureRects=()=>{
+    const grid=gridRef.current;
+    if(!grid)return;
+    const map=new Map();
+    grid.querySelectorAll('[data-slug]').forEach(card=>map.set(card.dataset.slug,card.getBoundingClientRect()));
+    prevRectsRef.current=map;
+  };
+  useLayoutEffect(()=>{
+    const grid=gridRef.current;
+    const prev=prevRectsRef.current;
+    prevRectsRef.current=null;
+    if(!grid||!prev||prefersReducedMotion())return;
+    grid.querySelectorAll('[data-slug]').forEach(card=>{
+      const before=prev.get(card.dataset.slug);
+      const after=card.getBoundingClientRect();
+      if(before){
+        const dx=before.left-after.left,dy=before.top-after.top;
+        const sx=before.width/after.width,sy=before.height/after.height;
+        if(Math.abs(dx)>.5||Math.abs(dy)>.5||Math.abs(sx-1)>.01||Math.abs(sy-1)>.01)card.animate([{transform:`translate(${dx}px,${dy}px) scale(${sx},${sy})`},{transform:'none'}],{duration:320,easing:'cubic-bezier(.22,.8,.2,1)'});
+      } else {
+        card.animate([{opacity:0,transform:'translateY(10px)'},{opacity:1,transform:'none'}],{duration:260,easing:'ease-out'});
+      }
+    });
+  });
+  return captureRects;
+}
+function ExperimentCard({e}){
+  const url=e.liveUrl||e.sourceUrl;
+  const label=e.liveUrl?'Visit live project':e.sourceUrl?'View source':null;
+  return <article className="experiment-card">
+    <div className="experiment-visual" aria-hidden="true">{e.cover?<img src={mediaURL(e.cover)} alt=""/>:<span className="experiment-format">{e.format}</span>}</div>
+    <div className="experiment-body">
+      {e.cover&&<span className="experiment-format">{e.format}</span>}
+      <h3>{e.title}</h3>
+      <p>{e.overview||e.summary}</p>
+      {e.gallery?.length>0&&<div className="experiment-gallery">{e.gallery.map((im,i)=><img key={i} src={mediaURL(im.image)} alt={im.alt||''} loading="lazy"/>)}</div>}
+      {url&&<a className="text-link" href={safeURL(url)} target="_blank" rel="noreferrer" aria-label={`${label} — opens in a new tab`}>{label} <span aria-hidden="true">&#8599;</span></a>}
+    </div>
+  </article>;
+}
+// Kept as a separate content source (site/content/experiments) from client/employment
+// projects on purpose -- see docs/portfolio-decisions.md. Renders nothing when there's
+// nothing published, so an empty experiments folder doesn't leave a bare heading.
+function Experiments(){
+  if(!experiments.length)return null;
+  return <section id="experiments" className="experiments" data-reveal aria-labelledby="experiments-heading">
+    <p className="eyebrow">Experiments</p>
+    <h2 id="experiments-heading">Things I build<br/>when no one's<br/>watching.</h2>
+    <p className="experiments-intro">AI-assisted tools, games, and workflows outside client work — some live, some in progress.</p>
+    <div className="experiment-grid">{experiments.map(e=><ExperimentCard key={e.slug} e={e}/>)}</div>
+  </section>;
+}
+function Home({initial='All'}){
+  const [filter,setFilter]=useState(cats.includes(initial)?initial:'All');
+  const [expanded,setExpanded]=useState(false);
+  const gridRef=useRef(null);
+  const toggleRef=useRef(null);
+  const captureRects=useExpandTransition(gridRef);
+  const ref=useReveal();useCoverParallax(ref);
+  const list=projects.filter(p=>filter==='All'||p.category===filter);
+  const visible=expanded?list:list.filter(p=>p.featured);
+  const onToggle=()=>{
+    const next=!expanded;
+    if(prefersReducedMotion()){setExpanded(next);}
+    else if(typeof document.startViewTransition==='function'){document.startViewTransition(()=>{flushSync(()=>setExpanded(next));});}
+    else {captureRects();setExpanded(next);}
+    toggleRef.current?.focus();
+  };
+  return <div ref={ref}><section className="hero" data-reveal><h1>{settings.headline}</h1><p>{settings.intro}</p><a className="hero-link" href="#work">View selected work <Arrow/></a></section><section id="work" className="work" data-reveal><h2>Selected work</h2><div className="filters" role="group" aria-label="Filter projects">{cats.map(c=><button key={c} aria-pressed={c===filter} className={c===filter?'active':''} onClick={()=>setFilter(c)}>{c}</button>)}</div><div id="work-grid" ref={gridRef} className={`project-grid columns-${settings.gridColumns||'2'} gap-${settings.gridGap||'comfortable'}`}>{visible.map(p=><Card key={p.slug} p={p}/>)}</div>{!expanded&&visible.length===0&&<p className="work-empty-hint">No featured picks in this category yet — view all work to see everything.</p>}<button type="button" ref={toggleRef} className="work-toggle text-link" aria-expanded={expanded} aria-controls="work-grid" onClick={onToggle}>{expanded?'Show selected work':'View all work'}<Arrow/></button></section><Experiments/></div>;
+}
 function Project({p}){const next=projects[(projects.indexOf(p)+1)%projects.length];return <><header className="project-intro"><a className="eyebrow" href={'/?category='+encodeURIComponent(p.category)}>All {p.category.toLowerCase()} <Arrow/></a><h1>{p.title}</h1><p className="summary">{p.summary}</p><dl><div><dt>Company</dt><dd>{p.company}</dd></div><div><dt>Role</dt><dd>{p.role}</dd></div></dl></header><figure className="project-hero"><img src={mediaURL(p.cover)} alt={p.coverAlt}/></figure><section className="overview"><h2>The work</h2><div><Text>{p.overview}</Text></div></section>{p.outcomes?.length>0&&<section className="outcomes" aria-label="Project outcomes">{p.outcomes.map((o,i)=><div key={i}><strong>{o.value}</strong><p>{o.label}</p></div>)}</section>}<Blocks blocks={p.blocks}/><nav className="project-next" aria-label="Next project"><span>Next project</span><a href={'/'+next.slug}>{next.title}<Arrow/></a></nav></>;}
 function About(){return <section className="simple-page"><p className="eyebrow">About Ayo</p><h1>The story.<br/>The system.<br/>The people using it.</h1><Text>{settings.about}</Text><a href="/resume" className="text-link">View experience <Arrow/></a></section>;}
 function Resume(){return <section className="simple-page"><p className="eyebrow">Experience</p><h1>Brand, web,<br/>and creative direction.</h1>{settings.resume&&<a className="text-link" href={mediaURL(settings.resume)} download>Download résumé <Arrow/></a>}<div className="experience">{[['AppOmni','Senior Visual Designer','Dec 2024–Present'],['Forge HQ','Founder, Creative Director','2020–Present'],['Meta, via TEKSystems','Creative Consultant, Keynote Storytelling (Contract)','2025'],['Secureframe','Principal Designer','2022–2024'],['Navan (TripActions)','Director of Design','2019–2022'],['MongoDB','Creative Director','2015–2019'],['DocuSign','Director of Creative Services','2012–2015']].map(([a,b,c])=><div key={a}><h2>{a}</h2><p>{b}</p><span>{c}</span></div>)}</div></section>;}
@@ -258,4 +339,4 @@ function ContactForm(){
   </form>;
 }
 function Contact(){return <section className="simple-page"><p className="eyebrow">Contact</p><h1>Have something<br/>in mind?</h1><ContactForm/>{settings.contactUrl&&<a className="text-link" href={safeURL(settings.contactUrl)}>Or get in touch <Arrow/></a>}</section>;}
-export function App(){const path=decodeURIComponent(location.pathname).replace(/^\/|\/$/g,'');const [menu,setMenu]=useState(false);const project=projects.find(p=>p.slug===path);const title=project?.title||({about:'About',resume:'Experience',contact:'Contact'}[path])||'Brand systems. Clearer stories.';useEffect(()=>{document.title=title+' | Ayodeji Akintilo';},[title]);return <><a className="skip" href="#main">Skip to content</a><div className="shell"><header className="site-header"><a className="wordmark" href="/">{settings.name}</a><button className="menu-toggle" aria-expanded={menu} aria-controls="main-nav" onClick={()=>setMenu(!menu)}>{menu?'Close':'Menu'}</button><nav id="main-nav" className={menu?'open':''} aria-label="Main navigation">{[['Work','/'],['About','/about'],['Resume','/resume'],['Contact','/contact']].map(([name,url])=><a key={url} aria-current={location.pathname===url?'page':undefined} href={url}>{name}</a>)}</nav></header><main id="main">{project?<Project p={project}/>:path==='about'?<About/>:path==='resume'?<Resume/>:path==='contact'?<Contact/>:!path||aliases[path]?<Home initial={aliases[path]||new URLSearchParams(location.search).get('category')||'All'}/>:<section className="simple-page"><h1>Page not found.</h1><a href="/">Explore the work <Arrow/></a></section>}</main><footer><a href="/">{settings.name}</a><a href="/contact">Get in touch <Arrow/></a><a href="/admin/">Edit portfolio</a></footer></div></>;}
+export function App(){const path=decodeURIComponent(location.pathname).replace(/^\/|\/$/g,'');const [menu,setMenu]=useState(false);const project=projects.find(p=>p.slug===path);const title=project?.title||({about:'About',resume:'Experience',contact:'Contact'}[path])||'Brand systems. Clearer stories.';useEffect(()=>{document.title=title+' | Ayodeji Akintilo';},[title]);return <><a className="skip" href="#main">Skip to content</a><div className="shell"><header className="site-header"><a className="wordmark" href="/">{settings.name}</a><button className="menu-toggle" aria-expanded={menu} aria-controls="main-nav" onClick={()=>setMenu(!menu)}>{menu?'Close':'Menu'}</button><nav id="main-nav" className={menu?'open':''} aria-label="Main navigation">{[['Work','/'],['About','/about'],['Experience','/resume'],['Contact','/contact']].map(([name,url])=><a key={url} aria-current={location.pathname===url?'page':undefined} href={url}>{name}</a>)}</nav></header><main id="main">{project?<Project p={project}/>:path==='about'?<About/>:path==='resume'?<Resume/>:path==='contact'?<Contact/>:!path||aliases[path]?<Home initial={aliases[path]||new URLSearchParams(location.search).get('category')||'All'}/>:<section className="simple-page"><h1>Page not found.</h1><a href="/">Explore the work <Arrow/></a></section>}</main><footer><a href="/">{settings.name}</a><a href="/contact">Get in touch <Arrow/></a><a href="/admin/">Edit portfolio</a></footer></div></>;}

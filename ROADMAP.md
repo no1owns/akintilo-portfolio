@@ -41,6 +41,17 @@ Three items Ayodeji asked to queue up next, after confirming the gallery-grid fi
 
 Also requested the same day, after reviewing the above: a minimal contact form (**done** — mailto-based, see "Resolved this pass" and `docs/portfolio-decisions.md`), and the AppOmni/Secureframe section fix below (**done**).
 
+## New work requested (2026-10-10)
+
+A four-part batch Ayodeji pasted directly, all **done** this pass — see `docs/portfolio-decisions.md` for the full reasoning on each:
+
+1. **Rename "Resume" to "Experience" in the main nav** — done. Route stays `/resume` (no redirect needed; the page's own title/eyebrow already said "Experience").
+2. **Curate the homepage "Selected work" grid to 8 named projects** — done, via the existing (previously unused) `featured` field. The rest of the published catalog stays reachable through the new expand control below.
+3. **One signature interaction: an expandable work collection** — done. "View all work" / "Show selected work" toggle, `aria-expanded`, focus held on the control, View Transitions API preferred with a dependency-free FLIP fallback, both skipped under `prefers-reduced-motion`.
+4. **Add an "Experiments" section** (not "Lab") — done. New `site/content/experiments/*.json` content type, its own CMS collection, placed after Selected Work and before the footer. Published two: Multistep Form Generator and Stephen King's Universe, sourced from `web-portfolio`'s existing "Lab" section (confirmed live, both already had verified copy and a working URL). **Open gap:** neither has a real cover screenshot in the source material — both render with a text/placeholder tile for now rather than a fabricated image. See `docs/portfolio-decisions.md` and "Items requiring Ayodeji's decision" below.
+
+Not done, out of scope for this batch per explicit instruction: adding "Experiments" to the main nav, merging to `main`, or touching `akintilo.com` DNS/deployment.
+
 ## Resolved this pass
 
 - ~~AppOmni/Secureframe overview-vs-body ordering inconsistency~~ — fixed 2026-09-20. AppOmni is now presented first in both the section order and the overview/outcomes text (AppOmni is Ayodeji's current work and the stronger immediate hiring signal), followed by Secureframe. All outcome attributions were preserved exactly as before — only order changed, no numbers or copy were altered.
@@ -70,3 +81,6 @@ Also requested the same day, after reviewing the above: a minimal contact form (
 - New images for Lyft and BetterUp: supply the files, and for Lyft, where they should sit relative to the existing image.
 - For the 4 Adobe Behance embeds (Visa, `mongodb-web`, `mongodb-for-giant-ideas-video`, Lyft): original file, existing YouTube/Vimeo link, or keep as Adobe embeds for now?
 - If true silent server-side delivery is wanted for the contact form (vs. the current mailto hand-off, which needs the visitor's own email client): accept a third-party form-backend dependency (Formspree, FormSubmit, etc.) for it?
+- Real cover screenshots for the two published Experiments (Multistep Form Generator, Stephen King's Universe) — neither exists in `web-portfolio`, which only has an icon/gradient placeholder for each. Source repo link(s) too, if wanted, since none was identified this session (`no1owns/ForgeHQ` wasn't in this session's repo scope).
+- Whether to add more Experiment records from `web-portfolio`'s "Lab" section (Scene Generator, Brand Content Flywheel, Event Deck Generator, EPS-Agent, and the "coming soon" cards) — all are in-development/coming-soon, not live, so they weren't published this pass. Confirm which should become `published: false` drafts now vs. wait.
+- When to add "Experiments" to the main nav (currently reachable only via the homepage section itself, per this batch's explicit instruction not to add it yet).
