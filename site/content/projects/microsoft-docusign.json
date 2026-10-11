@@ -18,25 +18,34 @@
       "images": [
         {
           "image": "/media/3c1e92066c31e930.webp",
+          "width": 1632,
+          "height": 1056,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/a0436b58ee5d178b.webp",
+          "width": 1632,
+          "height": 1056,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/cc7421ccd8553336.webp",
+          "width": 1632,
+          "height": 1056,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/000c9c9ac9a67bfa.webp",
+          "width": 1632,
+          "height": 1056,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -46,30 +55,41 @@
       "images": [
         {
           "image": "/media/e3deb834ce68d2ab.webp",
+          "width": 800,
+          "height": 526,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/8c7d364fc281db30.webp",
+          "width": 800,
+          "height": 530,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/5eb007e3164c3f8d.webp",
+          "width": 851,
+          "height": 315,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/8f0dcab58f266cb5.webp",
+          "width": 800,
+          "height": 526,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/9afa17ddfda4fb32.webp",
+          "width": 800,
+          "height": 526,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -79,15 +99,20 @@
       "images": [
         {
           "image": "/media/a64409d76fef9a77.webp",
+          "width": 900,
+          "height": 560,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/549bad5727017ac2.webp",
+          "width": 600,
+          "height": 315,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -97,15 +122,20 @@
       "images": [
         {
           "image": "/media/0f3e2cabf4a6b2fe.webp",
+          "width": 640,
+          "height": 266,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/a3183bb1bfc3ca88.webp",
+          "width": 1200,
+          "height": 1020,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -115,20 +145,27 @@
       "images": [
         {
           "image": "/media/fe2603f29d9eb3c7.webp",
+          "width": 1920,
+          "height": 1920,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/3c038c858ff99fa8.webp",
+          "width": 1920,
+          "height": 1920,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/686e1b50fe7e21ec.webp",
+          "width": 1920,
+          "height": 1920,
           "alt": "Enterprise Integration Campaigns project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     }
   ],
   "cover": "/media/c4a9662c9f045c52.webp",

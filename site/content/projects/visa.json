@@ -24,50 +24,69 @@
       "images": [
         {
           "image": "/media/55e4da7f11803f7b.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Global Partnership Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/c0f95804cbd43cc8.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Global Partnership Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/7071d3c5f16b99aa.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Global Partnership Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/6216159a1d55d58f.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Global Partnership Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/c4560bd608e84da8.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Global Partnership Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/2cca50a4129b31d1.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Global Partnership Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/f81b8dc3bd458e38.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Global Partnership Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/79fd04bbd66f8eeb.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Global Partnership Campaigns project work",
           "caption": ""
         },
         {
           "image": "/media/0556be708c037c55.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Global Partnership Campaigns project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     }
   ],
   "cover": "/media/80949dacdef53d3c.webp",

@@ -24,35 +24,48 @@
       "images": [
         {
           "image": "/media/90bfe3bf8f205fbc.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Airline Partnership Experience Design project work",
           "caption": ""
         },
         {
           "image": "/media/23c36b9224e13344.webp",
+          "width": 1920,
+          "height": 1129,
           "alt": "Airline Partnership Experience Design project work",
           "caption": ""
         },
         {
           "image": "/media/fd86f87f75938579.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Airline Partnership Experience Design project work",
           "caption": ""
         },
         {
           "image": "/media/742c4a209ce08abd.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Airline Partnership Experience Design project work",
           "caption": ""
         },
         {
           "image": "/media/6408e5a8e0bb6bbd.webp",
+          "width": 800,
+          "height": 450,
           "alt": "Airline Partnership Experience Design project work",
           "caption": ""
         },
         {
           "image": "/media/18cbfe31a0226562.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Airline Partnership Experience Design project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     }
   ],
   "cover": "/media/fa85d213148e9138.webp",

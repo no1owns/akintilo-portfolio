@@ -18,10 +18,13 @@
       "images": [
         {
           "image": "/media/dd0a597a18f778d5.webp",
+          "width": 1920,
+          "height": 2559,
           "alt": "Technical Concept Visualization project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -31,20 +34,27 @@
       "images": [
         {
           "image": "/media/a5c115613cdd0426.webp",
+          "width": 1728,
+          "height": 2304,
           "alt": "Technical Concept Visualization project work",
           "caption": ""
         },
         {
           "image": "/media/781848589aa39ea4.webp",
+          "width": 1728,
+          "height": 2304,
           "alt": "Technical Concept Visualization project work",
           "caption": ""
         },
         {
           "image": "/media/a26ee5114fc51d56.webp",
+          "width": 1920,
+          "height": 2559,
           "alt": "Technical Concept Visualization project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     }
   ],
   "cover": "/media/51b8944b3b9bb030.webp",

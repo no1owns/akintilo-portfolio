@@ -18,10 +18,13 @@
       "images": [
         {
           "image": "/media/579d08192a2a6e19.webp",
+          "width": 1920,
+          "height": 1440,
           "alt": "Culture and Internal Brand Storytelling project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -31,10 +34,13 @@
       "images": [
         {
           "image": "/media/03f3c0677d92c98b.webp",
+          "width": 1920,
+          "height": 1440,
           "alt": "Culture and Internal Brand Storytelling project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -44,10 +50,13 @@
       "images": [
         {
           "image": "/media/580514dbebbd59a7.webp",
+          "width": 1920,
+          "height": 1440,
           "alt": "Culture and Internal Brand Storytelling project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -57,10 +66,13 @@
       "images": [
         {
           "image": "/media/9a90b713c7ca6cad.webp",
+          "width": 1920,
+          "height": 1280,
           "alt": "Culture and Internal Brand Storytelling project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     }
   ],
   "cover": "/media/7f9942430ee3af44.webp",
