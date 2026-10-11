@@ -48,16 +48,16 @@ Legend — **Media**: Local = served from `site/public/media/*.webp` (already in
 
 **Meta Connect sourcing note:** this project's cover and 26 gallery images were supplied directly by Ayodeji (uploaded to the session as a ZIP archive) after this environment's network egress proved unable to reach `akintilo.com` to pull the Adobe reference page's media. All 27 files were extracted as-is (no recompression) and their dimensions inspected directly — the first two images are 1200×675 and 1280×720, images 03–26 are all confirmed 1920×1080. Image sequence from the archive was preserved exactly; nothing was reordered, cropped, or invented. Alt text was written by viewing each image individually and describing only what's visibly legible on screen (on-screen speaker names are transcribed as shown; no speaker is named where the slide itself doesn't name them).
 
-## Experiments (new content type, 2026-10-10)
+## Experiments (new content type, 2026-10-10; cover images added 2026-10-11)
 
-A separate content source from the project table above — `site/content/experiments/*.json`, its own Decap collection, rendered in a homepage section (`id="experiments"`) after Selected Work, not mixed into the project list or its curation logic. See `docs/portfolio-decisions.md` for the full reasoning (why "Experiments" not "Lab," why a separate content type, the no-cover-image gap).
+A separate content source from the project table above — `site/content/experiments/*.json`, its own Decap collection, rendered in a homepage section (`id="experiments"`) after Selected Work, not mixed into the project list or its curation logic. See `docs/portfolio-decisions.md` for the full reasoning (why "Experiments" not "Lab," why a separate content type, and — newest entry — how each cover image was sourced).
 
-Sourced from `web-portfolio/portfolio.html`'s "The Lab" section — the only place either was found; neither has any representation in `akintilo-portfolio` prior to this pass.
+Sourced from `web-portfolio/portfolio.html`'s "The Lab" section — the only place either was found; neither has any representation in `akintilo-portfolio` prior to this pass. `no1owns/ForgeHQ` was identified 2026-10-11 as the actual source repo behind both live projects (`projects/multistep-form-generator/`, `projects/games/dark-universe/`) — useful for any future content/attribution work on these two.
 
 | Slug | Title (this site) | Source title (web-portfolio) | Status in source | Live URL | Cover image | Published |
 |---|---|---|---|---|---|---|
-| `multistep-form-generator` | Multistep Form Generator | "Form Studio" (`lab-type`: Web Tool) | `data-status="live"` | `https://no1owns.github.io/ForgeHQ/projects/multistep-form-generator/` | **None found** — source renders an icon/gradient placeholder, not a screenshot | Yes |
-| `stephen-kings-universe` | Stephen King's Universe | "The Dark Universe" (`lab-type`: Browser Game Portal) | `data-status="live"` | `https://games.theforgehq.com` | **None found** — same placeholder treatment in source | Yes |
+| `multistep-form-generator` | Multistep Form Generator | "Form Studio" (`lab-type`: Web Tool) | `data-status="live"` | `https://no1owns.github.io/ForgeHQ/projects/multistep-form-generator/` | `/media/experiment-multistep-form-generator.webp` — a real screenshot of the actual tool, captured by running its own zero-build source locally (the live URL itself is unreachable from this session) | Yes |
+| `stephen-kings-universe` | Stephen King's Universe | "The Dark Universe" (`lab-type`: Browser Game Portal) | `data-status="live"` | `https://games.theforgehq.com` | `/media/experiment-stephen-kings-universe.webp` — the source repo's own existing `img/og-image.png` social-preview key art (the live-rendered portal page itself only has emoji placeholders for its game tiles, so the og-image was the stronger real asset) | Yes |
 
 Both are rendered with a text/format-pill placeholder tile instead of a fabricated screenshot (see `ExperimentCard` in `src/App.jsx`). The remaining `web-portfolio` Lab cards (Scene Generator, Brand Content Flywheel, Event Deck Generator, EPS-Agent, Booth Visualizer, and others) are all `data-status="in-development"` or `"coming-soon"` — none were published this pass; see `ROADMAP.md`'s "Items requiring Ayodeji's decision" for whether any should be added as unpublished drafts.
 

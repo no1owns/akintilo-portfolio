@@ -311,7 +311,7 @@ function ExperimentCard({e}){
   const url=e.liveUrl||e.sourceUrl;
   const label=e.liveUrl?'Visit live project':e.sourceUrl?'View source':null;
   return <article className="experiment-card">
-    <div className="experiment-visual" aria-hidden="true">{e.cover?<img src={mediaURL(e.cover)} alt=""/>:<span className="experiment-format">{e.format}</span>}</div>
+    <div className="experiment-visual">{e.cover?<img src={mediaURL(e.cover)} alt={e.coverAlt||e.title} style={{objectPosition:e.coverPosition||'center'}}/>:<span className="experiment-format" aria-hidden="true">{e.format}</span>}</div>
     <div className="experiment-body">
       {e.cover&&<span className="experiment-format">{e.format}</span>}
       <h3>{e.title}</h3>
