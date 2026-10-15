@@ -560,6 +560,36 @@
           "image": "/media/8aba420cd09b8f16.gif",
           "alt": "Security Brand Experiences project work",
           "caption": ""
+        },
+        {
+          "image": "/media/3ac4fa7de3162710.webp",
+          "alt": "Tip 1: Find every AI agent and copilot connected to your SaaS apps.",
+          "caption": ""
+        },
+        {
+          "image": "/media/d4a9723db5818fed.webp",
+          "alt": "Tip 2: Give each AI agent only the access its job requires.",
+          "caption": ""
+        },
+        {
+          "image": "/media/0f4babae89d0e331.webp",
+          "alt": "Tip 3: Require human approval for sensitive agent actions.",
+          "caption": ""
+        },
+        {
+          "image": "/media/c573cc5afb2d9006.webp",
+          "alt": "Tip 4: Check what data your AI tools can retain, share, and reach.",
+          "caption": ""
+        },
+        {
+          "image": "/media/b3b5767c79502cdc.webp",
+          "alt": "Tip 5: Watch for unusual AI agent behavior.",
+          "caption": ""
+        },
+        {
+          "image": "/media/26bfb5364ebfcac5.webp",
+          "alt": "Tip 6: Review OAuth connections and revoke access you no longer need.",
+          "caption": ""
         }
       ]
     },

@@ -2,6 +2,18 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-15 — 6 new AppOmni assets added: Cybersecurity Awareness Month AI-agent tips
+
+**What was added:** 6 social graphics Ayodeji supplied directly (uploaded as images, not sourced from any repo) — a numbered "Cybersecurity Awareness Month" tip series about AI agent security (Tip 1: finding every connected AI agent/copilot; Tip 2: least-privilege access; Tip 3: human approval for sensitive agent actions; Tip 4: data retention/sharing visibility; Tip 5: watching for unusual agent behavior; Tip 6: reviewing/revoking OAuth connections). Saved as optimized WebP (1080×1080, 46–72 KB each) in `site/public/media/`.
+
+**Placement — confirmed with Ayodeji before touching content, given this project's history of AppOmni/Secureframe attribution mistakes:** appended to the end of the existing AppOmni image gallery within `brand-systems-and-web-performance.json` (the 45-image block right after the "AppOmni" section heading) — no new sub-section, per his direct choice. Gallery is now 51 images; the file's total image count is 94 (was 88). Sequenced Tip 1 → Tip 6 in reading order (the order he sent them in was 5/6/4/3/2/1).
+
+**Alt text:** transcribed verbatim from each slide's own "Tip N" label and headline — per his direct choice, nothing paraphrased or invented (e.g. "Tip 3: Require human approval for sensitive agent actions."), consistent with this project's standing no-invented-content policy.
+
+**Verified:** every image `src` diffed old vs. new, exact-set match (same 88 plus the 6 new paths, nothing lost or duplicated) before writing. `npm run build` (26 routes, clean) and `npm run test:sites` (13/13) pass. Playwright: all 6 images confirmed loaded (`naturalWidth` > 0) once scrolled into view, correct alt text present, positioned immediately before the next video block as intended, zero console errors. This gallery is still on the (now-deterministic) bento grid, not yet converted to justified — the 6 new images render as plain landscape tiles like the rest of the uncurated gallery, consistent with its current state.
+
+**Decided by:** Ayodeji, directly (supplied the assets; confirmed placement and alt-text approach via a clarifying question before any file was touched).
+
 ## 2026-10-11 — Justified-grid rollout, round 1: the 8 unambiguous "uniform" candidates converted to justified instead
 
 **Context:** Ayodeji compared the justified grid on `mongodb-the-next-generation-database` against the (now-deterministic, but still flat-looking) bento grid everywhere else and asked to start converting. Of the two open recommendations from the 2026-10-10 bento audit table — convert to `uniform` or convert to `justified` — this round went with justified for all 8, since that's the layout he'd just confirmed he prefers, and justified's own standing documentation already frames `uniform` as the layout for images that merely "share a common aspect ratio," which undersells what these galleries actually have (mixed photography, device mockups, and slide exports with real ratio variety that justified handles better than either bento or uniform).
