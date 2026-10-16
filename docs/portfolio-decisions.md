@@ -31,6 +31,19 @@ Running log of durable creative/technical decisions for the akintilo-portfolio l
 
 **Decided by:** Ayodeji, directly — flagged the miscategorization and asked for duration-based review; supplied the new video after the two blocked delivery paths; confirmed it's a TripActions video.
 
+## 2026-10-16 (third pass) — 2 more TripActions Liquid ads added to the reel
+
+Ayodeji uploaded 2 more videos directly (`TripActions-Concept2-BusinessTravelerPersona-A_1920x1080.mp4`, 9.5 MB; `1920x1080_BLACK_VERSION_2.mp4`, 10.7 MB), both confirmed as TripActions. Frame extraction (`ffmpeg`, same method used throughout this project) showed both are variants of the same "Hello, Liquid" TripActions Liquid-card campaign already represented in the reel by "Introducing TripActions Liquid": scrolling real-time expense line items (rental car, conference, coffee, lunch, taxi, gas) dissolving into tagline text, then the glowing Liquid card, closing on the same "TripActions / Let's go" lockup used across the other TripActions ads already in the reel.
+
+- **"Goodbye Expenses, Hello Liquid"** (blue/"Concept2-BusinessTravelerPersona-A" version) — reads "Goodbye, Expenses." then "Hello, Liquid." before the card and lockup.
+- **"Hello, Liquid"** (black-background/"Version 2") — a black-background variant leading with "Hello, Liquid." directly, plus a red bracket wipe transition.
+
+Both are ~10s tagline-driven pieces, the same pattern as the existing Hello Travel / Bring It On / Future of Work entries, so both were filed under Ads & Commercials rather than Product Launch or Explainers — they don't name a specific feature (unlike "Inside the Card") or carry a launch narrative (unlike the 30–84s Product Launch entries). Re-encoded the same way as the rest of this project's video migrations: H.264, 1920×1080, audio stripped (muted/looped like every reel video) — 9.5 MB → 2.6 MB and 10.7 MB → 1.8 MB, both verified with an `ffmpeg -f null` decode pass (no errors, same durations). Neither is part of any existing project's `blocks` — both are reel-only, same as "Inside the Card" added in the prior pass.
+
+**Verified:** `npm run build` (27 routes, unchanged) and `npm run test:sites` (13/13) pass; Playwright at 1440px and 390px shows 21 reel items rendering, zero console errors, `/reel` still absent from `#main-nav`.
+
+**Decided by:** Ayodeji, directly — uploaded both files and confirmed they're TripActions videos.
+
 ## 2026-10-15 — 6 new AppOmni assets added: Cybersecurity Awareness Month AI-agent tips
 
 **What was added:** 6 social graphics Ayodeji supplied directly (uploaded as images, not sourced from any repo) — a numbered "Cybersecurity Awareness Month" tip series about AI agent security (Tip 1: finding every connected AI agent/copilot; Tip 2: least-privilege access; Tip 3: human approval for sensitive agent actions; Tip 4: data retention/sharing visibility; Tip 5: watching for unusual agent behavior; Tip 6: reviewing/revoking OAuth connections). Saved as optimized WebP (1080×1080, 46–72 KB each) in `site/public/media/`.

@@ -107,6 +107,20 @@
     },
     {
       "category": "Ads & Commercials",
+      "title": "Goodbye Expenses, Hello Liquid",
+      "company": "TripActions",
+      "description": "A brand ad for the TripActions Liquid card — scrolling real-time expense line items dissolve into \"Goodbye, Expenses\" and \"Hello, Liquid,\" closing on the card and TripActions' \"Let's go\" tagline.",
+      "file": "/media/motion-tripactions-goodbye-expenses.mp4"
+    },
+    {
+      "category": "Ads & Commercials",
+      "title": "Hello, Liquid",
+      "company": "TripActions",
+      "description": "A black-background variant of the TripActions Liquid card ad — scrolling expense line items and a red bracket wipe lead into \"Hello, Liquid\" and the card reveal, closing on TripActions' \"Let's go\" tagline.",
+      "file": "/media/motion-tripactions-hello-liquid.mp4"
+    },
+    {
+      "category": "Ads & Commercials",
       "title": "Global Partnership Campaigns",
       "company": "TripActions × Visa",
       "description": "Co-marketing that connected the corporate card with a broader travel story.",

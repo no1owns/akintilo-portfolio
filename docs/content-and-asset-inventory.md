@@ -71,10 +71,10 @@ Categories are assigned by actual content and duration, not by title wording —
 |---|---|---|
 | Product Launch | Marlin AI, BusinessToGo, TripActions Liquid | 3 self-hosted |
 | Explainers | Comply AI for Remediation, Inside the Card, SOC 2 Trust Service Criteria, Secure By Design, Designing for a Developer Platform, Innovation Without Limits | 4 self-hosted, 2 Adobe embeds |
-| Ads & Commercials | Save Hours on Compliance, Hello Travel, Bring It On, Future of Work, Global Partnership Campaigns | 4 self-hosted, 1 Adobe embed |
+| Ads & Commercials | Save Hours on Compliance, Hello Travel, Bring It On, Future of Work, Goodbye Expenses Hello Liquid, Hello Liquid (black variant), Global Partnership Campaigns | 6 self-hosted, 1 Adobe embed |
 | Brand & Campaign Work | Introducing Comply AI, AI Agent Security, Connected Network, Visibility & Protection, Coffee with Customers | 5 self-hosted |
 
-18 of 19 videos re-present video blocks that already exist in 9 published projects (see `docs/portfolio-decisions.md` for the full inclusion/exclusion list and per-video title/description sourcing). The 19th, "Inside the Card" (TripActions), is reel-only: Ayodeji supplied it directly (12.16 MB original, re-encoded to 2.33 MB — H.264, 1920×1080, audio stripped, same approach as the original `work.akintilo.com` migration) since it was held back from the original site for file size and isn't part of any existing project's `blocks`.
+18 of 21 videos re-present video blocks that already exist in 9 published projects (see `docs/portfolio-decisions.md` for the full inclusion/exclusion list and per-video title/description sourcing). The other 3 are reel-only additions Ayodeji supplied directly because they were held back from the original site for file size, and aren't part of any existing project's `blocks`: "Inside the Card" (12.16 MB → 2.33 MB), "Goodbye Expenses, Hello Liquid" (9.5 MB → 2.6 MB), and "Hello, Liquid" (10.7 MB → 1.8 MB) — all re-encoded H.264/1920×1080/audio-stripped, same approach as the original `work.akintilo.com` migration.
 
 Excluded from the 23-video source inventory: Lyft's Adobe embed and all 4 `event-brand-experiential` videos — both confirmed out of scope directly by Ayodeji (not product-related).
 
