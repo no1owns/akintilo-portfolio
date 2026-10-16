@@ -61,6 +61,19 @@ Sourced from `web-portfolio/portfolio.html`'s "The Lab" section — the only pla
 
 Both are rendered with a text/format-pill placeholder tile instead of a fabricated screenshot (see `ExperimentCard` in `src/App.jsx`). The remaining `web-portfolio` Lab cards (Scene Generator, Brand Content Flywheel, Event Deck Generator, EPS-Agent, Booth Visualizer, and others) are all `data-status="in-development"` or `"coming-soon"` — none were published this pass; see `ROADMAP.md`'s "Items requiring Ayodeji's decision" for whether any should be added as unpublished drafts.
 
+## Video reel page (new content type, 2026-10-16)
+
+A standalone, unlisted page at `/reel` — `site/content/reel.json`, its own Decap "files" collection, rendered by `Reel()` in `src/App.jsx`. Not a project and not in the comparison matrix above: it re-presents 18 video blocks that already exist in 9 published projects (see `docs/portfolio-decisions.md` for the full inclusion/exclusion list and per-video title/description sourcing). Not linked from the main nav or footer; prerendered like every other route but forced `noindex,nofollow` and excluded from `sitemap.xml` (`scripts/prerender.mjs`) — reachable only by direct link, which is the point (Ayodeji wants to share it with a potential employer without it being part of the public site structure).
+
+| Category | Videos | Source |
+|---|---|---|
+| Product Launch | Comply AI, Marlin AI, BusinessToGo, TripActions Liquid | 4 self-hosted |
+| Explainers | Comply AI for Remediation, SOC 2 Trust Service Criteria, Designing for a Developer Platform, Innovation Without Limits | 2 self-hosted, 2 Adobe embeds |
+| Ads & Commercials | Save Hours on Compliance, Hello Travel, Bring It On, Future of Work, Global Partnership Campaigns | 4 self-hosted, 1 Adobe embed |
+| Brand & Campaign Work | AI Agent Security, Connected Network, Visibility & Protection, Secure By Design, Coffee with Customers | 5 self-hosted |
+
+Excluded from the 23-video source inventory: Lyft's Adobe embed and all 4 `event-brand-experiential` videos — both confirmed out of scope directly by Ayodeji (not product-related).
+
 ## Selected Work curation (2026-10-10)
 
 The homepage "Selected work" grid now defaults to 8 `featured: true` projects (rows 1–7 and 12 below), with the rest reachable via the new "View all work" expand control. Two `featured` flags changed this pass to match Ayodeji's named list: **row 12 (Frictionless Product Onboarding)** `featured: false → true`, and **row 8 (Brand Illustration System / Linx Security)** `featured: true → false` (it isn't one of the 8 named projects, and it's unpublished besides — the field was stale). All other rows' `featured` values were already correct and untouched. See `docs/portfolio-decisions.md` for the full reasoning, including why no `order` values needed to change.

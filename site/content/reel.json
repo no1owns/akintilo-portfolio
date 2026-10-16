@@ -1,0 +1,150 @@
+{
+  "title": "Reel",
+  "intro": "Product launch films, explainers, ads, and brand motion work pulled from case studies across this site — all in one place.",
+  "videos": [
+    {
+      "category": "Product Launch",
+      "title": "Introducing Comply AI",
+      "company": "Secureframe",
+      "description": "The title-card animation introducing Comply AI, Secureframe's AI-powered remediation product.",
+      "file": "/media/motion-secureframe-06.mp4",
+      "sourceSlug": "brand-systems-and-web-performance"
+    },
+    {
+      "category": "Product Launch",
+      "title": "Introducing Marlin AI",
+      "company": "AppOmni",
+      "description": "The launch video for Marlin AI, AppOmni's AI-driven SaaS security investigation assistant that correlates, investigates, and remediates risk automatically.",
+      "file": "/media/motion-appomni-04.mp4",
+      "sourceSlug": "brand-systems-and-web-performance"
+    },
+    {
+      "category": "Product Launch",
+      "title": "BusinessToGo",
+      "company": "TripActions × Lufthansa Group",
+      "description": "The launch video for BusinessToGo, a TripActions travel-booking product built in partnership with Lufthansa Group — booking, itinerary management, and loyalty points in one flow.",
+      "file": "/media/motion-lufthansa-hero.mp4",
+      "sourceSlug": "lufthansa"
+    },
+    {
+      "category": "Product Launch",
+      "title": "Introducing TripActions Liquid",
+      "company": "TripActions",
+      "description": "The brand film introducing TripActions Liquid, a corporate card and expense management product — a cinematic travel narrative building to the product reveal.",
+      "file": "/media/motion-tripactions-travel-expense-hero.mp4",
+      "sourceSlug": "tripactions"
+    },
+    {
+      "category": "Explainers",
+      "title": "Comply AI for Remediation",
+      "company": "Secureframe",
+      "description": "A product explainer demonstrating Comply AI: detecting a misconfigured AWS resource and generating a Terraform fix automatically, no manual work required.",
+      "file": "/media/motion-secureframe-01.mp4",
+      "sourceSlug": "brand-systems-and-web-performance"
+    },
+    {
+      "category": "Explainers",
+      "title": "SOC 2 Trust Service Criteria",
+      "company": "Secureframe",
+      "description": "An explainer walking through SOC 2's Trust Service Criteria — Security, Confidentiality, and Privacy.",
+      "file": "/media/motion-secureframe-09.mp4",
+      "sourceSlug": "brand-systems-and-web-performance"
+    },
+    {
+      "category": "Explainers",
+      "title": "Designing for a Developer Platform",
+      "company": "MongoDB",
+      "description": "Helping developers understand and explore a growing product platform.",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/GjsQMLn3E7-/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "sourceSlug": "mongodb-web"
+    },
+    {
+      "category": "Explainers",
+      "title": "Innovation Without Limits",
+      "company": "MongoDB",
+      "description": "Product and brand storytelling for a developer audience.",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/4psJ9Iy7jBf/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "sourceSlug": "mongodb-for-giant-ideas-video"
+    },
+    {
+      "category": "Ads & Commercials",
+      "title": "Save Hours on Compliance",
+      "company": "Secureframe",
+      "description": "A paid social ad promoting time saved on security compliance work, with a demo-booking call to action.",
+      "file": "/media/motion-secureframe-08.mp4",
+      "sourceSlug": "brand-systems-and-web-performance"
+    },
+    {
+      "category": "Ads & Commercials",
+      "title": "Hello Travel",
+      "company": "TripActions",
+      "description": "An animated brand ad built around a plane-window reveal — \"Hello World, Hello Travel\" — closing on TripActions' \"Let's go\" tagline.",
+      "file": "/media/motion-tripactions-ad-1.mp4",
+      "sourceSlug": "tripactions"
+    },
+    {
+      "category": "Ads & Commercials",
+      "title": "Bring It On",
+      "company": "TripActions",
+      "description": "A confident brand ad addressing increased scrutiny on business travel expenses — \"Bring it on.\"",
+      "file": "/media/motion-tripactions-ad-2.mp4",
+      "sourceSlug": "tripactions"
+    },
+    {
+      "category": "Ads & Commercials",
+      "title": "Future of Work",
+      "company": "TripActions",
+      "description": "A brand ad on remote work and staying connected — \"Get ready for the future of work.\"",
+      "file": "/media/motion-tripactions-ad-3.mp4",
+      "sourceSlug": "tripactions"
+    },
+    {
+      "category": "Ads & Commercials",
+      "title": "Global Partnership Campaigns",
+      "company": "TripActions × Visa",
+      "description": "Co-marketing that connected the corporate card with a broader travel story.",
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/KFgp954czdh/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "sourceSlug": "visa"
+    },
+    {
+      "category": "Brand & Campaign Work",
+      "title": "AI Agent Security",
+      "company": "AppOmni",
+      "description": "A short animated brand piece built around AppOmni's AI-agent-security concept — one agent figure watching over another.",
+      "file": "/media/motion-appomni-01.mp4",
+      "sourceSlug": "brand-systems-and-web-performance"
+    },
+    {
+      "category": "Brand & Campaign Work",
+      "title": "Connected Network",
+      "company": "AppOmni",
+      "description": "An abstract network-node motion graphic representing connected systems and data, used as brand and background animation.",
+      "file": "/media/motion-appomni-02.mp4",
+      "sourceSlug": "brand-systems-and-web-performance"
+    },
+    {
+      "category": "Brand & Campaign Work",
+      "title": "Visibility & Protection",
+      "company": "AppOmni",
+      "description": "A shield-and-eye motion graphic symbolizing AppOmni's visibility into, and protection against, SaaS security threats.",
+      "file": "/media/motion-appomni-03.mp4",
+      "sourceSlug": "brand-systems-and-web-performance"
+    },
+    {
+      "category": "Brand & Campaign Work",
+      "title": "Secure By Design",
+      "company": "Secureframe",
+      "description": "A product UI and risk-illustration motion piece — a support chat widget alongside an animated illustration of unsecured work at a laptop, flagged with warning icons.",
+      "file": "/media/motion-secureframe-10.mp4",
+      "sourceSlug": "brand-systems-and-web-performance"
+    },
+    {
+      "category": "Brand & Campaign Work",
+      "title": "Coffee with Customers",
+      "company": "DocuSign",
+      "description": "An iPad walkthrough of \"Coffee with Customers,\" a DocuSign enterprise communications campaign.",
+      "file": "/media/motion-docusign.mp4",
+      "sourceSlug": "docusign-enterprise-campaign"
+    }
+  ]
+}

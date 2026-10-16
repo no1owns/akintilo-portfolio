@@ -99,3 +99,12 @@
 .experiment-body .text-link{font-size:15px;margin-top:4px}
 @media(max-width:800px){.experiment-grid{gap:20px}}
 @media(max-width:560px){.experiments{padding-top:50px;margin-top:50px}.experiments h2{font-size:28px}.experiment-grid{grid-template-columns:1fr}}
+.reel-category{margin-top:60px}
+.reel-category h2{font-size:clamp(26px,3vw,36px);line-height:1.1;margin-bottom:24px;letter-spacing:-.03em}
+.reel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.reel-item{border:1px solid #ddd;border-radius:4px;overflow:hidden;background:#fafafa}
+.reel-item .video-block{margin:0}
+.reel-item .video-block h3{font-size:19px;margin:18px 24px 0}
+.reel-item-meta{margin:14px 24px 0;color:#555;font-size:14px;letter-spacing:.02em}
+.reel-item>p:last-child{margin:6px 24px 22px;color:#555;font-size:16px;line-height:1.5}
+@media(max-width:800px){.reel-grid{grid-template-columns:1fr;gap:24px}}

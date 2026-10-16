@@ -2,6 +2,22 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-16 — New shareable `/reel` page: product launch, explainer, ad, and brand video work
+
+**What was requested:** Ayodeji asked to collect every product launch film, explainer, ad/commercial, and other product-related video already published across the case studies into one page, so he can share a single link with a potential employer. Requirement: it does not need to be in the main nav, but must be directly reachable by URL.
+
+**Content inventory:** audited every `blocks[].type === "video"` entry across all 19 published project JSON files — 23 total video blocks across 9 projects. Of those, 5 were excluded, 18 included:
+- **Excluded, confirmed by Ayodeji directly (`AskUserQuestion`):** Lyft's Adobe embed ("It's not product related") and all 4 `event-brand-experiential` videos (event coverage, not product/launch/ad content — confirmed "Exclude").
+- **Included:** all 9 self-hosted Secureframe/AppOmni motion pieces from `brand-systems-and-web-performance`, all 4 TripActions ads/hero videos, the Lufthansa/BusinessToGo launch video, the DocuSign video, and the 3 remaining Adobe embeds (Visa, `mongodb-web`, `mongodb-for-giant-ideas-video`) — these are product/brand work, unlike the excluded Lyft embed.
+
+**Per-video titles and descriptions:** none of the existing project blocks had individual per-video titles (many share one generic block title, e.g. "Security Brand Experiences video," across multiple distinct videos in the same project) — reusing those would have been misleading on a dedicated reel page. Instead, extracted 5 evenly-spaced frames per self-hosted video via `ffmpeg`/`ffprobe` (at 8/28/50/72/92% of duration), combined into contact sheets, and wrote each title/description directly from what's visible on screen — consistent with this project's standing "never invent metrics, outcomes, dates, or attributions" policy. The 3 included Adobe embeds reuse their own project's already-verified `title`/`company`/`summary` fields rather than new text, since those can't be frame-inspected the same way.
+
+**Implementation:** new `site/content/reel.json` (title/intro/videos array, one CMS "files" collection entry in `site/admin/editor.js` mirroring the `settings` pattern) feeding a new `Reel()` component in `src/App.jsx` at `/reel`, grouped into Product Launch / Explainers / Ads & Commercials / Brand & Campaign Work, reusing the existing `Video` component as-is (so self-hosted files autoplay muted/looped and the 3 untrusted Adobe-host embeds fall back to the same "View embedded project" external link used elsewhere). `scripts/prerender.mjs` prerenders `/reel` like every other route (so it's a real static page, reachable and crawlable by direct link) but treats it as an explicitly unlisted route: forced `noindex,nofollow` regardless of whether `settings.siteUrl` is set, and left out of `sitemap.xml` generation — the goal is "accessible by link," not "discoverable."
+
+**Verified:** `npm run build` (27 routes, clean — up from 26) and `npm run test:sites` (13/13) pass. Confirmed in the built output: `/reel/index.html` exists, carries `<meta name="robots" content="noindex,nofollow">`, and is absent from the main-nav markup on every page. Playwright at 1440px and 390px: all 18 reel items render (4 category headings, zero missing videos), zero console errors, no `/reel` link anywhere in `#main-nav`.
+
+**Decided by:** Ayodeji, directly — requested the page and its unlisted-but-linkable requirement; confirmed the Lyft exclusion, the event-video exclusion, and the `/reel` URL path via `AskUserQuestion` before content was written.
+
 ## 2026-10-15 — 6 new AppOmni assets added: Cybersecurity Awareness Month AI-agent tips
 
 **What was added:** 6 social graphics Ayodeji supplied directly (uploaded as images, not sourced from any repo) — a numbered "Cybersecurity Awareness Month" tip series about AI agent security (Tip 1: finding every connected AI agent/copilot; Tip 2: least-privilege access; Tip 3: human approval for sensitive agent actions; Tip 4: data retention/sharing visibility; Tip 5: watching for unusual agent behavior; Tip 6: reviewing/revoking OAuth connections). Saved as optimized WebP (1080×1080, 46–72 KB each) in `site/public/media/`.
