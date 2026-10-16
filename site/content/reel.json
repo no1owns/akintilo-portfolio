@@ -4,14 +4,6 @@
   "videos": [
     {
       "category": "Product Launch",
-      "title": "Introducing Comply AI",
-      "company": "Secureframe",
-      "description": "The title-card animation introducing Comply AI, Secureframe's AI-powered remediation product.",
-      "file": "/media/motion-secureframe-06.mp4",
-      "sourceSlug": "brand-systems-and-web-performance"
-    },
-    {
-      "category": "Product Launch",
       "title": "Introducing Marlin AI",
       "company": "AppOmni",
       "description": "The launch video for Marlin AI, AppOmni's AI-driven SaaS security investigation assistant that correlates, investigates, and remediates risk automatically.",
@@ -33,6 +25,14 @@
       "description": "The brand film introducing TripActions Liquid, a corporate card and expense management product — a cinematic travel narrative building to the product reveal.",
       "file": "/media/motion-tripactions-travel-expense-hero.mp4",
       "sourceSlug": "tripactions"
+    },
+    {
+      "category": "Explainers",
+      "title": "Secure By Design",
+      "company": "Secureframe",
+      "description": "A product UI and risk-illustration motion piece — a support chat widget alongside an animated illustration of unsecured work at a laptop, flagged with warning icons.",
+      "file": "/media/motion-secureframe-10.mp4",
+      "sourceSlug": "brand-systems-and-web-performance"
     },
     {
       "category": "Explainers",
@@ -132,10 +132,10 @@
     },
     {
       "category": "Brand & Campaign Work",
-      "title": "Secure By Design",
+      "title": "Introducing Comply AI",
       "company": "Secureframe",
-      "description": "A product UI and risk-illustration motion piece — a support chat widget alongside an animated illustration of unsecured work at a laptop, flagged with warning icons.",
-      "file": "/media/motion-secureframe-10.mp4",
+      "description": "The title-card animation introducing Comply AI, Secureframe's AI-powered remediation product.",
+      "file": "/media/motion-secureframe-06.mp4",
       "sourceSlug": "brand-systems-and-web-performance"
     },
     {
