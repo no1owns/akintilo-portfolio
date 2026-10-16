@@ -18,6 +18,19 @@ Running log of durable creative/technical decisions for the akintilo-portfolio l
 
 **Decided by:** Ayodeji, directly — requested the page and its unlisted-but-linkable requirement; confirmed the Lyft exclusion, the event-video exclusion, and the `/reel` URL path via `AskUserQuestion` before content was written.
 
+## 2026-10-16 (second pass) — Reel recategorization by content/duration, plus a 19th video added
+
+**Recategorization:** Ayodeji flagged that some reel entries were "just animations or ads" mis-sorted into Product Launch/Explainers by title wording alone, and said duration should factor into the category call. Pulled exact durations via `ffprobe` for all 15 self-hosted videos and re-checked each against its already-reviewed frames:
+- "Introducing Comply AI" (`motion-secureframe-06`, 2.6s) — Product Launch → Brand & Campaign Work. It's a title-card logo reveal, not a launch narrative like the two other Product Launch entries (31s, 84s).
+- "Secure By Design" (`motion-secureframe-10`, 36.5s) — Brand & Campaign Work → Explainers. At 36.5s it explains a specific risk concept (unsecured laptop → flagged warnings) rather than functioning as ambient brand motion.
+- Everything else checked out against the same logic (sub-10s AppOmni/DocuSign pieces are genuinely loops; 8–10s TripActions pieces are genuinely tone-only ads; 20–84s pieces are genuinely launch/explainer content) and was left as-is.
+
+**New video added — "Inside the Card" (TripActions):** Ayodeji said he had more videos held back from the original site for file size. First attempt was a `gofile.me` link, which this session's network policy doesn't allow (egress proxy only permits a fixed allowlist — GitHub, npm, PyPI, etc.) — flagged to him rather than guessing a workaround. Second attempt was a Google Drive link; the file (`_TripActions-InsideTheCard_1_1920x1080.mp4`, 12.16 MB) exceeded the Drive connector's 10 MB download cap. Ayodeji then uploaded the file directly into the conversation. Confirmed by frame extraction (5 frames via `ffmpeg`, same method as the rest of this project): a TripActions corporate-card reveal that calls out two named features — "Powerful Spend Controls" and "Automated Reconciliation" — before closing on the card and TripActions' "Let's go" tagline. Categorized as Explainers (names specific product capabilities, unlike the existing TripActions Ads & Commercials entries, which are tone-only). Re-encoded the same way as the original 19-video `work.akintilo.com` migration — H.264, capped at 1920px width (already 1920×1080, so just re-muxed/compressed, not downscaled), audio stripped (renders muted/looped like every other reel video) — 12.16 MB → 2.33 MB, verified with an `ffmpeg -f null` decode pass (no errors, same duration). This video isn't part of any existing project's `blocks` — it's reel-only.
+
+**Verified:** `npm run build` (27 routes, unchanged — the reel route itself doesn't add a route count) and `npm run test:sites` (13/13) pass after both the recategorization and the new video.
+
+**Decided by:** Ayodeji, directly — flagged the miscategorization and asked for duration-based review; supplied the new video after the two blocked delivery paths; confirmed it's a TripActions video.
+
 ## 2026-10-15 — 6 new AppOmni assets added: Cybersecurity Awareness Month AI-agent tips
 
 **What was added:** 6 social graphics Ayodeji supplied directly (uploaded as images, not sourced from any repo) — a numbered "Cybersecurity Awareness Month" tip series about AI agent security (Tip 1: finding every connected AI agent/copilot; Tip 2: least-privilege access; Tip 3: human approval for sensitive agent actions; Tip 4: data retention/sharing visibility; Tip 5: watching for unusual agent behavior; Tip 6: reviewing/revoking OAuth connections). Saved as optimized WebP (1080×1080, 46–72 KB each) in `site/public/media/`.
