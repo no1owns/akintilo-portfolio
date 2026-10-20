@@ -211,12 +211,6 @@
       ]
     },
     {
-      "type": "video",
-      "title": "Security Brand Experiences video",
-      "file": "/media/motion-secureframe-10.mp4",
-      "spacing": "regular"
-    },
-    {
       "type": "gallery",
       "title": "",
       "columns": "2",

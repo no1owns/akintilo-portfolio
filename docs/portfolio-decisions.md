@@ -2,6 +2,43 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-20 — Reel page revision pass: content fixes, autoplay off, role attribution on every entry
+
+After the reel went live, Ayodeji reviewed it and sent back a full batch of corrections. All of the following landed in one pass, with every genuinely ambiguous call confirmed with him directly before writing content (per this project's standing "never invent, ask if unsure" policy):
+
+**Autoplay removed sitewide on the reel.** He flagged that videos linking to Adobe-hosted content shouldn't autoplay, and more broadly that none of the 21 reel videos should play automatically. Added `"playback": "controls"` to every entry — reuses the existing `Video` component mechanism in `src/App.jsx` (no code change needed), so every reel video now shows standard controls instead of autoplaying muted/looped.
+
+**`motion-secureframe-10.mp4` removed from the site entirely, not just the reel.** Flagged as "has mistakes." Confirmed with Ayodeji that this should be a full removal: the reel entry was deleted, the video block referencing it in `site/content/projects/brand-systems-and-web-performance.json` was removed (the only other place it was used — confirmed via a repo-wide grep), and the media file itself was deleted (`git rm`). That project's video count is now 8, down from 9.
+
+**Visa story consolidated.** Ayodeji pointed out that "Introducing TripActions Liquid" and the separate "Global Partnership Campaigns" (Visa) Adobe-embed entry told the same story. Confirmed with him: removed the Adobe-embed duplicate, and renamed/recategorized the self-hosted entry to carry the Visa co-marketing copy — title and company now "TripActions × Visa," description "Co-marketing that connected the corporate card with a broader travel story," category moved from Product Launch to Ads & Commercials (confirmed via question).
+
+**Two re-categorizations:** "SOC 2 Trust Service Criteria" moved Explainers → Ads & Commercials ("it's more of an ad," his words). "Comply AI for Remediation" moved Explainers → Product Launch.
+
+**"Coffee with Customers" renamed to "Coffee is for Closers"** — he said the old title was simply wrong. Updated the title and the quoted campaign name inside the description to match.
+
+**3 Adobe Behance embeds replaced with local files he supplied directly** (the last Adobe-hosted content anywhere in the reel — it's now 100% self-hosted):
+- "Designing for a Developer Platform" (MongoDB) now uses `video-mongodb-stitch.mp4` (23.9 MB, has audio). Frame-verified (5-frame contact sheet via `ffmpeg`, same method used throughout this project): an abstract explainer connecting dev/collaboration icons, code, security, and multi-device access — still matches the existing title/description, so only the media source changed.
+- "Innovation Without Limits" (MongoDB) now uses `movie-mongodb-event-opener.mp4` (23.6 MB, has audio). Frame-verified: a narrative arc (an idea, building it, a team celebrating, a packed live event crowd, recurring glowing-leaf motif) — confirmed with Ayodeji to keep the existing title but move category Explainers → Brand & Campaign Work, since it's event/story footage rather than a feature walkthrough.
+- Both files were left un-re-encoded (already H.264, reasonable bitrate) rather than stripped of audio like the earlier muted/looped migration — now that autoplay is off sitewide, their audio has a legitimate use.
+
+**2 new reel-only videos added**, both supplied by Ayodeji with context, both frame-verified before writing copy:
+- An AppOmni "depth explainer" (`motion-appomni-depth.mp4`, 58.7s, portrait 1080×1350) — confirmed via frames as a 4-step Salesforce security-posture walkthrough (on-screen labels, verbatim: Surface → Correlate → Prioritize → Remediate, ending on an export/share UI). Titled "Surface, Correlate, Prioritize, Remediate" directly from that on-screen text. Filed under Explainers.
+- An intro clip (`motion-byron-intro-scene.mp4`, 8s) for Byron, a client project in progress. On-screen headline, verbatim: "More time for the work that needs you." — used as the title. Filed under Product Launch, since Ayodeji described it as an intro clip for a product-launch video.
+
+**Every one of the 21 entries now carries a `role` field** — a short note on what Ayodeji actually did on that piece, not a job title — per his direct request ("so someone viewing it knows what part I played," with an explicit "ask me if unsure"). Two things were confirmed with him before writing any of it, both because the obvious source (each project's existing `overview` field) didn't settle the question on its own:
+- For the 9 Secureframe/AppOmni videos, that project's `overview` describes him leading the website overhaul/brand system (Secureframe) and building reusable page components (AppOmni) — not video production specifically. Confirmed directly: he directed/produced these videos himself, so the role text says so.
+- For the TripActions videos, his first answer ("just what i was responsible for on the project") clarified the *format* he wanted (a responsibility sentence, not a "Title, Company" tag) but not the specific content for that group. He then specified directly: a mix of ideation and concept direction across the group, and for "Hello Travel" specifically, he also created the animation — so that one entry's role text is distinct from the other 5 TripActions entries.
+- For Byron: his first answer to the role-format question ("Founder / Creative Director") turned out to be a miscommunication — he corrected it immediately after: Byron is a client, not his own venture, and his actual contribution was designing the intro animation sequence for their product launch. The role text was rewritten to match.
+- Every other role line (Lufthansa, both MongoDB projects, DocuSign) is grounded directly in that project's own already-verified `overview` text — several of which explicitly mention "videos"/"video storytelling," giving solid grounding without needing to ask.
+
+**Rendering/schema:** `Reel()` in `src/App.jsx` now renders `v.role` in italic between the company name and description (new `.reel-item-role` CSS rule). `site/admin/editor.js`'s `reelVideo` CMS fields gained `role` (text) and `playback` (select, default "controls") so both stay editable through Decap and the autoplay-off behavior survives future edits.
+
+**Two CSS layout fixes**, root-caused by reading the existing rules rather than guessing: the `.reel-item .video-block h3` title had `0` bottom margin, so it touched the video/embed-link directly below it with no gap — fixed by giving it `14px` bottom margin. Separately, the base `.text-link` class (used for "View embedded project" links) had no horizontal margin, so on embed-link cards it sat flush at the card's left edge while the title and description above/below it sat at a 24px inset — fixed with a reel-scoped `.reel-item .video-block .text-link{margin:0 24px 18px}` override. Both fixes are scoped to `.reel-item` so they don't touch `.video-block`/`.text-link` rendering on project pages elsewhere on the site.
+
+**Verified:** `npm run build` (27 routes, clean) and `npm run test:sites` (13/13) pass. Confirmed in the built output: zero `autoplay` attributes, zero `www-ccv.adobe.io` references, "Secure By Design" and "Global Partnership Campaigns" absent, all corrected titles and all 21 role sentences present, `motion-secureframe-10.mp4` gone from both the reel and the `brand-systems-and-web-performance` build output while its sibling Secureframe videos are untouched. Playwright at 1440px and 390px: 21 `.reel-item`s, 4 categories, all 21 videos paused on load (zero autoplaying), 21 `.reel-item-role` lines rendered, a confirmed 14px gap between each title and its video, zero console errors, `/reel` still absent from `#main-nav`.
+
+**Decided by:** Ayodeji, directly — sent the full correction batch, then answered every clarifying question raised along the way (Visa duplicate removal and category, the MongoDB event-opener title/category, the role-field format, the Secureframe/AppOmni responsibility gap, the TripActions ideation/concept-direction split and Hello Travel's animation credit, and the Byron client correction).
+
 ## 2026-10-16 — New shareable `/reel` page: product launch, explainer, ad, and brand video work
 
 **What was requested:** Ayodeji asked to collect every product launch film, explainer, ad/commercial, and other product-related video already published across the case studies into one page, so he can share a single link with a potential employer. Requirement: it does not need to be in the main nav, but must be directly reachable by URL.

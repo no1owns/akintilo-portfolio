@@ -104,8 +104,10 @@
 .reel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
 .reel-item{border:1px solid #ddd;border-radius:4px;overflow:hidden;background:#fafafa}
 .reel-item .video-block{margin:0}
-.reel-item .video-block h3{font-size:19px;margin:18px 24px 0}
+.reel-item .video-block h3{font-size:19px;margin:18px 24px 14px}
+.reel-item .video-block .text-link{margin:0 24px 18px}
 .reel-item-meta{margin:14px 24px 0;color:#555;font-size:14px;letter-spacing:.02em}
+.reel-item-role{margin:4px 24px 0;color:#555;font-size:14px;font-style:italic}
 .reel-item>p:last-child{margin:6px 24px 22px;color:#555;font-size:16px;line-height:1.5}
 @media(max-width:800px){.reel-grid{grid-template-columns:1fr;gap:24px}}
 
