@@ -61,6 +61,23 @@ Sourced from `web-portfolio/portfolio.html`'s "The Lab" section — the only pla
 
 Both are rendered with a text/format-pill placeholder tile instead of a fabricated screenshot (see `ExperimentCard` in `src/App.jsx`). The remaining `web-portfolio` Lab cards (Scene Generator, Brand Content Flywheel, Event Deck Generator, EPS-Agent, Booth Visualizer, and others) are all `data-status="in-development"` or `"coming-soon"` — none were published this pass; see `ROADMAP.md`'s "Items requiring Ayodeji's decision" for whether any should be added as unpublished drafts.
 
+## Video reel page (new content type, 2026-10-16)
+
+A standalone, unlisted page at `/reel` — `site/content/reel.json`, its own Decap "files" collection, rendered by `Reel()` in `src/App.jsx`. Not a project and not in the comparison matrix above. Not linked from the main nav or footer; prerendered like every other route but forced `noindex,nofollow` and excluded from `sitemap.xml` (`scripts/prerender.mjs`) — reachable only by direct link, which is the point (Ayodeji wants to share it with a potential employer without it being part of the public site structure).
+
+Categories are assigned by actual content and duration, not by title wording — a short (≤10s) piece with no named feature or launch narrative is Brand & Campaign Work even if it says "Introducing ___"; a longer or feature-specific piece is Explainers or Product Launch. See `docs/portfolio-decisions.md` for the 2026-10-16 recategorization pass.
+
+| Category | Videos | Source |
+|---|---|---|
+| Product Launch | Marlin AI, BusinessToGo, TripActions Liquid | 3 self-hosted |
+| Explainers | Comply AI for Remediation, Inside the Card, SOC 2 Trust Service Criteria, Secure By Design, Designing for a Developer Platform, Innovation Without Limits | 4 self-hosted, 2 Adobe embeds |
+| Ads & Commercials | Save Hours on Compliance, Hello Travel, Bring It On, Future of Work, Goodbye Expenses Hello Liquid, Hello Liquid (black variant), Global Partnership Campaigns | 6 self-hosted, 1 Adobe embed |
+| Brand & Campaign Work | Introducing Comply AI, AI Agent Security, Connected Network, Visibility & Protection, Coffee with Customers | 5 self-hosted |
+
+18 of 21 videos re-present video blocks that already exist in 9 published projects (see `docs/portfolio-decisions.md` for the full inclusion/exclusion list and per-video title/description sourcing). The other 3 are reel-only additions Ayodeji supplied directly because they were held back from the original site for file size, and aren't part of any existing project's `blocks`: "Inside the Card" (12.16 MB → 2.33 MB), "Goodbye Expenses, Hello Liquid" (9.5 MB → 2.6 MB), and "Hello, Liquid" (10.7 MB → 1.8 MB) — all re-encoded H.264/1920×1080/audio-stripped, same approach as the original `work.akintilo.com` migration.
+
+Excluded from the 23-video source inventory: Lyft's Adobe embed and all 4 `event-brand-experiential` videos — both confirmed out of scope directly by Ayodeji (not product-related).
+
 ## Selected Work curation (2026-10-10)
 
 The homepage "Selected work" grid now defaults to 8 `featured: true` projects (rows 1–7 and 12 below), with the rest reachable via the new "View all work" expand control. Two `featured` flags changed this pass to match Ayodeji's named list: **row 12 (Frictionless Product Onboarding)** `featured: false → true`, and **row 8 (Brand Illustration System / Linx Security)** `featured: true → false` (it isn't one of the 8 named projects, and it's unpublished besides — the field was stale). All other rows' `featured` values were already correct and untouched. See `docs/portfolio-decisions.md` for the full reasoning, including why no `order` values needed to change.

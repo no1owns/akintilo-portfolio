@@ -2,6 +2,48 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-16 — New shareable `/reel` page: product launch, explainer, ad, and brand video work
+
+**What was requested:** Ayodeji asked to collect every product launch film, explainer, ad/commercial, and other product-related video already published across the case studies into one page, so he can share a single link with a potential employer. Requirement: it does not need to be in the main nav, but must be directly reachable by URL.
+
+**Content inventory:** audited every `blocks[].type === "video"` entry across all 19 published project JSON files — 23 total video blocks across 9 projects. Of those, 5 were excluded, 18 included:
+- **Excluded, confirmed by Ayodeji directly (`AskUserQuestion`):** Lyft's Adobe embed ("It's not product related") and all 4 `event-brand-experiential` videos (event coverage, not product/launch/ad content — confirmed "Exclude").
+- **Included:** all 9 self-hosted Secureframe/AppOmni motion pieces from `brand-systems-and-web-performance`, all 4 TripActions ads/hero videos, the Lufthansa/BusinessToGo launch video, the DocuSign video, and the 3 remaining Adobe embeds (Visa, `mongodb-web`, `mongodb-for-giant-ideas-video`) — these are product/brand work, unlike the excluded Lyft embed.
+
+**Per-video titles and descriptions:** none of the existing project blocks had individual per-video titles (many share one generic block title, e.g. "Security Brand Experiences video," across multiple distinct videos in the same project) — reusing those would have been misleading on a dedicated reel page. Instead, extracted 5 evenly-spaced frames per self-hosted video via `ffmpeg`/`ffprobe` (at 8/28/50/72/92% of duration), combined into contact sheets, and wrote each title/description directly from what's visible on screen — consistent with this project's standing "never invent metrics, outcomes, dates, or attributions" policy. The 3 included Adobe embeds reuse their own project's already-verified `title`/`company`/`summary` fields rather than new text, since those can't be frame-inspected the same way.
+
+**Implementation:** new `site/content/reel.json` (title/intro/videos array, one CMS "files" collection entry in `site/admin/editor.js` mirroring the `settings` pattern) feeding a new `Reel()` component in `src/App.jsx` at `/reel`, grouped into Product Launch / Explainers / Ads & Commercials / Brand & Campaign Work, reusing the existing `Video` component as-is (so self-hosted files autoplay muted/looped and the 3 untrusted Adobe-host embeds fall back to the same "View embedded project" external link used elsewhere). `scripts/prerender.mjs` prerenders `/reel` like every other route (so it's a real static page, reachable and crawlable by direct link) but treats it as an explicitly unlisted route: forced `noindex,nofollow` regardless of whether `settings.siteUrl` is set, and left out of `sitemap.xml` generation — the goal is "accessible by link," not "discoverable."
+
+**Verified:** `npm run build` (27 routes, clean — up from 26) and `npm run test:sites` (13/13) pass. Confirmed in the built output: `/reel/index.html` exists, carries `<meta name="robots" content="noindex,nofollow">`, and is absent from the main-nav markup on every page. Playwright at 1440px and 390px: all 18 reel items render (4 category headings, zero missing videos), zero console errors, no `/reel` link anywhere in `#main-nav`.
+
+**Decided by:** Ayodeji, directly — requested the page and its unlisted-but-linkable requirement; confirmed the Lyft exclusion, the event-video exclusion, and the `/reel` URL path via `AskUserQuestion` before content was written.
+
+## 2026-10-16 (second pass) — Reel recategorization by content/duration, plus a 19th video added
+
+**Recategorization:** Ayodeji flagged that some reel entries were "just animations or ads" mis-sorted into Product Launch/Explainers by title wording alone, and said duration should factor into the category call. Pulled exact durations via `ffprobe` for all 15 self-hosted videos and re-checked each against its already-reviewed frames:
+- "Introducing Comply AI" (`motion-secureframe-06`, 2.6s) — Product Launch → Brand & Campaign Work. It's a title-card logo reveal, not a launch narrative like the two other Product Launch entries (31s, 84s).
+- "Secure By Design" (`motion-secureframe-10`, 36.5s) — Brand & Campaign Work → Explainers. At 36.5s it explains a specific risk concept (unsecured laptop → flagged warnings) rather than functioning as ambient brand motion.
+- Everything else checked out against the same logic (sub-10s AppOmni/DocuSign pieces are genuinely loops; 8–10s TripActions pieces are genuinely tone-only ads; 20–84s pieces are genuinely launch/explainer content) and was left as-is.
+
+**New video added — "Inside the Card" (TripActions):** Ayodeji said he had more videos held back from the original site for file size. First attempt was a `gofile.me` link, which this session's network policy doesn't allow (egress proxy only permits a fixed allowlist — GitHub, npm, PyPI, etc.) — flagged to him rather than guessing a workaround. Second attempt was a Google Drive link; the file (`_TripActions-InsideTheCard_1_1920x1080.mp4`, 12.16 MB) exceeded the Drive connector's 10 MB download cap. Ayodeji then uploaded the file directly into the conversation. Confirmed by frame extraction (5 frames via `ffmpeg`, same method as the rest of this project): a TripActions corporate-card reveal that calls out two named features — "Powerful Spend Controls" and "Automated Reconciliation" — before closing on the card and TripActions' "Let's go" tagline. Categorized as Explainers (names specific product capabilities, unlike the existing TripActions Ads & Commercials entries, which are tone-only). Re-encoded the same way as the original 19-video `work.akintilo.com` migration — H.264, capped at 1920px width (already 1920×1080, so just re-muxed/compressed, not downscaled), audio stripped (renders muted/looped like every other reel video) — 12.16 MB → 2.33 MB, verified with an `ffmpeg -f null` decode pass (no errors, same duration). This video isn't part of any existing project's `blocks` — it's reel-only.
+
+**Verified:** `npm run build` (27 routes, unchanged — the reel route itself doesn't add a route count) and `npm run test:sites` (13/13) pass after both the recategorization and the new video.
+
+**Decided by:** Ayodeji, directly — flagged the miscategorization and asked for duration-based review; supplied the new video after the two blocked delivery paths; confirmed it's a TripActions video.
+
+## 2026-10-16 (third pass) — 2 more TripActions Liquid ads added to the reel
+
+Ayodeji uploaded 2 more videos directly (`TripActions-Concept2-BusinessTravelerPersona-A_1920x1080.mp4`, 9.5 MB; `1920x1080_BLACK_VERSION_2.mp4`, 10.7 MB), both confirmed as TripActions. Frame extraction (`ffmpeg`, same method used throughout this project) showed both are variants of the same "Hello, Liquid" TripActions Liquid-card campaign already represented in the reel by "Introducing TripActions Liquid": scrolling real-time expense line items (rental car, conference, coffee, lunch, taxi, gas) dissolving into tagline text, then the glowing Liquid card, closing on the same "TripActions / Let's go" lockup used across the other TripActions ads already in the reel.
+
+- **"Goodbye Expenses, Hello Liquid"** (blue/"Concept2-BusinessTravelerPersona-A" version) — reads "Goodbye, Expenses." then "Hello, Liquid." before the card and lockup.
+- **"Hello, Liquid"** (black-background/"Version 2") — a black-background variant leading with "Hello, Liquid." directly, plus a red bracket wipe transition.
+
+Both are ~10s tagline-driven pieces, the same pattern as the existing Hello Travel / Bring It On / Future of Work entries, so both were filed under Ads & Commercials rather than Product Launch or Explainers — they don't name a specific feature (unlike "Inside the Card") or carry a launch narrative (unlike the 30–84s Product Launch entries). Re-encoded the same way as the rest of this project's video migrations: H.264, 1920×1080, audio stripped (muted/looped like every reel video) — 9.5 MB → 2.6 MB and 10.7 MB → 1.8 MB, both verified with an `ffmpeg -f null` decode pass (no errors, same durations). Neither is part of any existing project's `blocks` — both are reel-only, same as "Inside the Card" added in the prior pass.
+
+**Verified:** `npm run build` (27 routes, unchanged) and `npm run test:sites` (13/13) pass; Playwright at 1440px and 390px shows 21 reel items rendering, zero console errors, `/reel` still absent from `#main-nav`.
+
+**Decided by:** Ayodeji, directly — uploaded both files and confirmed they're TripActions videos.
+
 ## 2026-10-15 — 6 new AppOmni assets added: Cybersecurity Awareness Month AI-agent tips
 
 **What was added:** 6 social graphics Ayodeji supplied directly (uploaded as images, not sourced from any repo) — a numbered "Cybersecurity Awareness Month" tip series about AI agent security (Tip 1: finding every connected AI agent/copilot; Tip 2: least-privilege access; Tip 3: human approval for sensitive agent actions; Tip 4: data retention/sharing visibility; Tip 5: watching for unusual agent behavior; Tip 6: reviewing/revoking OAuth connections). Saved as optimized WebP (1080×1080, 46–72 KB each) in `site/public/media/`.
