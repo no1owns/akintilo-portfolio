@@ -210,19 +210,12 @@
       "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/9505a6f37a7c7f0a.webp",
-          "width": 913,
-          "height": 350,
-          "alt": "Security Brand Experiences project work",
-          "caption": ""
-        }
-      ],
-      "layout": "justified"
+      "type": "image",
+      "image": "/media/9505a6f37a7c7f0a.webp",
+      "alt": "Security Brand Experiences project work",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
       "type": "video",
@@ -231,19 +224,12 @@
       "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/521efdd63bee6b4e.webp",
-          "width": 1744,
-          "height": 980,
-          "alt": "Security Brand Experiences project work",
-          "caption": ""
-        }
-      ],
-      "layout": "justified"
+      "type": "image",
+      "image": "/media/521efdd63bee6b4e.webp",
+      "alt": "Security Brand Experiences project work",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
       "type": "video",
@@ -794,19 +780,12 @@
       "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/4674fec7ad50a061.webp",
-          "width": 1024,
-          "height": 1024,
-          "alt": "Security Brand Experiences project work",
-          "caption": ""
-        }
-      ],
-      "layout": "justified"
+      "type": "image",
+      "image": "/media/4674fec7ad50a061.webp",
+      "alt": "Security Brand Experiences project work",
+      "caption": "",
+      "width": "narrow",
+      "spacing": "regular"
     },
     {
       "type": "video",

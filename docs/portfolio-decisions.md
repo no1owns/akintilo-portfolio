@@ -2,6 +2,20 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-21 (second pass) — Fixed lone single-image rows in the justified grid
+
+**What prompted this:** after the round-2 bento→justified conversion, Ayodeji said "The alignment is better but there are a few sections with just one item in a row... remove or place them in rows with other assets so they don't look out of place." Scanned every justified gallery on the site programmatically (not just the 8 just-converted ones) rather than guessing which pages had the problem.
+
+**Two distinct causes found, two different fixes:**
+
+1. **Trailing-row orphans.** `computeJustifiedRows()`'s greedy row-packing algorithm (`src/App.jsx`) leaves a final row `incomplete` (unstretched, rendered at natural size with empty space beside it) whenever the last few images don't add up to a full row width. When that trailing row had exactly 1 image, it sat alone at natural size next to otherwise-full-width rows above it — visually jarring. Found 8 instances across 6 projects (`brand-systems-and-web-performance` ×3, `tripactions`, `event-brand-experiential`, `dream-big`, `mongodb-web`, `mongodb-internal`, `betterup-product-presentations`). **Fix:** `computeJustifiedRows()` now folds a lone trailing image into the previous row and re-solves the combined row's height together, so it's justified like every other row instead of left at natural size. This is a pure layout fix — no images reordered, removed, or recropped; manual order is still preserved exactly as `site/AGENTS.md` requires.
+
+2. **Standalone single-image gallery blocks.** Some projects interleave a single accent image between video blocks (e.g., an ISO 27001 dashboard screenshot sandwiched between two Secureframe video blocks) — these are genuinely isolated `gallery` blocks with 1 image each, not an orphan within a larger gallery, so there's no "other row" to fold them into. The row-packing fix above can't help here; `JustifiedGallery` would still render these at natural size with empty space beside them. **Fix:** converted these to the already-existing `type: "image"` block (`site/admin/editor.js`'s schema already supports it — full-bleed figure, no row-packing) instead of a 1-image `gallery` block. 4 found and converted: 3 in `brand-systems-and-web-performance` (2 landscape images set to `width: "full"`, spanning the same width as the surrounding video blocks; 1 near-square illustration set to `width: "narrow"` so it doesn't sprawl to a ~1300px-tall full-bleed square) and 1 in `tripactions` (landscape, `width: "full"`). Also converted Lyft's sole gallery image the same way, since its one-image "gallery" had the identical natural-size-with-dead-space rendering problem even though there's no surrounding gallery content to compare it against.
+
+**Verified:** re-scanned every justified gallery on the site (18 published projects) programmatically after both fixes — zero single-image rows remain anywhere. `npm run build` (27 routes, clean) and `npm run test:sites` (13/13) pass. Playwright console-error check across all 18 justified pages: zero errors. Screenshotted the 3 converted `brand-systems-and-web-performance` sections directly: the two landscape images now span full width matching the video blocks above/below; the square illustration is cleanly centered and contained, not sprawling.
+
+**Decided by:** Ayodeji, directly — flagged the remaining out-of-place single-item rows after reviewing the round-2 conversion.
+
 ## 2026-10-21 — Justified-grid rollout, round 2: every remaining bento gallery converted (all published projects now justified)
 
 **What prompted this:** after the reel page landed, Ayodeji reviewed the rest of the site and said "the other pages on the site dont structure the images into grids well." Rather than guess at the fix, took screenshots of every published project still on `layout: "bento"` (8 of them) before proposing anything.

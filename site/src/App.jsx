@@ -99,6 +99,19 @@ function computeJustifiedRows(images, containerWidth, gap) {
       rows.push({ images: row, height: targetHeight, incomplete: true });
     }
   });
+  // A lone trailing image left at natural size (with empty space beside it)
+  // reads as out of place against the fully justified rows above it. Fold it
+  // into the previous row and re-solve both together instead.
+  if (rows.length > 1) {
+    const lastRow = rows[rows.length - 1];
+    if (lastRow.incomplete && lastRow.images.length === 1) {
+      const prevRow = rows[rows.length - 2];
+      const merged = [...prevRow.images, ...lastRow.images];
+      const totalRatio = merged.reduce((sum, item) => sum + item.ratio, 0);
+      const availableWidth = containerWidth - (merged.length - 1) * gap;
+      rows.splice(rows.length - 2, 2, { images: merged, height: availableWidth / totalRatio });
+    }
+  }
   return rows;
 }
 

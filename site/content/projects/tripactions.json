@@ -11,20 +11,12 @@
   "outcomes": [],
   "blocks": [
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/3c4276a119ed3875.webp",
-          "width": 1920,
-          "height": 941,
-          "alt": "Performance Marketing Systems project work",
-          "caption": ""
-        }
-      ],
-      "layout": "justified"
+      "type": "image",
+      "image": "/media/3c4276a119ed3875.webp",
+      "alt": "Performance Marketing Systems project work",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
       "type": "video",
