@@ -18,10 +18,13 @@
       "images": [
         {
           "image": "/media/3c4276a119ed3875.webp",
+          "width": 1920,
+          "height": 941,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "video",
@@ -37,40 +40,55 @@
       "images": [
         {
           "image": "/media/6a523183c389cdc5.webp",
+          "width": 800,
+          "height": 419,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/6b268c7f4bcbd075.webp",
+          "width": 800,
+          "height": 418,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/6d41dbaa53b328bd.webp",
+          "width": 800,
+          "height": 483,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/a896ea93234fe524.webp",
+          "width": 1692,
+          "height": 662,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/3700b2e99fb9820b.webp",
+          "width": 1136,
+          "height": 872,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/3e595809c2b519bf.webp",
+          "width": 1136,
+          "height": 856,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/55f648eea166df2d.webp",
+          "width": 1136,
+          "height": 798,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -80,55 +98,76 @@
       "images": [
         {
           "image": "/media/0750de535ffc6cdb.webp",
+          "width": 1620,
+          "height": 2025,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/837ef776245886f8.webp",
+          "width": 1920,
+          "height": 1451,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/5fe4cdb179a590dd.webp",
+          "width": 1620,
+          "height": 2025,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/aa11020c1cf6998c.webp",
+          "width": 1200,
+          "height": 628,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/aa52baa50f821254.webp",
+          "width": 1800,
+          "height": 1800,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/e1e23b2a83140b7c.webp",
+          "width": 1920,
+          "height": 1025,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/48bdb382ef6caf63.webp",
+          "width": 1920,
+          "height": 1024,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/04ed4222927d8031.webp",
+          "width": 875,
+          "height": 1409,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/568793ab15090a82.webp",
+          "width": 1920,
+          "height": 1920,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         },
         {
           "image": "/media/a0e12a7c5b0bff33.webp",
+          "width": 1440,
+          "height": 421,
           "alt": "Performance Marketing Systems project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "video",

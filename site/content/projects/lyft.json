@@ -18,10 +18,13 @@
       "images": [
         {
           "image": "/media/d207327d7315c84a.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Motion Design for Internal Communications project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "video",

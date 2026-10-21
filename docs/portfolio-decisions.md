@@ -2,6 +2,24 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-21 — Justified-grid rollout, round 2: every remaining bento gallery converted (all published projects now justified)
+
+**What prompted this:** after the reel page landed, Ayodeji reviewed the rest of the site and said "the other pages on the site dont structure the images into grids well." Rather than guess at the fix, took screenshots of every published project still on `layout: "bento"` (8 of them) before proposing anything.
+
+**Diagnosis:** `BentoGallery`'s fixed-shape grid (`src/bento.js`) sizes every tile to one of a handful of constant-aspect-ratio boxes regardless of the actual image. With `fit: "contain"` as the default (never crops), an image whose real aspect ratio doesn't match its assigned box just floats small and centered inside a large empty gray box. Every one of the 8 remaining bento projects mixes portrait social graphics, square posts, phone mockups, and landscape photos/screenshots in the same gallery — exactly the case `BentoGallery` handles worst. Screenshots of `docusign-enterprise-campaign` and `dream-big` made this most visible: vertical Hawaiian-Getaway and phone-mockup images shrunk to a sliver inside oversized landscape boxes, with large dead whitespace margins on every side.
+
+**Confirmed with Ayodeji before converting:** (1) convert all 8, not a partial list; (2) for Dream Big and Frictionless Product Onboarding specifically — flagged in an earlier pass as needing his explicit pick between uniform and justified rather than a default — he confirmed justified for both, same as everything else.
+
+**Converted (8 published projects, 36 gallery blocks, 214 images total):** Security Brand Experiences (`brand-systems-and-web-performance`, 94 images across 9 blocks), Performance Marketing Systems (`tripactions`, 18 images/3 blocks), Event Brand and Experiential (`event-brand-experiential`, 42 images/7 blocks), Enterprise Brand Campaigns (`docusign-enterprise-campaign`, 14 images/6 blocks), Global Rebrand Launch Experience (`dream-big`, 9 images/5 blocks), Frictionless Product Onboarding (`tripactions-visual-product-ux`, 16 images/4 blocks), Launch Marketing for Lyft Business (`lyft`, 1 image/1 block — visually unchanged, converted for consistency), Innovation Without Limits (`mongodb-for-giant-ideas-video`, 20 images/1 block — this project's own Adobe-embed hero video block is untouched by this pass; only its separate copy in the reel was swapped to local media in the 2026-10-20 revision).
+
+**How:** every `gallery` block in these 8 files got `"layout": "justified"`; every image got real `width`/`height` read directly from the actual file via ImageMagick's `identify` (first frame only, for the handful of animated GIFs in the Security Brand Experiences gallery — same first-frame convention established in the original round-1 conversion). Old bento-only fields (`size`, `fit`, `position`) were dropped since justified doesn't use them. Every image `src` was diffed old vs. new per file and confirmed an exact-set match (same images, same count, nothing lost or duplicated) before any file was written — all 214 succeeded.
+
+**Result: every published project on the site is now justified. `BentoGallery` is no longer used by any live page** — it remains available as an opt-in layout for a future project an editor deliberately wants to curate as a mixed-size composition, per `site/AGENTS.md`, just not the default anymore. The 2 unpublished drafts (`linx-security`, `mongodb-beliefs-storyboard`) are untouched since they're not reachable from the live site.
+
+**Verified:** `npm run build` (27 routes, clean) and `npm run test:sites` (13/13) pass. Playwright across all 8 pages: zero console errors, zero broken-image responses (confirmed by direct `curl`/`identify` spot-checks after an initial automated `naturalWidth` check gave false positives from lazy-load timing in headless Chromium — not an actual content issue). Screenshotted every converted gallery before and after; all now show consistent row heights, real aspect ratios, and no forced-crop or oversized-whitespace artifacts.
+
+**Decided by:** Ayodeji, directly — flagged the problem, confirmed full-scope conversion, and confirmed justified (not uniform) for the 2 previously-undecided projects.
+
 ## 2026-10-20 — Reel page revision pass: content fixes, autoplay off, role attribution on every entry
 
 After the reel went live, Ayodeji reviewed it and sent back a full batch of corrections. All of the following landed in one pass, with every genuinely ambiguous call confirmed with him directly before writing content (per this project's standing "never invent, ask if unsure" policy):

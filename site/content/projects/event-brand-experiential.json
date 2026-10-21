@@ -18,10 +18,13 @@
       "images": [
         {
           "image": "/media/32505e5073b9ff21.webp",
+          "width": 1920,
+          "height": 651,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -31,35 +34,48 @@
       "images": [
         {
           "image": "/media/b039b0827c6fa07b.webp",
+          "width": 587,
+          "height": 1276,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/ec63cdd32531f2e3.webp",
+          "width": 1462,
+          "height": 1097,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/83bb729768cff7cf.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/4a25e688d1144d36.webp",
+          "width": 1024,
+          "height": 1536,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/fd3abd964dcb93a5.webp",
+          "width": 600,
+          "height": 899,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/691071a27950fbbe.webp",
+          "width": 1200,
+          "height": 800,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -69,25 +85,34 @@
       "images": [
         {
           "image": "/media/b6fcac202d28be5e.webp",
+          "width": 1672,
+          "height": 941,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/0644f1156ff874dd.webp",
+          "width": 1536,
+          "height": 1024,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/df08b716ac73f59e.webp",
+          "width": 1536,
+          "height": 1024,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/eb1d7affef1cda61.webp",
+          "width": 1536,
+          "height": 1024,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "video",
@@ -103,45 +128,62 @@
       "images": [
         {
           "image": "/media/89bf3810f6d2d50e.webp",
+          "width": 1600,
+          "height": 1067,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/da785cfbe8c9dc19.webp",
+          "width": 1600,
+          "height": 1067,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/201cc84d228cc566.webp",
+          "width": 1600,
+          "height": 1067,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/6ec4eafb3e24f000.webp",
+          "width": 1600,
+          "height": 1067,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/6b44849166ccf586.webp",
+          "width": 1600,
+          "height": 1067,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/7c730dc528afce46.webp",
+          "width": 1600,
+          "height": 1067,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/efe0ec312f458979.webp",
+          "width": 1600,
+          "height": 1067,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/ceabc4de59d68021.webp",
+          "width": 1600,
+          "height": 1067,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -151,25 +193,34 @@
       "images": [
         {
           "image": "/media/526ddbba3ae29231.webp",
+          "width": 1920,
+          "height": 1280,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/167cee55aced2513.webp",
+          "width": 1920,
+          "height": 1074,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/b80946aad8572b33.webp",
+          "width": 983,
+          "height": 948,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/f249a5eb9533f401.webp",
+          "width": 1020,
+          "height": 1533,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -179,40 +230,55 @@
       "images": [
         {
           "image": "/media/c72243c1122f1668.webp",
+          "width": 854,
+          "height": 480,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/1e8c375f67e5efaf.webp",
+          "width": 1920,
+          "height": 1011,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/2e63ffd1d3b03b8c.webp",
+          "width": 1920,
+          "height": 1011,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/65a3d94b9cbe0f4c.webp",
+          "width": 1920,
+          "height": 1011,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/b4bbdb76b406c405.webp",
+          "width": 1920,
+          "height": 1011,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/c9a9d50c9be9cc78.webp",
+          "width": 1920,
+          "height": 1011,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/ae128095d88725b0.webp",
+          "width": 1920,
+          "height": 1011,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "video",
@@ -240,65 +306,90 @@
       "images": [
         {
           "image": "/media/4ca3581d39bc1daa.webp",
+          "width": 1600,
+          "height": 900,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/388c47f89d597c6c.webp",
+          "width": 600,
+          "height": 600,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/7b45e70caf39e329.webp",
+          "width": 1600,
+          "height": 900,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/be3cfa844c398ad4.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/0d4ebef6d39d5a05.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/8a1f2d66f992f3a1.webp",
+          "width": 1600,
+          "height": 900,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/5bd1d1ca2cd6d8bd.webp",
+          "width": 1600,
+          "height": 900,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/f1f808fb0ddd7b00.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/83307f8b1a423dab.webp",
+          "width": 1600,
+          "height": 900,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/93f6946177282dbc.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/16bfd90acb190e9f.webp",
+          "width": 1600,
+          "height": 900,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         },
         {
           "image": "/media/04f104eef9213685.webp",
+          "width": 1600,
+          "height": 900,
           "alt": "Event Brand and Experiential project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     }
   ],
   "cover": "/media/4c3bc4f6d134a55a.webp",

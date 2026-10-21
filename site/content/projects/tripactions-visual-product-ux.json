@@ -18,25 +18,34 @@
       "images": [
         {
           "image": "/media/50581f9fe66af9f4.webp",
+          "width": 1920,
+          "height": 1054,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         },
         {
           "image": "/media/979a555c2618ee79.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         },
         {
           "image": "/media/a2b32dbfcc1e2219.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         },
         {
           "image": "/media/8b095afc0a9cf316.webp",
+          "width": 1920,
+          "height": 1080,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -46,25 +55,34 @@
       "images": [
         {
           "image": "/media/ba8a29568363f7f2.webp",
+          "width": 1440,
+          "height": 1555,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         },
         {
           "image": "/media/df5925b76ce1d897.webp",
+          "width": 1440,
+          "height": 1555,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         },
         {
           "image": "/media/45f8f98ea80aa318.webp",
+          "width": 1440,
+          "height": 1555,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         },
         {
           "image": "/media/4496de7035bc6ee5.webp",
+          "width": 1440,
+          "height": 1555,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -74,15 +92,20 @@
       "images": [
         {
           "image": "/media/75b34b95562e74db.webp",
+          "width": 1920,
+          "height": 1443,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         },
         {
           "image": "/media/02755dd0ff7ff1aa.webp",
+          "width": 1920,
+          "height": 1443,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     },
     {
       "type": "gallery",
@@ -92,35 +115,48 @@
       "images": [
         {
           "image": "/media/539ed45317edaf39.webp",
+          "width": 1920,
+          "height": 1109,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         },
         {
           "image": "/media/fc86a1ba6249884d.webp",
+          "width": 1006,
+          "height": 878,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         },
         {
           "image": "/media/4f6163f734328c11.webp",
+          "width": 1920,
+          "height": 1200,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         },
         {
           "image": "/media/c0909862d47b67a0.webp",
+          "width": 1920,
+          "height": 1200,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         },
         {
           "image": "/media/06cb6b92cff8dacf.webp",
+          "width": 1920,
+          "height": 960,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         },
         {
           "image": "/media/e45348dcf5c830c7.webp",
+          "width": 1511,
+          "height": 849,
           "alt": "Frictionless Product Onboarding project work",
           "caption": ""
         }
-      ]
+      ],
+      "layout": "justified"
     }
   ],
   "cover": "/media/61c538bf03e4d184.webp",
