@@ -107,21 +107,77 @@
           "image": "/media/73210c14a4911ab5.webp",
           "width": 1200,
           "height": 730,
-          "alt": "Security Brand Experiences project work",
+          "alt": "Secureframe compliance dashboard with a \"View history\" dialog open over a Risk Management table, prompting the user to select a date",
           "caption": ""
+        }
+      ],
+      "layout": "justified"
+    },
+    {
+      "type": "gallery",
+      "layout": "justified",
+      "title": "Secureframe website",
+      "images": [
+        {
+          "image": "/media/3564c19109ee9aa0-seg1.webp",
+          "width": 1920,
+          "height": 1566,
+          "alt": "Secureframe marketing homepage header: navigation bar, a banner inviting visitors to learn about tailoring their security posture, the headline \"Automate compliance. Improve security. Reduce risk.\", a \"Schedule a demo\" button, and a dashboard collage showing a task checklist, a \"Welcome back, Chauncey\" product view with test and standards compliance gauges, an unhealthy control row, a chat widget, and an integrations panel"
         },
         {
-          "image": "/media/3564c19109ee9aa0.webp",
+          "image": "/media/3564c19109ee9aa0-seg2.webp",
           "width": 1920,
-          "height": 12516,
-          "alt": "Security Brand Experiences project work",
-          "caption": ""
+          "height": 1566,
+          "alt": "A dark \"Trusted and used by thousands of companies\" logo bar followed by a 2x2 grid of feature cards pairing product UI mockups with headlines about access visibility, scaling security, and flexible compliance frameworks"
         },
+        {
+          "image": "/media/3564c19109ee9aa0-seg3.webp",
+          "width": 1920,
+          "height": 1564,
+          "alt": "A training-task list (Security Awareness, PCI, HIPAA trainings) above the headline \"End-to-end compliance right at your fingertips,\" followed by two dark product cards, Secureframe Comply and Secureframe Trust, each showing a compliance dashboard mockup"
+        },
+        {
+          "image": "/media/3564c19109ee9aa0-seg4.webp",
+          "width": 1920,
+          "height": 1564,
+          "alt": "The headline \"Easily add frameworks that fit your growing needs\" above framework cards for SOC 2, ISO 27001, and HIPAA, each with a short description and a \"Learn more\" link"
+        },
+        {
+          "image": "/media/3564c19109ee9aa0-seg5.webp",
+          "width": 1920,
+          "height": 1564,
+          "alt": "A dark section headlined \"The best of technology backed by the best in the business\" with a \"Why Secureframe\" button, leading into a \"Hands-free control\" feature card"
+        },
+        {
+          "image": "/media/3564c19109ee9aa0-seg6.webp",
+          "width": 1920,
+          "height": 1564,
+          "alt": "\"World-class expertise\" and \"Unrivaled support\" feature cards beside a \"Get in touch with an expert\" chat widget mockup, followed by the \"Our Customers\" headline with placeholder statistic cards and a customer logo"
+        },
+        {
+          "image": "/media/3564c19109ee9aa0-seg7.webp",
+          "width": 1920,
+          "height": 1564,
+          "alt": "A placeholder customer testimonial headshot and caption above the headline \"Trusted by over 3,000 Organizations\" and a 2x2 grid of placeholder testimonial cards with repeated sample quotes and attribution"
+        },
+        {
+          "image": "/media/3564c19109ee9aa0-seg8.webp",
+          "width": 1920,
+          "height": 1564,
+          "alt": "A green \"Use trust as a catalyst for growth\" call-to-action banner with a \"Request a demo\" button, above the Secureframe site footer with newsletter signup, navigation columns, social links, and certification badges"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "spacing": "regular",
+      "images": [
         {
           "image": "/media/fcdc5ac39f59eeb4.webp",
           "width": 1600,
           "height": 1200,
-          "alt": "Security Brand Experiences project work",
+          "alt": "A hand holding a phone displaying the Secureframe mobile homepage, headlined \"Build trust. Unlock growth.\" above a row of customer logos including OpenAI, Shortcut, Gremlin, Figma, and Contra",
           "caption": ""
         },
         {
@@ -199,13 +255,13 @@
     },
     {
       "type": "video",
-      "title": "Security Brand Experiences video",
+      "title": "Comply AI for Remediation",
       "file": "/media/motion-secureframe-01.mp4",
       "spacing": "regular"
     },
     {
       "type": "video",
-      "title": "Security Brand Experiences video",
+      "title": "Introducing Comply AI",
       "file": "/media/motion-secureframe-06.mp4",
       "spacing": "regular"
     },
@@ -219,7 +275,7 @@
     },
     {
       "type": "video",
-      "title": "Security Brand Experiences video",
+      "title": "Save Hours on Compliance",
       "file": "/media/motion-secureframe-08.mp4",
       "spacing": "regular"
     },
@@ -233,7 +289,7 @@
     },
     {
       "type": "video",
-      "title": "Security Brand Experiences video",
+      "title": "SOC 2 Trust Service Criteria",
       "file": "/media/motion-secureframe-09.mp4",
       "spacing": "regular"
     },
@@ -398,7 +454,7 @@
     },
     {
       "type": "video",
-      "title": "Security Brand Experiences video",
+      "title": "AI Agent Security",
       "file": "/media/motion-appomni-01.mp4",
       "spacing": "regular"
     },
@@ -769,13 +825,21 @@
     },
     {
       "type": "video",
-      "title": "Security Brand Experiences video",
+      "title": "Surface, Correlate, Prioritize, Remediate",
+      "file": "/media/motion-appomni-depth.mp4",
+      "poster": "/media/motion-appomni-depth-poster.webp",
+      "playback": "controls",
+      "spacing": "regular"
+    },
+    {
+      "type": "video",
+      "title": "Visibility & Protection",
       "file": "/media/motion-appomni-03.mp4",
       "spacing": "regular"
     },
     {
       "type": "video",
-      "title": "Security Brand Experiences video",
+      "title": "Connected Network",
       "file": "/media/motion-appomni-02.mp4",
       "spacing": "regular"
     },
@@ -789,7 +853,7 @@
     },
     {
       "type": "video",
-      "title": "Security Brand Experiences video",
+      "title": "Introducing Marlin AI",
       "file": "/media/motion-appomni-04.mp4",
       "spacing": "regular"
     }

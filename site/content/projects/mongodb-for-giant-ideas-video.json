@@ -12,9 +12,11 @@
   "blocks": [
     {
       "type": "video",
-      "title": "Innovation Without Limits video",
-      "url": "https://www-ccv.adobe.io/v1/player/ccv/4psJ9Iy7jBf/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
-      "spacing": "regular"
+      "title": "Innovation Without Limits",
+      "spacing": "regular",
+      "file": "/media/movie-mongodb-event-opener.mp4",
+      "poster": "/media/movie-mongodb-event-opener-poster.webp",
+      "playback": "controls"
     },
     {
       "type": "gallery",
