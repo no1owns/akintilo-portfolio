@@ -24,8 +24,11 @@ See `ROADMAP.md` → "Launch blockers" (as of the 2026-09-20 correction pass, ju
 - [x] Bento gallery blocks render deterministically, with fully aligned tile edges, at 1600px and 1440px (rewritten 2026-10-10 — no more runtime measurement; verified against a 12-tile mixed-shape fixture and five real projects up to 88 images, zero 0-height tiles, zero console errors; see `docs/portfolio-decisions.md`).
 - [x] Justified-grid rollout, round 1 (2026-10-11): 8 more projects converted from bento to justified (Visa, Enterprise Integration Campaigns, Lufthansa, Designing for a Developer Platform, Loft, LILT eBook, MongoDB Internal, BetterUp — 80 images). Verified at 1440px: zero broken images, zero bento galleries remaining, zero console errors, lightbox keyboard behavior confirmed.
 - [x] Justified-grid rollout, round 2 (2026-10-21): the remaining 8 published bento projects converted (Security Brand Experiences, Performance Marketing Systems, Event Brand and Experiential, Enterprise Brand Campaigns, Innovation Without Limits, Lyft, Dream Big, Frictionless Product Onboarding — 214 images). Prompted by Ayodeji flagging that these pages' images weren't structuring into grids well — root cause was `BentoGallery` forcing every image into a fixed-aspect-ratio box regardless of its real shape. Every published project is now justified; `BentoGallery` is no longer used by any live page (only the 2 unpublished drafts remain on it). Verified at 1440px: zero console errors, exact-set image match on all 8 files, zero broken images (confirmed via direct file checks after headless lazy-load timing gave false positives) — see `docs/portfolio-decisions.md` and `ROADMAP.md`.
-- [ ] Video blocks show controls, respect poster images, and do not autoplay with sound
-- [ ] Adobe-embedded videos (Visa, mongodb-web, mongodb-for-giant-ideas-video, Lyft) load and play
+- [x] Category filter / expand-collapse correction pass (2026-10-22): selecting a category now always shows its full list immediately (no empty-state regression); URL sync (`pushState`/`popstate`) added and verified — direct category URLs, refresh, and back/forward all restore correct state. Verified at 1440px with zero console errors. See `docs/portfolio-decisions.md`.
+- [x] Justified-grid final-row rebalance generalized from 1-image to any sparse trailing row (2026-10-22) — verified against the task's own worked 6-square/1229px example (only valid split is 3+3, confirmed by exhaustive search in the new unit tests) and in a real-browser pass on Security Brand Experiences. See `docs/portfolio-decisions.md`.
+- [x] Extreme-aspect-ratio screenshot fix (2026-10-22): the 1920×12516 Secureframe screenshot segmented into 8 legible pieces, each verified to load at its exact expected dimensions in a real-browser pass. `scripts/audit-gallery-ratios.mjs` added as an ongoing defensive check.
+- [x] Video blocks show controls, respect poster images, and do not autoplay with sound (verified 2026-10-22 for the 6 newly-placed case-study videos specifically — `playback:"controls"`, poster set, `autoplay=false` confirmed via direct DOM attribute checks in a real-browser pass; pre-existing project video blocks' autoplay convention is unchanged, by design)
+- [ ] Adobe-embedded videos (Visa, Lyft — 2 remaining, down from 4) load and play. `mongodb-web` and `mongodb-for-giant-ideas-video` resolved 2026-10-22 — both now use local video files, zero remaining Adobe iframes confirmed via a real-browser pass.
 
 ## Tablet rendering
 
@@ -39,6 +42,7 @@ See `ROADMAP.md` → "Launch blockers" (as of the 2026-09-20 correction pass, ju
 - [x] Justified-grid prototype checked at 390×844 via headless Chromium (2026-09-20) — rows stay compact, no blown-out row heights, no console errors. Still needs a real-device pass, not just headless.
 - [x] Homepage curated grid + expand/collapse control checked at 390×844 and 768×1024 via headless Chromium (2026-10-10) — single-column collapse at 390px, no overlap, control remains reachable. Still needs a real-device pass.
 - [x] Bento grid checked at 390×844, 768×1024, and 1024×768 (2026-10-10) — single natural-ratio column below 560px (desktop shapes ignored, no cropping even on a tile deliberately set to `cover`), stable 2-column layout in the 561–900px tablet range, no horizontal scroll. Still needs a real-device pass.
+- [x] Justified-grid phone-width rules added and verified (2026-10-22): rows capped at 2 images, a full-width banner escape hatch, and a 112px-minimum-rendered-width backout — swept across 4 projects at 390×844 (62, 13, 13, and 26 rows checked), zero rows exceed 2 images, zero console errors. Still needs a real-device pass, not just headless.
 - [ ] Video blocks and Adobe embeds checked on mobile Safari and Chrome (iframe embeds and native `<video>` behave differently across mobile browsers)
 
 ## Accessibility
@@ -47,8 +51,8 @@ See `ROADMAP.md` → "Launch blockers" (as of the 2026-09-20 correction pass, ju
 - [ ] All images have meaningful `alt` text (currently editor-supplied per image; spot-check a sample of the 19 projects rather than assuming)
 - [ ] Category filter buttons expose `aria-pressed` correctly (implemented in code — verify in a screen reader)
 - [ ] Video "Load video" buttons for untrusted-host iframes are reachable and labeled (implemented in code — verify)
-- [x] Bento tiles open the same accessible lightbox as the justified grid (2026-10-10) — same `Lightbox` component, same `imageAccessibleName` labeling, verified Enter-to-open moves focus to the close button and Escape returns focus to the exact tile that opened it
-- [ ] `prefers-reduced-motion: reduce` is respected — currently only disables CSS transitions; autoplaying looped `<video>` elements (`autoPlay={loop} muted={loop}`) do **not** currently check for reduced-motion. Flagged as a gap, not yet fixed. (The 2026-10-10 expand/collapse interaction is a separate, JS-driven animation and does correctly check `prefers-reduced-motion` before running — verified 0 Web Animations fire under it. This existing video gap is unchanged by that work.)
+- [x] Bento tiles open the same accessible lightbox as the justified grid (2026-10-10) — same `Lightbox` component, same `imageAccessibleName` labeling, verified Enter-to-open moves focus to the close button and Escape returns focus to the exact tile that opened it. Reconfirmed 2026-10-22 on the new segmented-screenshot gallery specifically: click opens with focus on the close button, ArrowRight advances to the next segment in order, Escape closes and returns focus to the originating `.justified-trigger` button.
+- [ ] `prefers-reduced-motion: reduce` is respected — currently only disables CSS transitions; autoplaying looped `<video>` elements (`autoPlay={loop} muted={loop}`) do **not** currently check for reduced-motion. Flagged as a gap, not yet fixed. (The 2026-10-10 expand/collapse interaction is a separate, JS-driven animation and does correctly check `prefers-reduced-motion` before running — verified 0 Web Animations fire under it, reconfirmed 2026-10-22 alongside the filter-behavior fix. This existing video gap is unchanged by that work.)
 - [x] Selected-work expand/collapse control (2026-10-10): semantic `<button>`, accurate `aria-expanded`, keyboard focus stays on the control after toggling, reachable with Enter/Space as a native button — verified via headless Chromium
 - [ ] Color contrast spot-checked against WCAG AA (body text is `#555`/`#666` on white in several places — verify against the 4.5:1 threshold at the sizes used)
 
@@ -68,8 +72,8 @@ See `ROADMAP.md` → "Launch blockers" (as of the 2026-09-20 correction pass, ju
 ## Media
 
 - [ ] Every changed image/video URL loads (re-check after any media migration batch)
-- [ ] Poster images present for all local `<video>` blocks that have one available
-- [ ] Adobe-hosted embeds (4 total) still resolve — flag immediately if `www-ccv.adobe.io` becomes unreachable, since there's no local fallback for those four yet
+- [x] Poster images present for the 6 reel videos newly placed into case studies (2026-10-22) — generated from representative, non-transitional frames, verified by direct viewing; set on both the project-page block and the matching reel.json entry. Still outstanding for any pre-existing video block without one.
+- [ ] Adobe-hosted embeds (2 total, down from 4 — see "Desktop rendering") still resolve — flag immediately if `www-ccv.adobe.io` becomes unreachable, since there's no local fallback for Visa or Lyft yet
 
 ## Cross-browser
 

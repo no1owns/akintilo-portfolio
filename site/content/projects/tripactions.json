@@ -163,8 +163,24 @@
     },
     {
       "type": "video",
+      "title": "Inside the Card",
+      "file": "/media/motion-tripactions-inside-the-card.mp4",
+      "poster": "/media/motion-tripactions-inside-the-card-poster.webp",
+      "playback": "controls",
+      "spacing": "regular"
+    },
+    {
+      "type": "video",
       "title": "Performance Marketing Systems video",
       "file": "/media/motion-tripactions-ad-1.mp4",
+      "spacing": "regular"
+    },
+    {
+      "type": "video",
+      "title": "Goodbye Expenses, Hello Liquid",
+      "file": "/media/motion-tripactions-goodbye-expenses.mp4",
+      "poster": "/media/motion-tripactions-goodbye-expenses-poster.webp",
+      "playback": "controls",
       "spacing": "regular"
     },
     {
@@ -177,6 +193,14 @@
       "type": "video",
       "title": "Performance Marketing Systems video",
       "file": "/media/motion-tripactions-ad-3.mp4",
+      "spacing": "regular"
+    },
+    {
+      "type": "video",
+      "title": "Hello, Liquid",
+      "file": "/media/motion-tripactions-hello-liquid.mp4",
+      "poster": "/media/motion-tripactions-hello-liquid-poster.webp",
+      "playback": "controls",
       "spacing": "regular"
     }
   ],

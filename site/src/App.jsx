@@ -4,12 +4,14 @@ import {HiArrowLongRight} from 'react-icons/hi2';
 import settings from '../content/settings.json';
 import reel from '../content/reel.json';
 import {bentoShapeFor} from './bento.js';
+import {justifiedTargetHeight, computeJustifiedRows} from './justified.js';
 const files=import.meta.glob('../content/projects/*.json',{eager:true,import:'default'});
 const projects=Object.values(files).filter(p=>p.published).sort((a,b)=>a.order-b.order);
 const experimentFiles=import.meta.glob('../content/experiments/*.json',{eager:true,import:'default'});
 const experiments=Object.values(experimentFiles).filter(e=>e.published).sort((a,b)=>a.order-b.order);
 const cats=['All','Brand Systems','Partnerships','Technical Storytelling','Communications'];
 const aliases={'brand-storytelling':'Brand Systems','partnership-campaigns':'Partnerships','technical-storytelling':'Technical Storytelling','communications':'Communications'};
+function categoryFromLocation(){const path=decodeURIComponent(location.pathname).replace(/^\/|\/$/g,'');if(aliases[path])return aliases[path];const qp=new URLSearchParams(location.search).get('category');return cats.includes(qp)?qp:'All';}
 export function safeURL(value){try {const u=new URL(value,location.origin);return ['http:','https:'].includes(u.protocol)?u.href:'';}catch{return '';}}
 export function mediaURL(value){if(!value)return '';return value.startsWith('/media/')?value:safeURL(value);}
 function Arrow(){return <HiArrowLongRight aria-hidden="true" className="arrow"/>;}
@@ -60,61 +62,6 @@ function BentoGallery({block}){
 // Plain same-size grid for images that already share a common aspect ratio -- no shape
 // logic, reuses the generic .gallery.columns-N rules.
 function UniformGallery({block}){const images=block.images||[];return <div className={`gallery layout-uniform columns-${block.columns||'2'}`}>{images.map((im,j)=><figure key={j}><img src={mediaURL(im.image)} alt={im.alt||''} loading="lazy"/>{im.caption&&<figcaption>{im.caption}</figcaption>}</figure>)}</div>;}
-// Responsive target row heights for the justified grid. Adjust these three
-// numbers to change the grid's density; the algorithm below does the rest.
-function justifiedTargetHeight(containerWidth) {
-  if (containerWidth >= 1000) return 340;
-  if (containerWidth >= 640) return 260;
-  return 190;
-}
-
-// Classic justified-layout packing: walk images left to right, accumulating
-// each one's width at the target row height, and close a row once that sum
-// (plus gaps) reaches the container width. The row is then scaled down so
-// its images fill the container exactly — never scaled up, so a row never
-// ends up taller than the target height. Images keep their real aspect
-// ratio (no cropping) and manual order is preserved. A final, incomplete
-// row is rendered at the target height and left-aligned rather than
-// stretched to fill the row, per the Adobe Portfolio-style spec.
-function computeJustifiedRows(images, containerWidth, gap) {
-  if (!containerWidth) return [];
-  const targetHeight = justifiedTargetHeight(containerWidth);
-  const rows = [];
-  let row = [];
-  let widthAtTarget = 0;
-  images.forEach((image, index) => {
-    const ratio = image.width && image.height ? image.width / image.height : 1.5;
-    row.push({ ...image, index, ratio });
-    widthAtTarget += ratio * targetHeight;
-    const isLast = index === images.length - 1;
-    const gapsWidth = (row.length - 1) * gap;
-    if (widthAtTarget + gapsWidth >= containerWidth) {
-      const totalRatio = row.reduce((sum, item) => sum + item.ratio, 0);
-      const availableWidth = containerWidth - (row.length - 1) * gap;
-      const height = availableWidth / totalRatio;
-      rows.push({ images: row, height });
-      row = [];
-      widthAtTarget = 0;
-    } else if (isLast && row.length) {
-      rows.push({ images: row, height: targetHeight, incomplete: true });
-    }
-  });
-  // A lone trailing image left at natural size (with empty space beside it)
-  // reads as out of place against the fully justified rows above it. Fold it
-  // into the previous row and re-solve both together instead.
-  if (rows.length > 1) {
-    const lastRow = rows[rows.length - 1];
-    if (lastRow.incomplete && lastRow.images.length === 1) {
-      const prevRow = rows[rows.length - 2];
-      const merged = [...prevRow.images, ...lastRow.images];
-      const totalRatio = merged.reduce((sum, item) => sum + item.ratio, 0);
-      const availableWidth = containerWidth - (merged.length - 1) * gap;
-      rows.splice(rows.length - 2, 2, { images: merged, height: availableWidth / totalRatio });
-    }
-  }
-  return rows;
-}
-
 function imageAccessibleName(image, position, total) {
   return image.caption || image.alt || `Image ${position} of ${total}`;
 }
@@ -209,6 +156,8 @@ function JustifiedGallery({block}) {
                 <img
                   src={mediaURL(image.image)}
                   alt={image.alt || ''}
+                  width={image.width}
+                  height={image.height}
                   loading="lazy"
                 />
               </button>
@@ -354,8 +303,21 @@ function Home({initial='All'}){
   const toggleRef=useRef(null);
   const captureRects=useExpandTransition(gridRef);
   const ref=useReveal();useCoverParallax(ref);
-  const list=projects.filter(p=>filter==='All'||p.category===filter);
-  const visible=expanded?list:list.filter(p=>p.featured);
+  useEffect(()=>{
+    const onPopState=()=>{setFilter(categoryFromLocation());setExpanded(false);};
+    window.addEventListener('popstate',onPopState);
+    return ()=>window.removeEventListener('popstate',onPopState);
+  },[]);
+  const isAll=filter==='All';
+  const list=projects.filter(p=>isAll||p.category===filter);
+  const visible=isAll?(expanded?list:list.filter(p=>p.featured)):list;
+  const heading=isAll?(expanded?'All work':'Selected work'):filter;
+  const onFilterClick=(c)=>{
+    if(c===filter)return;
+    history.pushState(null,'',c==='All'?'/':'/?category='+encodeURIComponent(c)+'#work');
+    setFilter(c);
+    setExpanded(false);
+  };
   const onToggle=()=>{
     const next=!expanded;
     if(prefersReducedMotion()){setExpanded(next);}
@@ -363,11 +325,11 @@ function Home({initial='All'}){
     else {captureRects();setExpanded(next);}
     toggleRef.current?.focus();
   };
-  return <div ref={ref}><section className="hero" data-reveal><h1>{settings.headline}</h1><p>{settings.intro}</p><a className="hero-link" href="#work">View selected work <Arrow/></a></section><section id="work" className="work" data-reveal><h2>Selected work</h2><div className="filters" role="group" aria-label="Filter projects">{cats.map(c=><button key={c} aria-pressed={c===filter} className={c===filter?'active':''} onClick={()=>setFilter(c)}>{c}</button>)}</div><div id="work-grid" ref={gridRef} className={`project-grid columns-${settings.gridColumns||'2'} gap-${settings.gridGap||'comfortable'}`}>{visible.map(p=><Card key={p.slug} p={p}/>)}</div>{!expanded&&visible.length===0&&<p className="work-empty-hint">No featured picks in this category yet — view all work to see everything.</p>}<button type="button" ref={toggleRef} className="work-toggle text-link" aria-expanded={expanded} aria-controls="work-grid" onClick={onToggle}>{expanded?'Show selected work':'View all work'}<Arrow/></button></section><Experiments/></div>;
+  return <div ref={ref}><section className="hero" data-reveal><h1>{settings.headline}</h1><p>{settings.intro}</p><a className="hero-link" href="#work">View selected work <Arrow/></a></section><section id="work" className="work" data-reveal><h2>{heading}</h2><div className="filters" role="group" aria-label="Filter projects">{cats.map(c=><button key={c} aria-pressed={c===filter} className={c===filter?'active':''} onClick={()=>onFilterClick(c)}>{c}</button>)}</div><div id="work-grid" ref={gridRef} className={`project-grid columns-${settings.gridColumns||'2'} gap-${settings.gridGap||'comfortable'}`}>{visible.map(p=><Card key={p.slug} p={p}/>)}</div>{isAll&&!expanded&&visible.length===0&&<p className="work-empty-hint">No featured picks in this category yet — view all work to see everything.</p>}{isAll&&<button type="button" ref={toggleRef} className="work-toggle text-link" aria-expanded={expanded} aria-controls="work-grid" onClick={onToggle}>{expanded?'Show selected work':'View all work'}<Arrow/></button>}</section><Experiments/></div>;
 }
-function Project({p}){const next=projects[(projects.indexOf(p)+1)%projects.length];return <><header className="project-intro"><a className="eyebrow" href={'/?category='+encodeURIComponent(p.category)}>All {p.category.toLowerCase()} <Arrow/></a><h1>{p.title}</h1><p className="summary">{p.summary}</p><dl><div><dt>Company</dt><dd>{p.company}</dd></div><div><dt>Role</dt><dd>{p.role}</dd></div></dl></header><figure className="project-hero"><img src={mediaURL(p.cover)} alt={p.coverAlt}/></figure><section className="overview"><h2>The work</h2><div><Text>{p.overview}</Text></div></section>{p.outcomes?.length>0&&<section className="outcomes" aria-label="Project outcomes">{p.outcomes.map((o,i)=><div key={i}><strong>{o.value}</strong><p>{o.label}</p></div>)}</section>}<Blocks blocks={p.blocks}/><nav className="project-next" aria-label="Next project"><span>Next project</span><a href={'/'+next.slug}>{next.title}<Arrow/></a></nav></>;}
+function Project({p}){const next=projects[(projects.indexOf(p)+1)%projects.length];return <><header className="project-intro"><a className="eyebrow" href={'/?category='+encodeURIComponent(p.category)+'#work'}>All {p.category.toLowerCase()} <Arrow/></a><h1>{p.title}</h1><p className="summary">{p.summary}</p><dl><div><dt>Company</dt><dd>{p.company}</dd></div><div><dt>Role</dt><dd>{p.role}</dd></div></dl></header><figure className="project-hero"><img src={mediaURL(p.cover)} alt={p.coverAlt}/></figure><section className="overview"><h2>The work</h2><div><Text>{p.overview}</Text></div></section>{p.outcomes?.length>0&&<section className="outcomes" aria-label="Project outcomes">{p.outcomes.map((o,i)=><div key={i}><strong>{o.value}</strong><p>{o.label}</p></div>)}</section>}<Blocks blocks={p.blocks}/><nav className="project-next" aria-label="Next project"><span>Next project</span><a href={'/'+next.slug}>{next.title}<Arrow/></a></nav></>;}
 function About(){return <section className="simple-page"><p className="eyebrow">About Ayo</p><h1>The story.<br/>The system.<br/>The people using it.</h1><Text>{settings.about}</Text><a href="/resume" className="text-link">View experience <Arrow/></a></section>;}
-function Resume(){return <section className="simple-page"><p className="eyebrow">Experience</p><h1>Brand, web,<br/>and creative direction.</h1>{settings.resume&&<a className="text-link" href={mediaURL(settings.resume)} download>Download résumé <Arrow/></a>}<div className="experience">{[['AppOmni','Senior Visual Designer','Dec 2024–Present'],['Forge HQ','Founder, Creative Director','2020–Present'],['Meta, via TEKSystems','Creative Consultant, Keynote Storytelling (Contract)','2025'],['Secureframe','Principal Designer','2022–2024'],['Navan (TripActions)','Director of Design','2019–2022'],['MongoDB','Creative Director','2015–2019'],['DocuSign','Director of Creative Services','2012–2015']].map(([a,b,c])=><div key={a}><h2>{a}</h2><p>{b}</p><span>{c}</span></div>)}</div></section>;}
+function Resume(){return <section className="simple-page"><p className="eyebrow">Experience</p><h1>Brand, web,<br/>and creative direction.</h1>{settings.resume&&<a className="text-link" href={mediaURL(settings.resume)} download>Download résumé <Arrow/></a>}<div className="experience">{[['AppOmni','Senior Visual Designer','Dec 2024–Oct 2026'],['Forge HQ','Founder, Creative Director','2020–Present'],['Meta, via TEKSystems','Creative Consultant, Keynote Storytelling (Contract)','2025'],['Secureframe','Principal Designer','2022–2024'],['Navan (TripActions)','Director of Design','2019–2022'],['MongoDB','Creative Director','2015–2019'],['DocuSign','Director of Creative Services','2012–2015']].map(([a,b,c])=><div key={a}><h2>{a}</h2><p>{b}</p><span>{c}</span></div>)}</div></section>;}
 const CONTACT_EMAIL='ayoakintilo@gmail.com';
 function ContactForm(){
   const onSubmit=(event)=>{
@@ -395,4 +357,4 @@ function Reel(){
   const categories=[...new Set(reel.videos.map(v=>v.category))];
   return <section className="simple-page reel-page"><p className="eyebrow">Reel</p><h1>{reel.title}</h1><p className="summary">{reel.intro}</p>{categories.map(cat=><div key={cat} className="reel-category"><h2>{cat}</h2><div className="reel-grid">{reel.videos.filter(v=>v.category===cat).map((v,i)=><article key={i} className="reel-item"><Video block={v}/><p className="reel-item-meta"><strong>{v.company}</strong></p><p className="reel-item-role">{v.role}</p><p>{v.description}</p></article>)}</div></div>)}</section>;
 }
-export function App(){const path=decodeURIComponent(location.pathname).replace(/^\/|\/$/g,'');const [menu,setMenu]=useState(false);const project=projects.find(p=>p.slug===path);const title=project?.title||({about:'About',resume:'Experience',contact:'Contact',reel:reel.title}[path])||'Brand systems. Clearer stories.';useEffect(()=>{document.title=title+' | Ayodeji Akintilo';},[title]);return <><a className="skip" href="#main">Skip to content</a><div className="shell"><header className="site-header"><a className="wordmark" href="/">{settings.name}</a><button className="menu-toggle" aria-expanded={menu} aria-controls="main-nav" onClick={()=>setMenu(!menu)}>{menu?'Close':'Menu'}</button><nav id="main-nav" className={menu?'open':''} aria-label="Main navigation">{[['Work','/'],['About','/about'],['Experience','/resume'],['Contact','/contact']].map(([name,url])=><a key={url} aria-current={location.pathname===url?'page':undefined} href={url}>{name}</a>)}</nav></header><main id="main">{project?<Project p={project}/>:path==='about'?<About/>:path==='resume'?<Resume/>:path==='contact'?<Contact/>:path==='reel'?<Reel/>:!path||aliases[path]?<Home initial={aliases[path]||new URLSearchParams(location.search).get('category')||'All'}/>:<section className="simple-page"><h1>Page not found.</h1><a href="/">Explore the work <Arrow/></a></section>}</main><footer><a href="/">{settings.name}</a><a href="/contact">Get in touch <Arrow/></a></footer></div></>;}
+export function App(){const path=decodeURIComponent(location.pathname).replace(/^\/|\/$/g,'');const [menu,setMenu]=useState(false);const project=projects.find(p=>p.slug===path);const title=project?.title||({about:'About',resume:'Experience',contact:'Contact',reel:reel.title}[path])||'Brand systems. Clearer stories.';useEffect(()=>{document.title=title+' | Ayodeji Akintilo';},[title]);return <><a className="skip" href="#main">Skip to content</a><div className="shell"><header className="site-header"><a className="wordmark" href="/">{settings.name}</a><button className="menu-toggle" aria-expanded={menu} aria-controls="main-nav" onClick={()=>setMenu(!menu)}>{menu?'Close':'Menu'}</button><nav id="main-nav" className={menu?'open':''} aria-label="Main navigation">{[['Work','/'],['About','/about'],['Experience','/resume'],['Contact','/contact']].map(([name,url])=><a key={url} aria-current={location.pathname===url?'page':undefined} href={url}>{name}</a>)}</nav></header><main id="main">{project?<Project p={project}/>:path==='about'?<About/>:path==='resume'?<Resume/>:path==='contact'?<Contact/>:path==='reel'?<Reel/>:!path||aliases[path]?<Home initial={categoryFromLocation()}/>:<section className="simple-page"><h1>Page not found.</h1><a href="/">Explore the work <Arrow/></a></section>}</main><footer><a href="/">{settings.name}</a><a href="/contact">Get in touch <Arrow/></a></footer></div></>;}
