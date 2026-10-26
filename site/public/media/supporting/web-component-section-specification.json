@@ -1,0 +1,90 @@
+{
+  "name": "FeatureCardSection",
+  "evidence": {
+    "reference": "https://appomni.com/",
+    "section": "The AI-powered engine behind AppOmni",
+    "assets": "Published AppOmni illustrations",
+    "status": "Recreated web-section workflow",
+    "proposed": "Component names, properties, variants and token mapping"
+  },
+  "properties": {
+    "heading": "The AI-powered engine behind AppOmni",
+    "intro": "",
+    "alignment": "left",
+    "cardCount": 2,
+    "showMedia": true,
+    "showIcon": false,
+    "showLabel": false,
+    "showBody": true,
+    "showCTA": true
+  },
+  "variants": {
+    "layout": [
+      "cards",
+      "icons",
+      "split"
+    ],
+    "viewport": [
+      "desktop",
+      "mobile"
+    ],
+    "theme": [
+      "dark",
+      "light"
+    ]
+  },
+  "layout": {
+    "container": "vertical auto layout",
+    "content": "responsive grid",
+    "desktopColumns": 2,
+    "mobileColumns": 1,
+    "cardRadius": 8,
+    "cardPaddingReference": 40
+  },
+  "tokenRoles": {
+    "section.surface.dark": "#0b1643",
+    "section.surface.light": "#f5f9fc",
+    "card.surface": "#ffffff",
+    "text.primary": "#282d31",
+    "text.inverse": "#ffffff",
+    "button.dark": "#08090a",
+    "accent.blue": "#0429b9"
+  },
+  "children": [
+    {
+      "name": "FeatureCardSection",
+      "role": "Section container · vertical auto layout"
+    },
+    {
+      "name": "SectionHeader",
+      "role": "Heading + optional eyebrow and intro"
+    },
+    {
+      "name": "ContentGrid",
+      "role": "Responsive columns → vertical stack"
+    },
+    {
+      "name": "FeatureCard × 2",
+      "role": "Nested reusable component"
+    },
+    {
+      "name": "MediaSlot",
+      "role": "Image or illustration · optional"
+    },
+    {
+      "name": "ContentStack",
+      "role": "Icon, label, title, body, CTA"
+    },
+    {
+      "name": "Button",
+      "role": "Existing button style + label property"
+    }
+  ],
+  "review": [
+    "Reuses existing button and text styles",
+    "Content wraps without clipping",
+    "Mobile keeps semantic reading order",
+    "Optional slots collapse cleanly",
+    "Check actual theme contrast before production"
+  ]
+}
