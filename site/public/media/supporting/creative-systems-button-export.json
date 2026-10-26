@@ -1,0 +1,1418 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "url": "https://appomni.com/",
+    "inspectedAt": "2026-10-24",
+    "method": "Live CSSOM and computed style inspection",
+    "font": "Graphik",
+    "tokens": {
+      "button-primary-bg": "#0429b9",
+      "button-primary-bg-hover": "#2953fa",
+      "button-light-bg": "#f0f1f4",
+      "button-light-bg-hover": "#ffffff",
+      "button-dark-bg": "#08090a",
+      "button-dark-bg-hover": "#282d31",
+      "button-dark-outline-border": "#0429b9",
+      "button-dark-outline-border-hover": "#2953fa",
+      "button-light-outline-border": "#f0f1f4",
+      "button-light-outline-border-hover": "#ffffff",
+      "button-shared-disabled-bg": "#d4d5d6",
+      "button-shared-focus-ring": "#2953fa"
+    }
+  },
+  "geometry": {
+    "fontSize": 16,
+    "fontWeight": 500,
+    "radius": 8,
+    "borderWidth": 1,
+    "regularX": 24,
+    "regularY": 16,
+    "smallX": 16,
+    "smallY": 12,
+    "focusWidth": 2,
+    "focusOffset": 4
+  },
+  "variants": {
+    "primary": {
+      "name": "Primary blue",
+      "purpose": "High-emphasis actions",
+      "label": "Explore the Platform",
+      "surface": "#ffffff",
+      "states": {
+        "default": {
+          "bg": "#0429b9",
+          "fg": "#ffffff",
+          "border": "#0429b9",
+          "ring": "#2953fa",
+          "provenance": "Observed CSS"
+        },
+        "hover": {
+          "bg": "#2953fa",
+          "fg": "#ffffff",
+          "border": "#2953fa",
+          "ring": "#2953fa",
+          "provenance": "Observed CSS"
+        },
+        "focus": {
+          "bg": "#0429b9",
+          "fg": "#ffffff",
+          "border": "#0429b9",
+          "ring": "#2953fa",
+          "provenance": "Observed focus rule"
+        },
+        "active": {
+          "bg": "#2953fa",
+          "fg": "#ffffff",
+          "border": "#2953fa",
+          "ring": "#2953fa",
+          "provenance": "Proposed: hover-derived"
+        },
+        "disabled": {
+          "bg": "#d4d5d6",
+          "fg": "#a9abad",
+          "border": "#d4d5d6",
+          "ring": "#2953fa",
+          "provenance": "Observed disabled rule"
+        }
+      }
+    },
+    "light": {
+      "name": "Light",
+      "purpose": "Actions on dark surfaces",
+      "label": "Get a Demo",
+      "surface": "#0e1741",
+      "states": {
+        "default": {
+          "bg": "#f0f1f4",
+          "fg": "#282d31",
+          "border": "#f0f1f4",
+          "ring": "#2953fa",
+          "provenance": "Observed CSS"
+        },
+        "hover": {
+          "bg": "#ffffff",
+          "fg": "#282d31",
+          "border": "#ffffff",
+          "ring": "#2953fa",
+          "provenance": "Observed CSS"
+        },
+        "focus": {
+          "bg": "#f0f1f4",
+          "fg": "#282d31",
+          "border": "#f0f1f4",
+          "ring": "#2953fa",
+          "provenance": "Observed focus rule"
+        },
+        "active": {
+          "bg": "#ffffff",
+          "fg": "#282d31",
+          "border": "#ffffff",
+          "ring": "#2953fa",
+          "provenance": "Proposed: hover-derived"
+        },
+        "disabled": {
+          "bg": "#d4d5d6",
+          "fg": "#a9abad",
+          "border": "#d4d5d6",
+          "ring": "#2953fa",
+          "provenance": "Observed disabled rule"
+        }
+      }
+    },
+    "dark": {
+      "name": "Dark",
+      "purpose": "Neutral filled actions",
+      "label": "Learn More",
+      "surface": "#ffffff",
+      "states": {
+        "default": {
+          "bg": "#08090a",
+          "fg": "#ffffff",
+          "border": "#08090a",
+          "ring": "#2953fa",
+          "provenance": "Observed CSS"
+        },
+        "hover": {
+          "bg": "#282d31",
+          "fg": "#ffffff",
+          "border": "#282d31",
+          "ring": "#2953fa",
+          "provenance": "Observed CSS"
+        },
+        "focus": {
+          "bg": "#08090a",
+          "fg": "#ffffff",
+          "border": "#08090a",
+          "ring": "#2953fa",
+          "provenance": "Observed focus rule"
+        },
+        "active": {
+          "bg": "#282d31",
+          "fg": "#ffffff",
+          "border": "#282d31",
+          "ring": "#2953fa",
+          "provenance": "Proposed: hover-derived"
+        },
+        "disabled": {
+          "bg": "#d4d5d6",
+          "fg": "#a9abad",
+          "border": "#d4d5d6",
+          "ring": "#2953fa",
+          "provenance": "Observed disabled rule"
+        }
+      }
+    },
+    "darkOutline": {
+      "name": "Blue outline",
+      "purpose": "Secondary actions on light",
+      "label": "Explore the Platform",
+      "surface": "#ffffff",
+      "states": {
+        "default": {
+          "bg": "transparent",
+          "fg": "#0429b9",
+          "border": "#0429b9",
+          "ring": "#2953fa",
+          "provenance": "Observed CSS"
+        },
+        "hover": {
+          "bg": "transparent",
+          "fg": "#0429b9",
+          "border": "#2953fa",
+          "ring": "#2953fa",
+          "provenance": "Observed CSS"
+        },
+        "focus": {
+          "bg": "transparent",
+          "fg": "#0429b9",
+          "border": "#0429b9",
+          "ring": "#2953fa",
+          "provenance": "Observed focus rule"
+        },
+        "active": {
+          "bg": "transparent",
+          "fg": "#0429b9",
+          "border": "#2953fa",
+          "ring": "#2953fa",
+          "provenance": "Proposed: hover-derived"
+        },
+        "disabled": {
+          "bg": "#d4d5d6",
+          "fg": "#a9abad",
+          "border": "#d4d5d6",
+          "ring": "#2953fa",
+          "provenance": "Observed disabled rule"
+        }
+      }
+    },
+    "lightOutline": {
+      "name": "Light outline",
+      "purpose": "Secondary actions on dark",
+      "label": "View All Integrations",
+      "surface": "#0e1741",
+      "states": {
+        "default": {
+          "bg": "transparent",
+          "fg": "#ffffff",
+          "border": "#f0f1f4",
+          "ring": "#2953fa",
+          "provenance": "Observed CSS"
+        },
+        "hover": {
+          "bg": "transparent",
+          "fg": "#ffffff",
+          "border": "#ffffff",
+          "ring": "#2953fa",
+          "provenance": "Observed CSS"
+        },
+        "focus": {
+          "bg": "transparent",
+          "fg": "#ffffff",
+          "border": "#f0f1f4",
+          "ring": "#2953fa",
+          "provenance": "Observed focus rule"
+        },
+        "active": {
+          "bg": "transparent",
+          "fg": "#ffffff",
+          "border": "#ffffff",
+          "ring": "#2953fa",
+          "provenance": "Proposed: hover-derived"
+        },
+        "disabled": {
+          "bg": "#d4d5d6",
+          "fg": "#a9abad",
+          "border": "#d4d5d6",
+          "ring": "#2953fa",
+          "provenance": "Observed disabled rule"
+        }
+      }
+    },
+    "offWhite": {
+      "name": "Off-white",
+      "purpose": "Alternative surface action",
+      "label": "Learn More",
+      "surface": "#ffffff",
+      "states": {
+        "default": {
+          "bg": "#f5f9fc",
+          "fg": "#282d31",
+          "border": "transparent",
+          "ring": "#2953fa",
+          "provenance": "Observed CSS"
+        },
+        "hover": {
+          "bg": "#003785",
+          "fg": "#ffffff",
+          "border": "transparent",
+          "ring": "#2953fa",
+          "provenance": "Observed CSS"
+        },
+        "focus": {
+          "bg": "#f5f9fc",
+          "fg": "#282d31",
+          "border": "transparent",
+          "ring": "#2953fa",
+          "provenance": "Observed focus rule"
+        },
+        "active": {
+          "bg": "#003785",
+          "fg": "#ffffff",
+          "border": "transparent",
+          "ring": "#2953fa",
+          "provenance": "Proposed: hover-derived"
+        },
+        "disabled": {
+          "bg": "#d4d5d6",
+          "fg": "#a9abad",
+          "border": "#d4d5d6",
+          "ring": "#2953fa",
+          "provenance": "Observed disabled rule"
+        }
+      }
+    }
+  },
+  "exportedAt": "2026-10-25T01:46:30.902Z",
+  "tokenFormat": "Button System Lab v1; portable JSON, not a Figma variable import file",
+  "tokens": {
+    "primitive": {
+      "button-primary-bg": {
+        "$type": "color",
+        "$value": "#0429b9"
+      },
+      "button-primary-bg-hover": {
+        "$type": "color",
+        "$value": "#2953fa"
+      },
+      "button-light-bg": {
+        "$type": "color",
+        "$value": "#f0f1f4"
+      },
+      "button-light-bg-hover": {
+        "$type": "color",
+        "$value": "#ffffff"
+      },
+      "button-dark-bg": {
+        "$type": "color",
+        "$value": "#08090a"
+      },
+      "button-dark-bg-hover": {
+        "$type": "color",
+        "$value": "#282d31"
+      },
+      "button-dark-outline-border": {
+        "$type": "color",
+        "$value": "#0429b9"
+      },
+      "button-dark-outline-border-hover": {
+        "$type": "color",
+        "$value": "#2953fa"
+      },
+      "button-light-outline-border": {
+        "$type": "color",
+        "$value": "#f0f1f4"
+      },
+      "button-light-outline-border-hover": {
+        "$type": "color",
+        "$value": "#ffffff"
+      },
+      "button-shared-disabled-bg": {
+        "$type": "color",
+        "$value": "#d4d5d6"
+      },
+      "button-shared-focus-ring": {
+        "$type": "color",
+        "$value": "#2953fa"
+      }
+    },
+    "component": {
+      "primary": {
+        "default": {
+          "bg": {
+            "$type": "color",
+            "$value": "#0429b9"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#0429b9"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed CSS"
+          }
+        },
+        "hover": {
+          "bg": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed CSS"
+          }
+        },
+        "focus": {
+          "bg": {
+            "$type": "color",
+            "$value": "#0429b9"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#0429b9"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed focus rule"
+          }
+        },
+        "active": {
+          "bg": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Proposed: hover-derived"
+          }
+        },
+        "disabled": {
+          "bg": {
+            "$type": "color",
+            "$value": "#d4d5d6"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#a9abad"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#d4d5d6"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed disabled rule"
+          }
+        }
+      },
+      "light": {
+        "default": {
+          "bg": {
+            "$type": "color",
+            "$value": "#f0f1f4"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#282d31"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#f0f1f4"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed CSS"
+          }
+        },
+        "hover": {
+          "bg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#282d31"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed CSS"
+          }
+        },
+        "focus": {
+          "bg": {
+            "$type": "color",
+            "$value": "#f0f1f4"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#282d31"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#f0f1f4"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed focus rule"
+          }
+        },
+        "active": {
+          "bg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#282d31"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Proposed: hover-derived"
+          }
+        },
+        "disabled": {
+          "bg": {
+            "$type": "color",
+            "$value": "#d4d5d6"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#a9abad"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#d4d5d6"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed disabled rule"
+          }
+        }
+      },
+      "dark": {
+        "default": {
+          "bg": {
+            "$type": "color",
+            "$value": "#08090a"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#08090a"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed CSS"
+          }
+        },
+        "hover": {
+          "bg": {
+            "$type": "color",
+            "$value": "#282d31"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#282d31"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed CSS"
+          }
+        },
+        "focus": {
+          "bg": {
+            "$type": "color",
+            "$value": "#08090a"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#08090a"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed focus rule"
+          }
+        },
+        "active": {
+          "bg": {
+            "$type": "color",
+            "$value": "#282d31"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#282d31"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Proposed: hover-derived"
+          }
+        },
+        "disabled": {
+          "bg": {
+            "$type": "color",
+            "$value": "#d4d5d6"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#a9abad"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#d4d5d6"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed disabled rule"
+          }
+        }
+      },
+      "darkOutline": {
+        "default": {
+          "bg": {
+            "$type": "color",
+            "$value": "#00000000"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#0429b9"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#0429b9"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed CSS"
+          }
+        },
+        "hover": {
+          "bg": {
+            "$type": "color",
+            "$value": "#00000000"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#0429b9"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed CSS"
+          }
+        },
+        "focus": {
+          "bg": {
+            "$type": "color",
+            "$value": "#00000000"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#0429b9"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#0429b9"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed focus rule"
+          }
+        },
+        "active": {
+          "bg": {
+            "$type": "color",
+            "$value": "#00000000"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#0429b9"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Proposed: hover-derived"
+          }
+        },
+        "disabled": {
+          "bg": {
+            "$type": "color",
+            "$value": "#d4d5d6"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#a9abad"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#d4d5d6"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed disabled rule"
+          }
+        }
+      },
+      "lightOutline": {
+        "default": {
+          "bg": {
+            "$type": "color",
+            "$value": "#00000000"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#f0f1f4"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed CSS"
+          }
+        },
+        "hover": {
+          "bg": {
+            "$type": "color",
+            "$value": "#00000000"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed CSS"
+          }
+        },
+        "focus": {
+          "bg": {
+            "$type": "color",
+            "$value": "#00000000"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#f0f1f4"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed focus rule"
+          }
+        },
+        "active": {
+          "bg": {
+            "$type": "color",
+            "$value": "#00000000"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Proposed: hover-derived"
+          }
+        },
+        "disabled": {
+          "bg": {
+            "$type": "color",
+            "$value": "#d4d5d6"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#a9abad"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#d4d5d6"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed disabled rule"
+          }
+        }
+      },
+      "offWhite": {
+        "default": {
+          "bg": {
+            "$type": "color",
+            "$value": "#f5f9fc"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#282d31"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#00000000"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed CSS"
+          }
+        },
+        "hover": {
+          "bg": {
+            "$type": "color",
+            "$value": "#003785"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#00000000"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed CSS"
+          }
+        },
+        "focus": {
+          "bg": {
+            "$type": "color",
+            "$value": "#f5f9fc"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#282d31"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#00000000"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed focus rule"
+          }
+        },
+        "active": {
+          "bg": {
+            "$type": "color",
+            "$value": "#003785"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#ffffff"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#00000000"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Proposed: hover-derived"
+          }
+        },
+        "disabled": {
+          "bg": {
+            "$type": "color",
+            "$value": "#d4d5d6"
+          },
+          "fg": {
+            "$type": "color",
+            "$value": "#a9abad"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "#d4d5d6"
+          },
+          "ring": {
+            "$type": "color",
+            "$value": "#2953fa"
+          },
+          "$extensions": {
+            "provenance": "Observed disabled rule"
+          }
+        }
+      }
+    }
+  },
+  "audit": {
+    "scope": "Color contrast on solid chosen surfaces; not full WCAG conformance",
+    "results": [
+      {
+        "family": "primary",
+        "state": "default",
+        "text": 10.381166021943633,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 10.381166021943633,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#0429b9"
+      },
+      {
+        "family": "primary",
+        "state": "hover",
+        "text": 5.657310075972246,
+        "large": false,
+        "aa": true,
+        "aaa": false,
+        "boundary": 5.657310075972246,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#2953fa"
+      },
+      {
+        "family": "primary",
+        "state": "focus",
+        "text": 10.381166021943633,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 10.381166021943633,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#0429b9"
+      },
+      {
+        "family": "primary",
+        "state": "active",
+        "text": 5.657310075972246,
+        "large": false,
+        "aa": true,
+        "aaa": false,
+        "boundary": 5.657310075972246,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#2953fa"
+      },
+      {
+        "family": "primary",
+        "state": "disabled",
+        "text": 1.5674369321069694,
+        "large": false,
+        "aa": false,
+        "aaa": false,
+        "boundary": 1.469752745047155,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": true,
+        "bg": "#d4d5d6"
+      },
+      {
+        "family": "light",
+        "state": "default",
+        "text": 12.314165929967182,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 15.271097295308525,
+        "focus": 3.048725684584224,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#f0f1f4"
+      },
+      {
+        "family": "light",
+        "state": "hover",
+        "text": 13.907949007682827,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 17.247586534273715,
+        "focus": 3.048725684584224,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#ffffff"
+      },
+      {
+        "family": "light",
+        "state": "focus",
+        "text": 12.314165929967182,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 15.271097295308525,
+        "focus": 3.048725684584224,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#f0f1f4"
+      },
+      {
+        "family": "light",
+        "state": "active",
+        "text": 13.907949007682827,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 17.247586534273715,
+        "focus": 3.048725684584224,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#ffffff"
+      },
+      {
+        "family": "light",
+        "state": "disabled",
+        "text": 1.5674369321069694,
+        "large": false,
+        "aa": false,
+        "aaa": false,
+        "boundary": 11.73502590309525,
+        "focus": 3.048725684584224,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": true,
+        "bg": "#d4d5d6"
+      },
+      {
+        "family": "dark",
+        "state": "default",
+        "text": 19.92820998492997,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 19.92820998492997,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#08090a"
+      },
+      {
+        "family": "dark",
+        "state": "hover",
+        "text": 13.907949007682827,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 13.907949007682827,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#282d31"
+      },
+      {
+        "family": "dark",
+        "state": "focus",
+        "text": 19.92820998492997,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 19.92820998492997,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#08090a"
+      },
+      {
+        "family": "dark",
+        "state": "active",
+        "text": 13.907949007682827,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 13.907949007682827,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#282d31"
+      },
+      {
+        "family": "dark",
+        "state": "disabled",
+        "text": 1.5674369321069694,
+        "large": false,
+        "aa": false,
+        "aaa": false,
+        "boundary": 1.469752745047155,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": true,
+        "bg": "#d4d5d6"
+      },
+      {
+        "family": "darkOutline",
+        "state": "default",
+        "text": 10.381166021943633,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 10.381166021943633,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#ffffff"
+      },
+      {
+        "family": "darkOutline",
+        "state": "hover",
+        "text": 10.381166021943633,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 5.657310075972246,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#ffffff"
+      },
+      {
+        "family": "darkOutline",
+        "state": "focus",
+        "text": 10.381166021943633,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 10.381166021943633,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#ffffff"
+      },
+      {
+        "family": "darkOutline",
+        "state": "active",
+        "text": 10.381166021943633,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 5.657310075972246,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#ffffff"
+      },
+      {
+        "family": "darkOutline",
+        "state": "disabled",
+        "text": 1.5674369321069694,
+        "large": false,
+        "aa": false,
+        "aaa": false,
+        "boundary": 1.469752745047155,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": true,
+        "bg": "#d4d5d6"
+      },
+      {
+        "family": "lightOutline",
+        "state": "default",
+        "text": 17.247586534273715,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 15.271097295308525,
+        "focus": 3.048725684584224,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#0e1741"
+      },
+      {
+        "family": "lightOutline",
+        "state": "hover",
+        "text": 17.247586534273715,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 17.247586534273715,
+        "focus": 3.048725684584224,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#0e1741"
+      },
+      {
+        "family": "lightOutline",
+        "state": "focus",
+        "text": 17.247586534273715,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 15.271097295308525,
+        "focus": 3.048725684584224,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#0e1741"
+      },
+      {
+        "family": "lightOutline",
+        "state": "active",
+        "text": 17.247586534273715,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 17.247586534273715,
+        "focus": 3.048725684584224,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#0e1741"
+      },
+      {
+        "family": "lightOutline",
+        "state": "disabled",
+        "text": 1.5674369321069694,
+        "large": false,
+        "aa": false,
+        "aaa": false,
+        "boundary": 11.73502590309525,
+        "focus": 3.048725684584224,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": true,
+        "bg": "#d4d5d6"
+      },
+      {
+        "family": "offWhite",
+        "state": "default",
+        "text": 13.138656086478882,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 1.058551872896318,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#f5f9fc"
+      },
+      {
+        "family": "offWhite",
+        "state": "hover",
+        "text": 11.13960036237307,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 11.13960036237307,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#003785"
+      },
+      {
+        "family": "offWhite",
+        "state": "focus",
+        "text": 13.138656086478882,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 1.058551872896318,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#f5f9fc"
+      },
+      {
+        "family": "offWhite",
+        "state": "active",
+        "text": 11.13960036237307,
+        "large": false,
+        "aa": true,
+        "aaa": true,
+        "boundary": 11.13960036237307,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": false,
+        "bg": "#003785"
+      },
+      {
+        "family": "offWhite",
+        "state": "disabled",
+        "text": 1.5674369321069694,
+        "large": false,
+        "aa": false,
+        "aaa": false,
+        "boundary": 1.469752745047155,
+        "focus": 5.657310075972246,
+        "focusPass": true,
+        "height": 51.2,
+        "disabled": true,
+        "bg": "#d4d5d6"
+      }
+    ]
+  }
+}
