@@ -2,6 +2,14 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-26 (fifth pass) — Atlas cluster builder animation frame added to Designing for a Developer Platform
+
+Ayodeji pasted a single image (a white-card-to-dark-card UI transition, 600×338) and asked for it to be added to `mongodb-web.json`. The image alone didn't show enough to confidently caption on sight -- no MongoDB branding or recognizable product UI was visible, just an abstract card reveal -- so rather than guess, asked what it was. Ayodeji confirmed: "its the animation of the atlas cluster builder for mongodb," which also lines up with the project's existing overview text ("I also pitched and built an interactive cluster builder for the Atlas announcement"). Added as a new full-width (`narrow`) `image` block at the end of the page's blocks, with alt text describing only what's actually visible and a caption carrying the attribution Ayodeji gave. Saved as `mongodb-atlas-cluster-builder-animation.webp`. Native resolution is low (600×338, a chat-pasted image rather than a full export) -- displayed at `narrow` width specifically to limit upscaling; flagged here rather than silently using it at full width.
+
+Verified: `npm run build` (30 routes, clean), `npm run test:sites` (23/23), `audit:media` (no new flags), Playwright screenshot confirms correct placement and rendering, zero console errors.
+
+**Decided by:** Ayodeji, via a direct clarifying question before anything was written.
+
 ## 2026-10-26 (fourth pass) — Lyft launch-marketing assets
 
 Ayodeji uploaded `lyft.zip` (8 PNGs, plus macOS `__MACOSX` junk entries which were discarded). Every real file was viewed directly before use. Two were skipped as redundant, not fabricated-around: `email_lyft_01.png` is a composite screenshot combining the other two emails side by side (no new information once both are shown individually), and `email_lyft_04.png`/`email_lyft_05.png` are the same mobile email screenshot at two different capture sizes — used the better-resolution one (`_05`) and skipped the other, consistent with this project's standing "don't present near-identical renders as separate examples" rule from the original Lyft pass.

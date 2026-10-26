@@ -162,6 +162,14 @@
         }
       ],
       "layout": "justified"
+    },
+    {
+      "type": "image",
+      "image": "/media/mongodb-atlas-cluster-builder-animation.webp",
+      "alt": "A UI transition frame from the interactive Atlas cluster builder animation, showing a blank white panel giving way to a dark cluster-configuration card",
+      "caption": "Frame from the interactive Atlas cluster builder animation, built for the MongoDB Atlas product announcement.",
+      "width": "narrow",
+      "spacing": "regular"
     }
   ],
   "cover": "/media/5d63296aaf9fa184.webp",
