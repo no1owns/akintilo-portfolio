@@ -1,178 +1,168 @@
 {
   "slug": "linx-security",
-  "title": "Brand Illustration System",
+  "title": "Linx Brand Illustration System",
   "category": "Brand Systems",
   "order": 7,
-  "published": false,
-  "company": "[CONFIRM: client and scope]",
-  "role": "",
-  "summary": "[CONFIRM: verify this project against career data]",
-  "overview": "[CONFIRM: Linx Security is present on the existing portfolio but is not verified in the supplied career file.]",
+  "published": true,
+  "company": "Linx",
+  "role": "Exploratory engagement, Forge HQ",
+  "summary": "A scalable botanical illustration system and custom AI tool for creating consistent brand assets across multiple levels of complexity.",
+  "overview": "An exploratory engagement for Linx, an AI-native identity security platform. The work began with a homepage audit that identified gaps in the existing visual brand, and developed into a botanical illustration direction and a custom \"Linx Brand Illustrator\" GPT for generating consistent, on-brand assets. The system was defined across four levels of complexity -- accent elements, spot illustrations, section illustrations, and hero and scene compositions -- with the visual language expanded to include elements like a sunflower, butterfly, dragonfly, ladybug, dandelion, tulip, and poppy, alongside an explored gestural icon direction. Moodboards were assembled and the system was presented to Linx's CPO; AI-assisted output was refined and composited in Figma and Adobe Illustrator.",
   "outcomes": [],
   "blocks": [
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/5eef243c97b1ac7b.webp",
-          "alt": "Brand Illustration System project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/5eef243c97b1ac7b.webp",
+      "alt": "A dandelion and a red poppy illustration, with dandelion seeds and petals scattered across the scene",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
+    },
+    {
+      "type": "image",
+      "image": "/media/a2f23d8d91e27ec3.webp",
+      "alt": "A collage of Linx homepage screens from a visual-brand audit, including the hero headline \"Identity security is now a breeze,\" product dashboard screenshots, and feature cards",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
+    },
+    {
+      "type": "image",
+      "image": "/media/24e3b7edfd8f9da8.webp",
+      "alt": "A deck title slide reading \"Level 1: Base elements\" on a yellow background with the Linx mark",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
       "type": "gallery",
       "title": "",
-      "columns": "1",
       "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/a2f23d8d91e27ec3.webp",
-          "alt": "Brand Illustration System project work",
-          "caption": ""
-        }
-      ]
-    },
-    {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/24e3b7edfd8f9da8.webp",
-          "alt": "Brand Illustration System project work",
-          "caption": ""
-        }
-      ]
-    },
-    {
-      "type": "gallery",
-      "title": "",
-      "columns": "2",
-      "spacing": "regular",
+      "layout": "justified",
       "images": [
         {
           "image": "/media/efdcfd98825ca0ab.webp",
-          "alt": "Brand Illustration System project work",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Three base illustration elements: a dandelion seed head, a red poppy, and an orange tulip",
           "caption": ""
         },
         {
           "image": "/media/1b8e640bcbe0d9d2.webp",
-          "alt": "Brand Illustration System project work",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Three more base elements: a soft cloud gradient, a yellow hill shape, and a four-color pinwheel icon",
           "caption": ""
         }
       ]
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/7b8b27509ca4bd5c.webp",
-          "alt": "Brand Illustration System project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/7b8b27509ca4bd5c.webp",
+      "alt": "A deck title slide reading \"Level 2: Highlighting and accent elements\" on a yellow background with the Linx mark",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
       "type": "gallery",
       "title": "",
-      "columns": "2",
       "spacing": "regular",
+      "layout": "justified",
       "images": [
         {
           "image": "/media/b709fbe0ba4ca231.webp",
-          "alt": "Brand Illustration System project work",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Three accent-level line icons: a cloud outline, a dandelion seed head, and tufts of grass",
           "caption": ""
         },
         {
           "image": "/media/aa16aae8e51d75a5.webp",
-          "alt": "Brand Illustration System project work",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Scattered dandelion seeds, wind-line motifs, and small tulips used as accent elements",
           "caption": ""
         }
       ]
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/fdd8d1a7a32e5d02.webp",
-          "alt": "Brand Illustration System project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/fdd8d1a7a32e5d02.webp",
+      "alt": "A deck title slide reading \"Level 3: Objects and spot illustrations\" on a yellow background with the Linx mark",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
       "type": "gallery",
       "title": "",
-      "columns": "2",
       "spacing": "regular",
+      "layout": "justified",
       "images": [
         {
           "image": "/media/cd33ecbd66065cd7.webp",
-          "alt": "Brand Illustration System project work",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Three spot illustrations combining botanical and product motifs: a browser window with a node diagram on a leaf, a progress ring with a dandelion seed and checkmark, and a wreath with a dragonfly",
           "caption": ""
         },
         {
           "image": "/media/7800c511b06b9a10.webp",
-          "alt": "Brand Illustration System project work",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Three spot illustrations of a hand holding a leaf with a connected-node diagram, shown at increasing complexity",
           "caption": ""
         }
       ]
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/8c12341c6fb944c7.webp",
-          "alt": "Brand Illustration System project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/8c12341c6fb944c7.webp",
+      "alt": "A deck title slide reading \"Level 4: Hero and scene illustrations\" on a yellow background with the Linx mark",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
       "type": "gallery",
       "title": "",
-      "columns": "2",
       "spacing": "regular",
+      "layout": "justified",
       "images": [
         {
           "image": "/media/82c5f5000cecfebd.webp",
-          "alt": "Brand Illustration System project work",
+          "width": 1920,
+          "height": 1080,
+          "alt": "A hero-scale illustration of a blooming red poppy and its bud on a single stem",
           "caption": ""
         },
         {
           "image": "/media/28b562ece81f51c1.webp",
-          "alt": "Brand Illustration System project work",
+          "width": 1920,
+          "height": 1080,
+          "alt": "A scene illustration of a plant growing above ground with branching roots connecting to colored nodes below",
           "caption": ""
         },
         {
           "image": "/media/f822eee6c7d84241.webp",
-          "alt": "Brand Illustration System project work",
+          "width": 1920,
+          "height": 1080,
+          "alt": "A scene illustration of a large flower on a branching stem, composited with bar-chart, trendline, and checklist UI cards and sparkle accents",
           "caption": ""
         },
         {
           "image": "/media/fe318a43d1736815.webp",
-          "alt": "Brand Illustration System project work",
+          "width": 1920,
+          "height": 1080,
+          "alt": "A scene illustration of a dandelion with seeds drifting toward small chart and graph UI cards on dashed lines",
           "caption": ""
         }
       ]
     }
   ],
   "cover": "/media/94084bdb321aba2c.webp",
-  "coverAlt": "Brand Illustration System project collage",
+  "coverAlt": "A dandelion releasing seeds beside a blooming red poppy, the signature illustration for the Linx brand illustration system",
   "coverPosition": "center",
   "featured": false
 }

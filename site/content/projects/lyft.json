@@ -1,32 +1,46 @@
 {
   "slug": "lyft",
-  "title": "Launch Marketing for Lyft Business",
+  "title": "Creative Communications for Lyft",
   "category": "Communications",
   "order": 18,
   "published": true,
   "company": "Lyft Business",
-  "role": "Founder, Creative Director, Forge HQ",
-  "summary": "Marketing creative that gives an internal team more capacity.",
-  "overview": "I built landing pages and email templates for a new Lyft Business service launch, allowing their internal creative team to stay on schedule with other priorities.",
+  "role": "Freelance Visual Designer",
+  "summary": "Launch marketing and internal communications design supporting Lyft Business across landing pages, email, presentations, and motion.",
+  "overview": "Design support for Lyft Business across two workstreams: launch marketing for a new service -- demand-generation landing pages, email templates, and a webinar thank-you landing page -- and internal communications, including motion and animated presentation work.",
   "outcomes": [],
   "blocks": [
     {
+      "type": "sectionHeading",
+      "eyebrow": "Lyft Business",
+      "title": "Launch marketing",
+      "overview": "Demand-generation landing pages and email templates supporting a new Lyft Business service launch, plus a dedicated webinar thank-you landing page.",
+      "spacing": "generous"
+    },
+    {
+      "type": "sectionHeading",
+      "eyebrow": "Lyft Business",
+      "title": "Internal communications",
+      "overview": "Motion and animated presentation work for internal Lyft Business communications.",
+      "spacing": "generous"
+    },
+    {
       "type": "image",
       "image": "/media/d207327d7315c84a.webp",
-      "alt": "Motion Design for Internal Communications project work",
+      "alt": "Animated presentation frame for Lyft Business projecting 1 billion total rides, illustrated with rideshare car and transit icons on a pink pedestal graphic",
       "caption": "",
       "width": "full",
       "spacing": "regular"
     },
     {
       "type": "video",
-      "title": "Motion Design for Internal Communications video",
+      "title": "Motion Design for Internal Communications",
       "url": "https://www-ccv.adobe.io/v1/player/ccv/SMIcP4zAIjK/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
       "spacing": "regular"
     }
   ],
   "cover": "/media/cfaeedc1fa52addf.webp",
-  "coverAlt": "Motion Design for Internal Communications project collage",
+  "coverAlt": "Animated presentation frame for Lyft Business projecting 1 billion total rides",
   "coverPosition": "center",
   "featured": false
 }

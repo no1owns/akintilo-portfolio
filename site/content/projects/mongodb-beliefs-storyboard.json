@@ -1,226 +1,146 @@
 {
   "slug": "mongodb-beliefs-storyboard",
-  "title": "Company Values Launch Campaign",
+  "title": "MongoDB Company Values Launch Campaign",
   "category": "Communications",
   "order": 16,
-  "published": false,
+  "published": true,
   "company": "MongoDB",
-  "role": "",
-  "summary": "[CONFIRM: attribution and scope]",
-  "overview": "[CONFIRM: The supplied career file rejects mascot and character-design attribution for this project. Review the actual contribution before publishing.]",
+  "role": "Storyboarding, presentation design, communications design, original illustrations",
+  "summary": "A company values launch campaign for MongoDB, developed through storyboarding, original illustration, presentation design, and communications design.",
+  "overview": "A storyboarded presentation campaign introducing MongoDB's company values, developed through original illustration, presentation design, and communications design. The work follows a cast of illustrated characters through narrative scenes -- building, exploring, and reflecting -- each paired with a specific value, from \"Build Together\" to \"Be Intellectually Honest\" to \"Own What You Do.\"",
   "outcomes": [],
   "blocks": [
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/66bcf275e805cead.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/66bcf275e805cead.webp",
+      "alt": "A node-and-line network diagram forming the word \"Beliefs,\" with the letters \"ea\" highlighted in green",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/8dd8b7a8c562729b.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/8dd8b7a8c562729b.webp",
+      "alt": "A close-up of the \"Beliefs\" wordmark reveal, with connected nodes and the green letters \"e\" and \"a\" emerging against a cloud backdrop",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/d290dd9dbb5d934a.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/d290dd9dbb5d934a.webp",
+      "alt": "A grayscale storyboard frame of illustrated teardrop-shaped characters standing before blank presentation panels",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/aa4ae6120537b217.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/aa4ae6120537b217.webp",
+      "alt": "An illustrated city scene with a \"Think Big\" sign and teardrop-shaped characters in red, green, and gray standing in the street",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/44fe64e1e669d1b0.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/44fe64e1e669d1b0.webp",
+      "alt": "Illustrated characters in a desert landscape with mountains and aircraft overhead, one character wearing an explorer hat",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/66bd4d7b43ecf85a.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/66bd4d7b43ecf85a.webp",
+      "alt": "Illustrated characters presenting with a megaphone, ruler, and chart screen beneath vine-draped mountains",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/80e6e694cb28e02b.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/80e6e694cb28e02b.webp",
+      "alt": "A \"Make It Matter\" concept slide with a mockup action-versus-impact chart and a grid of colored shapes",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/7cb46f3cba4a4885.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/7cb46f3cba4a4885.webp",
+      "alt": "A storyboard mockup slide labeled \"model No. 1.992\" with a placeholder statistic and a leaf icon inside an isometric frame",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/aa7c631a7894c562.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/aa7c631a7894c562.webp",
+      "alt": "A \"Build Together\" value illustration pairing a leaf icon with a mountain landscape and map coordinates",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/14756e00836c8b14.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/14756e00836c8b14.webp",
+      "alt": "Illustrated characters holding a megaphone and ruler beside a \"Site Map\" blueprint icon in a mountain setting",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/07d96c911f50ada2.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/07d96c911f50ada2.webp",
+      "alt": "Illustrated characters gathered around a large leaf and a building structure in a storyboard scene",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/f0277ef259ad2d9b.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/f0277ef259ad2d9b.webp",
+      "alt": "A character holding an open book titled \"Be Intellectually Honest, 3rd edition\" with a lightning-bolt icon",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/04fac9178780f476.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/04fac9178780f476.webp",
+      "alt": "Illustrated characters sleeping beneath a large leaf, marked with \"Zzz,\" beside a character reading an orange book",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/5386fe1b438cf4d6.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/5386fe1b438cf4d6.webp",
+      "alt": "A storm scene with lightning striking a tower above illustrated characters, one with a thought bubble",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/11a098a1970e5e20.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/11a098a1970e5e20.webp",
+      "alt": "An \"Own What You Do\" value illustration with a jetpack-style leaf character and a character giving a thumbs up",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     },
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/f37003d3ab068b37.webp",
-          "alt": "Company Values Launch Campaign project work",
-          "caption": ""
-        }
-      ]
+      "type": "image",
+      "image": "/media/f37003d3ab068b37.webp",
+      "alt": "Illustrated leaf characters flying with jetpacks above a mountain landscape dotted with grounded characters",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
     }
   ],
   "cover": "/media/2a387f57bbf6de8b.webp",
-  "coverAlt": "Company Values Launch Campaign project collage",
+  "coverAlt": "Illustrated characters with blueprints and tools gathered beneath vine-draped mountains, the cover scene for MongoDB's company values campaign",
   "coverPosition": "center",
   "featured": false
 }

@@ -4,12 +4,19 @@
   "category": "Brand Systems",
   "order": 3,
   "published": true,
-  "company": "TripActions / MongoDB / DocuSign",
+  "company": "Apollo GraphQL / TripActions / MongoDB / DocuSign",
   "role": "Creative direction",
   "summary": "A consistent experience from the invitation to the stage.",
   "overview": "I directed event identities and creative systems across customer conferences, field events, and executive experiences. The work connected stage visuals, signage, speaker presentations, digital campaigns, and production partners.",
   "outcomes": [],
   "blocks": [
+    {
+      "type": "sectionHeading",
+      "eyebrow": "Apollo GraphQL",
+      "title": "GraphQL Summit",
+      "overview": "Event brand and environmental design for GraphQL Summit by Apollo, including entrance and stage signage, lounge and venue branding, and digital displays.",
+      "spacing": "generous"
+    },
     {
       "type": "gallery",
       "title": "",
@@ -20,7 +27,7 @@
           "image": "/media/32505e5073b9ff21.webp",
           "width": 1920,
           "height": 651,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A navy entrance banner reading \"Apollo, Deliver tomorrow's roadmap today with the Apollo GraphQL API Platform\" hung above a conference hall doorway",
           "caption": ""
         }
       ],
@@ -36,42 +43,42 @@
           "image": "/media/b039b0827c6fa07b.webp",
           "width": 587,
           "height": 1276,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A hallway directional sign for GraphQL Summit Hall 1 listing the day's session schedule and speakers",
           "caption": ""
         },
         {
           "image": "/media/ec63cdd32531f2e3.webp",
           "width": 1462,
           "height": 1097,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "An \"Apollo Lounge\" building-facade billboard reading \"Design, build, and operate at scale. Deliver tomorrow's roadmap today with Apollo.\" above an orbiting-line graphic",
           "caption": ""
         },
         {
           "image": "/media/83bb729768cff7cf.webp",
           "width": 1920,
           "height": 1080,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A GraphQL Summit keynote stage slide for \"The value of your API Platform, today and tomorrow\" with speaker Matt DeBergalis, CTO and co-founder of Apollo",
           "caption": ""
         },
         {
           "image": "/media/4a25e688d1144d36.webp",
           "width": 1024,
           "height": 1536,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A large outdoor banner reading \"Build / Operate / Scale\" above repeated GraphQL Summit wordmarks on a street-facing wall",
           "caption": ""
         },
         {
           "image": "/media/fd3abd964dcb93a5.webp",
           "width": 600,
           "height": 899,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A hand holding a branded GraphQL Summit by Apollo drinking glass with a city-skyline graphic",
           "caption": ""
         },
         {
           "image": "/media/691071a27950fbbe.webp",
           "width": 1200,
           "height": 800,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "An event lobby standing sign listing GraphQL Summit breakout topics under \"Interested in learning more about\"",
           "caption": ""
         }
       ],
@@ -87,36 +94,43 @@
           "image": "/media/b6fcac202d28be5e.webp",
           "width": 1672,
           "height": 941,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A GraphQL Summit keynote stage slide for \"Exploring Apollo's new products, a deep dive\" with speakers Smruti Patel and Lenny Burdette",
           "caption": ""
         },
         {
           "image": "/media/0644f1156ff874dd.webp",
           "width": 1536,
           "height": 1024,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A digital lobby display reading \"Puppy Play Time with Power of the Puppy\" inviting attendees to a GraphQL Summit meet-and-greet",
           "caption": ""
         },
         {
           "image": "/media/df08b716ac73f59e.webp",
           "width": 1536,
           "height": 1024,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A confetti-filled celebration stage branded \"GraphQL Summit by Apollo\" marking 5 years of Apollo Federation",
           "caption": ""
         },
         {
           "image": "/media/eb1d7affef1cda61.webp",
           "width": 1536,
           "height": 1024,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A GraphQL Summit Day 2 keynote slide reading \"Exploring Apollo's new products, a deep dive\"",
           "caption": ""
         }
       ],
       "layout": "justified"
     },
     {
+      "type": "sectionHeading",
+      "eyebrow": "TripActions",
+      "title": "TRAVERSE '21",
+      "overview": "Brand and creative direction for Traverse and related event systems.",
+      "spacing": "generous"
+    },
+    {
       "type": "video",
-      "title": "Event Brand and Experiential video",
+      "title": "TRAVERSE '21 Event Highlights",
       "file": "/media/motion-navan-events-hero.mp4",
       "spacing": "regular"
     },
@@ -130,21 +144,21 @@
           "image": "/media/89bf3810f6d2d50e.webp",
           "width": 1600,
           "height": 1067,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A TRAVERSE '21 Travel & Expense Festival registration desk with branded counters and attendees checking in",
           "caption": ""
         },
         {
           "image": "/media/da785cfbe8c9dc19.webp",
           "width": 1600,
           "height": 1067,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A TRAVERSE '21 session stage displaying a \"A Year Like No Other\" 2020-2021 company timeline to a seated audience",
           "caption": ""
         },
         {
           "image": "/media/201cc84d228cc566.webp",
           "width": 1600,
           "height": 1067,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "Three panelists seated on a TRAVERSE '21 Travel & Expense Festival stage in a recorded discussion",
           "caption": ""
         },
         {
@@ -186,6 +200,13 @@
       "layout": "justified"
     },
     {
+      "type": "sectionHeading",
+      "eyebrow": "MongoDB",
+      "title": "MongoDB Events",
+      "overview": "Event work for MongoDB, spanning MongoDB World and MongoDB's AWS re:Invent exhibit, with supporting booth design, brand systems, and motion.",
+      "spacing": "generous"
+    },
+    {
       "type": "gallery",
       "title": "",
       "columns": "2",
@@ -195,28 +216,28 @@
           "image": "/media/526ddbba3ae29231.webp",
           "width": 1920,
           "height": 1280,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A hand-drawn notebook sketch exploring a MongoDB exhibit booth structure, including brand portal, storage, and swag concepts",
           "caption": ""
         },
         {
           "image": "/media/167cee55aced2513.webp",
           "width": 1920,
           "height": 1074,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A 3D rendering of a 20-foot MongoDB trade show booth with an illuminated logo ring, screens, and a reception counter",
           "caption": ""
         },
         {
           "image": "/media/b80946aad8572b33.webp",
           "width": 983,
           "height": 948,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A CRN.com article screenshot titled \"King Of The Cloud: 15 Sights And Scenes From AWS re:Invent 2017\" featuring the MongoDB exhibit",
           "caption": ""
         },
         {
           "image": "/media/f249a5eb9533f401.webp",
           "width": 1020,
           "height": 1533,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "The built MongoDB exhibit booth on a trade show floor with attendees gathered underneath its illuminated logo ring",
           "caption": ""
         }
       ],
@@ -232,49 +253,49 @@
           "image": "/media/c72243c1122f1668.webp",
           "width": 854,
           "height": 480,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "Attendees viewing an interactive branded touchscreen wall display at a MongoDB event",
           "caption": ""
         },
         {
           "image": "/media/1e8c375f67e5efaf.webp",
           "width": 1920,
           "height": 1011,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "The cover of the MongoDB World '18 Brand & Design Manual, New York City 2018, tagged #MDBW18",
           "caption": ""
         },
         {
           "image": "/media/2e63ffd1d3b03b8c.webp",
           "width": 1920,
           "height": 1011,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A MongoDB World '18 brand manual page defining the \"Build\" motif as a stack of isometric building-block cubes",
           "caption": ""
         },
         {
           "image": "/media/65a3d94b9cbe0f4c.webp",
           "width": 1920,
           "height": 1011,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A MongoDB World '18 brand manual page on color theory, showing do and don't examples for primary and secondary brand colors",
           "caption": ""
         },
         {
           "image": "/media/b4bbdb76b406c405.webp",
           "width": 1920,
           "height": 1011,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A MongoDB World '18 brand manual page titled \"A World of Shapes\" showing isometric cube-block arrangements",
           "caption": ""
         },
         {
           "image": "/media/c9a9d50c9be9cc78.webp",
           "width": 1920,
           "height": 1011,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A MongoDB World '18 brand manual page showing cropping examples for the isometric cube pattern across colored backgrounds",
           "caption": ""
         },
         {
           "image": "/media/ae128095d88725b0.webp",
           "width": 1920,
           "height": 1011,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "Two MongoDB World '18 \"Build your applications on MongoDB\" posters shown in light and dark colorways",
           "caption": ""
         }
       ],
@@ -282,21 +303,28 @@
     },
     {
       "type": "video",
-      "title": "Event Brand and Experiential video",
+      "title": "MongoDB World '17: Chicago Opener",
       "file": "/media/motion-mongodb-events-01.mp4",
       "spacing": "regular"
     },
     {
       "type": "video",
-      "title": "Event Brand and Experiential video",
+      "title": "MongoDB World '17: Cube Reveal",
       "file": "/media/motion-mongodb-events-02.mp4",
       "spacing": "regular"
     },
     {
       "type": "video",
-      "title": "Event Brand and Experiential video",
+      "title": "MongoDB World '17: For Giant Ideas",
       "file": "/media/motion-mongodb-events-03.mp4",
       "spacing": "regular"
+    },
+    {
+      "type": "sectionHeading",
+      "eyebrow": "DocuSign",
+      "title": "Momentum",
+      "overview": "Momentum branding, event materials, digital experiences, and virtual-session support for DocuSign's Momentum conference.",
+      "spacing": "generous"
     },
     {
       "type": "gallery",
@@ -308,14 +336,14 @@
           "image": "/media/4ca3581d39bc1daa.webp",
           "width": 1600,
           "height": 900,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "DocuSign Momentum '15 conference website homepage shown on a laptop, headlined \"The Future of Business Is Digital\"",
           "caption": ""
         },
         {
           "image": "/media/388c47f89d597c6c.webp",
           "width": 600,
           "height": 600,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A DocuSign Momentum '15 cover graphic reading \"The Global Trust Network\" over a geometric arrow icon on a world map",
           "caption": ""
         },
         {
@@ -329,7 +357,7 @@
           "image": "/media/be3cfa844c398ad4.webp",
           "width": 1920,
           "height": 1080,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "An airport terminal digital banner advertising DocuSign Momentum '15 in San Francisco and London above a busy departure hall",
           "caption": ""
         },
         {
@@ -357,7 +385,7 @@
           "image": "/media/f1f808fb0ddd7b00.webp",
           "width": 1920,
           "height": 1080,
-          "alt": "Event Brand and Experiential project work",
+          "alt": "A street-level digital ad for DocuSign Momentum '15 reading \"The Future of Business Is Digital\" beside a customer-story screen",
           "caption": ""
         },
         {

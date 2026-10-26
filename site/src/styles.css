@@ -5,7 +5,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 
 .hero-link{gap:0}.arrow{flex:0 0 auto;width:1em;height:1em;margin-left:.55em;vertical-align:-.12em}.project-intro .eyebrow,.text-link,footer a:has(.arrow){display:inline-flex;align-items:center}
-.type-gallery{margin:24px 0}.type-sectionHeading{margin:100px 0 32px;border-top:1px solid #ddd;padding-top:36px}.project-section-heading{font-size:clamp(36px,4vw,58px);line-height:1.05;margin:0}.project-video{display:block;width:100%;max-height:82vh;background:#111;object-fit:contain}
+.type-gallery{margin:24px 0}.type-sectionHeading{margin:100px 0 32px;border-top:1px solid #ddd;padding-top:36px}.section-eyebrow{margin-bottom:14px}.project-section-heading{font-size:clamp(36px,4vw,58px);line-height:1.05;margin:0}.section-overview{margin-top:20px}.project-video{display:block;width:100%;max-height:82vh;background:#111;object-fit:contain}
 @media(max-width:560px){.gallery.layout-uniform.columns-2,.gallery.layout-uniform.columns-3{grid-template-columns:1fr}}
 
 /* Deterministic bento grid (2026-10). Fixed 12-column grid, constant row-spans per

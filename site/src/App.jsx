@@ -181,7 +181,7 @@ function JustifiedGallery({block}) {
 
 function groupGalleries(blocks){return blocks.reduce((result,block)=>{const previous=result[result.length-1];const layout=block.layout||'bento';const previousLayout=previous?.layout||'bento';if(block.type==='gallery'&&previous?.type==='gallery'&&layout===previousLayout&&!block.title&&!previous.title){previous.images=[...(previous.images||[]),...(block.images||[])];return result;}result.push({...block,images:block.images?[...block.images]:block.images});return result;},[]);}
 export function Blocks({blocks=[]}){return groupGalleries(blocks).map((b,i)=><div key={i} className={`block space-${b.spacing||'regular'} type-${b.type}`}>
- {b.type==='sectionHeading'&&<h2 className="project-section-heading">{b.title}</h2>}
+ {b.type==='sectionHeading'&&<>{b.eyebrow&&<p className="eyebrow section-eyebrow">{b.eyebrow}</p>}<h2 className="project-section-heading">{b.title}</h2>{b.overview&&<div className="text-block section-overview"><Text>{b.overview}</Text></div>}</>}
  {b.type==='text'&&<div className={`text-block align-${b.align||'left'}`}>{b.title&&<h2>{b.title}</h2>}<Text>{b.body}</Text></div>}
  {b.type==='image'&&<figure className={b.width==='narrow'?'narrow':''}><img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><figcaption>{b.caption}</figcaption></figure>}
  {b.type==='gallery'&&<>{b.title&&<h2>{b.title}</h2>}{(b.layout||'bento')==='justified'?<JustifiedGallery block={b}/>:b.layout==='uniform'?<UniformGallery block={b}/>:<BentoGallery block={b}/>}</>}
