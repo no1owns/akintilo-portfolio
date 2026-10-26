@@ -218,7 +218,7 @@ export function Blocks({blocks=[]}){return groupGalleries(blocks).map((b,i)=><di
  {b.type==='gallery'&&<>{b.title&&<h2>{b.title}</h2>}{(b.layout||'bento')==='justified'?<JustifiedGallery block={b}/>:b.layout==='uniform'?<UniformGallery block={b}/>:<BentoGallery block={b}/>}</>}
  {b.type==='split'&&<div className={`split image-${b.side||'left'}`}><Img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><div><h2>{b.title}</h2><Text>{b.body}</Text></div></div>}
  {b.type==='video'&&<Video block={b}/>}
- {b.type==='caseSection'&&<div className="case-section">{b.eyebrow&&<p className="eyebrow">{b.eyebrow}</p>}<h2 className="project-section-heading">{b.title}</h2><div className="text-block"><Text>{b.body}</Text></div>{b.visual&&<figure className="case-visual"><Img src={mediaURL(b.visual)} alt={b.visualAlt||''} loading="lazy"/></figure>}</div>}
+ {b.type==='caseSection'&&<div className="case-section">{b.eyebrow&&<p className="eyebrow">{b.eyebrow}</p>}<h2 className="project-section-heading">{b.title}</h2><div className="text-block"><Text>{b.body}</Text></div>{b.visual&&<figure className="case-visual"><Img src={mediaURL(b.visual)} alt={b.visualAlt||''} loading="lazy"/></figure>}{b.linkHref&&b.linkLabel&&<a className="text-link" href={b.linkHref}>{b.linkLabel} <Arrow/></a>}</div>}
  {b.type==='responsibility'&&<div className="responsibility-block">
    <div className="responsibility-col"><p className="eyebrow">{b.title1}</p><ul>{(b.items1||[]).map((it,j)=><li key={j}>{typeof it==='string'?it:it.item}</li>)}</ul></div>
    <div className="responsibility-col"><p className="eyebrow">{b.title2}</p><ul>{(b.items2||[]).map((it,j)=><li key={j}>{typeof it==='string'?it:it.item}</li>)}</ul></div>

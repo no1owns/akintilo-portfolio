@@ -856,6 +856,15 @@
       "title": "Introducing Marlin AI",
       "file": "/media/motion-appomni-04.mp4",
       "spacing": "regular"
+    },
+    {
+      "type": "caseSection",
+      "eyebrow": "AppOmni",
+      "title": "How the system scaled",
+      "body": "The AppOmni work extended beyond individual pages. I developed reusable component, product-visualization, and motion workflows that helped carry design intent into repeatable production.",
+      "linkLabel": "Explore the AI-assisted design workflow",
+      "linkHref": "/ai-assisted-design-systems",
+      "spacing": "regular"
     }
   ],
   "cover": "/media/9e16f9a019cb6066.webp",

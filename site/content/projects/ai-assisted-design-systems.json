@@ -1,0 +1,139 @@
+{
+  "slug": "ai-assisted-design-systems",
+  "title": "AI-Assisted Design Systems",
+  "category": "Brand Systems",
+  "order": 0.5,
+  "published": true,
+  "company": "AppOmni",
+  "role": "Senior Visual Designer",
+  "summary": "Turning design intent into reusable components, marketing UI, and motion workflows.",
+  "overview": "At AppOmni, I developed AI-assisted workflows that helped translate designed sections, product references, and motion principles into reusable production systems. I defined the design intent, requirements, references, and acceptance criteria, then used AI to assist with analysis, construction, variation, implementation, and debugging.",
+  "projectBrief": {
+    "context": "AppOmni's marketing and product-storytelling pages were growing more complex, and needed to move faster without drifting from the established brand and product systems.",
+    "challenge": "Design sections, product references, and motion principles needed to become reusable production systems, not one-off compositions built fresh every time.",
+    "contribution": "As Senior Visual Designer, I defined the design intent, component structure, references, and acceptance criteria for every workflow below, and directed AI through analysis, construction, and correction.",
+    "approach": "Reused existing components and library styles where possible, introduced new ones only where needed, and configured AI tools with brand and product references -- never trained a model.",
+    "outcome": "Page production time dropped from 10 days to 3 days after the reusable component system was introduced -- a result of the system as a whole, not AI alone."
+  },
+  "outcomes": [
+    {
+      "value": "10 days to 3 days",
+      "label": "Page production time after introducing the reusable component system"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "caseSection",
+      "eyebrow": "AppOmni",
+      "title": "The production problem",
+      "body": "Complex marketing pages needed to move faster without drifting from AppOmni's established brand and product systems. The goal wasn't to make AI the outcome -- it was to build a more reusable and consistent creative-production system, with AI assisting inside that system rather than replacing the judgment that shaped it.",
+      "spacing": "generous"
+    },
+    {
+      "type": "caseSection",
+      "eyebrow": "Component workflow",
+      "title": "From composition to component",
+      "body": "I began with a page section I had designed, then defined its reusable structure: what should stay fixed, what should vary, and which existing components and library styles could be reused instead of rebuilt. AI assisted with analyzing that structure and implementing the first pass; I evaluated the result against the original composition and directed the corrections.\n\nThe interface below is a recreated demonstration of this workflow, built to illustrate the process. It is not the AppOmni production environment, and the inspector-style properties panel shown did not exist natively inside AppOmni's own Figma files.",
+      "visual": "/media/flagship/component-workflow-build.jpg",
+      "visualAlt": "Recreated \"Component Workflow / Studio\" interface showing a published AppOmni section reconstructed into an editable component, with a properties panel, a proposed component structure, and a generated component specification",
+      "spacing": "regular"
+    },
+    {
+      "type": "image",
+      "image": "/media/flagship/component-properties-inspector.jpg",
+      "alt": "A recreated design-tool inspection view of the same AppOmni feature section, showing its layer structure, nested components, and exposed properties (viewport, theme, layout, card count) in a Design/Prototype panel",
+      "caption": "Recreated demonstration -- illustrates how the section's structure and properties could be exposed for reuse, not a screenshot of AppOmni's own Figma file.",
+      "width": "full",
+      "spacing": "regular"
+    },
+    {
+      "type": "caseSection",
+      "eyebrow": "Variants",
+      "title": "Expanding the system",
+      "body": "Once the base component existed, the workflow extended it across the combinations a real page actually needs: desktop and mobile, light and dark, different content lengths, and different icon, label, headline, copy, and CTA combinations. Unless noted otherwise, the variants shown here are reconstructed examples built to demonstrate the approach, not screenshots pulled directly from AppOmni's own files.",
+      "visual": "/media/flagship/component-workflow-variants.jpg",
+      "visualAlt": "Recreated \"Create variants\" step showing the same AppOmni feature section recomposed across desktop and mobile, dark and light theme combinations, with icon, label, and content variations",
+      "spacing": "regular"
+    },
+    {
+      "type": "image",
+      "image": "/media/flagship/component-variant-set.jpg",
+      "alt": "A component-set view in the recreated workflow grouping four variants of the same AppOmni feature section by viewport (desktop/mobile) and theme (dark/light)",
+      "caption": "Recreated demonstration of how the variant set could be organized for reuse.",
+      "width": "full",
+      "spacing": "regular"
+    },
+    {
+      "type": "caseSection",
+      "eyebrow": "Motion",
+      "title": "Motion as a system",
+      "body": "Motion supported the storytelling itself: progressive headline reveals, staged UI builds, a sense of depth and forward movement, deliberate attention shifts, and technical storytelling that needed to hold up on its own, without narration.\n\nThe Marlin AI animation below is original work. The motion-system interface shown afterward is a recreated demonstration inspired by that original work -- it is not the production editor used at AppOmni, and no original timing tokens, easing curves, or full accessibility compliance were recovered from the real tool.",
+      "spacing": "regular"
+    },
+    {
+      "type": "video",
+      "title": "Marlin AI",
+      "file": "/media/flagship/marlin-ai-motion.mp4",
+      "poster": "/media/flagship/marlin-ai-motion-poster.webp",
+      "playback": "controls",
+      "spacing": "regular"
+    },
+    {
+      "type": "gallery",
+      "title": "Motion System Studio",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/flagship/motion-system-editor.jpg",
+          "width": 936,
+          "height": 936,
+          "alt": "Recreated \"Motion System / Studio\" interface with sliders for base duration, sequence stagger, travel distance, and easing curve, plus a live replay and exported motion-token JSON",
+          "caption": ""
+        },
+        {
+          "image": "/media/flagship/motion-system-presentation.jpg",
+          "width": 1348,
+          "height": 926,
+          "alt": "The same recreated motion system applied to a representative dark-theme product-storytelling composition, showing staggered entrance timing for type, UI, and graphic elements",
+          "caption": ""
+        }
+      ],
+      "layout": "justified"
+    },
+    {
+      "type": "responsibility",
+      "title1": "Ayo defined and reviewed",
+      "items1": [
+        "Communication goals",
+        "Component logic",
+        "Brand and product references",
+        "Information hierarchy",
+        "Acceptance criteria",
+        "Corrections and final design judgment"
+      ],
+      "title2": "AI assisted with",
+      "items2": [
+        "Layout analysis",
+        "Initial construction",
+        "Variant generation",
+        "Implementation",
+        "Debugging",
+        "Repetitive production tasks",
+        "Export preparation"
+      ],
+      "spacing": "generous"
+    },
+    {
+      "type": "caseSection",
+      "eyebrow": "Outcome",
+      "title": "What changed",
+      "body": "Page production time dropped from 10 days to 3 days after this reusable component system was introduced. That isn't attributed to AI alone -- it reflects the system as a whole: a reusable setup, more consistent references, adjustable rules, less repetitive construction, and a clearer handoff from design to development.",
+      "spacing": "regular"
+    }
+  ],
+  "cover": "/media/flagship/marlin-ai-motion-frames.png",
+  "coverAlt": "Three selected frames from the original Marlin AI motion piece -- \"Surface,\" \"Prioritize,\" and \"Remediate\" -- each showing a staged interface reveal",
+  "coverPosition": "center",
+  "featured": true
+}

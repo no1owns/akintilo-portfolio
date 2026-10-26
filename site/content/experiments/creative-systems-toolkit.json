@@ -1,0 +1,40 @@
+{
+  "slug": "creative-systems-toolkit",
+  "title": "Creative Systems Toolkit",
+  "published": true,
+  "order": 2,
+  "summary": "Focused tools for component states, token exports, pattern generation, logo placement, and asset optimization.",
+  "overview": "A grouped set of small tools built to explore AppOmni's design system at a more granular level than a single page. The Button System Lab distinguishes between observed AppOmni button styles (captured from the live site's CSS, flagged with an \"Observed CSS\" provenance label on each state), a proposed \"off-white\" active state that isn't part of the original system, and small custom edits made while building the demo -- plus a per-state color-contrast check, which is not the same as full accessibility testing. The dot-pattern section shows the original AppOmni pattern as it actually appears on the live site, alongside a recreated generative tool for building similar fields. The logo-placement tool searches a small, supplied library of sample SVG marks (four logos from AppOmni's public partner page), not every brand or the open web. The WebP export is a single demonstration result -- one 89% file-size reduction on one sample image -- not a historical AppOmni metric or a universal compression rate.",
+  "format": "Design utilities",
+  "cover": "/media/lab/creative-systems-button-lab.jpg",
+  "coverAlt": "Recreated \"Button System Lab\" interface showing six AppOmni button families with per-state color-contrast ratios",
+  "coverPosition": "center",
+  "liveUrl": "",
+  "sourceUrl": "",
+  "gallery": [
+    {
+      "image": "/media/lab/creative-systems-button-lab.jpg",
+      "alt": "Recreated \"Button System Lab\" showing six AppOmni button families (primary, light, dark, and their outline variants) with AA text-contrast ratios for each"
+    },
+    {
+      "image": "/media/lab/creative-systems-button-tokens.png",
+      "alt": "Generated token JSON export from the Button System Lab, showing shared geometry values and primary-button state colors each labeled with an \"Observed CSS\" or \"Observed focus rule\" provenance"
+    },
+    {
+      "image": "/media/lab/creative-systems-dot-pattern.jpg",
+      "alt": "Recreated \"Dot Pattern Studio\" generative tool showing an editable wave-arranged dot field with spacing, radius, and canvas controls, exported as SVG"
+    },
+    {
+      "image": "/media/lab/creative-systems-dot-pattern-original.jpg",
+      "alt": "The original AppOmni dot pattern as it appears on the live AppOmni Press Releases page, used as the visual reference for the recreated tool"
+    },
+    {
+      "image": "/media/lab/creative-systems-svg-placement.jpg",
+      "alt": "Recreated brand-logo placement tool composing four sample SVG marks (Google, Accenture, Cisco, PwC) from a small supplied logo library into a horizontal row"
+    },
+    {
+      "image": "/media/lab/creative-systems-webp-export.jpg",
+      "alt": "A WebP asset-export demo showing one sample PNG reduced from 547.6 KB to 60.3 KB, an 89% size reduction on this single image"
+    }
+  ]
+}

@@ -76,19 +76,26 @@ Ayodeji said the reel page looked good, but "the other pages on the site dont st
 
 Formal, fully-specified correction pass for `preview.akintilo.com`, scoped explicitly to the staging branch (no merge to `main`, no DNS change — see `docs/portfolio-decisions.md`'s 2026-10-22 entry for the full account). All 7 prioritized items plus a mid-pass addition (placing 6 reel-only videos into their case studies) are **done** — see "Resolved this pass" below. **Explicitly deferred, not a blocker:** item 6's remaining ~86 generic alt texts on Security Brand Experiences, each needing individual visual review to write real (non-invented) text.
 
-## New work requested (2026-10-26) — dark editorial theme, typography, case-study schema, AI case study (partially blocked)
+## New work requested (2026-10-26) — dark editorial theme, typography, case-study schema, AI case study
 
-Formal, fully-specified pass covering a sitewide dark theme, self-hosted typography, an optional product-design case-study schema (`projectBrief`/`caseSection`/responsibility block), a reusable image-loading component, a new featured "AI-Assisted Design Systems" case study, and a Lab expansion with AppOmni creative-tooling evidence. **Blocked, explicitly:** every one of the ~25 named uploaded assets (`component-workflow-build.jpg`, `marlin-ai-motion.mp4`, the Creative Brief Generator/Creative Systems Toolkit screenshots, etc.) was searched for across every upload directory in this environment and found nowhere — none exist yet. Per instruction, nothing was fabricated to fill the gap. Ayodeji chose (via `AskUserQuestion`) to proceed with everything not dependent on those files; see `docs/portfolio-decisions.md`'s 2026-10-26 (second pass) entry for the full account.
+Formal, fully-specified pass covering a sitewide dark theme, self-hosted typography, an optional product-design case-study schema (`projectBrief`/`caseSection`/responsibility block), a reusable image-loading component, a new featured "AI-Assisted Design Systems" case study, and a Lab expansion with AppOmni creative-tooling evidence.
 
-**Done this pass:** dark theme + CSS custom-property tokens sitewide, self-hosted Newsreader/IBM Plex Sans/IBM Plex Mono typography, homepage card redesign (eyebrow/summary/persistent view-indicator), the optional `projectBrief`/`caseSection`/responsibility-block schema (CMS + preview included), the reusable `Img` loading/failure component applied everywhere an image renders, one new About-page sentence on AI-assisted workflows, Event Brand and Experiential demoted out of the featured eight, and Form Studio's Lab summary updated.
+**First pass (2026-10-26):** every one of the ~25 named uploaded assets was searched for across every upload directory in this sandboxed environment and found nowhere, so the case study and two Lab entries were deferred and everything else (dark theme, typography, schema, image-loading component, About line, Event Brand demotion, Form Studio summary) was built. See `docs/portfolio-decisions.md`'s 2026-10-26 (second pass) entry.
 
-**Still blocked on uploaded assets (not started — fully specified, ready to build once the files exist):**
-- The `ai-assisted-design-systems` case study itself (7 narrative sections: the production problem, composition-to-component, expanding the system, marketing UI reproduction, motion as a system, the Ayo-vs-AI responsibility block, the "10 days to 3 days" outcome).
-- The "How the system scaled" subsection and internal link on Security Brand Experiences (depends on the case study existing).
-- The Creative Brief Generator and Creative Systems Toolkit Lab entries.
-- Testing the 5 `eyometer.chatgpt.site` demo URLs for signed-out accessibility.
+**Correction (2026-10-26, third pass):** Ayodeji confirmed the assets were already pushed to `main` in commit `cdd7ec6` ("lab and ai") — this branch's checkout simply hadn't fetched that commit. Fetched and merged `origin/main` (clean, additive-only merge, nothing discarded — confirmed `cdd7ec6` touched only the 17 media files, no code), then built everything that was blocked:
+- `ai-assisted-design-systems.json`, the full case study (production problem, composition-to-component, expanding the system, motion as a system, the responsibility block, the "10 days to 3 days" outcome), featured, ordered to sit directly after Security Brand Experiences.
+- The "How the system scaled" subsection + internal link on Security Brand Experiences.
+- The `creative-systems-toolkit.json` Lab entry (3rd of 4 Lab cards).
 
-**Known, flagged inconsistency until the above lands:** Selected Work currently shows 7 of its usual 8 slots (Event Brand and Experiential was moved out to make room for the AI case study, which doesn't exist yet). Not treated as a regression to silently work around — the 8th slot is reserved for `ai-assisted-design-systems` once it can be built.
+See `docs/portfolio-decisions.md`'s 2026-10-26 (third pass) entry for the full account, including exactly which assets were used where.
+
+**Still genuinely missing (confirmed against the real synced file list under `site/public/media/{flagship,lab,supporting}/`, not the original prompt text):**
+- The 4 `product-ui-*.png` marketing-UI-reproduction assets — section 4 of the case study ("Marketing UI reproduction") was omitted entirely rather than written from description.
+- The 2 `creative-brief-generator-*.png` screenshots — the Creative Brief Generator Lab entry is still unbuilt.
+
+**Demo URLs — untested, not confirmed either way.** All 5 `eyometer.chatgpt.site` URLs failed DNS resolution from this session (confirmed as a sandbox-wide network restriction, not specific to these URLs — a control fetch to `example.com` failed identically). Treated the same as a gated demo per instruction: no public "View prototype" links were added anywhere. **Needs a real-browser check from Ayodeji or someone with unrestricted network access** — if any of the 5 work signed-out, they can be added as links in a follow-up.
+
+Selected Work is back to its full 8 (the AI case study fills the slot Event Brand and Experiential vacated in the second pass).
 
 ## Resolved this pass
 
@@ -124,6 +131,7 @@ Formal, fully-specified pass covering a sitewide dark theme, self-hosted typogra
 - Online (non-local) publishing needs a Decap-compatible GitHub OAuth service (`VITE_CMS_AUTH_URL`) that isn't configured yet. This is explicitly out of scope until after the public replacement is stable.
 
 - ~~Dark editorial theme, self-hosted typography, case-study schema, image-loading component, Event Brand demotion, Form Studio summary, About line~~ — done 2026-10-26, see the "New work requested (2026-10-26)" entry above and `docs/portfolio-decisions.md`.
+- ~~`ai-assisted-design-systems` case study, Security Brand Experiences link, Creative Systems Toolkit Lab entry~~ — done 2026-10-26 (third pass), once the uploaded assets were located on `origin/main` (commit `cdd7ec6`) and merged in. See the "New work requested (2026-10-26)" entry above and `docs/portfolio-decisions.md`.
 
 ## Items requiring Ayodeji's decision
 
@@ -132,7 +140,8 @@ Formal, fully-specified pass covering a sitewide dark theme, self-hosted typogra
 - If/when `linx-security` and `mongodb-beliefs-storyboard` should be finished and published: confirm client/scope/attribution.
 - Review and approve (or redirect) the justified-grid + accessibility prototype on `mongodb-the-next-generation-database` before it's rolled out to any other project.
 - Supply real values for site settings before launch: `siteUrl` (final domain), résumé PDF.
-- Supply the ~25 named AI-workflow assets for the `ai-assisted-design-systems` case study and the two blocked Lab entries (see "New work requested (2026-10-26)" above) — nothing in this area can move until the actual files exist.
+- Supply the 4 `product-ui-*.png` marketing-UI-reproduction assets (for case-study section 4) and the 2 `creative-brief-generator-*.png` screenshots (for the Creative Brief Generator Lab entry) — see "New work requested (2026-10-26)" above. Everything else in that batch is done.
+- Test the 5 `eyometer.chatgpt.site` demo URLs from a real, signed-out browser (this session's network access can't reach them) and report back which work without authentication — see "New work requested (2026-10-26)" above.
 - New images for Lyft and BetterUp: supply the files, and for Lyft, where they should sit relative to the existing image.
 - For the 4 Adobe Behance embeds (Visa, `mongodb-web`, `mongodb-for-giant-ideas-video`, Lyft): original file, existing YouTube/Vimeo link, or keep as Adobe embeds for now?
 - If true silent server-side delivery is wanted for the contact form (vs. the current mailto hand-off, which needs the visitor's own email client): accept a third-party form-backend dependency (Formspree, FormSubmit, etc.) for it?
