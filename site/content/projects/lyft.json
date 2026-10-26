@@ -18,6 +18,45 @@
       "spacing": "generous"
     },
     {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/lyft-landing-thankyou-sand.webp",
+          "width": 1440,
+          "height": 1477,
+          "alt": "A Lyft Business webinar thank-you landing page with a sand-toned illustrated cityscape, the headline \"Thank you!\", and a related-webinars section below",
+          "caption": ""
+        },
+        {
+          "image": "/media/lyft-landing-thankyou-purple.webp",
+          "width": 1440,
+          "height": 1251,
+          "alt": "A purple color treatment of the same Lyft Business webinar thank-you landing page, with the same \"Thank you!\" headline and related-webinars section",
+          "caption": ""
+        }
+      ],
+      "layout": "justified"
+    },
+    {
+      "type": "image",
+      "image": "/media/lyft-email-reliable-ride.webp",
+      "alt": "A narrow Lyft Business event-invite email, \"Great things start with a reliable ride,\" with a Register Now button and a sidebar listing conference activities, a speaker session, and two speaker photos",
+      "caption": "",
+      "width": "narrow",
+      "spacing": "regular"
+    },
+    {
+      "type": "image",
+      "image": "/media/lyft-email-aaae-conference.webp",
+      "alt": "A Lyft Business email promoting Lyft's presence at the AAAE conference, with a photo of travelers moving through an airport-style scene, session details for \"Anticipating Tomorrow's Trends,\" a booth number, and a promo code",
+      "caption": "",
+      "width": "narrow",
+      "spacing": "regular"
+    },
+    {
       "type": "sectionHeading",
       "eyebrow": "Lyft Business",
       "title": "Internal communications",
@@ -28,6 +67,14 @@
       "type": "image",
       "image": "/media/d207327d7315c84a.webp",
       "alt": "Animated presentation frame for Lyft Business projecting 1 billion total rides, illustrated with rideshare car and transit icons on a pink pedestal graphic",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
+    },
+    {
+      "type": "image",
+      "image": "/media/lyft-slide-fleet-motion.webp",
+      "alt": "A later frame from the same animated presentation series, showing a fleet of white rideshare cars and a train icon moving toward the viewer",
       "caption": "",
       "width": "full",
       "spacing": "regular"

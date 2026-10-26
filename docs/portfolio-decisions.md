@@ -2,6 +2,20 @@
 
 Running log of durable creative/technical decisions for the akintilo-portfolio launch. Newest first. Each entry: what was decided, why, who decided it.
 
+## 2026-10-26 (fourth pass) — Lyft launch-marketing assets
+
+Ayodeji uploaded `lyft.zip` (8 PNGs, plus macOS `__MACOSX` junk entries which were discarded). Every real file was viewed directly before use. Two were skipped as redundant, not fabricated-around: `email_lyft_01.png` is a composite screenshot combining the other two emails side by side (no new information once both are shown individually), and `email_lyft_04.png`/`email_lyft_05.png` are the same mobile email screenshot at two different capture sizes — used the better-resolution one (`_05`) and skipped the other, consistent with this project's standing "don't present near-identical renders as separate examples" rule from the original Lyft pass.
+
+The remaining 5 were converted to WebP and added to `lyft.json`'s existing "Launch marketing" and "Internal communications" sections (structure untouched, just filled in with the now-supplied assets):
+- **Launch marketing:** a 2-up gallery of the webinar thank-you landing page in its two color treatments (`lyft-landing-thankyou-sand.webp`, `lyft-landing-thankyou-purple.webp` — this is the exact "webinar thank-you landing page" flagged missing in the original pass), then two full-width `image` blocks for the two distinct email designs: the "Great things start with a reliable ride" event-invite email (`lyft-email-reliable-ride.webp`, native 358×2516 — rendered as a `narrow`-width block rather than a justified-gallery entry, since its ratio (0.14) is well outside the justified grid's 0.3–3.5 safe band and would row-pack as a sliver) and the "Two-line is an ideal headline" AAAE-conference email (`lyft-email-aaae-conference.webp`).
+- **Internal communications:** `slide_lyft_02.png` (`lyft-slide-fleet-motion.webp`) is a genuinely different frame from the existing "Projected Total Rides, 1 Billion" animation already in this project — a white-rideshare-fleet moving-toward-camera shot, not the pink-pedestal stat graphic already used as cover/body image — confirmed by direct pixel comparison before adding it, so this is new content, not a near-duplicate of what's already there.
+
+No section overview/summary copy was changed — the existing text already described exactly this content ("demand-generation landing pages and email templates... a dedicated webinar thank-you landing page") from the earlier pass, written in anticipation of these assets eventually being supplied.
+
+**Verification.** `npm run build` (30 routes, clean), `npm run test:sites` (23/23), `audit:media` (same 2 pre-existing, already-confirmed-legitimate flags only, nothing new). Playwright screenshots at 1440px and 390px confirm correct rendering, white-background email/landing-page imagery un-inverted inside the dark frame, zero console errors.
+
+**Decided by:** task instruction. Pushed to `claude/akintilo-portfolio-audit-j7gue1` only this time — not merged to `main` — since the earlier merge was a one-off explicit request tied to that moment, not a standing instruction to merge on every push.
+
 ## 2026-10-26 (third pass) — AI-Assisted Design Systems case study, Security Brand Experiences link, Creative Systems Toolkit Lab entry
 
 **Correction, not a re-request.** The previous pass (below) reported the ~25 named AI-workflow assets as missing because every upload directory in this sandboxed environment was empty and a filesystem search found nothing. Ayodeji confirmed they were already pushed to `no1owns/akintilo-portfolio` on `main` in commit `cdd7ec6` ("lab and ai"), under `site/public/media/{flagship,lab,supporting}/` — this branch's checkout simply hadn't fetched that commit yet (its last sync from `main` predated `cdd7ec6`). Fetched `origin/main`, confirmed `cdd7ec6` and all 17 files with `git diff --name-only 6cdc0bb..origin/main` (the merge-base), confirmed that commit touched **only** those 17 media files — no content or code — so `git merge origin/main` was a clean, conflict-free, purely additive merge (3c5ba2c). Nothing from either side was discarded.
