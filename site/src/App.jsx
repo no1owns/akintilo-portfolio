@@ -16,6 +16,37 @@ export function safeURL(value){try {const u=new URL(value,location.origin);retur
 export function mediaURL(value){if(!value)return '';return value.startsWith('/media/')?value:safeURL(value);}
 function Arrow(){return <HiArrowLongRight aria-hidden="true" className="arrow"/>;}
 function Text({children}){return String(children||'').split('\n\n').filter(Boolean).map((p,i)=><p key={i}>{p}</p>);}
+// Reusable image-loading/failure component (2026-10) -- see .img-media/.img-fallback in
+// styles.css. Checks img.complete on mount so an image the browser already finished
+// loading before React attached listeners (common for prerendered/cached pages) is
+// marked loaded immediately, instead of getting stuck showing the loading placeholder
+// forever. Never retries a failed load; swaps to a plain, accessible fallback instead.
+function Img({src, alt, width, height, className='', loading='lazy', style}) {
+  const ref = useRef(null);
+  const [status, setStatus] = useState('loading');
+  useEffect(() => {
+    const el = ref.current;
+    if (el && el.complete) setStatus(el.naturalWidth > 0 ? 'loaded' : 'error');
+  }, []);
+  if (!src || status === 'error') {
+    return <span className={`img-fallback ${className}`.trim()} style={style} role="img" aria-label={alt || 'Image unavailable'}>
+      <span aria-hidden="true">Image unavailable</span>
+    </span>;
+  }
+  return <img
+    ref={ref}
+    className={`img-media ${status} ${className}`.trim()}
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={loading}
+    decoding="async"
+    style={style}
+    onLoad={() => setStatus('loaded')}
+    onError={() => setStatus('error')}
+  />;
+}
 function Video({block}){const [play,setPlay]=useState(false);const source=block.file||block.url||'';const media=mediaURL(source);const isVideoFile=source.startsWith('/media/')||/\.mp4(?:$|\?)/i.test(source);let host='';try{host=new URL(media).hostname;}catch{}const trusted=['www.youtube.com','www.youtube-nocookie.com','player.vimeo.com'].includes(host);const loop=block.playback!=='controls';return <section className="video-block"><h3>{block.title}</h3>{isVideoFile?<video className="project-video" autoPlay={loop} muted={loop} loop={loop} controls playsInline preload="metadata" poster={block.poster?mediaURL(block.poster):undefined}><source src={media}/></video>:trusted?play?<iframe title={block.title||'Project video'} src={media} allow="fullscreen; picture-in-picture" loading="lazy" referrerPolicy="strict-origin-when-cross-origin"/>:<button className="video-load" onClick={()=>setPlay(true)}>Load video <Arrow/><small>Video loads from {host} when you choose to play.</small></button>:media?<a className="text-link" href={media} target="_blank" rel="noreferrer">View embedded project <Arrow/></a>:null}</section>;}
 // Deterministic bento grid (2026-10): tile shapes are a fixed 12-column CSS Grid with
 // constant row-spans per shape -- see .gallery.layout-bento in styles.css. There is no
@@ -43,7 +74,7 @@ function BentoGallery({block}){
           aria-label={`View full size: ${imageAccessibleName(im,j+1,images.length)}`}
           onClick={(event)=>openLightbox(event,j)}
         >
-          <img src={mediaURL(im.image)} alt={im.alt||''} loading="lazy" style={{objectFit:fit,objectPosition:position}}/>
+          <Img src={mediaURL(im.image)} alt={im.alt||''} loading="lazy" style={{objectFit:fit,objectPosition:position}}/>
         </button>
         {im.caption&&<figcaption className="bento-caption">{im.caption}</figcaption>}
       </figure>;
@@ -61,7 +92,7 @@ function BentoGallery({block}){
 }
 // Plain same-size grid for images that already share a common aspect ratio -- no shape
 // logic, reuses the generic .gallery.columns-N rules.
-function UniformGallery({block}){const images=block.images||[];return <div className={`gallery layout-uniform columns-${block.columns||'2'}`}>{images.map((im,j)=><figure key={j}><img src={mediaURL(im.image)} alt={im.alt||''} loading="lazy"/>{im.caption&&<figcaption>{im.caption}</figcaption>}</figure>)}</div>;}
+function UniformGallery({block}){const images=block.images||[];return <div className={`gallery layout-uniform columns-${block.columns||'2'}`}>{images.map((im,j)=><figure key={j}><Img src={mediaURL(im.image)} alt={im.alt||''} loading="lazy"/>{im.caption&&<figcaption>{im.caption}</figcaption>}</figure>)}</div>;}
 function imageAccessibleName(image, position, total) {
   return image.caption || image.alt || `Image ${position} of ${total}`;
 }
@@ -111,7 +142,7 @@ function Lightbox({images, index, onClose, onNavigate, restoreFocusRef}) {
       <button ref={closeRef} className="lightbox-close" aria-label="Close image viewer" onClick={onClose}>&times;</button>
       {images.length > 1 && <button className="lightbox-prev" aria-label="Previous image" onClick={() => onNavigate(-1)}>&lsaquo;</button>}
       <figure className="lightbox-figure">
-        <img className="lightbox-img" src={mediaURL(image.image)} alt={image.alt || ''} />
+        <Img className="lightbox-img" src={mediaURL(image.image)} alt={image.alt || ''} loading="eager" />
         {image.caption && <figcaption className="lightbox-caption">{image.caption}</figcaption>}
       </figure>
       {images.length > 1 && <button className="lightbox-next" aria-label="Next image" onClick={() => onNavigate(1)}>&rsaquo;</button>}
@@ -153,7 +184,7 @@ function JustifiedGallery({block}) {
                 aria-label={`View full size: ${imageAccessibleName(image, image.index + 1, images.length)}`}
                 onClick={(event) => openLightbox(event, image.index)}
               >
-                <img
+                <Img
                   src={mediaURL(image.image)}
                   alt={image.alt || ''}
                   width={image.width}
@@ -183,10 +214,15 @@ function groupGalleries(blocks){return blocks.reduce((result,block)=>{const prev
 export function Blocks({blocks=[]}){return groupGalleries(blocks).map((b,i)=><div key={i} className={`block space-${b.spacing||'regular'} type-${b.type}`}>
  {b.type==='sectionHeading'&&<>{b.eyebrow&&<p className="eyebrow section-eyebrow">{b.eyebrow}</p>}<h2 className="project-section-heading">{b.title}</h2>{b.overview&&<div className="text-block section-overview"><Text>{b.overview}</Text></div>}</>}
  {b.type==='text'&&<div className={`text-block align-${b.align||'left'}`}>{b.title&&<h2>{b.title}</h2>}<Text>{b.body}</Text></div>}
- {b.type==='image'&&<figure className={b.width==='narrow'?'narrow':''}><img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><figcaption>{b.caption}</figcaption></figure>}
+ {b.type==='image'&&<figure className={b.width==='narrow'?'narrow':''}><Img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><figcaption>{b.caption}</figcaption></figure>}
  {b.type==='gallery'&&<>{b.title&&<h2>{b.title}</h2>}{(b.layout||'bento')==='justified'?<JustifiedGallery block={b}/>:b.layout==='uniform'?<UniformGallery block={b}/>:<BentoGallery block={b}/>}</>}
- {b.type==='split'&&<div className={`split image-${b.side||'left'}`}><img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><div><h2>{b.title}</h2><Text>{b.body}</Text></div></div>}
+ {b.type==='split'&&<div className={`split image-${b.side||'left'}`}><Img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><div><h2>{b.title}</h2><Text>{b.body}</Text></div></div>}
  {b.type==='video'&&<Video block={b}/>}
+ {b.type==='caseSection'&&<div className="case-section">{b.eyebrow&&<p className="eyebrow">{b.eyebrow}</p>}<h2 className="project-section-heading">{b.title}</h2><div className="text-block"><Text>{b.body}</Text></div>{b.visual&&<figure className="case-visual"><Img src={mediaURL(b.visual)} alt={b.visualAlt||''} loading="lazy"/></figure>}</div>}
+ {b.type==='responsibility'&&<div className="responsibility-block">
+   <div className="responsibility-col"><p className="eyebrow">{b.title1}</p><ul>{(b.items1||[]).map((it,j)=><li key={j}>{typeof it==='string'?it:it.item}</li>)}</ul></div>
+   <div className="responsibility-col"><p className="eyebrow">{b.title2}</p><ul>{(b.items2||[]).map((it,j)=><li key={j}>{typeof it==='string'?it:it.item}</li>)}</ul></div>
+ </div>}
  </div>);}
 // Prototype (homepage only, 2026-10-09): fades up elements marked data-reveal as they
 // scroll into view, and gives project-card covers a few px of scroll parallax. Both are
@@ -235,7 +271,7 @@ function useCoverParallax(ref){
   },[ref]);
 }
 function prefersReducedMotion(){return window.matchMedia('(prefers-reduced-motion: reduce)').matches;}
-function Card({p}){return <article className="project-card" data-slug={p.slug} style={{viewTransitionName:'card-'+p.slug}}><a href={'/'+p.slug}><div className="cover"><img src={mediaURL(p.cover)} alt={p.coverAlt||p.title} style={{objectPosition:p.coverPosition||'center'}} loading={p.order<2?'eager':'lazy'}/></div><h3>{p.title}</h3><p>{p.company}</p></a></article>;}
+function Card({p}){return <article className="project-card" data-slug={p.slug} style={{viewTransitionName:'card-'+p.slug}}><a href={'/'+p.slug}><div className="cover"><Img src={mediaURL(p.cover)} alt={p.coverAlt||p.title} style={{objectPosition:p.coverPosition||'center'}} loading={p.order<2?'eager':'lazy'}/></div><p className="eyebrow card-eyebrow">{p.category}</p><h3>{p.title}</h3><p className="card-company">{p.company}</p>{p.summary&&<p className="card-summary">{p.summary}</p>}<span className="card-view">View case study<Arrow/></span></a></article>;}
 // Signature interaction (2026-10): the Selected Work grid starts curated to `featured`
 // projects and expands in place to the full category-filtered list. Prefers the View
 // Transitions API (named per card, so the browser morphs position/size itself); falls
@@ -274,12 +310,12 @@ function ExperimentCard({e}){
   const url=e.liveUrl||e.sourceUrl;
   const label=e.liveUrl?'Visit live project':e.sourceUrl?'View source':null;
   return <article className="experiment-card">
-    <div className="experiment-visual">{e.cover?<img src={mediaURL(e.cover)} alt={e.coverAlt||e.title} style={{objectPosition:e.coverPosition||'center'}}/>:<span className="experiment-format" aria-hidden="true">{e.format}</span>}</div>
+    <div className="experiment-visual">{e.cover?<Img src={mediaURL(e.cover)} alt={e.coverAlt||e.title} style={{objectPosition:e.coverPosition||'center'}}/>:<span className="experiment-format" aria-hidden="true">{e.format}</span>}</div>
     <div className="experiment-body">
       {e.cover&&<span className="experiment-format">{e.format}</span>}
       <h3>{e.title}</h3>
       <p>{e.overview||e.summary}</p>
-      {e.gallery?.length>0&&<div className="experiment-gallery">{e.gallery.map((im,i)=><img key={i} src={mediaURL(im.image)} alt={im.alt||''} loading="lazy"/>)}</div>}
+      {e.gallery?.length>0&&<div className="experiment-gallery">{e.gallery.map((im,i)=><Img key={i} src={mediaURL(im.image)} alt={im.alt||''} loading="lazy"/>)}</div>}
       {url&&<a className="text-link" href={safeURL(url)} target="_blank" rel="noreferrer" aria-label={`${label} — opens in a new tab`}>{label} <span aria-hidden="true">&#8599;</span></a>}
     </div>
   </article>;
@@ -327,7 +363,18 @@ function Home({initial='All'}){
   };
   return <div ref={ref}><section className="hero" data-reveal><h1>{settings.headline}</h1><p>{settings.intro}</p><a className="hero-link" href="#work">View selected work <Arrow/></a></section><section id="work" className="work" data-reveal><h2>{heading}</h2><div className="filters" role="group" aria-label="Filter projects">{cats.map(c=><button key={c} aria-pressed={c===filter} className={c===filter?'active':''} onClick={()=>onFilterClick(c)}>{c}</button>)}</div><div id="work-grid" ref={gridRef} className={`project-grid columns-${settings.gridColumns||'2'} gap-${settings.gridGap||'comfortable'}`}>{visible.map(p=><Card key={p.slug} p={p}/>)}</div>{isAll&&!expanded&&visible.length===0&&<p className="work-empty-hint">No featured picks in this category yet — view all work to see everything.</p>}{isAll&&<button type="button" ref={toggleRef} className="work-toggle text-link" aria-expanded={expanded} aria-controls="work-grid" onClick={onToggle}>{expanded?'Show selected work':'View all work'}<Arrow/></button>}</section><Experiments/></div>;
 }
-function Project({p}){const next=projects[(projects.indexOf(p)+1)%projects.length];return <><header className="project-intro"><a className="eyebrow" href={'/?category='+encodeURIComponent(p.category)+'#work'}>All {p.category.toLowerCase()} <Arrow/></a><h1>{p.title}</h1><p className="summary">{p.summary}</p><dl><div><dt>Company</dt><dd>{p.company}</dd></div><div><dt>Role</dt><dd>{p.role}</dd></div></dl></header><figure className="project-hero"><img src={mediaURL(p.cover)} alt={p.coverAlt}/></figure><section className="overview"><h2>The work</h2><div><Text>{p.overview}</Text></div></section>{p.outcomes?.length>0&&<section className="outcomes" aria-label="Project outcomes">{p.outcomes.map((o,i)=><div key={i}><strong>{o.value}</strong><p>{o.label}</p></div>)}</section>}<Blocks blocks={p.blocks}/><nav className="project-next" aria-label="Next project"><span>Next project</span><a href={'/'+next.slug}>{next.title}<Arrow/></a></nav></>;}
+// Optional, CMS-editable case-study brief (2026-10) -- every field is independently
+// optional and renders no label/heading when empty, so existing project JSON without
+// a projectBrief object continues to render exactly as before.
+const BRIEF_LABELS={context:'Context',challenge:'Challenge',contribution:'Contribution',approach:'Approach',outcome:'Outcome'};
+function ProjectBrief({brief}){
+  const entries=Object.entries(BRIEF_LABELS).filter(([key])=>brief?.[key]);
+  if(!entries.length)return null;
+  return <section className="project-brief" aria-label="Project brief">
+    {entries.map(([key,label])=><React.Fragment key={key}><p className="eyebrow brief-label">{label}</p><div className="brief-body"><Text>{brief[key]}</Text></div></React.Fragment>)}
+  </section>;
+}
+function Project({p}){const next=projects[(projects.indexOf(p)+1)%projects.length];return <><header className="project-intro"><a className="eyebrow" href={'/?category='+encodeURIComponent(p.category)+'#work'}>All {p.category.toLowerCase()} <Arrow/></a><h1>{p.title}</h1><p className="summary">{p.summary}</p><dl><div><dt>Company</dt><dd>{p.company}</dd></div><div><dt>Role</dt><dd>{p.role}</dd></div></dl></header><figure className="project-hero"><Img src={mediaURL(p.cover)} alt={p.coverAlt} loading="eager"/></figure><section className="overview"><h2>The work</h2><div><Text>{p.overview}</Text></div></section><ProjectBrief brief={p.projectBrief}/>{p.outcomes?.length>0&&<section className="outcomes" aria-label="Project outcomes">{p.outcomes.map((o,i)=><div key={i}><strong>{o.value}</strong><p>{o.label}</p></div>)}</section>}<Blocks blocks={p.blocks}/><nav className="project-next" aria-label="Next project"><span>Next project</span><a href={'/'+next.slug}>{next.title}<Arrow/></a></nav></>;}
 function About(){return <section className="simple-page"><p className="eyebrow">About Ayo</p><h1>The story.<br/>The system.<br/>The people using it.</h1><Text>{settings.about}</Text><a href="/resume" className="text-link">View experience <Arrow/></a></section>;}
 function Resume(){return <section className="simple-page"><p className="eyebrow">Experience</p><h1>Brand, web,<br/>and creative direction.</h1>{settings.resume&&<a className="text-link" href={mediaURL(settings.resume)} download>Download résumé <Arrow/></a>}<div className="experience">{[['AppOmni','Senior Visual Designer','Dec 2024–Oct 2026'],['Forge HQ','Founder, Creative Director','2020–Present'],['Meta, via TEKSystems','Creative Consultant, Keynote Storytelling (Contract)','2025'],['Secureframe','Principal Designer','2022–2024'],['Navan (TripActions)','Director of Design','2019–2022'],['MongoDB','Creative Director','2015–2019'],['DocuSign','Director of Creative Services','2012–2015']].map(([a,b,c])=><div key={a}><h2>{a}</h2><p>{b}</p><span>{c}</span></div>)}</div></section>;}
 const CONTACT_EMAIL='ayoakintilo@gmail.com';

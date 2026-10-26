@@ -76,6 +76,20 @@ Ayodeji said the reel page looked good, but "the other pages on the site dont st
 
 Formal, fully-specified correction pass for `preview.akintilo.com`, scoped explicitly to the staging branch (no merge to `main`, no DNS change — see `docs/portfolio-decisions.md`'s 2026-10-22 entry for the full account). All 7 prioritized items plus a mid-pass addition (placing 6 reel-only videos into their case studies) are **done** — see "Resolved this pass" below. **Explicitly deferred, not a blocker:** item 6's remaining ~86 generic alt texts on Security Brand Experiences, each needing individual visual review to write real (non-invented) text.
 
+## New work requested (2026-10-26) — dark editorial theme, typography, case-study schema, AI case study (partially blocked)
+
+Formal, fully-specified pass covering a sitewide dark theme, self-hosted typography, an optional product-design case-study schema (`projectBrief`/`caseSection`/responsibility block), a reusable image-loading component, a new featured "AI-Assisted Design Systems" case study, and a Lab expansion with AppOmni creative-tooling evidence. **Blocked, explicitly:** every one of the ~25 named uploaded assets (`component-workflow-build.jpg`, `marlin-ai-motion.mp4`, the Creative Brief Generator/Creative Systems Toolkit screenshots, etc.) was searched for across every upload directory in this environment and found nowhere — none exist yet. Per instruction, nothing was fabricated to fill the gap. Ayodeji chose (via `AskUserQuestion`) to proceed with everything not dependent on those files; see `docs/portfolio-decisions.md`'s 2026-10-26 (second pass) entry for the full account.
+
+**Done this pass:** dark theme + CSS custom-property tokens sitewide, self-hosted Newsreader/IBM Plex Sans/IBM Plex Mono typography, homepage card redesign (eyebrow/summary/persistent view-indicator), the optional `projectBrief`/`caseSection`/responsibility-block schema (CMS + preview included), the reusable `Img` loading/failure component applied everywhere an image renders, one new About-page sentence on AI-assisted workflows, Event Brand and Experiential demoted out of the featured eight, and Form Studio's Lab summary updated.
+
+**Still blocked on uploaded assets (not started — fully specified, ready to build once the files exist):**
+- The `ai-assisted-design-systems` case study itself (7 narrative sections: the production problem, composition-to-component, expanding the system, marketing UI reproduction, motion as a system, the Ayo-vs-AI responsibility block, the "10 days to 3 days" outcome).
+- The "How the system scaled" subsection and internal link on Security Brand Experiences (depends on the case study existing).
+- The Creative Brief Generator and Creative Systems Toolkit Lab entries.
+- Testing the 5 `eyometer.chatgpt.site` demo URLs for signed-out accessibility.
+
+**Known, flagged inconsistency until the above lands:** Selected Work currently shows 7 of its usual 8 slots (Event Brand and Experiential was moved out to make room for the AI case study, which doesn't exist yet). Not treated as a regression to silently work around — the 8th slot is reserved for `ai-assisted-design-systems` once it can be built.
+
 ## Resolved this pass
 
 - ~~Category filter showed an empty page for categories with no featured projects~~ — fixed 2026-10-22. Selecting a category now always shows that category's full published list immediately; the expand/collapse toggle and empty-state hint are scoped to "All" only. Added URL sync (`pushState`/`popstate`, `/?category=<name>#work`) that didn't exist before — direct category URLs, refreshes, and browser back/forward all now restore the correct state. See `docs/portfolio-decisions.md`.
@@ -109,6 +123,8 @@ Formal, fully-specified correction pass for `preview.akintilo.com`, scoped expli
 - The Decap-based `/admin/` editor already exists and reads/writes the same `site/content/*.json` schema that will remain the system of record — no separate CMS data model is planned.
 - Online (non-local) publishing needs a Decap-compatible GitHub OAuth service (`VITE_CMS_AUTH_URL`) that isn't configured yet. This is explicitly out of scope until after the public replacement is stable.
 
+- ~~Dark editorial theme, self-hosted typography, case-study schema, image-loading component, Event Brand demotion, Form Studio summary, About line~~ — done 2026-10-26, see the "New work requested (2026-10-26)" entry above and `docs/portfolio-decisions.md`.
+
 ## Items requiring Ayodeji's decision
 
 - Where should the MongoDB Times Square IPO takeover content live — its own new section/project, or folded into an existing MongoDB project? What's the actual verified language beyond "Times Square IPO takeover" (dates, specifics) that's safe to publish?
@@ -116,6 +132,7 @@ Formal, fully-specified correction pass for `preview.akintilo.com`, scoped expli
 - If/when `linx-security` and `mongodb-beliefs-storyboard` should be finished and published: confirm client/scope/attribution.
 - Review and approve (or redirect) the justified-grid + accessibility prototype on `mongodb-the-next-generation-database` before it's rolled out to any other project.
 - Supply real values for site settings before launch: `siteUrl` (final domain), résumé PDF.
+- Supply the ~25 named AI-workflow assets for the `ai-assisted-design-systems` case study and the two blocked Lab entries (see "New work requested (2026-10-26)" above) — nothing in this area can move until the actual files exist.
 - New images for Lyft and BetterUp: supply the files, and for Lyft, where they should sit relative to the existing image.
 - For the 4 Adobe Behance embeds (Visa, `mongodb-web`, `mongodb-for-giant-ideas-video`, Lyft): original file, existing YouTube/Vimeo link, or keep as Adobe embeds for now?
 - If true silent server-side delivery is wanted for the contact form (vs. the current mailto hand-off, which needs the visitor's own email client): accept a third-party form-backend dependency (Formspree, FormSubmit, etc.) for it?
