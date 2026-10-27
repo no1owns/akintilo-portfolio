@@ -22,8 +22,8 @@ No attribution in the ledger was inferred from a file's appearance. Every row tr
 |---|---|---|
 | MongoDB | 108 | dream-big, mongodb-the-next-generation-database, mongodb-web, mongodb-for-giant-ideas-video, mongodb-internal, mongodb-beliefs-storyboard, + its share of event-brand-experiential |
 | TripActions (folder: `navan`) | 73 | tripactions, tripactions-visual-product-ux, lufthansa, visa, + its share of event-brand-experiential |
-| AppOmni | 66 | ai-assisted-design-systems, + its share of brand-systems-and-web-performance |
-| Secureframe | 52 | its share of brand-systems-and-web-performance |
+| AppOmni | 67 | ai-assisted-design-systems, + its share of brand-systems-and-web-performance |
+| Secureframe | 54 | its share of brand-systems-and-web-performance |
 | DocuSign | 45 | docusign-enterprise-campaign, microsoft-docusign, + its share of event-brand-experiential |
 | Meta | 27 | meta-connect |
 | BetterUp | 20 | betterup-product-presentations |
@@ -34,7 +34,6 @@ No attribution in the ledger was inferred from a file's appearance. Every row tr
 | Lyft Business | 7 | lyft |
 | Loft | 5 | loft |
 | Byron (reel-only) | 1 | no case-study page — `byron/additional-work/` |
-| **Uncertain (decision 6)** | **3** | all within brand-systems-and-web-performance — held in `_uncertain/` |
 | **Unreferenced** | **4** | 1 kept with its segments for provenance (decision 7), 3 held in `_unreferenced/` |
 
 ## 3. Final folder tree
@@ -42,10 +41,10 @@ No attribution in the ledger was inferred from a file's appearance. Every row tr
 ```text
 site/public/media/
 ├── appomni/
-│   ├── brand-systems-and-web-performance/   (57 files — AppOmni's section of this shared project)
+│   ├── brand-systems-and-web-performance/   (58 files — AppOmni's section of this shared project)
 │   └── ai-assisted-design-systems/          (9 files)
 ├── secureframe/
-│   └── brand-systems-and-web-performance/   (52 files — Secureframe's section of the same project)
+│   └── brand-systems-and-web-performance/   (54 files — Secureframe's section of the same project)
 │       └── source-originals/                (1 — pre-segmentation original, see §7)
 ├── mongodb/
 │   ├── dream-big/                           (10)
@@ -79,8 +78,6 @@ site/public/media/
 │   ├── creative-systems-toolkit/            (6)
 │   ├── multistep-form-generator/            (1 — slug kept per decision 5)
 │   └── stephen-kings-universe/              (1 — slug kept per decision 5)
-├── _uncertain/
-│   └── brand-systems-and-web-performance/   (3 — re-verified individually, no visible company evidence, decision 6)
 └── _unreferenced/                            (3, held not deleted -- see §7)
     └── supporting/
 ```
@@ -94,7 +91,7 @@ Full per-file mapping: `docs/asset-migration-ledger.md`.
 3. **Visa, Lufthansa, Microsoft get no top-level company folder.** Filed under the primary company (`navan/visa/`, `navan/lufthansa/`, `docusign/microsoft-docusign/`). Partner names are preserved everywhere they currently appear in copy/captions/alt text/metadata — only the file's folder location changes.
 4. **Byron → `byron/additional-work/`**, not a generic `shared/` bucket — stays clearly attributable to Byron even without a case-study page.
 5. **Lab subfolders use existing project slugs** (`multistep-form-generator`, `stephen-kings-universe`, `creative-systems-toolkit`) — this is a technical migration; friendlier public names are a content/routing-layer concern for later.
-6. **AppOmni/Secureframe boundary — individually re-verified.** Every GIF-derived first frame and the one generic icon the docs flagged were viewed directly (not re-derived from palette or section position). Result: **3 of the 4 candidates had no visible logo, text, or other company-identifying evidence** and are held in `_uncertain/brand-systems-and-web-performance/`, flagged in the ledger, not assigned. The 4th (`440fd6e00a8b97ce.webp`) is confirmed Secureframe on the strength of an *existing reference* — a prior documented pass that pulled multiple frames of the same source GIF and found an explicit "Introducing Comply AI" Secureframe title card later in the animation (see `docs/portfolio-decisions.md`). Every other image in this project keeps its structural section attribution (which company's `sectionHeading` block it falls under), which is unambiguous and doesn't rely on pixel content.
+6. **AppOmni/Secureframe boundary — individually re-verified, now fully resolved.** Every GIF-derived first frame and the one generic icon the docs flagged were viewed directly (not re-derived from palette or section position). At the time of the original migration, **3 of the 4 candidates had no visible logo, text, or other company-identifying evidence** and were held in `_uncertain/brand-systems-and-web-performance/`, flagged in the ledger, not assigned. The 4th (`440fd6e00a8b97ce.webp`) was confirmed Secureframe on the strength of an *existing reference* — a prior documented pass that pulled multiple frames of the same source GIF and found an explicit "Introducing Comply AI" Secureframe title card later in the animation (see `docs/portfolio-decisions.md`). On 2026-10-27 the portfolio owner confirmed the remaining 3 directly: `293b4b76e91a03b7.webp` and `59c122adbc83e0ba.webp` to Secureframe, `8aba420cd09b8f16.webp` to AppOmni. All three were moved into their confirmed company folders and the now-empty `_uncertain/` directory was removed; see `docs/asset-migration-ledger.md` for the per-file record. Every other image in this project keeps its structural section attribution (which company's `sectionHeading` block it falls under), which is unambiguous and doesn't rely on pixel content.
 7. **Unreferenced files**: all 4 are preserved, none deleted. The pre-segmentation original (`3564c19109ee9aa0.webp`) moves into `secureframe/brand-systems-and-web-performance/source-originals/`, alongside its 8 already-used `-seg1`…`-seg8` segments in the parent folder, with the relationship documented in the ledger. The other 3 (2 `supporting/*.json` spec files + `motion-reference-presentation.jpg`, all uploaded as "if useful" reference material for the AI case study, never rendered) go into `_unreferenced/`.
 
 ## 5. Suspected duplicates (not deleted)
