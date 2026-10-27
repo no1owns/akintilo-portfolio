@@ -8,7 +8,7 @@
       "company": "AppOmni",
       "role": "Directed and produced this video as part of building AppOmni's reusable page components and bringing them into production.",
       "description": "The launch video for Marlin AI, AppOmni's AI-driven SaaS security investigation assistant that correlates, investigates, and remediates risk automatically.",
-      "file": "/media/motion-appomni-04.mp4",
+      "file": "/media/appomni/brand-systems-and-web-performance/motion-appomni-04.mp4",
       "sourceSlug": "brand-systems-and-web-performance",
       "playback": "controls"
     },
@@ -18,7 +18,7 @@
       "company": "TripActions \u00d7 Lufthansa Group",
       "role": "Developed this Lufthansa partnership launch asset and helped align approval across both brands.",
       "description": "The launch video for BusinessToGo, a TripActions travel-booking product built in partnership with Lufthansa Group \u2014 booking, itinerary management, and loyalty points in one flow.",
-      "file": "/media/motion-lufthansa-hero.mp4",
+      "file": "/media/navan/lufthansa/motion-lufthansa-hero.mp4",
       "sourceSlug": "lufthansa",
       "playback": "controls"
     },
@@ -28,7 +28,7 @@
       "company": "Secureframe",
       "role": "Directed and produced this video as part of leading Secureframe's website overhaul and brand system.",
       "description": "A product explainer demonstrating Comply AI: detecting a misconfigured AWS resource and generating a Terraform fix automatically, no manual work required.",
-      "file": "/media/motion-secureframe-01.mp4",
+      "file": "/media/secureframe/brand-systems-and-web-performance/motion-secureframe-01.mp4",
       "sourceSlug": "brand-systems-and-web-performance",
       "playback": "controls"
     },
@@ -38,7 +38,7 @@
       "company": "Byron",
       "role": "Designed the intro animation sequence for Byron's product launch.",
       "description": "An intro clip for Byron Workspace, an AI-powered tax and accounting prep tool \u2014 a stack of documents (K-1, W-2, Trial balance) organizes itself under the line \"AI agents handle the prep. Reviewers stay in control.\"",
-      "file": "/media/motion-byron-intro-scene.mp4",
+      "file": "/media/byron/additional-work/motion-byron-intro-scene.mp4",
       "playback": "controls"
     },
     {
@@ -47,10 +47,10 @@
       "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece.",
       "description": "A quick feature highlight of the TripActions corporate card \u2014 animated chip graphics call out \"Powerful Spend Controls\" and \"Automated Reconciliation\" before landing on the card itself and TripActions' \"Let's go\" tagline.",
-      "file": "/media/motion-tripactions-inside-the-card.mp4",
+      "file": "/media/navan/tripactions/motion-tripactions-inside-the-card.mp4",
       "playback": "controls",
       "sourceSlug": "tripactions",
-      "poster": "/media/motion-tripactions-inside-the-card-poster.webp"
+      "poster": "/media/navan/tripactions/motion-tripactions-inside-the-card-poster.webp"
     },
     {
       "category": "Explainers",
@@ -58,10 +58,10 @@
       "company": "MongoDB",
       "role": "Worked with MongoDB product marketing and product management on the web, campaign, and video assets for the Stitch launch.",
       "description": "Helping developers understand and explore a growing product platform.",
-      "file": "/media/video-mongodb-stitch.mp4",
+      "file": "/media/mongodb/mongodb-web/video-mongodb-stitch.mp4",
       "sourceSlug": "mongodb-web",
       "playback": "controls",
-      "poster": "/media/video-mongodb-stitch-poster.webp"
+      "poster": "/media/mongodb/mongodb-web/video-mongodb-stitch-poster.webp"
     },
     {
       "category": "Explainers",
@@ -69,10 +69,10 @@
       "company": "AppOmni",
       "role": "Directed and produced this video as part of building AppOmni's reusable page components and bringing them into production.",
       "description": "A four-step AppOmni explainer on Salesforce security posture \u2014 surfacing public data exposure, correlating access paths, prioritizing risk by severity, and remediating down to the individual record, with options to export or share findings via email, Slack, or MS Teams.",
-      "file": "/media/motion-appomni-depth.mp4",
+      "file": "/media/appomni/brand-systems-and-web-performance/motion-appomni-depth.mp4",
       "playback": "controls",
       "sourceSlug": "brand-systems-and-web-performance",
-      "poster": "/media/motion-appomni-depth-poster.webp"
+      "poster": "/media/appomni/brand-systems-and-web-performance/motion-appomni-depth-poster.webp"
     },
     {
       "category": "Ads & Commercials",
@@ -80,7 +80,7 @@
       "company": "Secureframe",
       "role": "Directed and produced this video as part of leading Secureframe's website overhaul and brand system.",
       "description": "A paid social ad promoting time saved on security compliance work, with a demo-booking call to action.",
-      "file": "/media/motion-secureframe-08.mp4",
+      "file": "/media/secureframe/brand-systems-and-web-performance/motion-secureframe-08.mp4",
       "sourceSlug": "brand-systems-and-web-performance",
       "playback": "controls"
     },
@@ -90,7 +90,7 @@
       "company": "Secureframe",
       "role": "Directed and produced this video as part of leading Secureframe's website overhaul and brand system.",
       "description": "An explainer walking through SOC 2's Trust Service Criteria \u2014 Security, Confidentiality, and Privacy.",
-      "file": "/media/motion-secureframe-09.mp4",
+      "file": "/media/secureframe/brand-systems-and-web-performance/motion-secureframe-09.mp4",
       "sourceSlug": "brand-systems-and-web-performance",
       "playback": "controls"
     },
@@ -100,7 +100,7 @@
       "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece, and created the animation.",
       "description": "An animated brand ad built around a plane-window reveal \u2014 \"Hello World, Hello Travel\" \u2014 closing on TripActions' \"Let's go\" tagline.",
-      "file": "/media/motion-tripactions-ad-1.mp4",
+      "file": "/media/navan/tripactions/motion-tripactions-ad-1.mp4",
       "sourceSlug": "tripactions",
       "playback": "controls"
     },
@@ -110,7 +110,7 @@
       "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece.",
       "description": "A confident brand ad addressing increased scrutiny on business travel expenses \u2014 \"Bring it on.\"",
-      "file": "/media/motion-tripactions-ad-2.mp4",
+      "file": "/media/navan/tripactions/motion-tripactions-ad-2.mp4",
       "sourceSlug": "tripactions",
       "playback": "controls"
     },
@@ -120,7 +120,7 @@
       "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece.",
       "description": "A brand ad on remote work and staying connected \u2014 \"Get ready for the future of work.\"",
-      "file": "/media/motion-tripactions-ad-3.mp4",
+      "file": "/media/navan/tripactions/motion-tripactions-ad-3.mp4",
       "sourceSlug": "tripactions",
       "playback": "controls"
     },
@@ -130,10 +130,10 @@
       "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece.",
       "description": "A brand ad for the TripActions Liquid card \u2014 scrolling real-time expense line items dissolve into \"Goodbye, Expenses\" and \"Hello, Liquid,\" closing on the card and TripActions' \"Let's go\" tagline.",
-      "file": "/media/motion-tripactions-goodbye-expenses.mp4",
+      "file": "/media/navan/tripactions/motion-tripactions-goodbye-expenses.mp4",
       "playback": "controls",
       "sourceSlug": "tripactions",
-      "poster": "/media/motion-tripactions-goodbye-expenses-poster.webp"
+      "poster": "/media/navan/tripactions/motion-tripactions-goodbye-expenses-poster.webp"
     },
     {
       "category": "Ads & Commercials",
@@ -141,10 +141,10 @@
       "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece.",
       "description": "A black-background variant of the TripActions Liquid card ad \u2014 scrolling expense line items and a red bracket wipe lead into \"Hello, Liquid\" and the card reveal, closing on TripActions' \"Let's go\" tagline.",
-      "file": "/media/motion-tripactions-hello-liquid.mp4",
+      "file": "/media/navan/tripactions/motion-tripactions-hello-liquid.mp4",
       "playback": "controls",
       "sourceSlug": "tripactions",
-      "poster": "/media/motion-tripactions-hello-liquid-poster.webp"
+      "poster": "/media/navan/tripactions/motion-tripactions-hello-liquid-poster.webp"
     },
     {
       "category": "Ads & Commercials",
@@ -152,7 +152,7 @@
       "company": "TripActions \u00d7 Visa",
       "role": "Contributed ideation and concept direction for this TripActions piece.",
       "description": "Co-marketing that connected the corporate card with a broader travel story.",
-      "file": "/media/motion-tripactions-travel-expense-hero.mp4",
+      "file": "/media/navan/tripactions/motion-tripactions-travel-expense-hero.mp4",
       "sourceSlug": "tripactions",
       "playback": "controls"
     },
@@ -162,7 +162,7 @@
       "company": "AppOmni",
       "role": "Directed and produced this video as part of building AppOmni's reusable page components and bringing them into production.",
       "description": "A short animated brand piece built around AppOmni's AI-agent-security concept \u2014 one agent figure watching over another.",
-      "file": "/media/motion-appomni-01.mp4",
+      "file": "/media/appomni/brand-systems-and-web-performance/motion-appomni-01.mp4",
       "sourceSlug": "brand-systems-and-web-performance",
       "playback": "controls"
     },
@@ -172,7 +172,7 @@
       "company": "AppOmni",
       "role": "Directed and produced this video as part of building AppOmni's reusable page components and bringing them into production.",
       "description": "An abstract network-node motion graphic representing connected systems and data, used as brand and background animation.",
-      "file": "/media/motion-appomni-02.mp4",
+      "file": "/media/appomni/brand-systems-and-web-performance/motion-appomni-02.mp4",
       "sourceSlug": "brand-systems-and-web-performance",
       "playback": "controls"
     },
@@ -182,7 +182,7 @@
       "company": "AppOmni",
       "role": "Directed and produced this video as part of building AppOmni's reusable page components and bringing them into production.",
       "description": "A shield-and-eye motion graphic symbolizing AppOmni's visibility into, and protection against, SaaS security threats.",
-      "file": "/media/motion-appomni-03.mp4",
+      "file": "/media/appomni/brand-systems-and-web-performance/motion-appomni-03.mp4",
       "sourceSlug": "brand-systems-and-web-performance",
       "playback": "controls"
     },
@@ -192,7 +192,7 @@
       "company": "Secureframe",
       "role": "Directed and produced this video as part of leading Secureframe's website overhaul and brand system.",
       "description": "The title-card animation introducing Comply AI, Secureframe's AI-powered remediation product.",
-      "file": "/media/motion-secureframe-06.mp4",
+      "file": "/media/secureframe/brand-systems-and-web-performance/motion-secureframe-06.mp4",
       "sourceSlug": "brand-systems-and-web-performance",
       "playback": "controls"
     },
@@ -202,7 +202,7 @@
       "company": "DocuSign",
       "role": "Led creative for this DocuSign demand-generation campaign, part of a scope spanning social, events, and corporate communications.",
       "description": "An iPad walkthrough of \"Coffee is for Closers,\" a DocuSign enterprise communications campaign.",
-      "file": "/media/motion-docusign.mp4",
+      "file": "/media/docusign/docusign-enterprise-campaign/motion-docusign.mp4",
       "sourceSlug": "docusign-enterprise-campaign",
       "playback": "controls"
     },
@@ -212,10 +212,10 @@
       "company": "MongoDB",
       "role": "Connected this video storytelling to MongoDB's product launches and campaigns, in partnership with product marketing and product management.",
       "description": "Product and brand storytelling for a developer audience.",
-      "file": "/media/movie-mongodb-event-opener.mp4",
+      "file": "/media/mongodb/mongodb-for-giant-ideas-video/movie-mongodb-event-opener.mp4",
       "sourceSlug": "mongodb-for-giant-ideas-video",
       "playback": "controls",
-      "poster": "/media/movie-mongodb-event-opener-poster.webp"
+      "poster": "/media/mongodb/mongodb-for-giant-ideas-video/movie-mongodb-event-opener-poster.webp"
     }
   ]
 }

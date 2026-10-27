@@ -17,7 +17,7 @@
       "spacing": "regular",
       "images": [
         {
-          "image": "/media/ed0933c1bfb92429.webp",
+          "image": "/media/mongodb/mongodb-web/ed0933c1bfb92429.webp",
           "width": 1920,
           "height": 1536,
           "alt": "Designing for a Developer Platform project work",
@@ -33,35 +33,35 @@
       "spacing": "regular",
       "images": [
         {
-          "image": "/media/8a1748fd114498f6.webp",
+          "image": "/media/mongodb/mongodb-web/8a1748fd114498f6.webp",
           "width": 1920,
           "height": 1651,
           "alt": "Designing for a Developer Platform project work",
           "caption": ""
         },
         {
-          "image": "/media/b21ba1bb8890a733.webp",
+          "image": "/media/mongodb/mongodb-web/b21ba1bb8890a733.webp",
           "width": 1440,
           "height": 971,
           "alt": "Designing for a Developer Platform project work",
           "caption": ""
         },
         {
-          "image": "/media/24a8bc97c5759ba9.webp",
+          "image": "/media/mongodb/mongodb-web/24a8bc97c5759ba9.webp",
           "width": 1440,
           "height": 1425,
           "alt": "Designing for a Developer Platform project work",
           "caption": ""
         },
         {
-          "image": "/media/27228e2e17c1a51b.webp",
+          "image": "/media/mongodb/mongodb-web/27228e2e17c1a51b.webp",
           "width": 1440,
           "height": 1505,
           "alt": "Designing for a Developer Platform project work",
           "caption": ""
         },
         {
-          "image": "/media/f18d80655dcf16aa.webp",
+          "image": "/media/mongodb/mongodb-web/f18d80655dcf16aa.webp",
           "width": 1920,
           "height": 1440,
           "alt": "Designing for a Developer Platform project work",
@@ -77,28 +77,28 @@
       "spacing": "regular",
       "images": [
         {
-          "image": "/media/624a22815369f949.webp",
+          "image": "/media/mongodb/mongodb-web/624a22815369f949.webp",
           "width": 1440,
           "height": 571,
           "alt": "Designing for a Developer Platform project work",
           "caption": ""
         },
         {
-          "image": "/media/8d01ec222e636917.webp",
+          "image": "/media/mongodb/mongodb-web/8d01ec222e636917.webp",
           "width": 1440,
           "height": 833,
           "alt": "Designing for a Developer Platform project work",
           "caption": ""
         },
         {
-          "image": "/media/79c6e6ffacf52d3e.webp",
+          "image": "/media/mongodb/mongodb-web/79c6e6ffacf52d3e.webp",
           "width": 1440,
           "height": 509,
           "alt": "Designing for a Developer Platform project work",
           "caption": ""
         },
         {
-          "image": "/media/f9605d41e98ae451.webp",
+          "image": "/media/mongodb/mongodb-web/f9605d41e98ae451.webp",
           "width": 1440,
           "height": 568,
           "alt": "Designing for a Developer Platform project work",
@@ -111,8 +111,8 @@
       "type": "video",
       "title": "Designing for a Developer Platform",
       "spacing": "regular",
-      "file": "/media/video-mongodb-stitch.mp4",
-      "poster": "/media/video-mongodb-stitch-poster.webp",
+      "file": "/media/mongodb/mongodb-web/video-mongodb-stitch.mp4",
+      "poster": "/media/mongodb/mongodb-web/video-mongodb-stitch-poster.webp",
       "playback": "controls"
     },
     {
@@ -122,7 +122,7 @@
       "spacing": "regular",
       "images": [
         {
-          "image": "/media/1e5dceccf338eca9.webp",
+          "image": "/media/mongodb/mongodb-web/1e5dceccf338eca9.webp",
           "width": 1920,
           "height": 1472,
           "alt": "Designing for a Developer Platform project work",
@@ -138,7 +138,7 @@
       "spacing": "regular",
       "images": [
         {
-          "image": "/media/c77f502821a11fc6.webp",
+          "image": "/media/mongodb/mongodb-web/c77f502821a11fc6.webp",
           "width": 1440,
           "height": 793,
           "alt": "Designing for a Developer Platform project work",
@@ -154,7 +154,7 @@
       "spacing": "regular",
       "images": [
         {
-          "image": "/media/20de535d5e754219.webp",
+          "image": "/media/mongodb/mongodb-web/20de535d5e754219.webp",
           "width": 1920,
           "height": 1800,
           "alt": "Designing for a Developer Platform project work",
@@ -165,14 +165,14 @@
     },
     {
       "type": "image",
-      "image": "/media/mongodb-atlas-cluster-builder-animation.webp",
+      "image": "/media/mongodb/mongodb-web/mongodb-atlas-cluster-builder-animation.webp",
       "alt": "A UI transition frame from the interactive Atlas cluster builder animation, showing a blank white panel giving way to a dark cluster-configuration card",
       "caption": "Frame from the interactive Atlas cluster builder animation, built for the MongoDB Atlas product announcement.",
       "width": "narrow",
       "spacing": "regular"
     }
   ],
-  "cover": "/media/5d63296aaf9fa184.webp",
+  "cover": "/media/mongodb/mongodb-web/5d63296aaf9fa184.webp",
   "coverAlt": "Designing for a Developer Platform project collage",
   "coverPosition": "center",
   "featured": false
