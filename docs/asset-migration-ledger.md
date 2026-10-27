@@ -1,6 +1,8 @@
 # Asset migration ledger
 
-Full per-file migration plan for every file under `site/public/media/`. Generated from a three-part audit (file inventory + metadata, codebase reference mapping, company/project attribution cross-referenced against `docs/content-and-asset-inventory.md` and `docs/portfolio-decisions.md`). **Dry run only — no files have been moved.**
+Full per-file migration plan for every file under `site/public/media/`. Generated from a three-part audit (file inventory + metadata, codebase reference mapping, company/project attribution cross-referenced against `docs/content-and-asset-inventory.md` and `docs/portfolio-decisions.md`).
+
+**Status: executed.** All 458 moves listed below have been performed via `git mv` on branch `claude/media-reorg-audit`, and the "Proposed path" column is now the live path on disk. Every reference across `site/content/projects/*.json` (21 files), `site/content/experiments/*.json` (3 files), `site/content/reel.json`, and `docs/content-and-asset-inventory.md` was updated to match (481 path replacements across 25 content/doc files). See "Migration execution & validation" at the end of this document for counts and check results.
 
 **458 files total.**
 
@@ -464,3 +466,31 @@ Full per-file migration plan for every file under `site/public/media/`. Generate
 | `/media/c0f95804cbd43cc8.webp` | `/media/navan/visa/c0f95804cbd43cc8.webp` | TripActions | visa | confirmed | visa.json |  |
 | `/media/c4560bd608e84da8.webp` | `/media/navan/visa/c4560bd608e84da8.webp` | TripActions | visa | confirmed | visa.json |  |
 | `/media/f81b8dc3bd458e38.webp` | `/media/navan/visa/f81b8dc3bd458e38.webp` | TripActions | visa | confirmed | visa.json |  |
+
+## Migration execution & validation
+
+Executed on branch `claude/media-reorg-audit`, in two commits: an inventory/plan commit (docs only) followed by the media-migration commit (file moves + reference updates).
+
+**File count / size integrity**
+- Before: 458 files under `site/public/media/`, matching the inventory in `media-inventory.csv`.
+- After: 458 files under `site/public/media/` (unchanged count), total byte size unchanged — only directory structure and, where noted below, holding-folder placement changed. No file was deleted or newly created.
+
+**Reference integrity**
+- 481 total path replacements applied across 25 content/doc files (454 unique referenced paths + 27 paths cross-referenced in more than one file, e.g. `reel.json` + the owning project file).
+- Repo-wide search for every pre-migration `/media/...` path string: zero remaining hits outside this ledger and the migration proposal.
+- Repo-wide check that every post-migration referenced path resolves to a real file on disk: zero dangling references.
+
+**Build / test / audit**
+- `npm run build`: clean, same 30 routes as before the migration.
+- `npm run test:sites`: 23/23 passing.
+- `node scripts/audit-gallery-ratios.mjs`: same 2 pre-existing aspect-ratio flags as before the migration (unrelated to this change, both already present pre-migration) — no new flags introduced.
+
+**Visual / runtime verification**
+- Playwright pass across all touched/representative routes (`/`, `/brand-systems-and-web-performance`, `/event-brand-experiential`, `/reel`, `/lyft`, `/mongodb-web`, `/ai-assisted-design-systems`, `/linx-security`, `/visa`, `/lufthansa`, `/microsoft-docusign`) at 1440px, 1024px, 768px, and 390px widths: zero new console/page errors, zero failed `/media/` requests at any width.
+- Lightbox check on `/brand-systems-and-web-performance`: opens correctly, resolves the moved image path (`/media/secureframe/brand-systems-and-web-performance/63d5eb0abfb8726d.webp`).
+- `/admin/` (Decap CMS) loads with no page errors against the new media layout.
+
+**Deliberately unchanged / known gaps**
+- `site/admin/editor.js` keeps its single flat `media_folder`/`public_folder` pair. The CMS media picker can still browse into the new subfolders, but it will not auto-file a newly uploaded asset into a project subfolder. Out of scope for this migration (see proposal §7); flagged as a follow-up for whoever edits CMS config next.
+- The 2 duplicate pairs identified in Phase 1 (`meta-connect-08.webp`/`meta-connect-13.webp`, `a26ee5114fc51d56.webp`/`dd0a597a18f778d5.webp`) were moved to their respective new paths as distinct files, per decision — not merged or deleted.
+- The 3 `_uncertain/brand-systems-and-web-performance/` images and the 4 `_unreferenced/` files remain exactly as flagged in Phase 1 — held, not deleted, not guessed at.

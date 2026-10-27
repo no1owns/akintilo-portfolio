@@ -34,13 +34,13 @@
       "eyebrow": "Component workflow",
       "title": "From composition to component",
       "body": "I began with a page section I had designed, then defined its reusable structure: what should stay fixed, what should vary, and which existing components and library styles could be reused instead of rebuilt. AI assisted with analyzing that structure and implementing the first pass; I evaluated the result against the original composition and directed the corrections.\n\nThe interface below is a recreated demonstration of this workflow, built to illustrate the process. It is not the AppOmni production environment, and the inspector-style properties panel shown did not exist natively inside AppOmni's own Figma files.",
-      "visual": "/media/flagship/component-workflow-build.jpg",
+      "visual": "/media/appomni/ai-assisted-design-systems/component-workflow-build.jpg",
       "visualAlt": "Recreated \"Component Workflow / Studio\" interface showing a published AppOmni section reconstructed into an editable component, with a properties panel, a proposed component structure, and a generated component specification",
       "spacing": "regular"
     },
     {
       "type": "image",
-      "image": "/media/flagship/component-properties-inspector.jpg",
+      "image": "/media/appomni/ai-assisted-design-systems/component-properties-inspector.jpg",
       "alt": "A recreated design-tool inspection view of the same AppOmni feature section, showing its layer structure, nested components, and exposed properties (viewport, theme, layout, card count) in a Design/Prototype panel",
       "caption": "Recreated demonstration -- illustrates how the section's structure and properties could be exposed for reuse, not a screenshot of AppOmni's own Figma file.",
       "width": "full",
@@ -51,13 +51,13 @@
       "eyebrow": "Variants",
       "title": "Expanding the system",
       "body": "Once the base component existed, the workflow extended it across the combinations a real page actually needs: desktop and mobile, light and dark, different content lengths, and different icon, label, headline, copy, and CTA combinations. Unless noted otherwise, the variants shown here are reconstructed examples built to demonstrate the approach, not screenshots pulled directly from AppOmni's own files.",
-      "visual": "/media/flagship/component-workflow-variants.jpg",
+      "visual": "/media/appomni/ai-assisted-design-systems/component-workflow-variants.jpg",
       "visualAlt": "Recreated \"Create variants\" step showing the same AppOmni feature section recomposed across desktop and mobile, dark and light theme combinations, with icon, label, and content variations",
       "spacing": "regular"
     },
     {
       "type": "image",
-      "image": "/media/flagship/component-variant-set.jpg",
+      "image": "/media/appomni/ai-assisted-design-systems/component-variant-set.jpg",
       "alt": "A component-set view in the recreated workflow grouping four variants of the same AppOmni feature section by viewport (desktop/mobile) and theme (dark/light)",
       "caption": "Recreated demonstration of how the variant set could be organized for reuse.",
       "width": "full",
@@ -73,8 +73,8 @@
     {
       "type": "video",
       "title": "Marlin AI",
-      "file": "/media/flagship/marlin-ai-motion.mp4",
-      "poster": "/media/flagship/marlin-ai-motion-poster.webp",
+      "file": "/media/appomni/ai-assisted-design-systems/marlin-ai-motion.mp4",
+      "poster": "/media/appomni/ai-assisted-design-systems/marlin-ai-motion-poster.webp",
       "playback": "controls",
       "spacing": "regular"
     },
@@ -85,14 +85,14 @@
       "spacing": "regular",
       "images": [
         {
-          "image": "/media/flagship/motion-system-editor.jpg",
+          "image": "/media/appomni/ai-assisted-design-systems/motion-system-editor.jpg",
           "width": 936,
           "height": 936,
           "alt": "Recreated \"Motion System / Studio\" interface with sliders for base duration, sequence stagger, travel distance, and easing curve, plus a live replay and exported motion-token JSON",
           "caption": ""
         },
         {
-          "image": "/media/flagship/motion-system-presentation.jpg",
+          "image": "/media/appomni/ai-assisted-design-systems/motion-system-presentation.jpg",
           "width": 1348,
           "height": 926,
           "alt": "The same recreated motion system applied to a representative dark-theme product-storytelling composition, showing staggered entrance timing for type, UI, and graphic elements",
@@ -132,7 +132,7 @@
       "spacing": "regular"
     }
   ],
-  "cover": "/media/flagship/marlin-ai-motion-frames.png",
+  "cover": "/media/appomni/ai-assisted-design-systems/marlin-ai-motion-frames.png",
   "coverAlt": "Three selected frames from the original Marlin AI motion piece -- \"Surface,\" \"Prioritize,\" and \"Remediate\" -- each showing a staged interface reveal",
   "coverPosition": "center",
   "featured": true

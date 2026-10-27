@@ -6,7 +6,7 @@
   "summary": "An AI-assisted form builder developed through requirements, browser testing, and versioned refinement.",
   "overview": "A standalone web tool for generating structured, styled multistep forms fast.",
   "format": "Web Tool",
-  "cover": "/media/experiment-multistep-form-generator.webp",
+  "cover": "/media/lab/multistep-form-generator/experiment-multistep-form-generator.webp",
   "coverAlt": "Multistep Form Generator interface for creating structured web forms",
   "liveUrl": "https://no1owns.github.io/ForgeHQ/projects/multistep-form-generator/",
   "sourceUrl": "",
