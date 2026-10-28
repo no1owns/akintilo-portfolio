@@ -1,6 +1,6 @@
 {
   "title": "Reel",
-  "intro": "Product launch films, explainers, ads, and brand motion work pulled from case studies across this site \u2014 all in one place.",
+  "intro": "Product launch films, explainers, ads, and brand motion work pulled from case studies across this site — all in one place.",
   "videos": [
     {
       "category": "Product Launch",
@@ -15,9 +15,9 @@
     {
       "category": "Product Launch",
       "title": "BusinessToGo",
-      "company": "TripActions \u00d7 Lufthansa Group",
+      "company": "TripActions × Lufthansa Group",
       "role": "Developed this Lufthansa partnership launch asset and helped align approval across both brands.",
-      "description": "The launch video for BusinessToGo, a TripActions travel-booking product built in partnership with Lufthansa Group \u2014 booking, itinerary management, and loyalty points in one flow.",
+      "description": "The launch video for BusinessToGo, a TripActions travel-booking product built in partnership with Lufthansa Group — booking, itinerary management, and loyalty points in one flow.",
       "file": "/media/navan/lufthansa/motion-lufthansa-hero.mp4",
       "sourceSlug": "lufthansa",
       "playback": "controls"
@@ -37,7 +37,7 @@
       "title": "More time for the work that needs you.",
       "company": "Byron",
       "role": "Designed the intro animation sequence for Byron's product launch.",
-      "description": "An intro clip for Byron Workspace, an AI-powered tax and accounting prep tool \u2014 a stack of documents (K-1, W-2, Trial balance) organizes itself under the line \"AI agents handle the prep. Reviewers stay in control.\"",
+      "description": "An intro clip for Byron Workspace, an AI-powered tax and accounting prep tool — a stack of documents (K-1, W-2, Trial balance) organizes itself under the line \"AI agents handle the prep. Reviewers stay in control.\"",
       "file": "/media/byron/additional-work/motion-byron-intro-scene.mp4",
       "playback": "controls"
     },
@@ -46,7 +46,7 @@
       "title": "Inside the Card",
       "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece.",
-      "description": "A quick feature highlight of the TripActions corporate card \u2014 animated chip graphics call out \"Powerful Spend Controls\" and \"Automated Reconciliation\" before landing on the card itself and TripActions' \"Let's go\" tagline.",
+      "description": "A quick feature highlight of the TripActions corporate card — animated chip graphics call out \"Powerful Spend Controls\" and \"Automated Reconciliation\" before landing on the card itself and TripActions' \"Let's go\" tagline.",
       "file": "/media/navan/tripactions/motion-tripactions-inside-the-card.mp4",
       "playback": "controls",
       "sourceSlug": "tripactions",
@@ -68,7 +68,7 @@
       "title": "Surface, Correlate, Prioritize, Remediate",
       "company": "AppOmni",
       "role": "Directed and produced this video as part of building AppOmni's reusable page components and bringing them into production.",
-      "description": "A four-step AppOmni explainer on Salesforce security posture \u2014 surfacing public data exposure, correlating access paths, prioritizing risk by severity, and remediating down to the individual record, with options to export or share findings via email, Slack, or MS Teams.",
+      "description": "A four-step AppOmni explainer on Salesforce security posture — surfacing public data exposure, correlating access paths, prioritizing risk by severity, and remediating down to the individual record, with options to export or share findings via email, Slack, or MS Teams.",
       "file": "/media/appomni/brand-systems-and-web-performance/motion-appomni-depth.mp4",
       "playback": "controls",
       "sourceSlug": "brand-systems-and-web-performance",
@@ -89,7 +89,7 @@
       "title": "SOC 2 Trust Service Criteria",
       "company": "Secureframe",
       "role": "Directed and produced this video as part of leading Secureframe's website overhaul and brand system.",
-      "description": "An explainer walking through SOC 2's Trust Service Criteria \u2014 Security, Confidentiality, and Privacy.",
+      "description": "An explainer walking through SOC 2's Trust Service Criteria — Security, Confidentiality, and Privacy.",
       "file": "/media/secureframe/brand-systems-and-web-performance/motion-secureframe-09.mp4",
       "sourceSlug": "brand-systems-and-web-performance",
       "playback": "controls"
@@ -99,7 +99,7 @@
       "title": "Hello Travel",
       "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece, and created the animation.",
-      "description": "An animated brand ad built around a plane-window reveal \u2014 \"Hello World, Hello Travel\" \u2014 closing on TripActions' \"Let's go\" tagline.",
+      "description": "An animated brand ad built around a plane-window reveal — \"Hello World, Hello Travel\" — closing on TripActions' \"Let's go\" tagline.",
       "file": "/media/navan/tripactions/motion-tripactions-ad-1.mp4",
       "sourceSlug": "tripactions",
       "playback": "controls"
@@ -109,7 +109,7 @@
       "title": "Bring It On",
       "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece.",
-      "description": "A confident brand ad addressing increased scrutiny on business travel expenses \u2014 \"Bring it on.\"",
+      "description": "A confident brand ad addressing increased scrutiny on business travel expenses — \"Bring it on.\"",
       "file": "/media/navan/tripactions/motion-tripactions-ad-2.mp4",
       "sourceSlug": "tripactions",
       "playback": "controls"
@@ -119,7 +119,7 @@
       "title": "Future of Work",
       "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece.",
-      "description": "A brand ad on remote work and staying connected \u2014 \"Get ready for the future of work.\"",
+      "description": "A brand ad on remote work and staying connected — \"Get ready for the future of work.\"",
       "file": "/media/navan/tripactions/motion-tripactions-ad-3.mp4",
       "sourceSlug": "tripactions",
       "playback": "controls"
@@ -129,7 +129,7 @@
       "title": "Goodbye Expenses, Hello Liquid",
       "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece.",
-      "description": "A brand ad for the TripActions Liquid card \u2014 scrolling real-time expense line items dissolve into \"Goodbye, Expenses\" and \"Hello, Liquid,\" closing on the card and TripActions' \"Let's go\" tagline.",
+      "description": "A brand ad for the TripActions Liquid card — scrolling real-time expense line items dissolve into \"Goodbye, Expenses\" and \"Hello, Liquid,\" closing on the card and TripActions' \"Let's go\" tagline.",
       "file": "/media/navan/tripactions/motion-tripactions-goodbye-expenses.mp4",
       "playback": "controls",
       "sourceSlug": "tripactions",
@@ -140,7 +140,7 @@
       "title": "Hello, Liquid",
       "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece.",
-      "description": "A black-background variant of the TripActions Liquid card ad \u2014 scrolling expense line items and a red bracket wipe lead into \"Hello, Liquid\" and the card reveal, closing on TripActions' \"Let's go\" tagline.",
+      "description": "A black-background variant of the TripActions Liquid card ad — scrolling expense line items and a red bracket wipe lead into \"Hello, Liquid\" and the card reveal, closing on TripActions' \"Let's go\" tagline.",
       "file": "/media/navan/tripactions/motion-tripactions-hello-liquid.mp4",
       "playback": "controls",
       "sourceSlug": "tripactions",
@@ -148,10 +148,10 @@
     },
     {
       "category": "Ads & Commercials",
-      "title": "TripActions \u00d7 Visa",
-      "company": "TripActions \u00d7 Visa",
+      "title": "TripActions Liquid: Money 20/20 Launch",
+      "company": "TripActions",
       "role": "Contributed ideation and concept direction for this TripActions piece.",
-      "description": "Co-marketing that connected the corporate card with a broader travel story.",
+      "description": "The Money 20/20 launch video for the TripActions Liquid corporate card — in-app expense tracking, manual transactions, and a “Reimbursements Reimagined” teaser, closing with a booth invitation to Money 20/20.",
       "file": "/media/navan/tripactions/motion-tripactions-travel-expense-hero.mp4",
       "sourceSlug": "tripactions",
       "playback": "controls"
@@ -161,7 +161,7 @@
       "title": "AI Agent Security",
       "company": "AppOmni",
       "role": "Directed and produced this video as part of building AppOmni's reusable page components and bringing them into production.",
-      "description": "A short animated brand piece built around AppOmni's AI-agent-security concept \u2014 one agent figure watching over another.",
+      "description": "A short animated brand piece built around AppOmni's AI-agent-security concept — one agent figure watching over another.",
       "file": "/media/appomni/brand-systems-and-web-performance/motion-appomni-01.mp4",
       "sourceSlug": "brand-systems-and-web-performance",
       "playback": "controls"

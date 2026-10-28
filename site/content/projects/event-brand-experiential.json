@@ -66,5 +66,6 @@
     "mongodb-events",
     "docusign-momentum",
     "appomni-events"
-  ]
+  ],
+  "companyFolder": "events"
 }

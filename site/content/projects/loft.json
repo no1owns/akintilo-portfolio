@@ -60,5 +60,6 @@
   "cover": "/media/loft/51b8944b3b9bb030.webp",
   "coverAlt": "Technical Concept Visualization project collage",
   "coverPosition": "center",
-  "featured": false
+  "featured": false,
+  "companyFolder": "loft"
 }

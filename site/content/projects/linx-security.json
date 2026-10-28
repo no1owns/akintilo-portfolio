@@ -164,5 +164,6 @@
   "cover": "/media/linx/94084bdb321aba2c.webp",
   "coverAlt": "A dandelion releasing seeds beside a blooming red poppy, the signature illustration for the Linx brand illustration system",
   "coverPosition": "center",
-  "featured": false
+  "featured": false,
+  "companyFolder": "linx"
 }

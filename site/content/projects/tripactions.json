@@ -6,7 +6,7 @@
   "published": true,
   "company": "TripActions",
   "role": "Director of Design",
-  "summary": "An evergreen campaign system for travel, corporate cards, and expense management.",
+  "summary": "An evergreen campaign system for travel, corporate cards, and expense management, including the TripActions Liquid launch.",
   "overview": "I connected the travel and fintech brands across web, campaign landing pages, paid creative, and out-of-home placements. Working with growth teams, photographers, and production partners, I helped move the brand from stock imagery toward an owned asset library.",
   "outcomes": [],
   "blocks": [
@@ -16,12 +16,6 @@
       "alt": "Performance Marketing Systems project work",
       "caption": "",
       "width": "full",
-      "spacing": "regular"
-    },
-    {
-      "type": "video",
-      "title": "Performance Marketing Systems video",
-      "file": "/media/navan/tripactions/motion-tripactions-travel-expense-hero.mp4",
       "spacing": "regular"
     },
     {
@@ -170,9 +164,16 @@
       "spacing": "regular"
     },
     {
+      "type": "sectionHeading",
+      "eyebrow": "Campaign",
+      "title": "TripActions Liquid launch",
+      "overview": "Money 20/20 launch video plus the two brand ads for the TripActions Liquid corporate card.",
+      "spacing": "generous"
+    },
+    {
       "type": "video",
-      "title": "Performance Marketing Systems video",
-      "file": "/media/navan/tripactions/motion-tripactions-ad-1.mp4",
+      "title": "TripActions Liquid: Money 20/20 Launch",
+      "file": "/media/navan/tripactions/motion-tripactions-travel-expense-hero.mp4",
       "spacing": "regular"
     },
     {
@@ -185,22 +186,35 @@
     },
     {
       "type": "video",
-      "title": "Performance Marketing Systems video",
+      "title": "Hello, Liquid",
+      "file": "/media/navan/tripactions/motion-tripactions-hello-liquid.mp4",
+      "poster": "/media/navan/tripactions/motion-tripactions-hello-liquid-poster.webp",
+      "playback": "controls",
+      "spacing": "regular"
+    },
+    {
+      "type": "sectionHeading",
+      "eyebrow": "Campaign",
+      "title": "“Let's go” brand ads",
+      "overview": "A three-spot brand-ad campaign closing on TripActions' “Let's go” tagline.",
+      "spacing": "generous"
+    },
+    {
+      "type": "video",
+      "title": "Hello Travel",
+      "file": "/media/navan/tripactions/motion-tripactions-ad-1.mp4",
+      "spacing": "regular"
+    },
+    {
+      "type": "video",
+      "title": "Bring It On",
       "file": "/media/navan/tripactions/motion-tripactions-ad-2.mp4",
       "spacing": "regular"
     },
     {
       "type": "video",
-      "title": "Performance Marketing Systems video",
+      "title": "Future of Work",
       "file": "/media/navan/tripactions/motion-tripactions-ad-3.mp4",
-      "spacing": "regular"
-    },
-    {
-      "type": "video",
-      "title": "Hello, Liquid",
-      "file": "/media/navan/tripactions/motion-tripactions-hello-liquid.mp4",
-      "poster": "/media/navan/tripactions/motion-tripactions-hello-liquid-poster.webp",
-      "playback": "controls",
       "spacing": "regular"
     }
   ],

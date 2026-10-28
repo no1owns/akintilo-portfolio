@@ -309,16 +309,17 @@ function useExpandTransition(gridRef){
   return captureRects;
 }
 function ExperimentCard({e}){
-  const url=e.liveUrl||e.sourceUrl;
-  const label=e.liveUrl?'Visit live project':e.sourceUrl?'View source':null;
+  const externalUrl=e.liveUrl||e.sourceUrl;
+  const externalLabel=e.liveUrl?'Visit live project':e.sourceUrl?'View source':null;
   return <article className="experiment-card">
     <div className="experiment-visual">{e.cover?<Img src={mediaURL(e.cover)} alt={e.coverAlt||e.title} style={{objectPosition:e.coverPosition||'center'}}/>:<span className="experiment-format" aria-hidden="true">{e.format}</span>}</div>
     <div className="experiment-body">
       {e.cover&&<span className="experiment-format">{e.format}</span>}
       <h3>{e.title}</h3>
-      <p>{e.overview||e.summary}</p>
-      {e.gallery?.length>0&&<div className="experiment-gallery">{e.gallery.map((im,i)=><Img key={i} src={mediaURL(im.image)} alt={im.alt||''} loading="lazy"/>)}</div>}
-      {url&&<a className="text-link" href={safeURL(url)} target="_blank" rel="noreferrer" aria-label={`${label} — opens in a new tab`}>{label} <span aria-hidden="true">&#8599;</span></a>}
+      <p>{e.summary}</p>
+      {e.gallery?.length>0&&<div className="experiment-gallery">{e.gallery.slice(0,4).map((im,i)=><Img key={i} src={mediaURL(im.image)} alt={im.alt||''} loading="lazy"/>)}</div>}
+      {e.detailUrl&&<a className="text-link" href={e.detailUrl}>View experiment <Arrow/></a>}
+      {externalUrl&&<a className="text-link" href={safeURL(externalUrl)} target="_blank" rel="noreferrer" aria-label={`${externalLabel} — opens in a new tab`}>{externalLabel} <span aria-hidden="true">&#8599;</span></a>}
     </div>
   </article>;
 }
@@ -334,6 +335,7 @@ function Experiments(){
     <div className="experiment-grid">{experiments.map(e=><ExperimentCard key={e.slug} e={e}/>)}</div>
   </section>;
 }
+function ExperimentDetail({e}){return <><header className="project-intro"><a className="eyebrow" href="/#experiments">Experiments <Arrow/></a><h1>{e.title}</h1><p className="summary">{e.summary}</p>{e.format&&<dl><div><dt>Format</dt><dd>{e.format}</dd></div></dl>}</header>{e.cover&&<figure className="project-hero"><Img src={mediaURL(e.cover)} alt={e.coverAlt||e.title} loading="eager" style={{objectPosition:e.coverPosition||'center'}}/></figure>}<section className="overview"><h2>About this experiment</h2><div><Text>{e.overview}</Text></div></section>{e.gallery?.length>0&&<Blocks blocks={[{type:'gallery',title:'',columns:'2',spacing:'regular',layout:'justified',images:e.gallery.map(im=>({...im}))}]}/>}{(e.liveUrl||e.sourceUrl)&&<a className="text-link" href={safeURL(e.liveUrl||e.sourceUrl)} target="_blank" rel="noreferrer">{e.liveUrl?'Visit live project':'View source'} <Arrow/></a>}</>;}
 function Home({initial='All'}){
   const [filter,setFilter]=useState(cats.includes(initial)?initial:'All');
   const [expanded,setExpanded]=useState(false);
@@ -407,4 +409,4 @@ function Reel(){
   const categories=[...new Set(reel.videos.map(v=>v.category))];
   return <section className="simple-page reel-page"><p className="eyebrow">Reel</p><h1>{reel.title}</h1><p className="summary">{reel.intro}</p>{categories.map(cat=><div key={cat} className="reel-category"><h2>{cat}</h2><div className="reel-grid">{reel.videos.filter(v=>v.category===cat).map((v,i)=><article key={i} className="reel-item"><Video block={v}/><p className="reel-item-meta"><strong>{v.company}</strong></p><p className="reel-item-role">{v.role}</p><p>{v.description}</p></article>)}</div></div>)}</section>;
 }
-export function App(){const path=decodeURIComponent(location.pathname).replace(/^\/|\/$/g,'');const [menu,setMenu]=useState(false);const project=projects.find(p=>p.slug===path);const collection=!project&&collections.find(c=>c.slug===path);const title=project?.title||collection?.company||({about:'About',resume:'Experience',contact:'Contact',reel:reel.title}[path])||'Brand systems. Clearer stories.';useEffect(()=>{document.title=title+' | Ayodeji Akintilo';},[title]);return <><a className="skip" href="#main">Skip to content</a><div className="shell"><header className="site-header"><a className="wordmark" href="/">{settings.name}</a><button className="menu-toggle" aria-expanded={menu} aria-controls="main-nav" onClick={()=>setMenu(!menu)}>{menu?'Close':'Menu'}</button><nav id="main-nav" className={menu?'open':''} aria-label="Main navigation">{[['Work','/'],['About','/about'],['Experience','/resume'],['Contact','/contact']].map(([name,url])=><a key={url} aria-current={location.pathname===url?'page':undefined} href={url}>{name}</a>)}</nav></header><main id="main">{project?<Project p={project}/>:collection?<Collection c={collection}/>:path==='about'?<About/>:path==='resume'?<Resume/>:path==='contact'?<Contact/>:path==='reel'?<Reel/>:!path||aliases[path]?<Home initial={categoryFromLocation()}/>:<section className="simple-page"><h1>Page not found.</h1><a href="/">Explore the work <Arrow/></a></section>}</main><footer><a href="/">{settings.name}</a><a href="/contact">Get in touch <Arrow/></a></footer></div></>;}
+export function App(){const path=decodeURIComponent(location.pathname).replace(/^\/|\/$/g,'');const [menu,setMenu]=useState(false);const project=projects.find(p=>p.slug===path);const collection=!project&&collections.find(c=>c.slug===path);const experiment=!project&&!collection&&experiments.find(e=>e.detailUrl==='/'+path);const title=project?.title||collection?.company||experiment?.title||({about:'About',resume:'Experience',contact:'Contact',reel:reel.title}[path])||'Brand systems. Clearer stories.';useEffect(()=>{document.title=title+' | Ayodeji Akintilo';},[title]);return <><a className="skip" href="#main">Skip to content</a><div className="shell"><header className="site-header"><a className="wordmark" href="/">{settings.name}</a><button className="menu-toggle" aria-expanded={menu} aria-controls="main-nav" onClick={()=>setMenu(!menu)}>{menu?'Close':'Menu'}</button><nav id="main-nav" className={menu?'open':''} aria-label="Main navigation">{[['Work','/'],['About','/about'],['Experience','/resume'],['Contact','/contact']].map(([name,url])=><a key={url} aria-current={location.pathname===url?'page':undefined} href={url}>{name}</a>)}</nav></header><main id="main">{project?<Project p={project}/>:collection?<Collection c={collection}/>:experiment?<ExperimentDetail e={experiment}/>:path==='about'?<About/>:path==='resume'?<Resume/>:path==='contact'?<Contact/>:path==='reel'?<Reel/>:!path||aliases[path]?<Home initial={categoryFromLocation()}/>:<section className="simple-page"><h1>Page not found.</h1><a href="/">Explore the work <Arrow/></a></section>}</main><footer><a href="/">{settings.name}</a><a href="/contact">Get in touch <Arrow/></a></footer></div></>;}

@@ -135,5 +135,7 @@
   "cover": "/media/appomni/ai-assisted-design-systems/marlin-ai-motion-frames.png",
   "coverAlt": "Three selected frames from the original Marlin AI motion piece -- \"Surface,\" \"Prioritize,\" and \"Remediate\" -- each showing a staged interface reveal",
   "coverPosition": "center",
-  "featured": true
+  "featured": true,
+  "companyFolder": "appomni",
+  "collection": "appomni"
 }
