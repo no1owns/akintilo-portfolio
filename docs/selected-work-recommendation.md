@@ -64,9 +64,9 @@ Per Ayo's approval of Decision 11 ("include one strong event project; include ei
 - **Linx Brand Illustration System** (`/linx-security`, existing) — chosen over BetterUp Executive Presentation Systems because it adds a *medium* the current 8 lack entirely (illustration system + custom AI tooling), not just a different company. BetterUp remains a reasonable alternative if Ayo prefers presentation-format range over illustration-format range instead.
 
 **Remove:**
-- **Global Rebrand Launch Experience** (Dream Big, MongoDB) — MongoDB keeps strong Selected Work representation through "Modern UX for a Leading Developer Platform," which has the widest image-ratio range on the site; removing Dream Big reduces redundancy within one company rather than cutting a company entirely.
+- **Global Rebrand Launch Experience** (Dream Big, MongoDB) — MongoDB keeps strong Selected Work representation through "MongoDB Web Design System" (retitled from "Modern UX for a Leading Developer Platform" in commit 4 of this pass — same project, `mongodb-the-next-generation-database`), which has the widest image-ratio range on the site; removing Dream Big reduces redundancy within one company rather than cutting a company entirely.
 - **Enterprise Brand Campaigns** (DocuSign) — DocuSign stays fully visible in All Work and gets its own new `/docusign` collection page; this is the one full removal (no other DocuSign project replaces it in Selected Work this round).
 
-**Resulting lineup (8):** Security Brand Experiences · AI-Assisted Design Systems · Meta Connect 2025 Developer Keynote · Performance Marketing Systems · Modern UX for a Leading Developer Platform · Frictionless Product Onboarding · Apollo GraphQL Summit (new) · Linx Brand Illustration System.
+**Resulting lineup (8):** Security Brand Experiences · AI-Assisted Design Systems · Meta Connect 2025 Developer Keynote · Performance Marketing Systems · MongoDB Web Design System (`mongodb-the-next-generation-database`) · Frictionless Product Onboarding · Apollo GraphQL Summit (new) · Linx Brand Illustration System.
 
 **This swap is proposed, not applied.** No `featured` flag changes until Ayo confirms this exact lineup (or an adjusted one). This gate does not block any other Phase 2 work — the Apollo page, Linx's existing state, and every other change proceed regardless of the outcome here.
