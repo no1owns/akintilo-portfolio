@@ -4,6 +4,32 @@ Living roadmap for replacing Adobe Portfolio with `akintilo-portfolio`. Updated 
 
 **Content accuracy policy:** never invent metrics, outcomes, dates, or attributions to make project pages look structurally consistent. A project without a verified quantified outcome stays qualitative — that's a content gap to flag, not something to paper over. See "no invented metrics" in `docs/portfolio-decisions.md`.
 
+## 2026-10-28 — Project-led restructure: company collections, Events and Environments category, 7 new routes
+
+Full plan, approved decisions, and directed-audit findings: `docs/portfolio-restructure-plan.md`. Implemented on `claude/portfolio-project-restructure`, pushed but not merged to `main`.
+
+**New architecture.** A second navigation level sits above the existing 21+ project pages: 5 company collection pages (`/appomni`, `/secureframe`, `/mongodb`, `/docusign`, `/navan`) that introduce the company, link its projects as cards, and (for AppOmni/Secureframe) carry gallery sections of their own for work that doesn't warrant a standalone page. A new `site/content/collections/*.json` content type and `Collection()` component power this; see `docs/portfolio-restructure-plan.md`'s Phase 2 section for the full schema.
+
+**New standalone projects** (category "Events and Environments," a new homepage filter category): `appomni-events.json`, `apollo-graphql.json`, `docusign-momentum.json`, `traverse-21.json`, `mongodb-events.json` — split out of the old `event-brand-experiential.json` (4 of them) and newly built from reclassified + newly-copied assets (AppOmni's). `event-brand-experiential.json` itself is now a compatibility index: its four sections are short links to the new pages, nothing deleted, category changed to Events and Environments, title marked "(index)".
+
+**Corrections found during the directed audits** (see the plan doc for full detail — these overturned Phase 1 conclusions, not just extended them):
+- AppOmni *does* have presentation content — 5 stage-photographed slides were misfiled in the "web" gallery, not missing as first reported.
+- Performance Marketing Systems' first video is TripActions Liquid/Money 20/20 content, confirmed by frame inspection — not Visa's, reversing the Phase 1 finding. Retitled and regrouped with the page's other Liquid videos; the 3 "Let's go" brand ads are also now grouped together and correctly titled. `reel.json`'s matching entry corrected to match.
+- Two Apollo images had swapped alt text from a previous session (`b6fcac202d28be5e.webp` is the "value of your API Platform" keynote slide, not "Exploring Apollo's new products"; `83bb729768cff7cf.webp` is a PlayStation customer-quote signage *mockup*, not a keynote photo) — fixed.
+- Secureframe's brand-evolution split (purple = old identity, green/black = new) is now built from 10 directly-classified assets, not left generic.
+
+**MongoDB Atlas animation restored.** The single static frame on "Launching Stitch and Atlas" (renamed from "Designing for a Developer Platform") is now the full interactive cluster-builder demo — re-encoded from the located `web-portfolio` GIF as a controls-based `<video>` (not autoplay, which satisfies the reduced-motion requirement without new motion-detection code).
+
+**Creative Systems Toolkit** now has its own detail page (`/creative-systems-toolkit`) and a short homepage card summary, fixing a real bug in `ExperimentCard` (it rendered the long `overview` field on the card instead of `summary` — the other two experiments just happened not to notice because their `overview` was already short).
+
+**CMS media-folder routing implemented**, not just proposed: confirmed via the installed `decap-cms-core` source that `{{fields.x}}` template tokens resolve against entry data, so `projects`/`collections`/`experiments` CMS collections now route new uploads to `media/{{fields.companyFolder}}/{{slug}}` automatically.
+
+**Card spacing fixed**: `.project-card .card-eyebrow`/`.card-summary` now override the `.project-card p{margin:0}` reset that was silently zeroing the intended gap — 20px desktop, 14px mobile, both within the requested ranges.
+
+**Selected Work: not yet changed.** A specific swap is proposed (see `docs/selected-work-recommendation.md`'s Phase 2 section) but waits on Ayo's sign-off per the approval gate — this does not block anything else above.
+
+**Still open / unresolved, same as before this pass:** Visa and Lyft's Adobe Behance embeds (no verified local original found in either repo; Behance/Adobe Portfolio still unreachable from this session); AppOmni Presentations/Secureframe old-brand assets beyond what's confirmed are not assumed further; Navan rebrand/global-rollout and sales/presentation-systems sections dropped per instruction, not built.
+
 ## Launch blockers
 
 Must resolve before Phase 4 (domain migration). Ordered by severity. (Reviewed 2026-09-20 with ChatGPT — several items previously listed here were downgraded; see "Launch risks" and "Launch improvements" below.)

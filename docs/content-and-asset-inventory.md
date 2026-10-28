@@ -1,5 +1,7 @@
 # Content and asset inventory
 
+**Update (2026-10-28): superseded in part by the project-led restructure.** This document's comparison matrix still accurately describes each *project's* own content/media state, but the company groupings, route list, and Selected Work section below predate the restructure. For current architecture, routes, and company collections, see `docs/portfolio-restructure-plan.md` (Phase 2 section) and `docs/project-content-audit.md`. Notably: row 1 (Security Brand Experiences) now also appears split across the new `/appomni` and `/secureframe` collection pages; row 3 (Performance Marketing Systems) had its video mislabeled as Visa's corrected to its real TripActions Liquid content; row 4 (Event Brand and Experiential) is now a compatibility index, its 4 sections rebuilt as standalone pages (`/apollo-graphql`, `/traverse-21`, `/mongodb-events`, `/docusign-momentum`); a new row, AppOmni Event Presence (`/appomni-events`), did not exist in this table. This document is not being fully regenerated this pass -- do that as a follow-up rather than leaving two conflicting "complete" tables.
+
 Audit date: 2026-09-20 (originally); updated 2026-10-01 with the addition of Meta Connect.
 Audited by: Claude Code, working from `no1owns/akintilo-portfolio` (branch `claude/akintilo-portfolio-audit-j7gue1`) and `no1owns/web-portfolio` (same branch name, separate repo).
 
