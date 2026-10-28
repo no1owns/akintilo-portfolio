@@ -1,0 +1,56 @@
+name: PR preview build
+
+# Builds the static site for every pull request into main and attaches it as a
+# downloadable artifact. This is deliberately NOT a deploy step: the repo's
+# only existing Pages workflow (.github/workflows/pages.yml) deploys to the
+# single production GitHub Pages environment on push to main, and reusing it
+# here would overwrite that production deployment on every PR build. This
+# workflow never touches Pages, never needs secrets, and never writes outside
+# its own Actions run -- the safest available preview mechanism that doesn't
+# risk production.
+#
+# To preview a PR: open its "PR preview build" check run, download the
+# "pr-preview-build" artifact, unzip it, and serve it locally, e.g.
+#   npx serve pr-preview-build
+# or open site/dist/client/index.html directly for a quick look (routes won't
+# resolve on refresh without a local server, since this is a static export).
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install dependencies
+        working-directory: site
+        run: npm ci
+
+      - name: Build portfolio
+        working-directory: site
+        run: npm run build
+
+      - name: Run test suite
+        working-directory: site
+        run: npm run test:sites
+
+      - name: Upload preview build
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-preview-build
+          path: site/dist/client
+          retention-days: 14
