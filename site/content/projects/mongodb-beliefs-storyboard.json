@@ -142,5 +142,7 @@
   "cover": "/media/mongodb/mongodb-beliefs-storyboard/2a387f57bbf6de8b.webp",
   "coverAlt": "Illustrated characters with blueprints and tools gathered beneath vine-draped mountains, the cover scene for MongoDB's company values campaign",
   "coverPosition": "center",
-  "featured": false
+  "featured": false,
+  "companyFolder": "mongodb",
+  "collection": "mongodb"
 }

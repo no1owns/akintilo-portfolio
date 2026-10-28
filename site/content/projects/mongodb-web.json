@@ -1,13 +1,16 @@
 {
   "slug": "mongodb-web",
-  "title": "Designing for a Developer Platform",
+  "title": "Launching Stitch and Atlas",
   "category": "Technical Storytelling",
   "order": 11,
   "published": true,
   "company": "MongoDB",
+  "companyFolder": "mongodb",
+  "collection": "mongodb",
   "role": "Creative Director",
-  "summary": "Helping developers understand and explore a growing product platform.",
-  "overview": "For the MongoDB Stitch launch, I worked with product marketing and product management on web pages, campaigns, videos, and visual assets. I also pitched and built an interactive cluster builder for the Atlas announcement so prospects could explore product features.",
+  "relatedSlugs": ["mongodb-the-next-generation-database"],
+  "summary": "Web pages, campaigns, and an interactive cluster builder for the MongoDB Stitch and Atlas product launches.",
+  "overview": "For the MongoDB Stitch launch, I worked with product marketing and product management on web pages, campaigns, videos, and visual assets. I also pitched and built an interactive cluster builder for the Atlas announcement so prospects could explore product features. This is launch-specific work, distinct from the ongoing design-system and web-platform practice covered in \"MongoDB Web Design System.\"",
   "outcomes": [],
   "blocks": [
     {
@@ -164,11 +167,11 @@
       "layout": "justified"
     },
     {
-      "type": "image",
-      "image": "/media/mongodb/mongodb-web/mongodb-atlas-cluster-builder-animation.webp",
-      "alt": "A UI transition frame from the interactive Atlas cluster builder animation, showing a blank white panel giving way to a dark cluster-configuration card",
-      "caption": "Frame from the interactive Atlas cluster builder animation, built for the MongoDB Atlas product announcement.",
-      "width": "narrow",
+      "type": "video",
+      "title": "Interactive Atlas cluster builder",
+      "file": "/media/mongodb/mongodb-web/mongodb-atlas-cluster-builder-animation.mp4",
+      "poster": "/media/mongodb/mongodb-web/mongodb-atlas-cluster-builder-animation-poster.webp",
+      "playback": "controls",
       "spacing": "regular"
     }
   ],

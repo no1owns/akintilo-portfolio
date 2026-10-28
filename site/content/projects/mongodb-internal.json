@@ -78,5 +78,7 @@
   "cover": "/media/mongodb/mongodb-internal/7f9942430ee3af44.webp",
   "coverAlt": "Culture and Internal Brand Storytelling project collage",
   "coverPosition": "center",
-  "featured": false
+  "featured": false,
+  "companyFolder": "mongodb",
+  "collection": "mongodb"
 }

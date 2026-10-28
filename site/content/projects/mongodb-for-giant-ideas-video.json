@@ -171,5 +171,7 @@
   "cover": "/media/mongodb/mongodb-for-giant-ideas-video/9e60892fb43f8a34.webp",
   "coverAlt": "Innovation Without Limits project collage",
   "coverPosition": "center",
-  "featured": false
+  "featured": false,
+  "companyFolder": "mongodb",
+  "collection": "mongodb"
 }

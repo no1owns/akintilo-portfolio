@@ -1,0 +1,22 @@
+{
+  "slug": "mongodb",
+  "published": true,
+  "order": 3,
+  "company": "MongoDB",
+  "companyFolder": "mongodb",
+  "role": "Creative Director",
+  "tenure": "2015–2019",
+  "scope": "MongoDB is a developer-data platform. As Creative Director, Ayo led the brand's web design system, the global rebrand launch experience, product-launch campaigns (Stitch, Atlas), the company values launch, and internal culture storytelling.",
+  "cover": "/media/mongodb/dream-big/a02cfeea3168f96d.webp",
+  "coverAlt": "A MongoDB global rebrand launch experience collage",
+  "linkedProjects": [
+    "dream-big",
+    "mongodb-the-next-generation-database",
+    "mongodb-web",
+    "mongodb-for-giant-ideas-video",
+    "mongodb-beliefs-storyboard",
+    "mongodb-internal"
+  ],
+  "blocks": [],
+  "additionalWork": []
+}

@@ -122,5 +122,7 @@
   "cover": "/media/mongodb/dream-big/a02cfeea3168f96d.webp",
   "coverAlt": "Global Rebrand Launch Experience project collage",
   "coverPosition": "center",
-  "featured": true
+  "featured": true,
+  "companyFolder": "mongodb",
+  "collection": "mongodb"
 }
