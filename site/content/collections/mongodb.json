@@ -15,7 +15,8 @@
     "mongodb-web",
     "mongodb-for-giant-ideas-video",
     "mongodb-beliefs-storyboard",
-    "mongodb-internal"
+    "mongodb-internal",
+    "mongodb-events"
   ],
   "blocks": [],
   "additionalWork": []

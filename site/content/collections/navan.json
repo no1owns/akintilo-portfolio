@@ -1,0 +1,21 @@
+{
+  "slug": "navan",
+  "published": true,
+  "order": 5,
+  "company": "TripActions",
+  "companyFolder": "navan",
+  "role": "Director of Design",
+  "tenure": "2019–2022",
+  "scope": "TripActions (now Navan) is a corporate travel and expense-management platform. As Director of Design, Ayo led performance marketing systems, product onboarding, partnership campaigns (Visa, Lufthansa), and the TRAVERSE '21 event.",
+  "cover": "/media/navan/tripactions/b9a12ff730241ab2.webp",
+  "coverAlt": "Performance Marketing Systems project collage",
+  "linkedProjects": [
+    "traverse-21",
+    "tripactions",
+    "tripactions-visual-product-ux",
+    "visa",
+    "lufthansa"
+  ],
+  "blocks": [],
+  "additionalWork": []
+}

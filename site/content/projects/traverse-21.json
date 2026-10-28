@@ -1,0 +1,92 @@
+{
+  "slug": "traverse-21",
+  "title": "TRAVERSE '21",
+  "category": "Events and Environments",
+  "order": 2.5,
+  "published": true,
+  "company": "TripActions",
+  "companyFolder": "navan",
+  "collection": "navan",
+  "role": "Creative direction",
+  "summary": "Brand and creative direction for TRAVERSE '21, TripActions' Travel & Expense Festival, and related event systems.",
+  "overview": "Brand and creative direction for Traverse and related event systems.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "video",
+      "title": "TRAVERSE '21 Event Highlights",
+      "spacing": "regular",
+      "file": "/media/navan/event-brand-experiential/motion-navan-events-hero.mp4",
+      "playback": "loop"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "layout": "justified",
+      "images": [
+        {
+          "image": "/media/navan/event-brand-experiential/89bf3810f6d2d50e.webp",
+          "width": 1600,
+          "height": 1067,
+          "alt": "A TRAVERSE '21 Travel & Expense Festival registration desk with branded counters and attendees checking in",
+          "caption": ""
+        },
+        {
+          "image": "/media/navan/event-brand-experiential/da785cfbe8c9dc19.webp",
+          "width": 1600,
+          "height": 1067,
+          "alt": "A TRAVERSE '21 session stage displaying a \"A Year Like No Other\" 2020-2021 company timeline to a seated audience",
+          "caption": ""
+        },
+        {
+          "image": "/media/navan/event-brand-experiential/201cc84d228cc566.webp",
+          "width": 1600,
+          "height": 1067,
+          "alt": "Three panelists seated on a TRAVERSE '21 Travel & Expense Festival stage in a recorded discussion",
+          "caption": ""
+        },
+        {
+          "image": "/media/navan/event-brand-experiential/6ec4eafb3e24f000.webp",
+          "width": 1600,
+          "height": 1067,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/navan/event-brand-experiential/6b44849166ccf586.webp",
+          "width": 1600,
+          "height": 1067,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/navan/event-brand-experiential/7c730dc528afce46.webp",
+          "width": 1600,
+          "height": 1067,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/navan/event-brand-experiential/efe0ec312f458979.webp",
+          "width": 1600,
+          "height": 1067,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/navan/event-brand-experiential/ceabc4de59d68021.webp",
+          "width": 1600,
+          "height": 1067,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "cover": "/media/navan/event-brand-experiential/89bf3810f6d2d50e.webp",
+  "coverAlt": "A TRAVERSE '21 Travel & Expense Festival registration desk with branded counters and attendees checking in",
+  "coverPosition": "center",
+  "featured": false
+}

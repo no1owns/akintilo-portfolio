@@ -1,0 +1,127 @@
+{
+  "slug": "mongodb-events",
+  "title": "MongoDB Events",
+  "category": "Events and Environments",
+  "order": 3.5,
+  "published": true,
+  "company": "MongoDB",
+  "companyFolder": "mongodb",
+  "collection": "mongodb",
+  "role": "Creative Director",
+  "summary": "Event work for MongoDB, spanning MongoDB World and MongoDB's AWS re:Invent exhibit, with supporting booth design, brand systems, and motion.",
+  "overview": "Event work for MongoDB, spanning MongoDB World and MongoDB's AWS re:Invent exhibit, with supporting booth design, brand systems, and motion.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "layout": "justified",
+      "images": [
+        {
+          "image": "/media/mongodb/event-brand-experiential/526ddbba3ae29231.webp",
+          "width": 1920,
+          "height": 1280,
+          "alt": "A hand-drawn notebook sketch exploring a MongoDB exhibit booth structure, including brand portal, storage, and swag concepts",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/event-brand-experiential/167cee55aced2513.webp",
+          "width": 1920,
+          "height": 1074,
+          "alt": "A 3D rendering of a 20-foot MongoDB trade show booth with an illuminated logo ring, screens, and a reception counter",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/event-brand-experiential/b80946aad8572b33.webp",
+          "width": 983,
+          "height": 948,
+          "alt": "A CRN.com article screenshot titled \"King Of The Cloud: 15 Sights And Scenes From AWS re:Invent 2017\" featuring the MongoDB exhibit",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/event-brand-experiential/f249a5eb9533f401.webp",
+          "width": 1020,
+          "height": 1533,
+          "alt": "The built MongoDB exhibit booth on a trade show floor with attendees gathered underneath its illuminated logo ring",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/event-brand-experiential/c72243c1122f1668.webp",
+          "width": 854,
+          "height": 480,
+          "alt": "Attendees viewing an interactive branded touchscreen wall display at a MongoDB event",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/event-brand-experiential/1e8c375f67e5efaf.webp",
+          "width": 1920,
+          "height": 1011,
+          "alt": "The cover of the MongoDB World '18 Brand & Design Manual, New York City 2018, tagged #MDBW18",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/event-brand-experiential/2e63ffd1d3b03b8c.webp",
+          "width": 1920,
+          "height": 1011,
+          "alt": "A MongoDB World '18 brand manual page defining the \"Build\" motif as a stack of isometric building-block cubes",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/event-brand-experiential/65a3d94b9cbe0f4c.webp",
+          "width": 1920,
+          "height": 1011,
+          "alt": "A MongoDB World '18 brand manual page on color theory, showing do and don't examples for primary and secondary brand colors",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/event-brand-experiential/b4bbdb76b406c405.webp",
+          "width": 1920,
+          "height": 1011,
+          "alt": "A MongoDB World '18 brand manual page titled \"A World of Shapes\" showing isometric cube-block arrangements",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/event-brand-experiential/c9a9d50c9be9cc78.webp",
+          "width": 1920,
+          "height": 1011,
+          "alt": "A MongoDB World '18 brand manual page showing cropping examples for the isometric cube pattern across colored backgrounds",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/event-brand-experiential/ae128095d88725b0.webp",
+          "width": 1920,
+          "height": 1011,
+          "alt": "Two MongoDB World '18 \"Build your applications on MongoDB\" posters shown in light and dark colorways",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "MongoDB World '17: Chicago Opener",
+      "spacing": "regular",
+      "file": "/media/mongodb/event-brand-experiential/motion-mongodb-events-01.mp4",
+      "playback": "loop"
+    },
+    {
+      "type": "video",
+      "title": "MongoDB World '17: Cube Reveal",
+      "spacing": "regular",
+      "file": "/media/mongodb/event-brand-experiential/motion-mongodb-events-02.mp4",
+      "playback": "loop"
+    },
+    {
+      "type": "video",
+      "title": "MongoDB World '17: For Giant Ideas",
+      "spacing": "regular",
+      "file": "/media/mongodb/event-brand-experiential/motion-mongodb-events-03.mp4",
+      "playback": "loop"
+    }
+  ],
+  "cover": "/media/mongodb/event-brand-experiential/526ddbba3ae29231.webp",
+  "coverAlt": "A hand-drawn notebook sketch exploring a MongoDB exhibit booth structure, including brand portal, storage, and swag concepts",
+  "coverPosition": "center",
+  "featured": false
+}
