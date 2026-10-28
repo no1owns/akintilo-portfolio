@@ -58,6 +58,13 @@ Neither pair was deleted or merged in PR #4 (explicitly deferred to Ayo's go-ahe
 
 **Unreferenced files** (also carried forward from the approved proposal, §7): 4 files preserved, not deleted — 1 pre-segmentation Secureframe screenshot original (kept for provenance alongside its 8 published segments) and 3 supporting reference files (2 JSON specs + 1 reference photo) uploaded "if useful" for the AI case study but never rendered. No action recommended beyond what's already approved.
 
+## Phase 2 update (2026-10-28): BetterUp/Lyft re-audit, Adobe/Behance re-test
+
+- **BetterUp**: all 4 checkable `web-portfolio/images/betterup/` files confirmed, by direct visual comparison, already present in akintilo-portfolio's 19-image gallery (re-encoded to WebP). Nothing new to copy.
+- **Lyft**: confirmed again — zero Lyft files anywhere in `web-portfolio`.
+- **Adobe Portfolio / Behance**: still unreachable this session (DNS resolution fails for both `akintilo.com` and `www.behance.net`; `www-ccv.adobe.io`, the Adobe video-embed host, returns `403` on the proxy's CONNECT tunnel on direct retest). Still blocked — still requires Ayo's own browser access or an uploaded file.
+- **Visa embed**: the one candidate local file (`motion-tripactions-travel-expense-hero.mp4`) was confirmed by frame inspection to be TripActions Liquid/Money 20/20 content, not Visa — it does **not** resolve the Visa embed. See `project-content-audit.md`'s Phase 2 corrections. Visa's embed remains unresolved, same status as Phase 1.
+
 ## Finding 4: the 2 remaining Adobe Behance embeds have no local original in either repo
 
 Confirmed by direct search of `web-portfolio` (`find . -ipath "*lyft*"`, `find . -ipath "*visa*"` — zero results for either) and by the existing inventory (`content-and-asset-inventory.md` rows 9 and 20, both "Not present as its own page" in `web-portfolio`).

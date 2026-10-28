@@ -1,4 +1,8 @@
-# Portfolio restructure plan — Phase 1
+# Portfolio restructure plan
+
+**Status: Phase 1 approved 2026-10-28. Phase 2 implementation in progress on `claude/portfolio-project-restructure`.** The original Phase 1 body below is left intact as the historical record of what was proposed and why. See "Phase 2: approved decisions and directed-audit corrections" at the end of this document for what Ayo approved, what the required directed audits found (several corrections to Phase 1's findings), and what changed as a result.
+
+## Phase 1 status (historical — see Phase 2 section below for current state)
 
 **Status: Phase 1 (planning and audit) only. No pages restructured, no media copied, no routes changed, no Selected Work changes, nothing committed as implementation. Stop here for Ayo's review, per the task.**
 
@@ -183,3 +187,52 @@ Consolidated from every companion document:
 5. The Atlas GIF replacement in `external-asset-gap-audit.md` Finding 1 (confirm the located `web-portfolio` file is in fact the right source before it's converted and published).
 6. The CMS media-folder routing approach in §5 above (confirm the `{{fields.company}}` template spike before Phase 2 commits to it).
 7. Exact route slugs for the new collection/standalone pages (proposed, not final, in `page-and-asset-migration-map.md`).
+
+## Phase 2: approved decisions and directed-audit corrections (2026-10-28)
+
+Ayo approved all 15 Phase 1 decisions with specific modifications, and required 4 directed audits be completed before any earlier gap claim could be treated as final. Results below — **three of these audits overturned or substantially revised a Phase 1 finding.**
+
+### Directed audit 1: AppOmni presentations — found, not missing
+
+Phase 1 reported no AppOmni presentation content was located. **Corrected.** A full visual pass of the 50-image AppOmni gallery in `brand-systems-and-web-performance.json` (block 16) found:
+- **5 genuine presentation-slide photographs** (stage photography — presenter silhouette, audience in foreground, large screen behind): `c6c27ca9fce9d1b8.webp` ("Unmatched Depth" — Surface Level vs. Deep Level competitive positioning), `8acd0f212dfedd46.webp` ("Just Along for the Ride?"), `f056841dd5d3182a.webp` ("The Innovation" — AskOmni, Marlin Insights, Detected AI Agents product features), `eaa2afbce7250c4f.webp` ("Or Are You in the Driver's Seat"), `e232e4cdae473b49.webp` ("The Last Mile"). These are executive-storytelling/keynote material — moved into a new AppOmni Presentations section.
+- **3 booth/environmental design assets misfiled in this "web" gallery**, not presentations: `72633835e2339a65.webp` (3D booth render with build-spec labels: "15' Square Hanging Sign," "LED Tiles," "Demo Station," etc.), `5ab8998427c984e3.webp` (booth wall-elevation spec: "Reception Panel," "Swag Wall," "Main Wall," "Demo Station"), `914d489fb76c9b67.webp` (booth floorplan: "Back Wall," "BW1–BW5," "Reception"). These move to AppOmni Events, alongside the `web-portfolio` event material (external-asset-gap-audit.md Finding 2).
+- The remaining ~42 images in this gallery (web dashboard screenshots, campaign illustrations/comics, social graphics, the Cybersecurity Awareness Month tip series) stay as AppOmni Web/Campaigns content — correctly classified in Phase 1.
+
+Not every one of the 50 images was individually opened (a representative sample of ~25 was, plus the full set was scanned via contact sheet for the stage-photo genre, which is visually distinctive and unlikely to have been missed). If any further presentation-style image surfaces later, it moves into this same section.
+
+### Directed audit 2: Secureframe brand evolution — classified, not left generic
+
+Using the confirmed rule (purple = old brand, green/black = new brand), a full visual pass of the 42 non-segment images in Secureframe's share of `brand-systems-and-web-performance.json` found a clear, consistent pattern:
+
+- **Old brand**: light lavender/white background, a teal-to-navy gradient "S" mark, periwinkle-purple accent color on buttons/stats/headlines. Confirmed: `02406e0598303174.webp` / `e3f45301...` ("Sony Pictures saved 80%"), `2268baac...` ("Respond to RFPs faster"), `2bed62d83696119d.webp` ("Cut compliance time in half"), `6e16f20f.webp` ("Everything Compliance" donut chart), `99a31cdf.webp` ("Framework Perfection"), `e4c95b55d6412af9.webp` ("100+ Integrations"), `e9d77b39322ea1aa.webp` (solid-purple testimonial card), `9a07a0fd2355fd34.webp` ("By 2026, 85%..." stat graphic). 8 confirmed old-brand assets.
+- **New brand**: dark navy/black product-UI chrome, flat (non-gradient) wordmark, solid green or black brand-lockup cards. Confirmed definitively by the two purest brand-lockup assets: `f85ecf26.webp` ("securframe.comply" on black) and `fc8eb9ad2dc493b6.webp` ("securframe.comply" on solid green) — these are the clearest possible match to the stated rule. The remaining ~30 dark-UI product screenshots (dashboards, risk management, training modules, the CTEM graphic) share the same dark-navy/black chrome and are grouped as new-brand product/web material, not individually re-verified pixel-by-pixel.
+- A handful (G2 award badges, a few ambiguous photo-based testimonials) carry no brand-specific color signal either way and are left in Web experience/Campaigns rather than forced into Brand Evolution.
+
+This is enough to build the "Brand Evolution" section the task asked for, showing old → new with the two clearest artifacts anchoring each end.
+
+### Directed audit 3: Performance Marketing Systems / Visa video — reversed
+
+**This is the most important correction.** Phase 1 concluded `motion-tripactions-travel-expense-hero.mp4` was Visa's co-marketing video, mis-homed on `/tripactions`, based on a text match between its `reel.json` entry ("TripActions × Visa") and Visa's own project summary. **Direct frame-by-frame inspection of the actual video file overturns this.** Extracted 24 sample frames across its full 30-second runtime: it shows TripActions push-notification mockups ("Hello Sam"/"Hello Tina," flight check-in reminders), travel lifestyle B-roll, a Las Vegas skyline, the TripActions Liquid card product UI ("tracks expenses," manual transactions, "Reimbursements Reimagined — Coming soon: TripActions × Coinbase"), and closes on explicit on-screen text: **"TripActions Liquid. Goodbye, Expense Management. Hello, Liquid. MONEY 20/20 — Visit us at Booth #2820."** This is a TripActions Liquid product/conference-booth promo video, not Visa co-marketing — no Visa branding, product, or messaging appears anywhere in it.
+
+**Correction applied:** this video stays on `/tripactions`, retitled to reflect its actual content ("TripActions Liquid: Money 20/20 Launch," not the prior generic "Performance Marketing Systems video" title and not a move to Visa). It's grouped with the page's other 2 Liquid-campaign videos ("Goodbye Expenses, Hello Liquid," "Hello, Liquid") rather than left isolated or moved off the page. The `reel.json` entry's "TripActions × Visa" label and Visa-summary description text were also inaccurate and are corrected to match the video's real content.
+
+**Consequence:** Visa's Adobe embed has **no verified local replacement** — Decision 3's embed stays in place, unresolved, exactly as flagged in Phase 1 (just for a different reason: not "no file was found," but "the one candidate file turned out not to be Visa's").
+
+### Directed audit 4: BetterUp and Lyft asset search
+
+- `web-portfolio/images/betterup/` (5 files: 4 deck/UI images + 1 high-res hero render) — all 4 checkable images were confirmed, by direct visual comparison, **already present** in `akintilo-portfolio`'s existing 19-image BetterUp gallery (re-encoded to WebP). No new content to copy.
+- `web-portfolio/images/lyft/` — does not exist; confirmed again this session (zero Lyft files anywhere in that repository).
+- Adobe Portfolio (`akintilo.com`) and Behance (`behance.net/ayodejiakintilo`) — **still unreachable from this session** (DNS resolution fails for both, re-tested this pass; `www-ccv.adobe.io`, the Adobe Behance video-embed host, returns `403` on the proxy's CONNECT tunnel). Cannot check either source for additional BetterUp or Lyft material. This remains an open item requiring Ayo's own browser access or an uploaded file, for both Decision 3 (Visa/Lyft embeds) and Decision 4 (BetterUp/Lyft new images).
+
+### Decisions 6–15, applied as approved (no correction needed)
+
+- **Events and Environments** category added; AppOmni/MongoDB/DocuSign/Navan/Apollo event work reclassified into it; no unrelated company work reclassified merely because the company also has event projects.
+- **MongoDB pages** (`mongodb-the-next-generation-database`, `mongodb-web`) kept separate, retitled for distinct scope, cross-linked.
+- **Navan rebrand/global-rollout and sales/presentation-systems sections**: dropped, not built as empty pages, per instruction.
+- **Card spacing**: scoped-specificity fix applied (`.project-card .card-eyebrow` / `.project-card .card-summary`), not a rewrite of the `<p>` reset.
+- **MongoDB Atlas animation**: replaced with the verified `web-portfolio` source, copied into the reorganized media folder.
+- **CMS media routing**: Decap compatibility spike run first (see the CMS section below for the result).
+- **Route names**: proposed slugs used as-is, aligned to existing media folder names.
+- **Selected Work**: flags not yet changed — the approved process requires presenting exact swaps for Ayo's sign-off first (see the Selected Work section of this plan / `selected-work-recommendation.md` for the proposed swap). This does not block the rest of Phase 2.
+- **Apollo**: 3 verified images copied from `web-portfolio`; the 4-company collage moved out of Apollo's folder to a shared cover location; the signage mockup kept and labeled as a mockup.

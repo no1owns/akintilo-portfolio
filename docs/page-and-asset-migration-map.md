@@ -63,6 +63,15 @@ What Phase 2 adds on top of this baseline is **route-level** (new company-collec
 - Once `/event-brand-experiential`'s 4–5 sections have verified successor pages, recommend it become an **index/compatibility collection** (not a single-target redirect, since it currently serves 4+ distinct audiences) linking out to the new event pages. Not applied this phase.
 - `scripts/prerender.mjs`'s `routes` array and `sitemap.xml` generation need updating whenever new routes are added — flagged here as a Phase 2 build-script change, not content.
 
+## Phase 2 updates (2026-10-28)
+
+- **Events and Environments** added as its own homepage filter category (Decision 6). Applies to: AppOmni's 3 relocated booth-design assets + copied `web-portfolio` event photos, MongoDB's event-brand section, DocuSign Momentum, TRAVERSE '21, and Apollo GraphQL Summit. Does not apply to any company's non-event work.
+- **AppOmni Presentations** is a real section now (not a gap) — see project-content-audit.md's Phase 2 corrections.
+- **`/tripactions`'s mis-homed video finding reversed** — it stays on this page; see project-content-audit.md.
+- **MongoDB pages stay separate**, per Ayo's decision — both retitled/cross-linked rather than merged.
+- **Navan rebrand/global-rollout and sales/presentation-systems sections dropped** — not built, per instruction; `/navan` ships with TRAVERSE '21, Performance Marketing Systems, Frictionless Product Onboarding, and Partnership campaigns only.
+- **Apollo GraphQL Summit** built at `/apollo-graphql`, with the 3 verified-missing images copied in and the 4-company collage relocated out of Apollo's folder.
+
 ## What this map does not resolve (left to Ayo, not guessed)
 
 1. Where exactly `/mongodb-internal` sits (named standalone vs. Additional work).

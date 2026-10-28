@@ -54,3 +54,19 @@ Linx (`/linx-security`) already exists, is already published (since 2026-10-26, 
 | Linx Brand Illustration System | No | Illustration-system + AI-tooling format range |
 
 No change made to `featured` flags this phase.
+
+## Phase 2: proposed exact swap (approval gate — flags not yet changed)
+
+Per Ayo's approval of Decision 11 ("include one strong event project; include either BetterUp Executive Presentation Systems or Linx Brand Illustration System; present the exact proposed swap before applying flags"), here is the specific proposal:
+
+**Add:**
+- **Apollo GraphQL Summit** (new standalone page, built this pass from the Apollo section of `/event-brand-experiential` plus 3 newly-copied `web-portfolio` images) — the strongest single self-contained event case study available: real conference branding, booth photography, stage-presentation screens, and a signage design mockup, all for one coherent event rather than a multi-company umbrella. This is the "one strong event project" slot.
+- **Linx Brand Illustration System** (`/linx-security`, existing) — chosen over BetterUp Executive Presentation Systems because it adds a *medium* the current 8 lack entirely (illustration system + custom AI tooling), not just a different company. BetterUp remains a reasonable alternative if Ayo prefers presentation-format range over illustration-format range instead.
+
+**Remove:**
+- **Global Rebrand Launch Experience** (Dream Big, MongoDB) — MongoDB keeps strong Selected Work representation through "Modern UX for a Leading Developer Platform," which has the widest image-ratio range on the site; removing Dream Big reduces redundancy within one company rather than cutting a company entirely.
+- **Enterprise Brand Campaigns** (DocuSign) — DocuSign stays fully visible in All Work and gets its own new `/docusign` collection page; this is the one full removal (no other DocuSign project replaces it in Selected Work this round).
+
+**Resulting lineup (8):** Security Brand Experiences · AI-Assisted Design Systems · Meta Connect 2025 Developer Keynote · Performance Marketing Systems · Modern UX for a Leading Developer Platform · Frictionless Product Onboarding · Apollo GraphQL Summit (new) · Linx Brand Illustration System.
+
+**This swap is proposed, not applied.** No `featured` flag changes until Ayo confirms this exact lineup (or an adjusted one). This gate does not block any other Phase 2 work — the Apollo page, Linx's existing state, and every other change proceed regardless of the outcome here.

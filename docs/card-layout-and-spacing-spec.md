@@ -1,5 +1,7 @@
 # Card layout and spacing spec
 
+**Approved 2026-10-28 — Option 1 (scoped specificity fix) applied in Phase 2.** See the implementation commit for the exact CSS change and verification results.
+
 Phase 1 deliverable. Verified against the live dev server (`npm run dev`, Vite on `localhost:5173`) via Playwright, not inferred from CSS alone — the root cause below only showed up once actual computed styles were measured, not from reading `src/styles.css` in isolation.
 
 ## Root cause (verified, not guessed)
