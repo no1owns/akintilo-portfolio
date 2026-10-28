@@ -1,0 +1,101 @@
+{
+  "slug": "appomni-events",
+  "title": "AppOmni Event Presence",
+  "category": "Events and Environments",
+  "order": 0.6,
+  "published": true,
+  "company": "AppOmni",
+  "companyFolder": "appomni",
+  "collection": "appomni",
+  "role": "Senior Visual Designer",
+  "summary": "Trade-show booth design and environmental graphics for AppOmni's conference presence, including confirmed appearances at Cisco Live and Black Hat USA 2026.",
+  "overview": "Booth design, environmental installations, and event-presence graphics supporting AppOmni's trade-show and conference programming. Two shows are directly confirmed by the materials themselves: Cisco Live (a speaker promo graphic for the May 2026 show) and Black Hat USA 2026 (an attendee-meeting promo for August 5–6, 2026). The booth floorplans, isometric build renders, and the environmental installation shown here are not independently tied to a specific show in the material reviewed -- they're presented as booth-design and environmental-graphics work generally, not attributed to any one event beyond what's confirmed.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "layout": "justified",
+      "images": [
+        {
+          "image": "/media/appomni/appomni-events/appomni-booth-environmental-design.webp",
+          "width": 1200,
+          "height": 904,
+          "alt": "An immersive, overgrown-ruins themed trade-show booth installation with ivy-covered walls and embedded video screens showing security-dashboard footage",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/appomni-events/appomni-booth-team-photo.webp",
+          "width": 1920,
+          "height": 1440,
+          "alt": "Four AppOmni staff standing behind a branded trade-show booth counter, with a partner-logo wall including Okta, Google, and HubSpot, and \"Effortless, automated, and visible SaaS Security\" messaging on the backdrop",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/appomni-events/booth-render-isometric.webp",
+          "width": 1066,
+          "height": 598,
+          "alt": "An isometric 3D render of an AppOmni trade-show booth labeled with build specifications: a 15-foot square hanging sign, LED tiles, a demo station with locking storage, a vertical monitor, and a reception counter",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/appomni-events/booth-wall-elevations.webp",
+          "width": 1920,
+          "height": 788,
+          "alt": "Three labeled booth wall elevations -- Reception Panel, Swag Wall, Main Wall, and Demo Station -- each showing AppOmni branding and a staff member for scale",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/appomni-events/appomni-booth-floorplan-elevation.webp",
+          "width": 1920,
+          "height": 1447,
+          "alt": "A technical booth floorplan and wall-elevation drawing labeled Reception, Back Wall, and BW1 through BW5, showing the layout of an AppOmni trade-show booth",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/appomni-events/booth-floorplan-back-wall.webp",
+          "width": 1920,
+          "height": 1447,
+          "alt": "A second booth floorplan drawing, labeled Back Wall, BW1 through BW5, and Reception, showing wall-panel and furniture placement for an AppOmni trade-show booth",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "sectionHeading",
+      "eyebrow": "Confirmed appearances",
+      "title": "Cisco Live and Black Hat USA 2026",
+      "overview": "The two event-specific graphics below are the only assets in this set that name a show directly.",
+      "spacing": "generous"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "layout": "justified",
+      "images": [
+        {
+          "image": "/media/appomni/appomni-events/appomni-cisco-live-speaker-graphic.webp",
+          "width": 1080,
+          "height": 1080,
+          "alt": "A speaker promo graphic: \"See Me at Cisco Live! May 31–June 4, 2026, Las Vegas, NV\" with a photo of Morgan Lloyd, Partner Director EMEA",
+          "caption": "Cisco Live, May 2026"
+        },
+        {
+          "image": "/media/appomni/appomni-events/appomni-black-hat-usa-2026-graphic.webp",
+          "width": 1744,
+          "height": 1148,
+          "alt": "A \"Meet with AppOmni\" promo graphic for Black Hat USA 2026, August 5–6, 2026, W Hotel Penthouse, reading \"Secure SaaS. Govern AI. Reduce risk. One platform.\"",
+          "caption": "Black Hat USA 2026, August 5–6"
+        }
+      ]
+    }
+  ],
+  "cover": "/media/appomni/appomni-events/appomni-booth-environmental-design.webp",
+  "coverAlt": "An immersive, overgrown-ruins themed AppOmni trade-show booth installation with embedded video screens",
+  "coverPosition": "center",
+  "featured": false
+}

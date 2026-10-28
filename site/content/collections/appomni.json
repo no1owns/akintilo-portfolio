@@ -1,0 +1,438 @@
+{
+  "slug": "appomni",
+  "published": true,
+  "order": 1,
+  "company": "AppOmni",
+  "companyFolder": "appomni",
+  "role": "Senior Visual Designer",
+  "tenure": "Dec 2024–Oct 2026",
+  "scope": "AppOmni is a SaaS and AI security platform. As Senior Visual Designer, Ayo builds the reusable page components, campaign systems, event presence, and AI-assisted workflows behind AppOmni's brand -- connecting product marketing, content, and development.",
+  "cover": "/media/appomni/brand-systems-and-web-performance/1922e3c3d25f2de0.webp",
+  "coverAlt": "A laptop showing an AppOmni product page, \"The AI-powered engine behind AppOmni\"",
+  "linkedProjects": [
+    "ai-assisted-design-systems",
+    "appomni-events"
+  ],
+  "blocks": [
+    {
+      "type": "sectionHeading",
+      "eyebrow": "Presentations",
+      "title": "Executive storytelling and product presentations",
+      "overview": "Stage-photographed slides from AppOmni product and keynote presentations -- competitive positioning, product-innovation reveals, and narrative framing for an executive audience.",
+      "spacing": "generous"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "layout": "justified",
+      "images": [
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/8acd0f212dfedd46.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/eaa2afbce7250c4f.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/f056841dd5d3182a.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/e232e4cdae473b49.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/c6c27ca9fce9d1b8.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "sectionHeading",
+      "eyebrow": "Web experience",
+      "title": "Homepage, product, and platform pages",
+      "overview": "The AppOmni website and product pages: homepage, platform and product detail pages, dashboards, and supporting UI.",
+      "spacing": "generous"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "layout": "justified",
+      "images": [
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/appomni-website-hero-render.webp",
+          "width": 1920,
+          "height": 1440,
+          "alt": "A laptop mockup of the AppOmni homepage: \"Detect and Prevent SaaS and AI Security Breaches,\" with partner logos including PwC, NBA, and Johnson & Johnson",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/bcdba867f901e846.webp",
+          "width": 1600,
+          "height": 1200,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/4f439be8fcd6df0f.webp",
+          "width": 1669,
+          "height": 1546,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/d61d3a7d76070c93.webp",
+          "width": 1676,
+          "height": 2203,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/21ae1c345e2c4973.webp",
+          "width": 1600,
+          "height": 1199,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/1922e3c3d25f2de0.webp",
+          "width": 1600,
+          "height": 1200,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/6dbfef86cc028594.webp",
+          "width": 1676,
+          "height": 1662,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/cf5ef95380fb2321.webp",
+          "width": 1920,
+          "height": 1821,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/1ddc83fd2e581d09.webp",
+          "width": 1651,
+          "height": 858,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/81270f33c96aad2a.webp",
+          "width": 1920,
+          "height": 2416,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/cec6f73db8f9d3aa.webp",
+          "width": 1440,
+          "height": 1200,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/e6d8005ca3dc57b8.webp",
+          "width": 1920,
+          "height": 2400,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/3ca4b2500c784e04.webp",
+          "width": 1920,
+          "height": 2400,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/6d0604ac766f5ed6.webp",
+          "width": 1920,
+          "height": 2400,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/590d4feca08bdf63.webp",
+          "width": 1920,
+          "height": 2400,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/c7747d08fc3108a8.webp",
+          "width": 1920,
+          "height": 2400,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/8d220d1ffaf41627.webp",
+          "width": 1920,
+          "height": 2400,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/5f87e7eda9f75b04.webp",
+          "width": 1774,
+          "height": 887,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/69fd5415443d5def.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/296d28ca9d01fa83.webp",
+          "width": 1080,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/2cb5c1f1d975e47d.webp",
+          "width": 1920,
+          "height": 1446,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/d65ce7cbd43841bf.webp",
+          "width": 1920,
+          "height": 1446,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/00dcf2545485c1b3.webp",
+          "width": 1849,
+          "height": 1446,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/d97bfbc3c6ca5742.webp",
+          "width": 1200,
+          "height": 904,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/dd54606af09f889e.webp",
+          "width": 1920,
+          "height": 1074,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/db4bd94345c9938d.webp",
+          "width": 1744,
+          "height": 1148,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/2647885173fd79a9.webp",
+          "width": 1682,
+          "height": 1460,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/bfa6807e97826f24.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/f207f48e85b5c9b0.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/37171be44da05d2f.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/8aba420cd09b8f16.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "sectionHeading",
+      "eyebrow": "Campaigns and social",
+      "title": "Campaign systems, social, and motion",
+      "overview": "Paid and organic social graphics, the Cybersecurity Awareness Month AI-agent tip series, campaign illustrations, and brand/product motion including the Marlin AI launch.",
+      "spacing": "generous"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "3",
+      "spacing": "regular",
+      "layout": "justified",
+      "images": [
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/49bdbf733065b1e0.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/3f40b668f2e26e09.webp",
+          "width": 1774,
+          "height": 887,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/d0bc25528a296847.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/485c35d62910b2c0.webp",
+          "width": 1920,
+          "height": 767,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/4c36c1243b5824b1.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/4cbd7bafa9e811a2.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/ef79b40d7f48085f.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Security Brand Experiences project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/3ac4fa7de3162710.webp",
+          "width": 1080,
+          "height": 1080,
+          "alt": "Tip 1: Find every AI agent and copilot connected to your SaaS apps.",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/d4a9723db5818fed.webp",
+          "width": 1080,
+          "height": 1080,
+          "alt": "Tip 2: Give each AI agent only the access its job requires.",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/0f4babae89d0e331.webp",
+          "width": 1080,
+          "height": 1080,
+          "alt": "Tip 3: Require human approval for sensitive agent actions.",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/c573cc5afb2d9006.webp",
+          "width": 1080,
+          "height": 1080,
+          "alt": "Tip 4: Check what data your AI tools can retain, share, and reach.",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/b3b5767c79502cdc.webp",
+          "width": 1080,
+          "height": 1080,
+          "alt": "Tip 5: Watch for unusual AI agent behavior.",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/26bfb5364ebfcac5.webp",
+          "width": 1080,
+          "height": 1080,
+          "alt": "Tip 6: Review OAuth connections and revoke access you no longer need.",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "AI Agent Security",
+      "spacing": "regular",
+      "file": "/media/appomni/brand-systems-and-web-performance/motion-appomni-01.mp4",
+      "playback": "loop"
+    },
+    {
+      "type": "video",
+      "title": "Connected Network",
+      "spacing": "regular",
+      "file": "/media/appomni/brand-systems-and-web-performance/motion-appomni-02.mp4",
+      "playback": "loop"
+    },
+    {
+      "type": "video",
+      "title": "Visibility & Protection",
+      "spacing": "regular",
+      "file": "/media/appomni/brand-systems-and-web-performance/motion-appomni-03.mp4",
+      "playback": "loop"
+    },
+    {
+      "type": "video",
+      "title": "Introducing Marlin AI",
+      "spacing": "regular",
+      "file": "/media/appomni/brand-systems-and-web-performance/motion-appomni-04.mp4",
+      "playback": "loop"
+    }
+  ],
+  "additionalWork": []
+}
