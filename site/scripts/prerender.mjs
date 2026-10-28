@@ -6,7 +6,9 @@ import React from 'react';
 const settings=JSON.parse(fs.readFileSync('content/settings.json'));
 const reel=JSON.parse(fs.readFileSync('content/reel.json'));
 const projects=fs.readdirSync('content/projects').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(fs.readFileSync('content/projects/'+f))).filter(p=>p.published);
-const routes=['','about','resume','contact','brand-storytelling','partnership-campaigns','technical-storytelling','communications',...projects.map(p=>p.slug)];
+const collectionsDir='content/collections';
+const collections=fs.existsSync(collectionsDir)?fs.readdirSync(collectionsDir).filter(f=>f.endsWith('.json')).map(f=>JSON.parse(fs.readFileSync(collectionsDir+'/'+f))).filter(c=>c.published):[];
+const routes=['','about','resume','contact','brand-storytelling','partnership-campaigns','technical-storytelling','communications','events-and-environments',...projects.map(p=>p.slug),...collections.map(c=>c.slug)];
 const unlistedRoutes=['reel'];
 const template=fs.readFileSync('dist/client/index.html','utf8');
 const escape=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -16,10 +18,11 @@ try{
  for(const route of [...routes,...unlistedRoutes,'404']){
   globalThis.location=new URL('/'+route,'https://preview.invalid');
   const p=projects.find(p=>p.slug===route);
-  const title=(p?.title||({about:'About',resume:'Experience',contact:'Contact',reel:reel.title,'404':'Page not found'}[route])||'Brand systems. Clearer stories.')+' | Ayodeji Akintilo';
-  const desc=p?.summary||(route==='reel'?reel.intro:settings.intro);
+  const col=!p&&collections.find(c=>c.slug===route);
+  const title=(p?.title||col?.company||({about:'About',resume:'Experience',contact:'Contact',reel:reel.title,'404':'Page not found'}[route])||'Brand systems. Clearer stories.')+' | Ayodeji Akintilo';
+  const desc=p?.summary||col?.scope||(route==='reel'?reel.intro:settings.intro);
   let meta=`<meta name="description" content="${escape(desc)}"><meta property="og:title" content="${escape(title)}"><meta property="og:description" content="${escape(desc)}"><meta property="og:type" content="website">`;
-  if(settings.siteUrl&&!unlistedRoutes.includes(route)){const canonical=new URL('/'+route,settings.siteUrl).href;meta+=`<link rel="canonical" href="${escape(canonical)}"><meta property="og:url" content="${escape(canonical)}">`;if(p?.cover)meta+=`<meta property="og:image" content="${escape(new URL(p.cover,settings.siteUrl).href)}">`;}
+  if(settings.siteUrl&&!unlistedRoutes.includes(route)){const canonical=new URL('/'+route,settings.siteUrl).href;meta+=`<link rel="canonical" href="${escape(canonical)}"><meta property="og:url" content="${escape(canonical)}">`;const coverSrc=p?.cover||col?.cover;if(coverSrc)meta+=`<meta property="og:image" content="${escape(new URL(coverSrc,settings.siteUrl).href)}">`;}
   else meta+='<meta name="robots" content="noindex,nofollow">';
   const html=template.replace(/<title>.*?<\/title>/,`<title>${escape(title)}</title>`).replace('</head>',meta+'</head>').replace('<div id="root"></div>',`<div id="root">${renderToString(React.createElement(App))}</div>`);
   const file=route==='404'?'dist/client/404.html':path.join('dist/client',route,'index.html');fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,html);
