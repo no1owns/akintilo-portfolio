@@ -1,13 +1,13 @@
 {
   "slug": "event-brand-experiential",
-  "title": "Event Brand and Experiential (index)",
+  "title": "Events and Environmental Design",
   "category": "Events and Environments",
   "order": 3,
   "published": true,
   "company": "Apollo GraphQL / TripActions / MongoDB / DocuSign",
   "role": "Creative direction",
-  "summary": "A consistent experience from the invitation to the stage.",
-  "overview": "I directed event identities and creative systems across customer conferences, field events, and executive experiences. The work connected stage visuals, signage, speaker presentations, digital campaigns, and production partners. This page has become an index: the event work for each company now has its own page, linked below, with the full media that used to live here. Nothing has been removed -- every image and video from this page's four sections is still published, just moved to its own case study.",
+  "summary": "Event identities and creative systems spanning conferences, field programs, presentations, environmental graphics, and digital experiences.",
+  "overview": "I have directed event and environmental design across developer conferences, customer programs, product launches, and executive experiences. Explore the work by company below.",
   "outcomes": [],
   "blocks": [
     {
@@ -22,8 +22,8 @@
     {
       "type": "caseSection",
       "eyebrow": "TripActions",
-      "title": "TRAVERSE '21",
-      "body": "Brand and creative direction for Traverse and related event systems.",
+      "title": "TRAVERSE '21 Brand Experience",
+      "body": "Brand and creative direction for TripActions' TRAVERSE '21 Travel & Expense Festival and related event systems.",
       "linkLabel": "View the TRAVERSE '21 case study",
       "linkHref": "/traverse-21",
       "spacing": "regular"
@@ -49,9 +49,9 @@
     {
       "type": "caseSection",
       "eyebrow": "AppOmni",
-      "title": "Event presence",
-      "body": "Trade-show booth design and environmental graphics, including confirmed appearances at Cisco Live and Black Hat USA 2026.",
-      "linkLabel": "View the AppOmni Event Presence case study",
+      "title": "Events and environmental design",
+      "body": "Booth systems, environmental graphics, and promotional creative supporting AppOmni's conference presence.",
+      "linkLabel": "View the AppOmni Events and Environmental Design case study",
       "linkHref": "/appomni-events",
       "spacing": "regular"
     }
