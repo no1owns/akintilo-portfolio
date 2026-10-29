@@ -1,0 +1,126 @@
+{
+  "slug": "apollo-graphql",
+  "title": "Apollo GraphQL Summit",
+  "category": "Events and Environments",
+  "order": 0.7,
+  "published": true,
+  "company": "Apollo GraphQL",
+  "companyFolder": "apollo",
+  "role": "Creative direction",
+  "summary": "Event brand and environmental design for GraphQL Summit by Apollo -- entrance and stage signage, lounge and venue branding, keynote slides, and digital displays.",
+  "overview": "Event brand and environmental design for GraphQL Summit by Apollo, including entrance and stage signage, lounge and venue branding, keynote presentation slides, and digital displays. Built as a standalone case study -- not a full company collection -- since Apollo GraphQL is a single, self-contained event engagement.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "layout": "justified",
+      "images": [
+        {
+          "image": "/media/apollo/event-brand-experiential/32505e5073b9ff21.webp",
+          "width": 1920,
+          "height": 651,
+          "alt": "A navy entrance banner reading \"Apollo, Deliver tomorrow's roadmap today with the Apollo GraphQL API Platform\" hung above a conference hall doorway",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/b039b0827c6fa07b.webp",
+          "width": 587,
+          "height": 1276,
+          "alt": "A hallway directional sign for GraphQL Summit Hall 1 listing the day's session schedule and speakers",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/ec63cdd32531f2e3.webp",
+          "width": 1462,
+          "height": 1097,
+          "alt": "An \"Apollo Lounge\" building-facade billboard reading \"Design, build, and operate at scale. Deliver tomorrow's roadmap today with Apollo.\" above an orbiting-line graphic",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/83bb729768cff7cf.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "A design mockup (not a photo of deployed signage) for an Apollo customer-story display: a quote from Devashree Shirude, Senior Software Engineer at PlayStation, shown at three panel sizes and composited into a lobby photo",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/4a25e688d1144d36.webp",
+          "width": 1024,
+          "height": 1536,
+          "alt": "A large outdoor banner reading \"Build / Operate / Scale\" above repeated GraphQL Summit wordmarks on a street-facing wall",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/fd3abd964dcb93a5.webp",
+          "width": 600,
+          "height": 899,
+          "alt": "A hand holding a branded GraphQL Summit by Apollo drinking glass with a city-skyline graphic",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/691071a27950fbbe.webp",
+          "width": 1200,
+          "height": 800,
+          "alt": "An event lobby standing sign listing GraphQL Summit breakout topics under \"Interested in learning more about\"",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/b6fcac202d28be5e.webp",
+          "width": 1672,
+          "height": 941,
+          "alt": "A GraphQL Summit Day 1 keynote slide for \"The value of your API Platform, today and tomorrow\" with speaker Matt DeBergalis, CTO and co-founder of Apollo",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/0644f1156ff874dd.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "A digital lobby display reading \"Puppy Play Time with Power of the Puppy\" inviting attendees to a GraphQL Summit meet-and-greet",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/df08b716ac73f59e.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "A confetti-filled celebration stage branded \"GraphQL Summit by Apollo\" marking 5 years of Apollo Federation",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/eb1d7affef1cda61.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "A GraphQL Summit Day 2 keynote slide reading \"Exploring Apollo's new products, a deep dive\"",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/apollo-graphql-summit-welcome-screen.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "A GraphQL Summit welcome/wayfinding screen at the event entrance",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/apollo-graphql-summit-social-prompt.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "A GraphQL Summit digital display prompting attendees to share real-time highlights and behind-the-scenes moments using #GraphQLSummit",
+          "caption": ""
+        },
+        {
+          "image": "/media/apollo/event-brand-experiential/apollo-graphql-summit-lobby-display.webp",
+          "width": 1679,
+          "height": 1437,
+          "alt": "An in-room digital display showing GraphQL Summit event signage (Convene, 225 Liberty, New York City) beside a seating area",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "cover": "/media/apollo/event-brand-experiential/ec63cdd32531f2e3.webp",
+  "coverAlt": "An \"Apollo Lounge\" building-facade billboard reading \"Design, build, and operate at scale. Deliver tomorrow's roadmap today with Apollo.\"",
+  "coverPosition": "center",
+  "featured": false
+}

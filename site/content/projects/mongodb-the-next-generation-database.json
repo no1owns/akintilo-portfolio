@@ -1,13 +1,16 @@
 {
   "slug": "mongodb-the-next-generation-database",
-  "title": "Modern UX for a Leading Developer Platform",
+  "title": "MongoDB Web Design System",
   "category": "Brand Systems",
   "order": 6,
   "published": true,
   "company": "MongoDB",
+  "companyFolder": "mongodb",
+  "collection": "mongodb",
   "role": "Creative Director",
-  "summary": "A clearer web experience for a complex developer platform.",
-  "overview": "I co-managed the web development team and led design-system work across web, product, and print. User research, usability testing, and collaboration with Product Design helped improve consistency and accessibility on priority pages.",
+  "relatedSlugs": ["mongodb-web"],
+  "summary": "Design-system work, user research, and accessibility improvements across MongoDB's web, product, and print surfaces.",
+  "overview": "I co-managed the web development team and led design-system work across web, product, and print. User research, usability testing, and collaboration with Product Design helped improve consistency and accessibility on priority pages. This is ongoing design-system and web-platform work, distinct from the specific product-launch campaigns covered in \"Launching Stitch and Atlas.\"",
   "outcomes": [],
   "blocks": [
     {

@@ -653,13 +653,6 @@
           "caption": ""
         },
         {
-          "image": "/media/appomni/brand-systems-and-web-performance/72633835e2339a65.webp",
-          "width": 1066,
-          "height": 598,
-          "alt": "Security Brand Experiences project work",
-          "caption": ""
-        },
-        {
           "image": "/media/appomni/brand-systems-and-web-performance/db4bd94345c9938d.webp",
           "width": 1744,
           "height": 1148,
@@ -677,20 +670,6 @@
           "image": "/media/appomni/brand-systems-and-web-performance/485c35d62910b2c0.webp",
           "width": 1920,
           "height": 767,
-          "alt": "Security Brand Experiences project work",
-          "caption": ""
-        },
-        {
-          "image": "/media/appomni/brand-systems-and-web-performance/914d489fb76c9b67.webp",
-          "width": 1920,
-          "height": 1447,
-          "alt": "Security Brand Experiences project work",
-          "caption": ""
-        },
-        {
-          "image": "/media/appomni/brand-systems-and-web-performance/5ab8998427c984e3.webp",
-          "width": 1920,
-          "height": 788,
           "alt": "Security Brand Experiences project work",
           "caption": ""
         },
@@ -870,5 +849,6 @@
   "cover": "/media/secureframe/brand-systems-and-web-performance/9e16f9a019cb6066.webp",
   "coverAlt": "Security Brand Experiences project collage",
   "coverPosition": "center",
-  "featured": true
+  "featured": true,
+  "companyFolder": "secureframe"
 }

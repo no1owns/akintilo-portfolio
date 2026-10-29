@@ -172,5 +172,7 @@
   "cover": "/media/docusign/docusign-enterprise-campaign/d03bc46e4cc2acdf.webp",
   "coverAlt": "Enterprise Brand Campaigns project collage",
   "coverPosition": "center",
-  "featured": true
+  "featured": true,
+  "companyFolder": "docusign",
+  "collection": "docusign"
 }

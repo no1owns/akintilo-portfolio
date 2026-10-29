@@ -220,5 +220,6 @@
   "cover": "/media/meta-connect/meta-connect-cover.webp",
   "coverAlt": "Meta Connect 2025 developer keynote slide collage",
   "coverPosition": "center",
-  "featured": true
+  "featured": true,
+  "companyFolder": "meta-connect"
 }

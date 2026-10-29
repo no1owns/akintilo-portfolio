@@ -89,5 +89,6 @@
   "cover": "/media/lyft/cfaeedc1fa52addf.webp",
   "coverAlt": "Animated presentation frame for Lyft Business projecting 1 billion total rides",
   "coverPosition": "center",
-  "featured": false
+  "featured": false,
+  "companyFolder": "lyft"
 }

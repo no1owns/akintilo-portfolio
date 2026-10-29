@@ -1,0 +1,113 @@
+{
+  "slug": "docusign-momentum",
+  "title": "DocuSign Momentum",
+  "category": "Events and Environments",
+  "order": 4.5,
+  "published": true,
+  "company": "DocuSign",
+  "companyFolder": "docusign",
+  "collection": "docusign",
+  "role": "Director of Creative Services",
+  "summary": "Momentum branding, event materials, digital experiences, and virtual-session support for DocuSign's Momentum conference.",
+  "overview": "Momentum branding, event materials, digital experiences, and virtual-session support for DocuSign's Momentum conference.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "layout": "justified",
+      "images": [
+        {
+          "image": "/media/docusign/event-brand-experiential/4ca3581d39bc1daa.webp",
+          "width": 1600,
+          "height": 900,
+          "alt": "DocuSign Momentum '15 conference website homepage shown on a laptop, headlined \"The Future of Business Is Digital\"",
+          "caption": ""
+        },
+        {
+          "image": "/media/docusign/event-brand-experiential/388c47f89d597c6c.webp",
+          "width": 600,
+          "height": 600,
+          "alt": "A DocuSign Momentum '15 cover graphic reading \"The Global Trust Network\" over a geometric arrow icon on a world map",
+          "caption": ""
+        },
+        {
+          "image": "/media/docusign/event-brand-experiential/7b45e70caf39e329.webp",
+          "width": 1600,
+          "height": 900,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/docusign/event-brand-experiential/be3cfa844c398ad4.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "An airport terminal digital banner advertising DocuSign Momentum '15 in San Francisco and London above a busy departure hall",
+          "caption": ""
+        },
+        {
+          "image": "/media/docusign/event-brand-experiential/0d4ebef6d39d5a05.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/docusign/event-brand-experiential/8a1f2d66f992f3a1.webp",
+          "width": 1600,
+          "height": 900,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/docusign/event-brand-experiential/5bd1d1ca2cd6d8bd.webp",
+          "width": 1600,
+          "height": 900,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/docusign/event-brand-experiential/f1f808fb0ddd7b00.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "A street-level digital ad for DocuSign Momentum '15 reading \"The Future of Business Is Digital\" beside a customer-story screen",
+          "caption": ""
+        },
+        {
+          "image": "/media/docusign/event-brand-experiential/83307f8b1a423dab.webp",
+          "width": 1600,
+          "height": 900,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/docusign/event-brand-experiential/93f6946177282dbc.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/docusign/event-brand-experiential/16bfd90acb190e9f.webp",
+          "width": 1600,
+          "height": 900,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        },
+        {
+          "image": "/media/docusign/event-brand-experiential/04f104eef9213685.webp",
+          "width": 1600,
+          "height": 900,
+          "alt": "Event Brand and Experiential project work",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "cover": "/media/docusign/event-brand-experiential/4ca3581d39bc1daa.webp",
+  "coverAlt": "DocuSign Momentum '15 conference website homepage shown on a laptop, headlined \"The Future of Business Is Digital\"",
+  "coverPosition": "center",
+  "featured": false
+}

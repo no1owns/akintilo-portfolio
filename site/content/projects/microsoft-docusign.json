@@ -171,5 +171,7 @@
   "cover": "/media/docusign/microsoft-docusign/c4a9662c9f045c52.webp",
   "coverAlt": "Enterprise Integration Campaigns project collage",
   "coverPosition": "center",
-  "featured": false
+  "featured": false,
+  "companyFolder": "docusign",
+  "collection": "docusign"
 }
