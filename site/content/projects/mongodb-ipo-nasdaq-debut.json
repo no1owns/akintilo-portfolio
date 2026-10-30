@@ -1,0 +1,72 @@
+{
+  "slug": "mongodb-ipo-nasdaq-debut",
+  "title": "MongoDB IPO: Nasdaq Debut Campaign",
+  "category": "Brand Systems",
+  "order": 5.5,
+  "published": true,
+  "company": "MongoDB",
+  "companyFolder": "mongodb",
+  "collection": "mongodb",
+  "role": "Creative Director",
+  "relatedSlugs": ["dream-big", "mongodb-for-giant-ideas-video"],
+  "summary": "Out-of-home and press creative marking MongoDB's October 2017 Nasdaq debut, including Times Square placements and national print.",
+  "overview": "Creative for MongoDB's public listing on Nasdaq (ticker MDB) in October 2017 -- a wrap and digital placements on the Nasdaq MarketSite tower and surrounding Times Square screens, plus a national print ad, all built around the line \"Finally, after 40 years, a real alternative\" -- a direct nod to the fact that the relational database was introduced more than 40 years earlier.",
+  "outcomes": [],
+  "blocks": [
+    {
+      "type": "sectionHeading",
+      "eyebrow": "MongoDB",
+      "title": "Out-of-home and press, as placed",
+      "overview": "Photographed in Times Square around MongoDB's Nasdaq listing, plus the matching national print ad.",
+      "spacing": "generous"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "spacing": "regular",
+      "layout": "justified",
+      "images": [
+        {
+          "image": "/media/mongodb/mongodb-ipo-nasdaq-debut/mongodb-ipo-times-square-nasdaq-tower-wide.webp",
+          "width": 2000,
+          "height": 1333,
+          "alt": "Street-level view of Times Square looking up at the curved Nasdaq MarketSite tower wrapped with a mongoDB \"Finally, after 40 years, a real alternative\" billboard, with further mongoDB leaf-mark panels lit on surrounding buildings and an NYPD car and pedestrians below",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/mongodb-ipo-nasdaq-debut/mongodb-ipo-nasdaq-tower-wrap-closeup.webp",
+          "width": 2000,
+          "height": 1333,
+          "alt": "Closer view of the Nasdaq MarketSite tower fully wrapped in the green-and-white mongoDB \"Finally, after 40 years, a real alternative / NasdaqListed MDB\" creative, with an EY ad visible to the left",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/mongodb-ipo-nasdaq-debut/mongodb-ipo-times-square-out-now-billboard.webp",
+          "width": 2000,
+          "height": 1333,
+          "alt": "A large green Times Square digital billboard reading \"mongoDB, NasdaqListed MDB\" beneath an \"Out Now\" marquee, with a yellow cab and NYPD car passing below",
+          "caption": ""
+        },
+        {
+          "image": "/media/mongodb/mongodb-ipo-nasdaq-debut/mongodb-ipo-times-square-dusk.webp",
+          "width": 2000,
+          "height": 1333,
+          "alt": "Dusk view of the Nasdaq tower showing a tall vertical mongoDB wordmark banner alongside a digital panel reading \"Finally, after 40 years, a real alternative / mongoDB / NasdaqListed MDB,\" with mongoDB leaf-mark panels lit on nearby buildings and a \"Welcome to Times Square\" sign visible",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": "/media/mongodb/mongodb-ipo-nasdaq-debut/mongodb-ipo-print-ad-nasdaq.webp",
+      "alt": "A national print ad for MongoDB's Nasdaq listing, headlined \"Finally, after 40 years, a real alternative,\" with the mongoDB leaf mark and a Nasdaq \"MDB\" listing notice, photographed beside a rotary phone",
+      "caption": "National print placement, dated Tuesday, October 24, 2017.",
+      "width": "narrow",
+      "spacing": "regular"
+    }
+  ],
+  "cover": "/media/mongodb/mongodb-ipo-nasdaq-debut/mongodb-ipo-nasdaq-tower-wrap-closeup.webp",
+  "coverAlt": "The Nasdaq MarketSite tower in Times Square wrapped with mongoDB's \"Finally, after 40 years, a real alternative\" Nasdaq-listing creative",
+  "coverPosition": "center",
+  "featured": false
+}

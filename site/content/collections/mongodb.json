@@ -6,11 +6,12 @@
   "companyFolder": "mongodb",
   "role": "Creative Director",
   "tenure": "2015–2019",
-  "scope": "MongoDB is a developer data platform. As Creative Director, Ayo led design systems across web, product, and print; product-launch campaigns for Stitch and Atlas; event experiences; the company-values launch; and internal brand storytelling.",
+  "scope": "MongoDB is a developer data platform. As Creative Director, Ayo led design systems across web, product, and print; product-launch campaigns for Stitch and Atlas; the Nasdaq IPO out-of-home and press campaign; event experiences; the company-values launch; and internal brand storytelling.",
   "cover": "/media/mongodb/dream-big/a02cfeea3168f96d.webp",
   "coverAlt": "A MongoDB global rebrand launch experience collage",
   "linkedProjects": [
     "dream-big",
+    "mongodb-ipo-nasdaq-debut",
     "mongodb-the-next-generation-database",
     "mongodb-web",
     "mongodb-for-giant-ideas-video",
