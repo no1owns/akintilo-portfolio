@@ -45,7 +45,7 @@
       "image": "/media/lyft/lyft-email-reliable-ride.webp",
       "alt": "A narrow Lyft Business event-invite email, \"Great things start with a reliable ride,\" with a Register Now button and a sidebar listing conference activities, a speaker session, and two speaker photos",
       "caption": "",
-      "width": "narrow",
+      "width": "scroll-long",
       "spacing": "regular"
     },
     {

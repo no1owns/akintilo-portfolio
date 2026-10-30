@@ -150,4 +150,19 @@
 .responsibility-col li::before{content:'';position:absolute;left:0;top:.65em;width:7px;height:1px;background:var(--border)}
 @media(max-width:800px){.responsibility-block{grid-template-columns:1fr;gap:36px}}
 
+/* Scrollable long-form image presentation (2026-10): for portfolio artwork with an
+   extreme aspect ratio -- a tall email/landing-page screenshot, say -- that would
+   otherwise stretch the whole page down at its natural height. Bounded height, vertical
+   scroll inside the frame instead. tabindex=0 on the scroll container makes it keyboard
+   focusable and keyboard-scrollable (arrow/space/page keys) with no extra JS; overflow-x
+   hidden plus the image's own width:100% keeps this from ever causing page-level
+   horizontal overflow. See src/longform.js (isLongFormPresentation) and the Width field
+   on the Image block in admin/editor.js ("Scrollable long page"). Ordinary image blocks
+   (full/narrow) are untouched by this rule set. */
+.long-form{max-width:800px;margin:auto}
+.long-form-scroll{max-height:min(78vh,900px);overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;background:var(--surface);border:1px solid var(--border);border-radius:2px}
+.long-form-scroll:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
+.long-form-scroll img{display:block;width:100%;height:auto}
+@media(max-width:560px){.long-form-scroll{max-height:70vh}}
+
 .preview{padding:32px;max-width:1100px;margin:auto}.preview h1{font-size:48px;line-height:1.05}.preview .summary{font-size:23px}.preview p{white-space:pre-line}.preview img{max-width:100%}.preview h2{margin-top:32px}.preview .gallery.layout-bento{display:block;columns:3;column-gap:24px}.preview .gallery.layout-bento figure{break-inside:avoid;margin:0 0 24px}.preview .gallery.layout-bento figure[data-size="wide"]{column-span:all}
