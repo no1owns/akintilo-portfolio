@@ -72,7 +72,8 @@ function BentoGallery({block}){
       const shape=bentoShapeFor(im.size||'auto');
       const fit=im.fit==='cover'?'cover':'contain';
       const position=['top','bottom','left','right'].includes(im.position)?im.position:'center';
-      return <figure key={j} className="bento-tile" data-shape={shape}>
+      const tileClass=im.boundedHeight?'bento-tile bounded-mobile':'bento-tile';
+      return <figure key={j} className={tileClass} data-shape={shape}>
         <button
           type="button"
           className="bento-trigger"

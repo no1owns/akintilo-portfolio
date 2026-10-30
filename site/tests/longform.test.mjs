@@ -88,11 +88,14 @@ test("the CMS preview template renders the long-form wrapper for scroll-long ima
   );
 });
 
-// Regression guard for the specific asset this presentation was built for: an extreme
-// 358x2516 (~7:1) Lyft email screenshot that used to render at its full natural height
-// inside a plain 'narrow' figure. See docs/portfolio-decisions.md.
-test("the Lyft reliable-ride email screenshot uses the long-form presentation, not 'narrow'", () => {
-  const block = lyft.blocks.find((b) => b.type === "image" && b.image === "/media/lyft/lyft-email-reliable-ride.webp");
-  assert.ok(block, "expected to find the lyft-email-reliable-ride image block in lyft.json");
-  assert.equal(block.width, LONG_FORM_WIDTH);
+// The Lyft reliable-ride email (358x2516, ~7:1) was the asset this presentation was
+// originally built for -- it has since moved into a bento/modular gallery instead (see
+// the boundedHeight tests below), so it's no longer a standalone image block at all.
+// This just guards against a stray 'narrow'/'scroll-long' standalone block reappearing
+// for either email image, which would reintroduce the original unbounded-height bug.
+test("the Lyft email screenshots are not standalone narrow/scroll-long image blocks", () => {
+  for (const path of ["/media/lyft/lyft-email-reliable-ride.webp", "/media/lyft/lyft-email-aaae-conference.webp"]) {
+    const standalone = lyft.blocks.find((b) => b.type === "image" && b.image === path);
+    assert.equal(standalone, undefined, `${path} should not be a standalone image block`);
+  }
 });
