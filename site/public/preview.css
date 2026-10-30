@@ -62,6 +62,18 @@
   .bento-tile:last-child{margin-bottom:0}
   .bento-trigger{height:auto;background:none}
   .bento-trigger img{height:auto;object-fit:contain!important;object-position:center!important}
+  /* height:auto above is right for an ordinary photo -- at full column width, a normal
+     ratio never gets unreasonably tall. It's wrong for a deliberately extreme-ratio image
+     (portrait email/landing-page screenshot, ~7:1 tall): natural height at full width
+     would stretch the page by thousands of pixels, the exact bug this presentation exists
+     to avoid. An image flagged boundedHeight (2026-10, src/App.jsx BentoGallery, exposed
+     as the per-image "Bound height on mobile" CMS field) gets a fixed height instead of
+     auto, so sizing isn't circular, and the image scales to fit it at its own ratio --
+     width shrinks accordingly, nothing crops, the whole image stays visible (full detail
+     is still one tap away via the lightbox). Leave ordinary photos unflagged; this rule
+     only applies where explicitly opted in. */
+  .bento-tile.bounded-mobile .bento-trigger{height:70vh;display:flex;align-items:center;justify-content:center}
+  .bento-tile.bounded-mobile .bento-trigger img{width:auto!important;height:100%!important;max-width:100%}
 }
 .gallery.layout-justified{display:block}
 .justified-row{display:flex;justify-content:flex-start;margin-bottom:12px}
