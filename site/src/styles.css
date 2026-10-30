@@ -164,3 +164,20 @@
 .long-form-scroll:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
 .long-form-scroll img{display:block;width:100%;height:auto}
 @media(max-width:560px){.long-form-scroll{max-height:70vh}}
+/* Without this, the box just truncates the image mid-content with no visual cue --
+   reads as a cropping bug, not a deliberate "there's more below" affordance. The fade
+   is a sticky last child of the scrollable content itself, pinned to the visible bottom
+   edge while scrolling -- a permanent vignette over the box's own edge, present at any
+   scroll position (including fully scrolled, since the negative margin that pulls it
+   over the image rather than adding scroll distance makes its stuck and natural/unstuck
+   positions coincide here). That's a deliberate tradeoff: a constant "this is a scroll
+   frame" cue, not a precise end-of-content indicator -- getting the latter without JS
+   would mean giving the fade its own space after the image (extra, empty scroll
+   distance) instead of overlapping it. Decorative only (pointer-events:none); the hint
+   text below is the one piece of this that's part of the content, not the scroll box,
+   so it can't be scrolled out of sight.*/
+.long-form-scroll::after{content:'';display:block;position:sticky;bottom:0;left:0;height:64px;margin-top:-64px;background:linear-gradient(to bottom,transparent,var(--surface));pointer-events:none}
+.long-form-hint{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;font-family:var(--font-mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary)}
+.long-form-hint-arrow{font-size:14px;animation:long-form-hint-bounce 1.6s ease-in-out infinite}
+@keyframes long-form-hint-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
+@media(prefers-reduced-motion:reduce){.long-form-hint-arrow{animation:none}}

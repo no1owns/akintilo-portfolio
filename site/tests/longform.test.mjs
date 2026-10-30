@@ -48,6 +48,14 @@ test("ordinary image blocks (full/narrow) keep their original, unwrapped structu
   );
 });
 
+// Regression guard: a bounded scroll box with no visual cue just looks like the image
+// got cropped by mistake -- the hint has to render outside .long-form-scroll (as a
+// sibling, after the closing </div>) so it stays visible and isn't itself scrolled away.
+test("the long-form branch renders a 'scroll to see more' hint outside the scrollable box", () => {
+  assert.ok(imageBlockSource.includes("</div><span className=\"long-form-hint\""), "the hint must be a sibling of .long-form-scroll, not nested inside it");
+  assert.ok(imageBlockSource.includes("aria-hidden=\"true\">Scroll to see more"), "the hint is decorative -- the accessible name already lives on the scrollable container's aria-label");
+});
+
 // Isolate the .long-form / .long-form-scroll CSS block by its own leading comment and
 // the next unrelated rule, same technique as tests/bento.test.mjs.
 const longFormBlockStart = stylesSource.indexOf("/* Scrollable long-form image presentation");
@@ -74,6 +82,29 @@ test("the long-form scroll container shrinks its max-height on phone widths", ()
   assert.ok(mobileBlock.includes(".long-form-scroll{max-height:70vh}"), "mobile max-height should be 70vh");
 });
 
+// Regression guard for the missing-affordance bug: the box was functionally bounded and
+// scrollable from the start, but with no visual signal that content continues below the
+// fold it reads as an accidental crop. A fade plus a standing hint fixes that -- the fade
+// is a constant vignette at the box's bottom edge at any scroll position, not a precise
+// end-of-content indicator (see the CSS comment for why), so these checks assert its
+// presence and the properties that keep it decorative/non-intrusive, not that it hides
+// itself once fully scrolled.
+test("the long-form scroll container has a bottom fade cue that doesn't add scroll distance", () => {
+  assert.ok(longFormBlock.includes(".long-form-scroll::after{"), "expected a ::after fade on the scroll container");
+  const fadeRule = longFormBlock.slice(longFormBlock.indexOf(".long-form-scroll::after{"));
+  assert.ok(fadeRule.includes("position:sticky"), "the fade should stay pinned to the visible bottom edge while scrolling, not scroll away with the content");
+  assert.ok(fadeRule.includes("pointer-events:none"), "the fade is purely decorative and must not intercept scroll/click/focus");
+  assert.ok(fadeRule.includes("margin-top:-"), "a negative margin keeps the fade from adding its own height to the scrollable area");
+});
+
+test("the long-form hint text respects prefers-reduced-motion", () => {
+  assert.ok(longFormBlock.includes(".long-form-hint-arrow{") && longFormBlock.includes("animation:"), "expected an animated hint arrow");
+  assert.ok(
+    longFormBlock.includes("@media(prefers-reduced-motion:reduce){.long-form-hint-arrow{animation:none}}"),
+    "the bouncing hint arrow must be disabled under prefers-reduced-motion",
+  );
+});
+
 test("the CMS Image block exposes a 'Scrollable long page' width option", () => {
   assert.ok(
     editorSource.includes("{label:'Scrollable long page',value:'scroll-long'}"),
@@ -81,10 +112,14 @@ test("the CMS Image block exposes a 'Scrollable long page' width option", () => 
   );
 });
 
-test("the CMS preview template renders the long-form wrapper for scroll-long images", () => {
+test("the CMS preview template renders the long-form wrapper and hint for scroll-long images", () => {
   assert.ok(
     editorSource.includes("b.width==='scroll-long'?h('figure',{className:'long-form'}"),
     "expected the Decap preview template to special-case scroll-long the same way the live site does",
+  );
+  assert.ok(
+    editorSource.includes("h('span',{className:'long-form-hint'},'Scroll to see more"),
+    "the editor preview should show the same scroll affordance an editor would see on the live page",
   );
 });
 

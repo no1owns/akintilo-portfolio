@@ -220,7 +220,7 @@ export function Blocks({blocks=[]}){return groupGalleries(blocks).map((b,i)=><di
  {b.type==='sectionHeading'&&<>{b.eyebrow&&<p className="eyebrow section-eyebrow">{b.eyebrow}</p>}<h2 className="project-section-heading">{b.title}</h2>{b.overview&&<div className="text-block section-overview"><Text>{b.overview}</Text></div>}</>}
  {b.type==='text'&&<div className={`text-block align-${b.align||'left'}`}>{b.title&&<h2>{b.title}</h2>}<Text>{b.body}</Text></div>}
  {b.type==='image'&&(isLongFormPresentation(b.width)
-   ?<figure className="long-form"><div className="long-form-scroll" tabIndex={0} role="group" aria-label={longFormAriaLabel(b.alt)}><Img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/></div>{b.caption&&<figcaption>{b.caption}</figcaption>}</figure>
+   ?<figure className="long-form"><div className="long-form-scroll" tabIndex={0} role="group" aria-label={longFormAriaLabel(b.alt)}><Img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/></div><span className="long-form-hint" aria-hidden="true">Scroll to see more<span className="long-form-hint-arrow">&#8595;</span></span>{b.caption&&<figcaption>{b.caption}</figcaption>}</figure>
    :<figure className={b.width==='narrow'?'narrow':''}><Img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><figcaption>{b.caption}</figcaption></figure>
  )}
  {b.type==='gallery'&&<>{b.title&&<h2>{b.title}</h2>}{(b.layout||'bento')==='justified'?<JustifiedGallery block={b}/>:b.layout==='uniform'?<UniformGallery block={b}/>:<BentoGallery block={b}/>}</>}
