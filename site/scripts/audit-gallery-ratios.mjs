@@ -104,4 +104,4 @@ if (ratioFlags) parts.push(`${ratioFlags} extreme-ratio image(s)`);
 if (staleMetadataFlags) parts.push(`${staleMetadataFlags} stale-dimension image(s)`);
 if (errors) parts.push(`${errors} unreadable reference(s)`);
 console.log(parts.length ? `Flagged: ${parts.join(', ')}.` : 'No extreme-aspect-ratio or stale-dimension justified-gallery images found.');
-if (errors) process.exitCode = 1;
+if (ratioFlags || staleMetadataFlags || errors) process.exitCode = 1;
