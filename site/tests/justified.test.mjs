@@ -102,3 +102,50 @@ test("manual order is preserved at phone widths too", () => {
   const flat = rows.flatMap((r) => r.images.map((im) => im.image));
   assert.deepEqual(flat, images.map((im) => im.image));
 });
+
+// --- Lone extreme-ratio image never gets stretched to fill its row (2026-10) ------
+//
+// Regression: an image whose own ratio is extreme enough to need pairing with a
+// same-row partner can get backed out into its own single-image row on phone widths
+// (see the 112px-floor test above). Before this fix, that single-image row called
+// stretchedHeight(row, containerWidth, gap), which for one very narrow item is
+// containerWidth/ratio -- thousands of pixels for a ~7:1 ratio image, i.e. the exact
+// "page stretched to the image's natural height" bug this presentation exists to
+// avoid, just reached through the phone pairing-backout path instead of a standalone
+// unbounded image block.
+
+test("a lone extreme-ratio image backed out of a phone pairing renders at targetHeight, not stretched", () => {
+  const images = [img(358, 2516, "tall"), img(1253, 1980, "normal")]; // ratios ~0.142 and ~0.633, the real Lyft case
+  const rows = computeJustifiedRows(images, 390, 8);
+  const tallRow = rows.find((r) => r.images[0].image === "tall");
+  assert.ok(tallRow, "expected the extreme-ratio image to close its own row");
+  assert.equal(tallRow.images.length, 1);
+  assert.equal(tallRow.height, justifiedTargetHeight(390));
+});
+
+test("a lone ordinary (non-extreme) narrow image is still allowed to stretch taller than target", () => {
+  // Ratio 0.4 doesn't cross RATIO_WARN_MIN (1/4.5 ~= 0.222) -- an isolated portrait
+  // photo stretching taller than the row target when it has no pairing partner is
+  // normal, readable justified-grid behavior, not the bug this fix targets. Mirrors
+  // the existing 112px-floor test's own fixture, which depends on this staying true.
+  const images = [img(400, 1000, "narrow"), img(1800, 1000, "wide")];
+  const rows = computeJustifiedRows(images, 390, 8);
+  const narrowRow = rows.find((r) => r.images[0].image === "narrow");
+  assert.ok(narrowRow.height > justifiedTargetHeight(390), "a non-extreme lone image should still be allowed to stretch");
+});
+
+// --- reviewedRatio silences the extreme-ratio console warning (2026-10) -----------
+
+test("reviewedRatio silences the extreme-aspect-ratio console warning", () => {
+  const warnings = [];
+  const originalWarn = console.warn;
+  console.warn = (msg) => warnings.push(msg);
+  try {
+    computeJustifiedRows([img(358, 2516, "unreviewed")], 1200, 12);
+    computeJustifiedRows([{ ...img(358, 2516, "reviewed"), reviewedRatio: true }], 1200, 12);
+  } finally {
+    console.warn = originalWarn;
+  }
+  assert.equal(warnings.length, 1, "expected exactly one warning, from the unreviewed image");
+  assert.match(warnings[0], /unreviewed/);
+});

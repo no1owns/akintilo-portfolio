@@ -83,6 +83,32 @@ test("exits with a non-zero status when declared dimensions don't match the actu
   }
 });
 
+test("an image marked reviewedRatio exits 0 despite exceeding the extreme-ratio threshold", async () => {
+  const dir = makeFixture();
+  try {
+    await writeImage(dir, "tall.webp", 100, 1000); // ratio 0.1, well past 4.5 -- same shape as the failing-audit test above
+    writeProject(dir, [{ image: "/media/tall.webp", width: 100, height: 1000, alt: "tall", reviewedRatio: true }]);
+    const { status, stdout } = runAudit(dir);
+    assert.equal(status, 0, "a deliberately reviewed extreme ratio should not fail the audit");
+    assert.match(stdout, /reviewed exception/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test("reviewedRatio does not also silence a genuine stale-dimension mismatch on the same image", async () => {
+  const dir = makeFixture();
+  try {
+    await writeImage(dir, "tall-stale.webp", 100, 1000); // actual ratio 0.1
+    writeProject(dir, [{ image: "/media/tall-stale.webp", width: 200, height: 1000, alt: "tall-stale", reviewedRatio: true }]); // declared width wrong
+    const { status, stdout } = runAudit(dir);
+    assert.notEqual(status, 0, "reviewedRatio exempts the ratio check only, not stale-dimension detection");
+    assert.match(stdout, /stale-dimension image/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test("exits with a non-zero status when a referenced file is missing", () => {
   const dir = makeFixture();
   try {

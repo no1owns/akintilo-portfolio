@@ -140,27 +140,18 @@ test("boundedHeight is exposed as a per-image CMS field on the Bento gallery ima
   );
 });
 
-// Content regression: the two Lyft email screenshots (the original motivating case for
-// a bounded presentation) now live in a bento/modular gallery rather than a standalone
-// image block. Only the genuinely extreme one (358x2516, ~7:1) needs boundedHeight --
-// its sibling (1253x1980, ~0.63) is a normal-enough portrait ratio that natural height
-// on phone is already reasonable.
-test("the Lyft reliable-ride email is a bento-gallery portrait tile with boundedHeight set", () => {
-  const galleryBlock = lyft.blocks.find(
-    (b) => b.type === "gallery" && b.layout === "bento" && (b.images || []).some((im) => im.image === "/media/lyft/lyft-email-reliable-ride.webp"),
-  );
-  assert.ok(galleryBlock, "expected a bento gallery block containing the reliable-ride email");
-  const image = galleryBlock.images.find((im) => im.image === "/media/lyft/lyft-email-reliable-ride.webp");
-  assert.equal(image.size, "portrait");
-  assert.equal(image.boundedHeight, true);
-});
-
-test("the Lyft AAAE-conference email sits in the same bento gallery without boundedHeight", () => {
-  const galleryBlock = lyft.blocks.find(
-    (b) => b.type === "gallery" && b.layout === "bento" && (b.images || []).some((im) => im.image === "/media/lyft/lyft-email-aaae-conference.webp"),
-  );
-  assert.ok(galleryBlock, "expected a bento gallery block containing the aaae-conference email");
-  const image = galleryBlock.images.find((im) => im.image === "/media/lyft/lyft-email-aaae-conference.webp");
-  assert.equal(image.size, "portrait");
-  assert.ok(!image.boundedHeight, "a ~0.63 ratio image doesn't need the mobile height bound");
+// boundedHeight is general-purpose bento infrastructure (2026-10), not tied to any one
+// project's content -- the Lyft emails that originally motivated it have since moved to
+// a justified gallery instead (see tests/justified.test.mjs and docs/portfolio-decisions.md
+// for why: a fixed-shape bento tile letterboxes a ~7:1 image, which read as wasted empty
+// space around it; justified sizes each image's column to its real ratio instead, no
+// letterboxing). These checks just confirm no content currently left dangling with the
+// now-removed combination (a standalone bento gallery block for either email image).
+test("neither Lyft email screenshot sits in a bento gallery block", () => {
+  for (const path of ["/media/lyft/lyft-email-reliable-ride.webp", "/media/lyft/lyft-email-aaae-conference.webp"]) {
+    const bentoBlock = lyft.blocks.find(
+      (b) => b.type === "gallery" && b.layout === "bento" && (b.images || []).some((im) => im.image === path),
+    );
+    assert.equal(bentoBlock, undefined, `${path} should not be in a bento gallery block`);
+  }
 });

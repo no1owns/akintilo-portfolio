@@ -89,17 +89,40 @@ export function computeJustifiedRows(images, containerWidth, gap) {
   const rows = [];
   let row = [], widthAtTarget = 0;
 
+  // A lone image with a genuinely EXTREME ratio (outside RATIO_WARN_MIN/MAX, same
+  // threshold the audit script and the warning above use) never gets stretched taller
+  // than targetHeight to fill the row -- stretchedHeight for a single item is
+  // availableWidth/ratio, which for a very narrow image is enormous (the exact "page
+  // stretched to the image's full natural height" bug this presentation exists to
+  // avoid). It renders at the plain targetHeight instead, same as an incomplete row:
+  // narrow and proportion-correct, not full-bleed. Deliberately narrow in scope:
+  // - only a single-image row -- a multi-image row's natural stretch is already
+  //   constrained by its other members.
+  // - only an EXTREME ratio -- an ordinary single portrait image closing its own row
+  //   (e.g. after the phone pairing backout below) is expected to stretch taller than
+  //   target; that's normal, readable justified-grid behavior, not a bug.
+  // - only when natural height would exceed target -- a lone very WIDE image, where
+  //   stretchedHeight is naturally smaller than target, already shrinks to fit
+  //   correctly on its own and must not be forced back up to target (that would
+  //   overflow the container instead of fixing anything).
   const closeRow = (incomplete) => {
     if (!row.length) return;
-    const height = incomplete ? targetHeight : stretchedHeight(row, containerWidth, gap);
+    let height;
+    if (incomplete) {
+      height = targetHeight;
+    } else {
+      const natural = stretchedHeight(row, containerWidth, gap);
+      const singleExtreme = row.length === 1 && (row[0].ratio < RATIO_WARN_MIN || row[0].ratio > RATIO_WARN_MAX);
+      height = singleExtreme && natural > targetHeight ? targetHeight : natural;
+    }
     rows.push({ images: row, height, incomplete: !!incomplete });
     row = []; widthAtTarget = 0;
   };
 
   images.forEach((image, index) => {
     const ratio = image.width && image.height ? image.width / image.height : 1.5;
-    if (ratio < RATIO_WARN_MIN || ratio > RATIO_WARN_MAX) {
-      console.warn(`Justified gallery image ${image.image || index} has an extreme aspect ratio (${ratio.toFixed(2)}); it will likely row-pack as a sliver -- consider cropping or segmenting it.`);
+    if (!image.reviewedRatio && (ratio < RATIO_WARN_MIN || ratio > RATIO_WARN_MAX)) {
+      console.warn(`Justified gallery image ${image.image || index} has an extreme aspect ratio (${ratio.toFixed(2)}); it will likely row-pack as a sliver -- consider cropping or segmenting it, or set reviewedRatio if this is intentional.`);
     }
     const item = { ...image, index, ratio };
     const isLast = index === images.length - 1;

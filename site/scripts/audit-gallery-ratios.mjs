@@ -65,6 +65,7 @@ async function readActualDimensions(mediaPath) {
 }
 
 let ratioFlags = 0;
+let reviewedExceptions = 0;
 let staleMetadataFlags = 0;
 let errors = 0;
 
@@ -86,10 +87,14 @@ for (const source of CONTENT_SOURCES) {
       const { width, height, pages } = actual;
       const ratio = width / height;
       const extreme = Math.max(ratio, 1 / ratio) > EXTREME_RATIO;
-      if (extreme) {
+      if (extreme && image.reviewedRatio) {
+        reviewedExceptions++;
+        const framing = pages > 1 ? ` (single frame of ${pages})` : '';
+        console.log(`${fullPath} ${where} ${image.image}: actual ratio ${ratio.toFixed(2)} (${width}x${height}${framing}) exceeds ${EXTREME_RATIO}:1, but is marked reviewedRatio -- not failing.`);
+      } else if (extreme) {
         ratioFlags++;
         const framing = pages > 1 ? ` (single frame of ${pages})` : '';
-        console.warn(`${fullPath} ${where} ${image.image}: actual ratio ${ratio.toFixed(2)} (${width}x${height}${framing}) exceeds the ${EXTREME_RATIO}:1 extreme-aspect-ratio threshold and will likely row-pack as a sliver.`);
+        console.warn(`${fullPath} ${where} ${image.image}: actual ratio ${ratio.toFixed(2)} (${width}x${height}${framing}) exceeds the ${EXTREME_RATIO}:1 extreme-aspect-ratio threshold and will likely row-pack as a sliver. Set reviewedRatio if this is intentional.`);
       }
       if (image.width && image.height && (image.width !== width || image.height !== height)) {
         staleMetadataFlags++;
@@ -99,9 +104,14 @@ for (const source of CONTENT_SOURCES) {
   }
 }
 
-const parts = [];
-if (ratioFlags) parts.push(`${ratioFlags} extreme-ratio image(s)`);
-if (staleMetadataFlags) parts.push(`${staleMetadataFlags} stale-dimension image(s)`);
-if (errors) parts.push(`${errors} unreadable reference(s)`);
-console.log(parts.length ? `Flagged: ${parts.join(', ')}.` : 'No extreme-aspect-ratio or stale-dimension justified-gallery images found.');
+const failParts = [];
+if (ratioFlags) failParts.push(`${ratioFlags} extreme-ratio image(s)`);
+if (staleMetadataFlags) failParts.push(`${staleMetadataFlags} stale-dimension image(s)`);
+if (errors) failParts.push(`${errors} unreadable reference(s)`);
+const infoParts = [];
+if (reviewedExceptions) infoParts.push(`${reviewedExceptions} reviewed exception(s), not failing`);
+console.log(
+  failParts.length ? `Flagged: ${failParts.join(', ')}.` : 'No extreme-aspect-ratio or stale-dimension justified-gallery images found.',
+);
+if (infoParts.length) console.log(infoParts.join(', ') + '.');
 if (ratioFlags || staleMetadataFlags || errors) process.exitCode = 1;

@@ -44,22 +44,22 @@
       "type": "gallery",
       "title": "",
       "spacing": "regular",
-      "layout": "bento",
+      "layout": "justified",
       "images": [
         {
           "image": "/media/lyft/lyft-email-reliable-ride.webp",
+          "width": 358,
+          "height": 2516,
           "alt": "A narrow Lyft Business event-invite email, \"Great things start with a reliable ride,\" with a Register Now button and a sidebar listing conference activities, a speaker session, and two speaker photos",
           "caption": "",
-          "size": "portrait",
-          "fit": "contain",
-          "boundedHeight": true
+          "reviewedRatio": true
         },
         {
           "image": "/media/lyft/lyft-email-aaae-conference.webp",
+          "width": 1253,
+          "height": 1980,
           "alt": "A Lyft Business email promoting Lyft's presence at the AAAE conference, with a photo of travelers moving through an airport-style scene, session details for \"Anticipating Tomorrow's Trends,\" a booth number, and a promo code",
-          "caption": "",
-          "size": "portrait",
-          "fit": "contain"
+          "caption": ""
         }
       ]
     },
