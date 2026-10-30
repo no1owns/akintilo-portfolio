@@ -15,8 +15,14 @@ const ROW_HEIGHT_MIN_FACTOR = 0.75;
 const ROW_HEIGHT_MAX_FACTOR = 1.20;
 const PHONE_MAX_WIDTH = 560;
 const PHONE_MIN_IMAGE_WIDTH = 112;
-const RATIO_WARN_MIN = 0.3;
-const RATIO_WARN_MAX = 3.5;
+// Kept in sync with EXTREME_RATIO in scripts/audit-gallery-ratios.mjs (2026-10). That
+// script reads actual file dimensions via Sharp; this one only has the content JSON's
+// declared width/height to work with (no filesystem access at runtime), so it can't
+// catch stale metadata -- but the extreme-ratio threshold itself should match, or a
+// gallery could warn at build time and stay silent in the browser (or vice versa).
+const EXTREME_RATIO = 4.5;
+const RATIO_WARN_MIN = 1 / EXTREME_RATIO;
+const RATIO_WARN_MAX = EXTREME_RATIO;
 
 function stretchedHeight(items, containerWidth, gap) {
   const totalRatio = items.reduce((sum, item) => sum + item.ratio, 0);

@@ -5,6 +5,7 @@ import settings from '../content/settings.json';
 import reel from '../content/reel.json';
 import {bentoShapeFor} from './bento.js';
 import {justifiedTargetHeight, computeJustifiedRows} from './justified.js';
+import {isLongFormPresentation, longFormAriaLabel} from './longform.js';
 const files=import.meta.glob('../content/projects/*.json',{eager:true,import:'default'});
 const projects=Object.values(files).filter(p=>p.published).sort((a,b)=>a.order-b.order);
 const experimentFiles=import.meta.glob('../content/experiments/*.json',{eager:true,import:'default'});
@@ -218,7 +219,10 @@ function groupGalleries(blocks){return blocks.reduce((result,block)=>{const prev
 export function Blocks({blocks=[]}){return groupGalleries(blocks).map((b,i)=><div key={i} className={`block space-${b.spacing||'regular'} type-${b.type}`}>
  {b.type==='sectionHeading'&&<>{b.eyebrow&&<p className="eyebrow section-eyebrow">{b.eyebrow}</p>}<h2 className="project-section-heading">{b.title}</h2>{b.overview&&<div className="text-block section-overview"><Text>{b.overview}</Text></div>}</>}
  {b.type==='text'&&<div className={`text-block align-${b.align||'left'}`}>{b.title&&<h2>{b.title}</h2>}<Text>{b.body}</Text></div>}
- {b.type==='image'&&<figure className={b.width==='narrow'?'narrow':''}><Img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><figcaption>{b.caption}</figcaption></figure>}
+ {b.type==='image'&&(isLongFormPresentation(b.width)
+   ?<figure className="long-form"><div className="long-form-scroll" tabIndex={0} role="group" aria-label={longFormAriaLabel(b.alt)}><Img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/></div>{b.caption&&<figcaption>{b.caption}</figcaption>}</figure>
+   :<figure className={b.width==='narrow'?'narrow':''}><Img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><figcaption>{b.caption}</figcaption></figure>
+ )}
  {b.type==='gallery'&&<>{b.title&&<h2>{b.title}</h2>}{(b.layout||'bento')==='justified'?<JustifiedGallery block={b}/>:b.layout==='uniform'?<UniformGallery block={b}/>:<BentoGallery block={b}/>}</>}
  {b.type==='split'&&<div className={`split image-${b.side||'left'}`}><Img src={mediaURL(b.image)} alt={b.alt||''} loading="lazy"/><div><h2>{b.title}</h2><Text>{b.body}</Text></div></div>}
  {b.type==='video'&&<Video block={b}/>}
