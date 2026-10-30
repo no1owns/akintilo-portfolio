@@ -149,3 +149,34 @@ test("reviewedRatio silences the extreme-aspect-ratio console warning", () => {
   assert.equal(warnings.length, 1, "expected exactly one warning, from the unreviewed image");
   assert.match(warnings[0], /unreviewed/);
 });
+
+// --- Phone pairing also backs out when a pair would render too SHORT (2026-10) ----
+//
+// Regression: the 112px-floor test above only guards against a pairing rendering
+// either image too NARROW. A set of several similar-ratio landscape photos (the
+// mongodb-ipo-nasdaq-debut case: four ~1.5-ratio Times Square photos) can clear that
+// width floor easily while the pair still renders as a cramped ~113px-tall thumbnail
+// strip -- technically "wide enough," but a visibly worse presentation than a single
+// full-width image per row.
+
+test("a pairing that would render too SHORT (even though neither image is too narrow) backs out to single-image rows", () => {
+  const images = [img(1500, 1000, "a"), img(1500, 1000, "b")]; // ratio 1.5 each, the real mongodb-ipo case
+  const rows = computeJustifiedRows(images, 390, 8);
+  assert.deepEqual(rows.map((r) => r.images.length), [1, 1], "expected both images backed out to their own rows, not paired");
+  for (const row of rows) {
+    assert.ok(row.height >= justifiedTargetHeight(390) * 0.75, `row height ${row.height} is still below the floor`);
+  }
+});
+
+test("four same-ratio landscape photos (the mongodb-ipo case) render one per row on phone, not two cramped pairs", () => {
+  const images = [img(2000, 1333, "a"), img(2000, 1333, "b"), img(2000, 1333, "c"), img(2000, 1333, "d")];
+  const rows = computeJustifiedRows(images, 390, 8);
+  assert.deepEqual(rows.map((r) => r.images.length), [1, 1, 1, 1]);
+  const flat = rows.flatMap((r) => r.images.map((im) => im.image));
+  assert.deepEqual(flat, ["a", "b", "c", "d"], "order must still be preserved");
+});
+
+test("a pairing that clears both the width and height floors is still accepted (no regression on the normal case)", () => {
+  const rows = computeJustifiedRows(square(5), 390, 8); // from the existing "phone widths cap rows at 2 images" fixture
+  assert.deepEqual(rows.map((r) => r.images.length), [2, 2, 1]);
+});

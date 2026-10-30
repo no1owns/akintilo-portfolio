@@ -63,6 +63,42 @@
       "caption": "National print placement, dated Tuesday, October 24, 2017.",
       "width": "narrow",
       "spacing": "regular"
+    },
+    {
+      "type": "sectionHeading",
+      "eyebrow": "MongoDB",
+      "title": "Concept exploration",
+      "overview": "Early billboard and press concepts explored for the same IPO moment, mocked up on stock billboard and magazine-cover templates -- shown here as design exploration, not placed or published work.",
+      "spacing": "generous"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "spacing": "regular",
+      "layout": "justified",
+      "images": [
+        {
+          "image": "/media/mongodb/mongodb-ipo-nasdaq-debut/mongodb-ipo-concept-billboard-delorean-day.webp",
+          "width": 2000,
+          "height": 1334,
+          "alt": "Concept billboard mockup on a daytime roadside template: a DeLorean illustration beside the headline \"The wait is over / The first database IPO since 1986,\" the mongoDB leaf mark, and a \"mongoDB | For Giant Ideas\" lockup",
+          "caption": "Concept exploration, daytime roadside mockup -- not a placed billboard."
+        },
+        {
+          "image": "/media/mongodb/mongodb-ipo-nasdaq-debut/mongodb-ipo-concept-billboard-delorean-night.webp",
+          "width": 2000,
+          "height": 1334,
+          "alt": "The same billboard concept on a dark background, mocked up on a nighttime city-street template with the same \"The wait is over / The first database IPO since 1986\" headline and \"mongoDB | For Giant Ideas\" lockup",
+          "caption": "Concept exploration, nighttime mockup of the same creative -- not a placed billboard."
+        },
+        {
+          "image": "/media/mongodb/mongodb-ipo-nasdaq-debut/mongodb-ipo-concept-fast-company-cover.webp",
+          "width": 1000,
+          "height": 1243,
+          "alt": "A Fast Company magazine cover concept mockup headlined \"Migrate to the Cloud,\" featuring MongoDB CEO Dev Ittycheria and the mongoDB leaf mark",
+          "caption": "Concept exploration, mocked up on a Fast Company cover template -- not a published cover."
+        }
+      ]
     }
   ],
   "cover": "/media/mongodb/mongodb-ipo-nasdaq-debut/mongodb-ipo-nasdaq-tower-wrap-closeup.webp",
