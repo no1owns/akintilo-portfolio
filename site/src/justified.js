@@ -133,8 +133,17 @@ export function computeJustifiedRows(images, containerWidth, gap) {
       row.push(item);
       if (row.length === 2) {
         const height = stretchedHeight(row, containerWidth, gap);
+        // Width floor: neither image ends up too narrow to read. Height floor: the
+        // pair as a whole doesn't end up a cramped thumbnail strip well short of
+        // target -- two similar-ratio landscape images (a common case: a set of
+        // same-ish photos) can clear the width floor easily while still rendering
+        // small, since pairing two wide images side by side in a narrow phone
+        // viewport only works well when they're not also forced short. Reuses
+        // ROW_HEIGHT_MIN_FACTOR, the same floor the desktop/tablet rebalance band
+        // uses, so "clearly too small" means the same thing at every width.
         const tooNarrow = row.some((r) => r.ratio * height < PHONE_MIN_IMAGE_WIDTH);
-        if (tooNarrow) {
+        const tooShort = height < targetHeight * ROW_HEIGHT_MIN_FACTOR;
+        if (tooNarrow || tooShort) {
           const current = row.pop();
           closeRow(false);
           row = [current];
