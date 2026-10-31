@@ -6,10 +6,24 @@
   "published": true,
   "company": "Meta",
   "role": "Creative Consultant, Keynote Storytelling",
-  "summary": "Concept, visual narrative, and deck design for Meta's 2025 developer keynote.",
-  "overview": "Selected to lead the design flow for the full Meta Connect 2025 developer keynote after starting with concept work for one speaker section. The engagement expanded across concept development, narrative structure, storyboarding, motion direction, deck design, and cross-functional production alignment.",
+  "summary": "A single speaker-section assignment for Meta's 2025 developer keynote that grew into leading the design flow for the full presentation.",
+  "overview": "Meta Connect's developer keynote brings together multiple speakers, products, and technical ideas inside one live presentation. I joined to develop concepts for a single speaker section, and the engagement grew into leading the design flow across the full keynote.",
+  "projectBrief": {
+    "context": "Meta Connect required a developer keynote that could connect multiple speakers, products, demonstrations, and technical ideas within one coherent experience.",
+    "challenge": "Each section needed its own purpose and pacing while still feeling like part of the same keynote. The presentation system also had to support speaker introductions, transitions, technical explanations, product moments, and motion.",
+    "contribution": "I began with concept work for one speaker section. The engagement expanded to leading the design flow for the full developer keynote, including concept development, narrative structure, storyboarding, slide layouts, motion direction, and production alignment.",
+    "approach": "Establish visual and structural patterns that could carry across speakers and subjects while adapting to different content needs, using hierarchy, pacing, transitions, and repeatable layouts to help the audience follow the story.",
+    "outcome": "The assignment grew from a single speaker section into leading the design flow for the full developer keynote."
+  },
   "outcomes": [],
   "blocks": [
+    {
+      "type": "caseSection",
+      "eyebrow": "Meta",
+      "title": "From one section to the full keynote",
+      "body": "I joined Meta Connect's 2025 developer keynote to develop concepts for a single speaker section. As the keynote took shape, the assignment grew into leading the design flow for the full developer keynote: concept development, narrative structure, storyboarding, slide layouts, motion direction, and alignment across the teams producing it.",
+      "spacing": "generous"
+    },
     {
       "type": "gallery",
       "layout": "justified",
@@ -24,13 +38,20 @@
           "caption": ""
         },
         {
-          "image": "/media/meta-connect/meta-connect-02.webp",
-          "width": 1280,
-          "height": 720,
-          "alt": "Keynote slide showing an AI \"Create anything\" content-generation demo on stage",
+          "image": "/media/meta-connect/meta-connect-03.webp",
+          "width": 1920,
+          "height": 1080,
+          "alt": "Meta Connect 2025 keynote title slide",
           "caption": ""
         }
       ]
+    },
+    {
+      "type": "caseSection",
+      "eyebrow": "Keynote system",
+      "title": "Building a flexible keynote system",
+      "body": "Each part of the keynote needed its own purpose and pacing while still reading as one continuous story. I worked on a set of repeatable title, section, and transition layouts that could carry across different speakers and subjects without losing a consistent visual language.",
+      "spacing": "generous"
     },
     {
       "type": "gallery",
@@ -39,24 +60,10 @@
       "spacing": "regular",
       "images": [
         {
-          "image": "/media/meta-connect/meta-connect-03.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "Meta Connect 2025 keynote title slide",
-          "caption": ""
-        },
-        {
           "image": "/media/meta-connect/meta-connect-04.webp",
           "width": 1920,
           "height": 1080,
           "alt": "\"Developer\" keynote section title slide",
-          "caption": ""
-        },
-        {
-          "image": "/media/meta-connect/meta-connect-05.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "Meta Connect keynote section title slide with abstract graphic",
           "caption": ""
         },
         {
@@ -65,7 +72,22 @@
           "height": 1080,
           "alt": "\"Coming up next\" keynote transition slide",
           "caption": ""
-        },
+        }
+      ]
+    },
+    {
+      "type": "caseSection",
+      "eyebrow": "Presentation design",
+      "title": "Supporting speakers and technical stories",
+      "body": "The keynote moved between speaker introductions, technical walkthroughs, and product moments, each with its own pacing and information needs. The slides below are examples from the keynote, pulled from public event documentation since the original working files weren't retained; not every one pictured was designed by me, but together they show the kind of layouts and hierarchy the role was responsible for shaping.",
+      "spacing": "generous"
+    },
+    {
+      "type": "gallery",
+      "layout": "justified",
+      "title": "",
+      "spacing": "regular",
+      "images": [
         {
           "image": "/media/meta-connect/meta-connect-07.webp",
           "width": 1920,
@@ -79,55 +101,12 @@
           "height": 1080,
           "alt": "Speaker introduction slide for Michael Abrash",
           "caption": ""
-        }
-      ]
-    },
-    {
-      "type": "gallery",
-      "layout": "justified",
-      "title": "",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/meta-connect/meta-connect-09.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "Meta logo title card",
-          "caption": ""
         },
         {
           "image": "/media/meta-connect/meta-connect-10.webp",
           "width": 1920,
           "height": 1080,
           "alt": "Keynote slide showcasing mobile games on Meta Horizon, with a \"5000+ new worlds\" statistic",
-          "caption": ""
-        },
-        {
-          "image": "/media/meta-connect/meta-connect-11.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "On-stage product and AI feature showcase, including smart glasses, a VR headset, and AI content-generation examples",
-          "caption": ""
-        },
-        {
-          "image": "/media/meta-connect/meta-connect-12.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "Keynote slide showcasing mobile games on Meta Horizon, with a \"4x active users in mobile worlds\" statistic",
-          "caption": ""
-        },
-        {
-          "image": "/media/meta-connect/meta-connect-13.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "Speaker introduction slide for Michael Abrash",
-          "caption": ""
-        },
-        {
-          "image": "/media/meta-connect/meta-connect-14.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "\"Create with AI\" keynote slide showing AI-generated world and character examples",
           "caption": ""
         },
         {
@@ -157,54 +136,45 @@
           "height": 1080,
           "alt": "Exploded-view product diagram of Meta smart-glasses components",
           "caption": ""
-        },
+        }
+      ]
+    },
+    {
+      "type": "responsibility",
+      "title1": "Creative direction",
+      "items1": [
+        "Concept development",
+        "Visual narrative",
+        "Presentation layouts",
+        "Storyboarding"
+      ],
+      "title2": "Production collaboration",
+      "items2": [
+        "Motion direction",
+        "Speaker-section alignment",
+        "Cross-functional reviews",
+        "Production handoff and refinement"
+      ],
+      "spacing": "generous"
+    },
+    {
+      "type": "caseSection",
+      "eyebrow": "On stage",
+      "title": "The live experience",
+      "body": "The keynote was delivered live, in front of an audience, across a multi-day event. The same layouts and pacing had to work on stage, not only on a slide.",
+      "spacing": "generous"
+    },
+    {
+      "type": "gallery",
+      "layout": "justified",
+      "title": "",
+      "spacing": "regular",
+      "images": [
         {
-          "image": "/media/meta-connect/meta-connect-19.webp",
+          "image": "/media/meta-connect/meta-connect-14.webp",
           "width": 1920,
           "height": 1080,
-          "alt": "Close-up exploded diagram of a smart-glasses camera and lens module",
-          "caption": ""
-        },
-        {
-          "image": "/media/meta-connect/meta-connect-20.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "AR interface concept showing a hand gesture alongside a chat app mockup",
-          "caption": ""
-        },
-        {
-          "image": "/media/meta-connect/meta-connect-21.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "\"Creator Fund\" keynote slide outlining monthly bonuses, milestone rewards, and organic earnings for creators",
-          "caption": ""
-        },
-        {
-          "image": "/media/meta-connect/meta-connect-22.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "Keynote slide on player motivation: Competence, Autonomy, and Relatedness",
-          "caption": ""
-        },
-        {
-          "image": "/media/meta-connect/meta-connect-23.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "\"You set the tone\" keynote slide on setting social norms for players",
-          "caption": ""
-        },
-        {
-          "image": "/media/meta-connect/meta-connect-24.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "\"Manual curation\" keynote slide listing four content-curation factors",
-          "caption": ""
-        },
-        {
-          "image": "/media/meta-connect/meta-connect-25.webp",
-          "width": 1920,
-          "height": 1080,
-          "alt": "\"Lay of the land sessions\" keynote agenda slide",
+          "alt": "Stage wide shot of the \"Create with AI\" keynote section, showing AI-generated world and character examples on screen above the audience",
           "caption": ""
         },
         {
@@ -212,7 +182,7 @@
           "width": 1920,
           "height": 1080,
           "alt": "Collage of people wearing and using Meta smart glasses and VR headsets in everyday settings",
-          "caption": ""
+          "caption": "Public product photography shown for context, not from the keynote itself."
         }
       ]
     }
