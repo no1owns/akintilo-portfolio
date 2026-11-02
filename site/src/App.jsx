@@ -181,12 +181,13 @@ function JustifiedGallery({block}) {
   return (
     <div ref={ref} className="gallery layout-justified">
       {rows.map((row, i) => (
-        <div key={i} className={`justified-row${row.incomplete ? ' incomplete' : ''}`} style={{height: row.height, gap}}>
+        <div key={i} className={`justified-row${row.incomplete ? ' incomplete' : ''}`} style={{gap}}>
           {row.images.map((image) => (
             <figure key={image.index} style={{width: image.ratio * row.height}}>
               <button
                 type="button"
                 className="justified-trigger"
+                style={{height: row.height}}
                 aria-label={`View full size: ${imageAccessibleName(image, image.index + 1, images.length)}`}
                 onClick={(event) => openLightbox(event, image.index)}
               >
@@ -198,7 +199,7 @@ function JustifiedGallery({block}) {
                   loading="lazy"
                 />
               </button>
-              {image.caption && <figcaption>{image.caption}</figcaption>}
+              {image.caption && <figcaption className="justified-caption">{image.caption}</figcaption>}
             </figure>
           ))}
         </div>
