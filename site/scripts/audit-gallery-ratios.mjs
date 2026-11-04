@@ -24,7 +24,6 @@ const CONTENT_SOURCES = [
   { dir: 'content/projects', kind: 'blocks' },
   { dir: 'content/collections', kind: 'blocks' },
   { dir: 'content/experiments', kind: 'gallery' },
-  { dir: 'content/design-utilities', kind: 'gallery' },
 ];
 
 function justifiedImagesFromBlocks(data) {
@@ -39,9 +38,9 @@ function justifiedImagesFromBlocks(data) {
 }
 
 function justifiedImagesFromGallery(data) {
-  // experiments/design-utilities render their `gallery` list as a single implicit
-  // justified-layout block (see ExperimentDetail in src/App.jsx) -- no per-block
-  // layout field exists to check.
+  // experiments render their `gallery` list as a single implicit justified-layout
+  // block (see ExperimentDetail in src/App.jsx) -- no per-block layout field exists
+  // to check.
   return (data.gallery || []).map((image, imageIndex) => ({ image, where: `gallery[${imageIndex}]` }));
 }
 
