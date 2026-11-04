@@ -27,10 +27,52 @@
           "caption": ""
         },
         {
+          "image": "/media/appomni/appomni-events/appomni-booth-concept-rugged-devices-01.webp",
+          "width": 1200,
+          "height": 904,
+          "alt": "A concept-exploration grid of four weathered, salvaged-tech device renders on cracked concrete among ivy, part of early mood-board work for the overgrown-ruins Black Hat booth theme",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/appomni-events/appomni-booth-concept-rugged-devices-02.webp",
+          "width": 1200,
+          "height": 904,
+          "alt": "A second concept-exploration grid of weathered, salvaged-tech device renders in the same overgrown-ruins mood-board direction",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/d97bfbc3c6ca5742.webp",
+          "width": 1200,
+          "height": 904,
+          "alt": "A concept-exploration grid of four dark, dripping-neon city-skyline illustrations explored as a backdrop mood for the overgrown-ruins Black Hat booth theme",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/00dcf2545485c1b3.webp",
+          "width": 1849,
+          "height": 1446,
+          "alt": "A concept-exploration grid of four glowing-tower cityscape illustrations, each showing a silhouetted figure beside a vertical beam of light, explored as a backdrop mood for the overgrown-ruins Black Hat booth theme",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/dd54606af09f889e.webp",
+          "width": 1920,
+          "height": 1074,
+          "alt": "A rendered AppOmni trade-show booth at night, labeled Hanging Banner and Side Wall /w door, with a glowing city-skyline backdrop, a demo station, and attendees gathered around a reception counter",
+          "caption": ""
+        },
+        {
           "image": "/media/appomni/appomni-events/booth-render-isometric.webp",
           "width": 1066,
           "height": 598,
           "alt": "An isometric 3D render of an AppOmni trade-show booth labeled with build specifications: a 15-foot square hanging sign, LED tiles, a demo station with locking storage, a vertical monitor, and a reception counter",
+          "caption": ""
+        },
+        {
+          "image": "/media/appomni/brand-systems-and-web-performance/2647885173fd79a9.webp",
+          "width": 1682,
+          "height": 1460,
+          "alt": "A \"Graphic Specs\" technical drawing labeled Left Wall, Light Box, Right Wall, and Reception, showing the exact graphic placement and dimensions for the AppOmni booth's TV panels, light box, and cabinetry",
           "caption": ""
         },
         {
@@ -48,13 +90,6 @@
           "caption": ""
         },
         {
-          "image": "/media/appomni/appomni-events/booth-floorplan-back-wall.webp",
-          "width": 1920,
-          "height": 1447,
-          "alt": "A second booth floorplan drawing, labeled Back Wall, BW1 through BW5, and Reception, showing wall-panel and furniture placement for an AppOmni trade-show booth",
-          "caption": ""
-        },
-        {
           "image": "/media/appomni/appomni-events/appomni-booth-team-photo.webp",
           "width": 1920,
           "height": 1440,
@@ -66,14 +101,14 @@
           "width": 1080,
           "height": 1080,
           "alt": "A speaker promo graphic: \"See Me at Cisco Live! May 31–June 4, 2026, Las Vegas, NV\" with a photo of Morgan Lloyd, Partner Director EMEA",
-          "caption": "Cisco Live, May 2026"
+          "caption": ""
         },
         {
           "image": "/media/appomni/appomni-events/appomni-black-hat-usa-2026-graphic.webp",
           "width": 1744,
           "height": 1148,
           "alt": "A \"Meet with AppOmni\" promo graphic for Black Hat USA 2026, August 5–6, 2026, W Hotel Penthouse, reading \"Secure SaaS. Govern AI. Reduce risk. One platform.\"",
-          "caption": "Black Hat USA 2026, August 5–6"
+          "caption": ""
         }
       ]
     }
