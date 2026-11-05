@@ -1,0 +1,14 @@
+{
+  "slug": "creative-brief-generator",
+  "title": "Creative Brief Generator",
+  "published": true,
+  "order": 0,
+  "summary": "A browser-based tool for turning project inputs into a portable, AI-ready creative brief.",
+  "overview": "I built a local-first tool for shaping project requirements, creative direction, references, and AI context into one reusable brief. It supports structured input, guided prompts, visual references, tone and guardrail controls, and exports for both people and AI tools.",
+  "format": "Web Tool",
+  "cover": "/media/lab/creative-brief-generator/experiment-creative-brief-generator.webp",
+  "coverAlt": "Creative Brief Generator interface showing project, strategy, execution, references, and AI context controls",
+  "liveUrl": "https://no1owns.github.io/ForgeHQ/projects/creative-brief-generator/",
+  "sourceUrl": "https://github.com/no1owns/ForgeHQ/tree/main/projects/creative-brief-generator",
+  "gallery": []
+}
