@@ -9,11 +9,8 @@ const projects=fs.readdirSync('content/projects').filter(f=>f.endsWith('.json'))
 const collectionsDir='content/collections';
 const collections=fs.existsSync(collectionsDir)?fs.readdirSync(collectionsDir).filter(f=>f.endsWith('.json')).map(f=>JSON.parse(fs.readFileSync(collectionsDir+'/'+f))).filter(c=>c.published):[];
 const experiments=fs.readdirSync('content/experiments').filter(f=>f.endsWith('.json')).map(f=>JSON.parse(fs.readFileSync('content/experiments/'+f))).filter(e=>e.published);
-const designUtilsDir='content/design-utilities';
-const designUtilities=fs.existsSync(designUtilsDir)?fs.readdirSync(designUtilsDir).filter(f=>f.endsWith('.json')).map(f=>JSON.parse(fs.readFileSync(designUtilsDir+'/'+f))).filter(e=>e.published):[];
 const experimentRoutes=experiments.filter(e=>e.detailUrl).map(e=>e.detailUrl.replace(/^\//,''));
-const designUtilityRoutes=designUtilities.filter(e=>e.detailUrl).map(e=>e.detailUrl.replace(/^\//,''));
-const routes=['','about','resume','contact','brand-storytelling','partnership-campaigns','technical-storytelling','communications','events-and-environments',...projects.map(p=>p.slug),...collections.map(c=>c.slug),...experimentRoutes,...designUtilityRoutes];
+const routes=['','about','resume','contact','experiments','brand-storytelling','partnership-campaigns','technical-storytelling','communications','events-and-environments',...projects.map(p=>p.slug),...collections.map(c=>c.slug),...experimentRoutes];
 const unlistedRoutes=['reel'];
 const template=fs.readFileSync('dist/client/index.html','utf8');
 const escape=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -24,8 +21,8 @@ try{
   globalThis.location=new URL('/'+route,'https://preview.invalid');
   const p=projects.find(p=>p.slug===route);
   const col=!p&&collections.find(c=>c.slug===route);
-  const exp=!p&&!col&&(experiments.find(e=>e.detailUrl==='/'+route)||designUtilities.find(e=>e.detailUrl==='/'+route));
-  const title=(p?.title||col?.company||exp?.title||({about:'About',resume:'Experience',contact:'Contact',reel:reel.title,'404':'Page not found'}[route])||'Brand systems. Clearer stories.')+' | Ayodeji Akintilo';
+  const exp=!p&&!col&&experiments.find(e=>e.detailUrl==='/'+route);
+  const title=(p?.title||col?.company||exp?.title||({about:'About',resume:'Experience',contact:'Contact',experiments:'Experiments',reel:reel.title,'404':'Page not found'}[route])||'Brand systems. Clearer stories.')+' | Ayodeji Akintilo';
   const desc=p?.summary||col?.scope||exp?.summary||(route==='reel'?reel.intro:settings.intro);
   let meta=`<meta name="description" content="${escape(desc)}"><meta property="og:title" content="${escape(title)}"><meta property="og:description" content="${escape(desc)}"><meta property="og:type" content="website">`;
   if(settings.siteUrl&&!unlistedRoutes.includes(route)){const canonical=new URL('/'+route,settings.siteUrl).href;meta+=`<link rel="canonical" href="${escape(canonical)}"><meta property="og:url" content="${escape(canonical)}">`;const coverSrc=p?.cover||col?.cover||exp?.cover;if(coverSrc)meta+=`<meta property="og:image" content="${escape(new URL(coverSrc,settings.siteUrl).href)}">`;}
