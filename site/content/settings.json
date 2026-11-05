@@ -3,7 +3,19 @@
   "name": "Ayodeji “Ayo” Akintilo",
   "intro": "I help teams turn complex products into clear stories and design systems they can use.",
   "resume": "",
-  "about": "I work across brand systems, web experiences, and technical storytelling. At AppOmni, I connected reusable page components with the way product marketing, content, and development worked together. Through Forge HQ, I partner with teams on campaign systems and presentations.\n\nI like learning from the people closest to the problem, then turning that insight into something clear and useful. My work spans security, developer platforms, enterprise software, and healthcare.\n\nI build AI-assisted workflows that translate design intent into reusable components, creative tools, motion systems, and production-ready prototypes.",
+  "about": "From an early age, I was drawn to making things—first through drawing, then through studying architecture. That instinct to create, both by hand and on screen, led me to digital art, visual communication, and ultimately design as a way to shape meaningful experiences.\n\nCreating my own typeface deepened that passion and showed me how thoughtful design can shape the way people understand and connect with a brand. Today, I bring that perspective to branding and visual identity, helping companies express who they are with clarity and purpose.\n\nMy work spans brand systems, web experiences, and technical storytelling. At AppOmni, I helped bridge reusable page components with the ways product marketing, content, and development teams worked together. Through Forge HQ, I partner with teams to build campaign systems and presentations that are both strategic and scalable.\n\nI’m most interested in learning from the people closest to the problem and turning their insight into something clear, useful, and effective. My experience includes security, developer platforms, enterprise software, and healthcare.\n\nI also build AI-assisted workflows that translate design intent into reusable components, creative tools, motion systems, and production-ready prototypes.\n\nOutside of work, I spend time in the garden and get outside whenever I can—beaches, woods, anywhere there’s room to slow down.",
+  "aboutPhoto": "/media/about/ayo-portrait.webp",
+  "aboutPhotoAlt": "Portrait of Ayodeji \"Ayo\" Akintilo",
+  "awards": [
+    {
+      "title": "Webby Awards Honoree",
+      "detail": "17th Annual Webby Awards"
+    },
+    {
+      "title": "Certificate of Appreciation",
+      "detail": "U.S. Department of State — recognized for outstanding contributions to digital communications"
+    }
+  ],
   "contactUrl": "",
   "gridGap": "comfortable",
   "headline": "Brand systems.\nClearer stories.",
