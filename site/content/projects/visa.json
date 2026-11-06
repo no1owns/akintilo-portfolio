@@ -13,7 +13,8 @@
     {
       "type": "video",
       "title": "Global Partnership Campaigns video",
-      "url": "https://www-ccv.adobe.io/v1/player/ccv/KFgp954czdh/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "file": "/media/navan/visa/motion-tripactions-hero.mp4",
+      "playback": "controls",
       "spacing": "regular"
     },
     {
