@@ -7,24 +7,22 @@
   "company": "Loft",
   "role": "Founder, Creative Director, Forge HQ",
   "summary": "Visual storytelling for satellite and edge-computing audiences.",
-  "overview": "The verified deliverable for this engagement is the Rise of Virtual Missions poster, translating a technical topic into an accessible visual story.",
+  "overview": "The verified deliverable for this engagement is the Space Made Simple poster, translating a technical topic into an accessible visual story.",
   "outcomes": [],
   "blocks": [
     {
-      "type": "gallery",
-      "title": "",
-      "columns": "1",
-      "spacing": "regular",
-      "images": [
-        {
-          "image": "/media/loft/dd0a597a18f778d5.webp",
-          "width": 1920,
-          "height": 2559,
-          "alt": "Technical Concept Visualization project work",
-          "caption": ""
-        }
-      ],
-      "layout": "justified"
+      "type": "image",
+      "image": "/media/loft/loft/loft-poster-hero.webp",
+      "alt": "The Space Made Simple poster mocked up framed on a wall in a meeting room",
+      "caption": "",
+      "width": "full",
+      "spacing": "regular"
+    },
+    {
+      "type": "sectionHeading",
+      "title": "Poster options",
+      "overview": "Final poster directions, in two colorways.",
+      "spacing": "regular"
     },
     {
       "type": "gallery",
@@ -33,24 +31,102 @@
       "spacing": "regular",
       "images": [
         {
-          "image": "/media/loft/a5c115613cdd0426.webp",
-          "width": 1728,
-          "height": 2304,
-          "alt": "Technical Concept Visualization project work",
+          "image": "/media/loft/loft/loft-poster-01.webp",
+          "width": 496,
+          "height": 661,
+          "alt": "Space Made Simple poster, navy colorway with teal accents, option 1",
           "caption": ""
         },
         {
-          "image": "/media/loft/781848589aa39ea4.webp",
-          "width": 1728,
-          "height": 2304,
-          "alt": "Technical Concept Visualization project work",
+          "image": "/media/loft/loft/loft-poster-02.webp",
+          "width": 496,
+          "height": 661,
+          "alt": "Space Made Simple poster, orange colorway, option 2",
           "caption": ""
         },
         {
-          "image": "/media/loft/a26ee5114fc51d56.webp",
-          "width": 1920,
-          "height": 2559,
-          "alt": "Technical Concept Visualization project work",
+          "image": "/media/loft/loft/loft-poster-03.webp",
+          "width": 496,
+          "height": 661,
+          "alt": "Space Made Simple poster, navy colorway with teal accents, option 3",
+          "caption": ""
+        },
+        {
+          "image": "/media/loft/loft/loft-poster-04.webp",
+          "width": 496,
+          "height": 661,
+          "alt": "Space Made Simple poster, orange colorway, option 4",
+          "caption": ""
+        },
+        {
+          "image": "/media/loft/loft/loft-poster-05.webp",
+          "width": 496,
+          "height": 661,
+          "alt": "Space Made Simple poster, navy colorway with yellow accents, option 5",
+          "caption": ""
+        },
+        {
+          "image": "/media/loft/loft/loft-poster-06.webp",
+          "width": 496,
+          "height": 661,
+          "alt": "Space Made Simple poster, orange colorway, option 6",
+          "caption": ""
+        }
+      ],
+      "layout": "justified"
+    },
+    {
+      "type": "sectionHeading",
+      "title": "Exploration",
+      "overview": "Comparing colorway and size variants side by side before narrowing to final options.",
+      "spacing": "regular"
+    },
+    {
+      "type": "gallery",
+      "title": "",
+      "columns": "2",
+      "spacing": "regular",
+      "images": [
+        {
+          "image": "/media/loft/loft/loft-poster-explorations-01.webp",
+          "width": 994,
+          "height": 559,
+          "alt": "Comparison of orange and navy Space Made Simple poster variants, set 1",
+          "caption": ""
+        },
+        {
+          "image": "/media/loft/loft/loft-poster-explorations-02.webp",
+          "width": 994,
+          "height": 559,
+          "alt": "Comparison of orange and navy Space Made Simple poster variants, set 2",
+          "caption": ""
+        },
+        {
+          "image": "/media/loft/loft/loft-poster-explorations-03.webp",
+          "width": 994,
+          "height": 559,
+          "alt": "Comparison of orange and navy Space Made Simple poster variants, set 3",
+          "caption": ""
+        },
+        {
+          "image": "/media/loft/loft/loft-poster-explorations-04.webp",
+          "width": 994,
+          "height": 559,
+          "alt": "Comparison of orange and navy Space Made Simple poster variants, set 4",
+          "caption": ""
+        },
+        {
+          "image": "/media/loft/loft/loft-poster-explorations-05.webp",
+          "width": 994,
+          "height": 559,
+          "alt": "Early exploratory layouts and component studies for the Space Made Simple poster",
+          "caption": ""
+        },
+        {
+          "image": "/media/loft/loft/loft-poster-explorations-06.webp",
+          "width": 994,
+          "height": 559,
+          "alt": "Mood and reference collage for the Space Made Simple poster direction",
           "caption": ""
         }
       ],
