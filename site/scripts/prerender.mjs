@@ -25,7 +25,15 @@ try{
   const title=(p?.title||col?.company||exp?.title||({about:'About',resume:'Experience',contact:'Contact',experiments:'Experiments',reel:reel.title,'404':'Page not found'}[route])||'Brand systems. Clearer stories.')+' | Ayodeji Akintilo';
   const desc=p?.summary||col?.scope||exp?.summary||(route==='reel'?reel.intro:settings.intro);
   let meta=`<meta name="description" content="${escape(desc)}"><meta property="og:title" content="${escape(title)}"><meta property="og:description" content="${escape(desc)}"><meta property="og:type" content="website">`;
-  if(settings.siteUrl&&!unlistedRoutes.includes(route)){const canonical=new URL('/'+route,settings.siteUrl).href;meta+=`<link rel="canonical" href="${escape(canonical)}"><meta property="og:url" content="${escape(canonical)}">`;const coverSrc=p?.cover||col?.cover||exp?.cover;if(coverSrc)meta+=`<meta property="og:image" content="${escape(new URL(coverSrc,settings.siteUrl).href)}">`;}
+  if(settings.siteUrl&&!unlistedRoutes.includes(route)){
+    const canonical=new URL('/'+route,settings.siteUrl).href;
+    meta+=`<link rel="canonical" href="${escape(canonical)}"><meta property="og:url" content="${escape(canonical)}">`;
+    const coverSrc=p?.cover||col?.cover||exp?.cover;
+    const coverUrl=coverSrc?new URL(coverSrc,settings.siteUrl).href:null;
+    if(coverUrl)meta+=`<meta property="og:image" content="${escape(coverUrl)}">`;
+    meta+=`<meta name="twitter:card" content="${coverUrl?'summary_large_image':'summary'}"><meta name="twitter:title" content="${escape(title)}"><meta name="twitter:description" content="${escape(desc)}">`;
+    if(coverUrl)meta+=`<meta name="twitter:image" content="${escape(coverUrl)}">`;
+  }
   else meta+='<meta name="robots" content="noindex,nofollow">';
   const html=template.replace(/<title>.*?<\/title>/,`<title>${escape(title)}</title>`).replace('</head>',meta+'</head>').replace('<div id="root"></div>',`<div id="root">${renderToString(React.createElement(App))}</div>`);
   const file=route==='404'?'dist/client/404.html':path.join('dist/client',route,'index.html');fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,html);

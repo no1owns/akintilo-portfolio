@@ -1,13 +1,20 @@
 {
   "slug": "tripactions",
-  "title": "Performance Marketing Systems",
+  "title": "TripActions Performance Marketing Campaigns",
   "category": "Brand Systems",
   "order": 2,
   "published": true,
   "company": "TripActions",
   "role": "Director of Design",
-  "summary": "An evergreen campaign system for travel, corporate cards, and expense management, including the TripActions Liquid launch.",
-  "overview": "I connected the travel and fintech brands across web, campaign landing pages, paid creative, and out-of-home placements. Working with growth teams, photographers, and production partners, I helped move the brand from stock imagery toward an owned asset library.",
+  "summary": "Performance marketing and launch creative connecting TripActions travel with its Liquid corporate card and expense product.",
+  "overview": "I built campaign creative connecting TripActions travel with its Liquid corporate card and expense product across web, landing pages, paid media, and out-of-home placements. I also directed custom photography that moved the brand away from stock imagery and created an owned asset library.",
+  "projectBrief": {
+    "context": "TripActions was expanding from corporate travel into cards and expense management through the Liquid product line.",
+    "challenge": "The work needed to connect the travel and fintech stories while giving performance marketing teams enough flexibility to support different formats, audiences, and placements.",
+    "contribution": "I built the visual brand for Liquid and directed campaign creative across web experiences, landing pages, paid media, out-of-home placements, and custom photography.",
+    "approach": "I worked with growth teams, photographers, and production partners to create adaptable campaign assets and replace stock imagery with owned photography.",
+    "outcome": "The custom shoots produced an owned image library reused across web, marketing, internal communications, print, and display campaigns."
+  },
   "outcomes": [],
   "blocks": [
     {
@@ -222,6 +229,11 @@
   "coverAlt": "Performance Marketing Systems project collage",
   "coverPosition": "center",
   "featured": true,
+  "relatedSlugs": [
+    "tripactions-visual-product-ux",
+    "visa",
+    "traverse-21"
+  ],
   "companyFolder": "navan",
   "collection": "navan"
 }

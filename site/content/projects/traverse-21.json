@@ -1,15 +1,22 @@
 {
   "slug": "traverse-21",
-  "title": "TRAVERSE '21 Brand Experience",
+  "title": "TRAVERSE '21 Event Brand Experience",
   "category": "Events and Environments",
-  "order": 2.5,
+  "order": 9,
   "published": true,
   "company": "TripActions",
   "companyFolder": "navan",
   "collection": "navan",
   "role": "Director of Design",
-  "summary": "Brand and creative direction for TRAVERSE '21, TripActions' Travel & Expense Festival, and related event systems.",
-  "overview": "I directed the brand and creative system for TripActions' TRAVERSE '21 Travel & Expense Festival, extending the experience across environmental graphics, registration, stage and presentation materials, signage, digital touchpoints, and related event assets.",
+  "summary": "Brand and creative direction for TripActions' TRAVERSE '21 Travel & Expense Festival.",
+  "overview": "I directed the brand and creative system for TripActions' TRAVERSE '21 Travel & Expense Festival. The experience extended across registration, environmental graphics, stage and presentation materials, signage, digital touchpoints, and supporting event assets.",
+  "projectBrief": {
+    "context": "TRAVERSE '21 brought TripActions' travel and expense story into a dedicated customer event.",
+    "challenge": "The identity needed to work across the full attendee journey, from registration and arrival through stage content, signage, and digital communications.",
+    "contribution": "I directed the event brand and creative system across environmental graphics, registration, stage and presentation materials, signage, and digital touchpoints.",
+    "approach": "I developed a flexible visual language that could scale from venue graphics and wayfinding to presentation and supporting campaign formats.",
+    "outcome": "The work delivered a connected event experience across physical, presentation, and digital surfaces."
+  },
   "outcomes": [],
   "blocks": [
     {

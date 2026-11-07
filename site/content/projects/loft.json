@@ -1,13 +1,20 @@
 {
   "slug": "loft",
-  "title": "Technical Concept Visualization",
+  "title": "Loft Rise of Virtual Missions Poster",
   "category": "Technical Storytelling",
-  "order": 13,
+  "order": 22,
   "published": true,
   "company": "Loft",
   "role": "Founder, Creative Director, Forge HQ",
-  "summary": "A bold, clean poster system built to make edge computing clear for satellite technology audiences.",
-  "overview": "Simplifying complex technology was the key goal of this project, and the Rise of Virtual Missions poster was the solution. I used a clean, bold aesthetic to communicate Loft's vision for edge computing through satellite technology — transforming satellites into edge computing platforms, no hardware required.",
+  "summary": "A poster translating Loft's satellite edge-computing concept into a clear visual story.",
+  "overview": "Through Forge HQ, I designed the Rise of Virtual Missions poster for Loft. The work used a bold, direct visual treatment to explain how virtual missions can turn satellites into edge-computing platforms without new hardware.",
+  "projectBrief": {
+    "context": "Loft needed to communicate a satellite and edge-computing concept to a technical audience.",
+    "challenge": "The idea had to be understandable in a single poster without flattening the technical premise.",
+    "contribution": "Through Forge HQ, I designed the Rise of Virtual Missions poster and its visual treatment.",
+    "approach": "I reduced the message to one clear idea, then used bold typography and a focused composition to make the technical story easier to scan.",
+    "outcome": "The final poster gave Loft a concise visual explanation of virtual missions and satellite-based edge computing."
+  },
   "outcomes": [],
   "blocks": [
     {

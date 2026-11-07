@@ -1,13 +1,20 @@
 {
   "slug": "docusign-enterprise-campaign",
-  "title": "Enterprise Brand Campaigns",
+  "title": "DocuSign Enterprise Campaigns",
   "category": "Brand Systems",
-  "order": 4,
+  "order": 12,
   "published": true,
   "company": "DocuSign",
   "role": "Director of Creative Services",
-  "summary": "Enterprise campaigns built around the product and the people using it.",
-  "overview": "I led creative for demand generation, with a scope that grew to include social, events, regional marketing, and corporate communications. Campaign systems connected product features with audience-specific stories across digital and physical formats.",
+  "summary": "Demand-generation and product campaigns for enterprise audiences across digital, event, social, and regional marketing.",
+  "overview": "I led creative for DocuSign's demand-generation campaigns, with a scope that expanded to social, events, regional marketing, and corporate communications. The work connected product features with audience-specific stories across digital and physical formats.",
+  "projectBrief": {
+    "context": "DocuSign was growing its enterprise business and needed campaign creative that could support demand generation, product stories, partnerships, and regional teams.",
+    "challenge": "The work had to make digital agreement products useful and relevant to different audiences while staying consistent across channels and markets.",
+    "contribution": "I led creative for all demand-generation campaigns and built a seven-person creative function, with responsibility expanding into social, events, EMEA, APAC, and corporate communications.",
+    "approach": "I developed campaign frameworks that paired product features with recognizable customer needs, then adapted the work across digital, print, social, event, and partner formats.",
+    "outcome": "The role expanded with the business, establishing a broader creative function that supported demand generation and company-wide marketing programs."
+  },
   "outcomes": [],
   "blocks": [
     {
@@ -172,7 +179,7 @@
   "cover": "/media/docusign/docusign-enterprise-campaign/d03bc46e4cc2acdf.webp",
   "coverAlt": "Enterprise Brand Campaigns project collage",
   "coverPosition": "center",
-  "featured": true,
+  "featured": false,
   "companyFolder": "docusign",
   "collection": "docusign"
 }

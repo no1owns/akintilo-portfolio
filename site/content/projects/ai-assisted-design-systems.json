@@ -1,19 +1,19 @@
 {
   "slug": "ai-assisted-design-systems",
-  "title": "AI-Assisted Design Systems",
+  "title": "AI-Assisted Design Workflows",
   "category": "Brand Systems",
-  "order": 0.5,
+  "order": 4,
   "published": true,
   "company": "AppOmni",
   "role": "Senior Visual Designer",
-  "summary": "Turning design intent into reusable components, marketing UI, and motion workflows.",
-  "overview": "At AppOmni, I developed AI-assisted workflows that helped translate designed sections, product references, and motion principles into reusable production systems. I defined the design intent, requirements, references, and acceptance criteria, then used AI to assist with analysis, construction, variation, implementation, and debugging.",
+  "summary": "AI-assisted workflows for turning design intent into reusable web components, marketing UI, and motion.",
+  "overview": "At AppOmni, I developed workflows that used AI to help translate designed sections, product references, and motion principles into reusable production assets. I set the design intent, structure, references, and acceptance criteria, then directed analysis, implementation, variation, and correction.",
   "projectBrief": {
     "context": "AppOmni's marketing and product-storytelling pages were growing more complex, and needed to move faster without drifting from the established brand and product systems.",
-    "challenge": "Design sections, product references, and motion principles needed to become reusable production systems, not one-off compositions built fresh every time.",
-    "contribution": "As Senior Visual Designer, I defined the design intent, component structure, references, and acceptance criteria for every workflow below, and directed AI through analysis, construction, and correction.",
-    "approach": "Reused existing components and library styles where possible, introduced new ones only where needed, and configured AI tools with brand and product references -- never trained a model.",
-    "outcome": "Page production time dropped from 10 days to 3 days after the reusable component system was introduced -- a result of the system as a whole, not AI alone."
+    "challenge": "Designed sections, product references, and motion principles needed to become reusable production assets instead of one-off compositions rebuilt for every page.",
+    "contribution": "As Senior Visual Designer, I defined the design intent, component structure, references, and acceptance criteria for each workflow, then directed the AI-assisted analysis, construction, and correction.",
+    "approach": "I reused existing components and library styles wherever possible, added new patterns only when needed, and supplied the tools with brand and product references. The work used configured AI tools, not a trained proprietary model.",
+    "outcome": "Page production time dropped from 10 days to 3 days after the reusable component system was introduced. The result came from the full production system, not AI alone."
   },
   "outcomes": [
     {
@@ -26,7 +26,7 @@
       "type": "caseSection",
       "eyebrow": "AppOmni",
       "title": "The production problem",
-      "body": "Complex marketing pages needed to move faster without drifting from AppOmni's established brand and product systems. The goal wasn't to make AI the outcome -- it was to build a more reusable and consistent creative-production system, with AI assisting inside that system rather than replacing the judgment that shaped it.",
+      "body": "Complex marketing pages needed to move faster without drifting from AppOmni's established brand and product systems. The goal was not to make AI the outcome. It was to build a more reusable and consistent production system, with AI assisting inside that system rather than replacing the judgment that shaped it.",
       "spacing": "generous"
     },
     {
@@ -42,7 +42,7 @@
       "type": "image",
       "image": "/media/appomni/ai-assisted-design-systems/component-properties-inspector.jpg",
       "alt": "A recreated design-tool inspection view of the same AppOmni feature section, showing its layer structure, nested components, and exposed properties (viewport, theme, layout, card count) in a Design/Prototype panel",
-      "caption": "Recreated demonstration -- illustrates how the section's structure and properties could be exposed for reuse, not a screenshot of AppOmni's own Figma file.",
+      "caption": "Recreated demonstration: illustrates how the section's structure and properties could be exposed for reuse, not a screenshot of AppOmni's own Figma file.",
       "width": "full",
       "spacing": "regular"
     },
@@ -67,7 +67,7 @@
       "type": "caseSection",
       "eyebrow": "Motion",
       "title": "Motion as a system",
-      "body": "Motion supported the storytelling itself: progressive headline reveals, staged UI builds, a sense of depth and forward movement, deliberate attention shifts, and technical storytelling that needed to hold up on its own, without narration.\n\nThe Marlin AI animation below is original work. The motion-system interface shown afterward is a recreated demonstration inspired by that original work -- it is not the production editor used at AppOmni, and no original timing tokens, easing curves, or full accessibility compliance were recovered from the real tool.",
+      "body": "Motion supported the storytelling itself: progressive headline reveals, staged UI builds, a sense of depth and forward movement, deliberate attention shifts, and technical storytelling that needed to hold up on its own, without narration.\n\nThe Marlin AI animation below is original work. The motion-system interface shown afterward is a recreated demonstration inspired by that work. It is not the production editor used at AppOmni, and the original timing tokens, easing curves, and full accessibility specifications were not available.",
       "spacing": "regular"
     },
     {
@@ -128,7 +128,7 @@
       "type": "caseSection",
       "eyebrow": "Outcome",
       "title": "What changed",
-      "body": "Page production time dropped from 10 days to 3 days after this reusable component system was introduced. That isn't attributed to AI alone -- it reflects the system as a whole: a reusable setup, more consistent references, adjustable rules, less repetitive construction, and a clearer handoff from design to development.",
+      "body": "Page production time dropped from 10 days to 3 days after this reusable component system was introduced. That result reflects the full system: a reusable setup, more consistent references, adjustable rules, less repetitive construction, and a clearer handoff from design to development.",
       "spacing": "regular"
     },
     {
@@ -194,6 +194,11 @@
   "coverAlt": "Three selected frames from the original Marlin AI motion piece -- \"Surface,\" \"Prioritize,\" and \"Remediate\" -- each showing a staged interface reveal",
   "coverPosition": "center",
   "featured": true,
+  "relatedSlugs": [
+    "brand-systems-and-web-performance",
+    "linx-security",
+    "betterup-product-presentations"
+  ],
   "companyFolder": "appomni",
   "collection": "appomni"
 }

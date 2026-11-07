@@ -1,17 +1,26 @@
 {
   "slug": "mongodb-the-next-generation-database",
-  "title": "Design Systems for a Developer Platform",
+  "title": "MongoDB Design Systems and Web Experience",
   "category": "Brand Systems",
-  "order": 6,
+  "order": 16,
   "published": true,
   "company": "MongoDB",
   "companyFolder": "mongodb",
   "collection": "mongodb",
   "role": "Creative Director",
-  "relatedSlugs": ["mongodb-web"],
-  "summary": "Design-system work, user research, and accessibility improvements across MongoDB's web, product, and print surfaces.",
-  "overview": "I co-managed the web development team and led design-system work across web, product, and print. User research, usability testing, and collaboration with Product Design helped improve consistency and accessibility on priority pages. This is ongoing design-system and web-platform work, distinct from the specific product-launch campaigns covered in \"Launching Stitch and Atlas.\"",
+  "relatedSlugs": [
+    "mongodb-web"
+  ],
+  "summary": "Design systems, user research, and accessibility improvements across MongoDB's web, product, and print experiences.",
+  "overview": "I co-managed MongoDB's web development team and led design-system work across web, product, and print. User research, usability testing, and collaboration with Product Design improved consistency and accessibility on priority pages.",
   "outcomes": [],
+  "projectBrief": {
+    "context": "MongoDB's developer platform was represented across a growing set of web, product, and print experiences.",
+    "challenge": "Teams needed a more consistent design language and stronger accessibility while continuing to support technical content and frequent launches.",
+    "contribution": "I co-managed the web development team, led design-system work, ran user research and usability testing, and partnered with Product Design on a WCAG AA accessibility initiative.",
+    "approach": "I combined shared patterns with research and testing, then applied the findings to priority pages and cross-platform standards.",
+    "outcome": "The work contributed to a 30% reduction in site drop-off and a 20% reduction in project cycle time."
+  },
   "blocks": [
     {
       "type": "gallery",
@@ -254,5 +263,5 @@
   "cover": "/media/mongodb/mongodb-the-next-generation-database/74461a78a3c15abf.webp",
   "coverAlt": "Modern UX for a Leading Developer Platform project collage",
   "coverPosition": "center",
-  "featured": true
+  "featured": false
 }

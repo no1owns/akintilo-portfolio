@@ -1,13 +1,20 @@
 {
   "slug": "mongodb-beliefs-storyboard",
-  "title": "MongoDB Company Values Launch Campaign",
+  "title": "MongoDB Company Values Storyboard Campaign",
   "category": "Communications",
-  "order": 16,
+  "order": 25,
   "published": true,
   "company": "MongoDB",
   "role": "Creative Director",
-  "summary": "A company values launch campaign for MongoDB, developed through storyboarding, original illustration, presentation design, and communications design.",
-  "overview": "A storyboarded presentation campaign introducing MongoDB's company values, developed through original illustration, presentation design, and communications design. The work follows a cast of illustrated characters through narrative scenes — building, exploring, and reflecting — each paired with a specific value, from \"Build Together\" to \"Be Intellectually Honest\" to \"Own What You Do.\"",
+  "summary": "A storyboarded launch campaign using original illustration and presentation design to introduce MongoDB's company values.",
+  "overview": "I developed a storyboarded presentation campaign to introduce MongoDB's company values. A recurring cast of illustrated characters moved through scenes tied to values such as Build Together, Be Intellectually Honest, and Own What You Do.",
+  "projectBrief": {
+    "context": "MongoDB needed to introduce its company values through a presentation-led internal campaign.",
+    "challenge": "The values were abstract ideas that needed a memorable narrative rather than a sequence of text-only slides.",
+    "contribution": "I developed the storyboard, original illustration direction, presentation design, and supporting communications.",
+    "approach": "I created a recurring cast of characters and placed them in scenes that made each value visible through action, exploration, and reflection.",
+    "outcome": "The work delivered a connected narrative campaign for launching the values across presentation and communications materials."
+  },
   "outcomes": [],
   "blocks": [
     {

@@ -1,13 +1,13 @@
 {
   "slug": "mongodb-for-giant-ideas-video",
-  "title": "For Giant Ideas: MongoDB Brand Film",
+  "title": "MongoDB Brand Film: For Giant Ideas",
   "category": "Technical Storytelling",
-  "order": 12,
+  "order": 21,
   "published": true,
   "company": "MongoDB",
   "role": "Creative Director",
-  "summary": "A cinematic brand story created for MongoDB's developer audience.",
-  "overview": "This brand film translated MongoDB's developer-platform story into a cinematic campaign centered on ambitious ideas and the people building them.",
+  "summary": "A cinematic brand film connecting MongoDB's platform with the ambitious ideas developers build.",
+  "overview": "Created for MongoDB's developer audience, this brand film translated the platform story into a cinematic narrative about ambitious ideas and the people building them.",
   "outcomes": [],
   "blocks": [
     {

@@ -1,14 +1,21 @@
 {
   "slug": "apollo-graphql",
-  "title": "Apollo GraphQL Summit",
+  "title": "Apollo GraphQL Summit Brand Experience",
   "category": "Events and Environments",
-  "order": 0.7,
+  "order": 6,
   "published": true,
   "company": "Apollo GraphQL",
   "companyFolder": "apollo",
   "role": "Founder and Creative Director, Forge HQ",
-  "summary": "Event brand and environmental design for GraphQL Summit by Apollo — entrance and stage signage, lounge and venue branding, keynote slides, and digital displays.",
-  "overview": "Through Forge HQ, I led event brand and environmental design for Apollo's GraphQL Summit, spanning entrance and stage signage, venue and lounge branding, keynote presentation slides, and digital displays.",
+  "summary": "Event branding and environmental design for Apollo's GraphQL Summit across venue, stage, presentation, and digital touchpoints.",
+  "overview": "Through Forge HQ, I led the event branding and environmental design for Apollo's GraphQL Summit. The work connected entrance and stage signage, venue and lounge graphics, keynote slides, and digital displays for a developer audience.",
+  "projectBrief": {
+    "context": "Apollo GraphQL needed a cohesive visual experience for its flagship developer conference.",
+    "challenge": "The event identity had to stay recognizable across large physical spaces, presentation content, and digital displays without losing clarity for a technical audience.",
+    "contribution": "I led the event branding and environmental design through Forge HQ, covering entrance and stage signage, lounge and venue graphics, keynote slides, and digital displays.",
+    "approach": "I used a shared visual language, layout structure, and hierarchy across each format so the venue and presentation experience felt connected.",
+    "outcome": "The final work delivered a coordinated event experience across the conference environment, keynote presentation, and digital touchpoints."
+  },
   "outcomes": [],
   "blocks": [
     {
@@ -122,5 +129,10 @@
   "cover": "/media/apollo/event-brand-experiential/ec63cdd32531f2e3.webp",
   "coverAlt": "An \"Apollo Lounge\" building-facade billboard reading \"Design, build, and operate at scale. Deliver tomorrow's roadmap today with Apollo.\"",
   "coverPosition": "center",
-  "featured": false
+  "featured": true,
+  "relatedSlugs": [
+    "traverse-21",
+    "mongodb-events",
+    "meta-connect"
+  ]
 }

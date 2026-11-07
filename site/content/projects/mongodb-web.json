@@ -1,16 +1,22 @@
 {
   "slug": "mongodb-web",
-  "title": "Launching Stitch and Atlas",
+  "title": "MongoDB Stitch and Atlas Product Launches",
   "category": "Technical Storytelling",
-  "order": 11,
+  "order": 3,
   "published": true,
   "company": "MongoDB",
   "companyFolder": "mongodb",
   "collection": "mongodb",
   "role": "Creative Director",
-  "relatedSlugs": ["mongodb-the-next-generation-database"],
-  "summary": "Web pages, campaigns, and an interactive cluster builder for the MongoDB Stitch and Atlas product launches.",
-  "overview": "For the MongoDB Stitch launch, I worked with product marketing and product management on web pages, campaigns, videos, and visual assets. I also pitched and built an interactive cluster builder for the Atlas announcement so prospects could explore product features. This is launch-specific work, distinct from the ongoing design-system and web-platform practice covered in \"Design Systems for a Developer Platform.\"",
+  "summary": "Launch campaigns, web experiences, and an interactive cluster builder for MongoDB Stitch and Atlas.",
+  "overview": "For the MongoDB Stitch launch, I worked with product marketing and product management on web pages, campaigns, videos, and visual assets. For the Atlas announcement, I pitched and built an interactive cluster builder that let prospects explore product features.",
+  "projectBrief": {
+    "context": "MongoDB was introducing Stitch and Atlas as distinct additions to its developer platform.",
+    "challenge": "Each launch needed to explain a technical product clearly while giving developers a more engaging way to understand what it could do.",
+    "contribution": "I partnered with product marketing and product management on the Stitch campaign, then pitched and built the interactive cluster builder for the Atlas announcement.",
+    "approach": "I connected web pages, campaigns, videos, and visual assets around each launch, using interaction to make the Atlas feature story more tangible.",
+    "outcome": "The work delivered coordinated launch creative for Stitch and an interactive product-exploration experience for Atlas."
+  },
   "outcomes": [],
   "blocks": [
     {
@@ -178,5 +184,10 @@
   "cover": "/media/mongodb/mongodb-web/5d63296aaf9fa184.webp",
   "coverAlt": "Designing for a Developer Platform project collage",
   "coverPosition": "center",
-  "featured": false
+  "featured": true,
+  "relatedSlugs": [
+    "mongodb-the-next-generation-database",
+    "mongodb-ipo-nasdaq-debut",
+    "apollo-graphql"
+  ]
 }

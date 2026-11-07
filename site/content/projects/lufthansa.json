@@ -1,18 +1,25 @@
 {
   "slug": "lufthansa",
-  "title": "Airline Partnership Experience Design",
+  "title": "TripActions x Lufthansa Launch Campaign",
   "category": "Partnerships",
-  "order": 9,
+  "order": 19,
   "published": true,
   "company": "TripActions / Lufthansa",
   "role": "Director of Design",
-  "summary": "Partner launch assets that bring two brands into one experience.",
-  "overview": "I developed Lufthansa partnership launch assets and supported the approval workflows needed to align both brands.",
+  "summary": "Co-branded launch assets and approval workflows for the TripActions and Lufthansa partnership.",
+  "overview": "I developed the launch assets for the TripActions and Lufthansa partnership and supported the approval process needed to align both brands.",
+  "projectBrief": {
+    "context": "TripActions and Lufthansa partnered on a co-branded travel experience.",
+    "challenge": "The launch assets needed to bring both brands together clearly while moving through a shared approval process.",
+    "contribution": "I developed the partnership launch assets and supported the cross-company approval workflow.",
+    "approach": "I balanced each brand's visual requirements and refined the work with partner feedback until the launch materials were aligned.",
+    "outcome": "The process produced an approved set of co-branded launch assets for the partnership."
+  },
   "outcomes": [],
   "blocks": [
     {
       "type": "video",
-      "title": "Airline Partnership Experience Design video",
+      "title": "TripActions x Lufthansa Launch Campaign video",
       "file": "/media/navan/lufthansa/motion-lufthansa-hero.mp4",
       "spacing": "regular"
     },

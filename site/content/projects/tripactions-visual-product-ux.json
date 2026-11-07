@@ -1,13 +1,20 @@
 {
   "slug": "tripactions-visual-product-ux",
-  "title": "Frictionless Product Onboarding",
+  "title": "TripActions Product Onboarding and Navigation",
   "category": "Technical Storytelling",
-  "order": 10,
+  "order": 20,
   "published": true,
   "company": "TripActions",
   "role": "Director of Design",
-  "summary": "Clearer onboarding, sign-in, and product navigation.",
-  "overview": "I redesigned core onboarding and sign-in flows for member and non-member customers. In a parallel Liquid tiger team, I explored unified visual directions and navigation between travel and expense, working with product design, PM, growth marketing, and engineering.",
+  "summary": "Onboarding, sign-in, and navigation work that created clearer connections between TripActions travel and expense products.",
+  "overview": "I redesigned onboarding, sign-in, and initial product flows for member and non-member customers. In a separate Liquid tiger team, I worked with product design, product management, growth marketing, and engineering to explore a more unified experience across travel and expense.",
+  "projectBrief": {
+    "context": "TripActions was expanding from corporate travel into expense management, creating new onboarding and navigation needs across related products.",
+    "challenge": "Member and non-member customers needed clearer entry flows, while administrators had no visibility into the new expense product after signing in.",
+    "contribution": "I redesigned core onboarding, sign-in, and initial screens. In a separate Liquid tiger team, I led visual and UX exploration, proposed unified directions and alternate navigation flows, and delivered Figma screen designs to product leadership.",
+    "approach": "I worked across product design, product management, growth marketing, engineering, and web to connect travel and expense through a more consistent visual and navigation language.",
+    "outcome": "The proposed experience resolved the product-discovery gap. Parts of the work were adopted at launch, and the broader visual direction informed the later TripActions-to-Navan transition."
+  },
   "outcomes": [],
   "blocks": [
     {
@@ -162,7 +169,7 @@
   "cover": "/media/navan/tripactions-visual-product-ux/61c538bf03e4d184.webp",
   "coverAlt": "Frictionless Product Onboarding project collage",
   "coverPosition": "center",
-  "featured": true,
+  "featured": false,
   "companyFolder": "navan",
   "collection": "navan"
 }

@@ -1,18 +1,25 @@
 {
   "slug": "visa",
-  "title": "Global Partnership Campaigns",
+  "title": "TripActions x Visa Partnership Campaign",
   "category": "Partnerships",
-  "order": 7,
+  "order": 17,
   "published": true,
   "company": "TripActions / Visa",
   "role": "Director of Design",
-  "summary": "Co-marketing that connected the corporate card with a broader travel story.",
-  "overview": "I directed Visa co-marketing creative, including custom photography featuring the physical expense card. The resulting owned imagery carried across web, campaigns, internal communications, and print and display formats.",
+  "summary": "An 18-month co-marketing campaign connecting the TripActions corporate card with a broader travel story.",
+  "overview": "I directed creative for the TripActions and Visa co-marketing campaign, including custom photography featuring the physical expense card. The resulting owned imagery carried across web, campaigns, internal communications, print, and display formats.",
   "outcomes": [],
+  "projectBrief": {
+    "context": "Visa was the card issuer for TripActions Liquid, creating a partnership story across corporate travel, cards, and expense management.",
+    "challenge": "The campaign needed to bring two established brands together while making the physical card and its role in the travel experience feel tangible.",
+    "contribution": "I directed the 18-month co-marketing campaign and the custom photography featuring the Visa co-branded expense card.",
+    "approach": "I worked with photographers, visual talent, partners, and internal teams to build an owned image library and adapt it across channels and approval requirements.",
+    "outcome": "The photography replaced stock imagery and was reused across web, marketing, internal communications, print, and display campaigns."
+  },
   "blocks": [
     {
       "type": "video",
-      "title": "Global Partnership Campaigns video",
+      "title": "TripActions x Visa Partnership Campaign video",
       "file": "/media/navan/visa/motion-tripactions-hero.mp4",
       "playback": "controls",
       "spacing": "regular"
