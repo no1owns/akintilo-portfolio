@@ -1,15 +1,22 @@
 {
   "slug": "appomni-events",
-  "title": "AppOmni Events and Environmental Design",
+  "title": "AppOmni Conference and Booth Design",
   "category": "Events and Environments",
-  "order": 0.6,
+  "order": 8,
   "published": true,
   "company": "AppOmni",
   "companyFolder": "appomni",
   "collection": "appomni",
   "role": "Senior Visual Designer",
-  "summary": "Booth systems, environmental graphics, and promotional creative supporting AppOmni's conference presence.",
-  "overview": "I supported AppOmni's event presence through booth production, environmental design, technical floor plans, and promotional creative across multiple conference programs.",
+  "summary": "Booth production, environmental graphics, and promotional creative for AppOmni's conference programs.",
+  "overview": "I owned RSA booth production and developed environmental and campaign creative for AppOmni conference programs. Across RSA and Black Hat, the work included vendor coordination, technical floor plans, print production, digital displays, social, email, and landing-page concepts.",
+  "projectBrief": {
+    "context": "AppOmni's conference presence needed to carry a technical SaaS security story across physical environments and the digital campaign surrounding each event.",
+    "challenge": "The work had to meet vendor and venue production requirements while keeping the experience clear, consistent, and useful to a technical audience.",
+    "contribution": "I owned RSA booth production, including vendor-proof review, final print files, and the official portal submission. For Black Hat, I developed the event theme and integrated creative direction across a mix of executed and presented work.",
+    "approach": "I connected floor plans, booth graphics, digital screens, social, email, collateral, and landing-page concepts around a shared event narrative.",
+    "outcome": "The RSA booth moved through production and submission, while the Black Hat work established an integrated direction that could extend from the booth into supporting campaign touchpoints."
+  },
   "outcomes": [],
   "blocks": [
     {

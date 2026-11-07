@@ -1,13 +1,20 @@
 {
   "slug": "brand-systems-and-web-performance",
-  "title": "Security Brand Experiences",
+  "title": "Security Brand and Web Systems",
   "category": "Brand Systems",
-  "order": 0,
+  "order": 1,
   "published": true,
   "company": "Secureframe / AppOmni",
   "role": "Principal Designer / Senior Visual Designer",
-  "summary": "Brand foundations that connect the website, product story, and the teams using them.",
-  "overview": "At Secureframe, I led the website overhaul and created a Canva-based brand system that gave marketing and sales a consistent starting point. At AppOmni, I built reusable page components and worked with content, development, and QA to bring them into production.",
+  "summary": "Brand and web systems that improved consistency, production speed, and site performance across Secureframe and AppOmni.",
+  "overview": "At Secureframe, I led the website overhaul and built a Canva-based brand system for marketing and sales. At AppOmni, I designed reusable page components and partnered with content, development, and QA to bring them into production.",
+  "projectBrief": {
+    "context": "Secureframe and AppOmni both needed brand work to carry consistently across websites, product storytelling, and the teams producing customer-facing materials.",
+    "challenge": "The work had to improve the live experience while giving cross-functional teams a repeatable way to create and ship new pages and assets.",
+    "contribution": "At Secureframe, I led the website overhaul and created a Canva-based brand system. At AppOmni, I designed reusable page components and worked with content, development, and QA through production.",
+    "approach": "I connected brand direction to practical templates, reusable components, product visuals, and review workflows that teams could use beyond a single launch.",
+    "outcome": "At AppOmni, scroll depth increased from 10% to 76%, and reusable components reduced page production from 10 days to 3. At Secureframe, landing-page conversion increased 30% in three months through work completed with content and demand generation."
+  },
   "outcomes": [
     {
       "value": "10% to 76%",
@@ -215,7 +222,7 @@
       "type": "caseSection",
       "eyebrow": "Secureframe",
       "title": "",
-      "body": "This is a curated selection -- the full website overhaul, brand system, and campaign library live on the Secureframe collection page.",
+      "body": "This is a curated selection. The full website overhaul, brand system, and campaign library live on the Secureframe collection page.",
       "linkLabel": "View the full Secureframe brand system",
       "linkHref": "/secureframe",
       "spacing": "regular"
@@ -380,7 +387,7 @@
       "type": "caseSection",
       "eyebrow": "AppOmni",
       "title": "",
-      "body": "This is a curated selection -- the full website, campaign, and product library live on the AppOmni collection page.",
+      "body": "This is a curated selection. The full website, campaign, and product library live on the AppOmni collection page.",
       "linkLabel": "View the full AppOmni brand system",
       "linkHref": "/appomni",
       "spacing": "regular"
@@ -399,5 +406,10 @@
   "coverAlt": "Security Brand Experiences project collage",
   "coverPosition": "center",
   "featured": true,
+  "relatedSlugs": [
+    "ai-assisted-design-systems",
+    "linx-security",
+    "apollo-graphql"
+  ],
   "companyFolder": "secureframe"
 }

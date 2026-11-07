@@ -1,13 +1,20 @@
 {
   "slug": "mongodb-internal",
-  "title": "Culture and Internal Brand Storytelling",
+  "title": "MongoDB Core Values Posters and Stickers",
   "category": "Communications",
-  "order": 15,
+  "order": 24,
   "published": true,
   "company": "MongoDB",
   "role": "Creative Director",
-  "summary": "A core-values poster and sticker system for MongoDB's internal culture campaign.",
-  "overview": "I designed a poster and sticker system translating MongoDB's core values — Think Big Go Far, Own What You Do, Make It Matter, Build Together, and Be Intellectually Honest — into a bold, consistent visual language used across office posters, wall murals, and internal culture materials.",
+  "summary": "Posters, stickers, murals, and internal materials bringing MongoDB's company values into the workplace.",
+  "overview": "I designed posters, stickers, and internal graphics that brought MongoDB's company values into the workplace. The visual language gave each value its own expression while keeping the full set recognizable as one campaign.",
+  "projectBrief": {
+    "context": "MongoDB wanted its company values to be visible and memorable across the employee experience.",
+    "challenge": "Five distinct values needed individual expression without feeling like unrelated internal campaigns.",
+    "contribution": "I designed the poster, sticker, mural, and internal graphic system for the values.",
+    "approach": "I used a shared typographic structure with distinct color and composition choices for each message.",
+    "outcome": "The work extended the values across office posters, wall murals, stickers, and other internal culture materials."
+  },
   "outcomes": [],
   "blocks": [
     {

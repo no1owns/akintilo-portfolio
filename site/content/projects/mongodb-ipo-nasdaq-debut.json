@@ -2,16 +2,26 @@
   "slug": "mongodb-ipo-nasdaq-debut",
   "title": "MongoDB IPO: Nasdaq Debut Campaign",
   "category": "Brand Systems",
-  "order": 5.5,
+  "order": 15,
   "published": true,
   "company": "MongoDB",
   "companyFolder": "mongodb",
   "collection": "mongodb",
   "role": "Creative Director",
-  "relatedSlugs": ["dream-big", "mongodb-for-giant-ideas-video"],
-  "summary": "Out-of-home and press creative marking MongoDB's October 2017 Nasdaq debut, including Times Square placements and national print.",
-  "overview": "Creative for MongoDB's public listing on Nasdaq (ticker MDB) in October 2017 -- a wrap and digital placements on the Nasdaq MarketSite tower and surrounding Times Square screens, plus a national print ad, all built around the line \"Finally, after 40 years, a real alternative\" -- a direct nod to the fact that the relational database was introduced more than 40 years earlier.",
+  "relatedSlugs": [
+    "dream-big",
+    "mongodb-for-giant-ideas-video"
+  ],
+  "summary": "Creative direction for MongoDB's October 2017 Nasdaq debut across Times Square, Nasdaq MarketSite, and national print.",
+  "overview": "As Creative Director, I led the campaign for MongoDB's October 2017 public listing on Nasdaq under the ticker MDB. The work included a wrap and digital placements on the Nasdaq MarketSite tower, surrounding Times Square screens, and a national print ad, all built around the line \"Finally, after 40 years, a real alternative.\"",
   "outcomes": [],
+  "projectBrief": {
+    "context": "MongoDB's October 2017 Nasdaq listing, under the ticker MDB, called for a public-facing campaign across out-of-home and print placements.",
+    "challenge": "The creative needed to mark a major company milestone while communicating MongoDB's position as an alternative to relational databases in a few words.",
+    "contribution": "As Creative Director, I directed the campaign concept and execution across the Nasdaq MarketSite tower, surrounding Times Square screens, and national print.",
+    "approach": "The line \"Finally, after 40 years, a real alternative\" connected the listing moment to MongoDB's challenge to the long-established relational database model.",
+    "outcome": "The campaign launched for listing day across Nasdaq MarketSite, Times Square screens, and national print."
+  },
   "blocks": [
     {
       "type": "sectionHeading",
@@ -67,7 +77,7 @@
       "type": "sectionHeading",
       "eyebrow": "MongoDB",
       "title": "Concept exploration",
-      "overview": "Early billboard and press concepts explored for the same IPO moment, mocked up on stock billboard and magazine-cover templates -- shown here as design exploration, not placed or published work.",
+      "overview": "Early billboard and press concepts explored for the same IPO moment, mocked up on stock billboard and magazine-cover templates. These are design explorations, not placed or published work.",
       "spacing": "generous"
     },
     {
@@ -81,21 +91,21 @@
           "width": 2000,
           "height": 1334,
           "alt": "Concept billboard mockup on a daytime roadside template: a DeLorean illustration beside the headline \"The wait is over / The first database IPO since 1986,\" the mongoDB leaf mark, and a \"mongoDB | For Giant Ideas\" lockup",
-          "caption": "Concept exploration, daytime roadside mockup -- not a placed billboard."
+          "caption": "Concept exploration, daytime roadside mockup. Not a placed billboard."
         },
         {
           "image": "/media/mongodb/mongodb-ipo-nasdaq-debut/mongodb-ipo-concept-billboard-delorean-night.webp",
           "width": 2000,
           "height": 1334,
           "alt": "The same billboard concept on a dark background, mocked up on a nighttime city-street template with the same \"The wait is over / The first database IPO since 1986\" headline and \"mongoDB | For Giant Ideas\" lockup",
-          "caption": "Concept exploration, nighttime mockup of the same creative -- not a placed billboard."
+          "caption": "Concept exploration, nighttime mockup of the same creative. Not a placed billboard."
         },
         {
           "image": "/media/mongodb/mongodb-ipo-nasdaq-debut/mongodb-ipo-concept-fast-company-cover.webp",
           "width": 1000,
           "height": 1243,
           "alt": "A Fast Company magazine cover concept mockup headlined \"Migrate to the Cloud,\" featuring MongoDB CEO Dev Ittycheria and the mongoDB leaf mark",
-          "caption": "Concept exploration, mocked up on a Fast Company cover template -- not a published cover."
+          "caption": "Concept exploration, mocked up on a Fast Company cover template. Not a published cover."
         }
       ]
     }

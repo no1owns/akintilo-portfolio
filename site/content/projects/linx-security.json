@@ -1,14 +1,21 @@
 {
   "slug": "linx-security",
-  "title": "Linx Brand Illustration System",
+  "title": "Linx AI-Assisted Illustration System",
   "category": "Brand Systems",
   "order": 7,
   "published": true,
   "company": "Linx",
   "role": "Founder and Creative Director, Forge HQ",
-  "summary": "A scalable botanical illustration system and custom AI tool for creating consistent brand assets across multiple levels of complexity.",
-  "overview": "An exploratory engagement for Linx, an AI-native identity security platform. The work began with a homepage audit that identified gaps in the existing visual brand, and developed into a botanical illustration direction and a custom \"Linx Brand Illustrator\" GPT for generating consistent, on-brand assets. The system was defined across four levels of complexity — accent elements, spot illustrations, section illustrations, and hero and scene compositions — with the visual language expanded to include elements like a sunflower, butterfly, dragonfly, ladybug, dandelion, tulip, and poppy, alongside an explored gestural icon direction. Moodboards were assembled and the system was presented to Linx's CPO; AI-assisted output was refined and composited in Figma and Adobe Illustrator.",
+  "summary": "A botanical illustration system and custom GPT for creating consistent Linx brand assets at four levels of complexity.",
+  "overview": "This exploratory engagement for Linx began with a homepage audit and developed into a botanical illustration direction supported by a custom \"Linx Brand Illustrator\" GPT. I defined four levels of complexity, from accent elements to full scenes, then refined and composited the AI-assisted output in Figma and Adobe Illustrator.",
   "outcomes": [],
+  "projectBrief": {
+    "context": "Linx is an AI-native identity security platform. The exploratory engagement began with an unsolicited homepage audit that identified gaps in the visual brand.",
+    "challenge": "The company needed a more distinctive illustration language that could stay consistent across small accents, feature graphics, page sections, and larger scenes.",
+    "contribution": "I developed the botanical visual direction and built the custom Linx Brand Illustrator GPT around a four-level illustration hierarchy.",
+    "approach": "I defined recurring subjects and composition rules, generated structured drafts, and refined the output through art direction and compositing in Figma and Adobe Illustrator.",
+    "outcome": "The workflow reduced concept-to-draft time for spot illustrations and iconography while keeping the work aligned to one visual language."
+  },
   "blocks": [
     {
       "type": "image",
@@ -164,6 +171,11 @@
   "cover": "/media/linx/94084bdb321aba2c.webp",
   "coverAlt": "A dandelion releasing seeds beside a blooming red poppy, the signature illustration for the Linx brand illustration system",
   "coverPosition": "center",
-  "featured": false,
+  "featured": true,
+  "relatedSlugs": [
+    "ai-assisted-design-systems",
+    "brand-systems-and-web-performance",
+    "apollo-graphql"
+  ],
   "companyFolder": "linx"
 }

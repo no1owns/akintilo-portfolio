@@ -1,15 +1,22 @@
 {
   "slug": "mongodb-events",
-  "title": "MongoDB Events",
+  "title": "MongoDB Conference and Event Design",
   "category": "Events and Environments",
-  "order": 3.5,
+  "order": 11,
   "published": true,
   "company": "MongoDB",
   "companyFolder": "mongodb",
   "collection": "mongodb",
   "role": "Creative Director",
-  "summary": "Event work for MongoDB, spanning MongoDB World and MongoDB's AWS re:Invent exhibit, with supporting booth design, brand systems, and motion.",
-  "overview": "I directed event identity and creative systems for MongoDB experiences including MongoDB World and AWS re:Invent. The work connected booth environments, interactive displays, presentations, motion, and supporting event materials for developer audiences.",
+  "summary": "Conference branding and environmental design for MongoDB World and AWS re:Invent.",
+  "overview": "I directed event identity and creative systems for MongoDB World and the company's AWS re:Invent presence. The work connected booth environments, interactive displays, technical presentations, motion, and supporting materials for developer audiences.",
+  "projectBrief": {
+    "context": "MongoDB's conference program needed to explain a developer platform within high-traffic event environments and technical presentations.",
+    "challenge": "The creative had to attract attention on the show floor while giving engineers and presenters a clear structure for more detailed product stories.",
+    "contribution": "I directed event identity and creative across booth environments, interactive displays, presentations, motion, and supporting materials.",
+    "approach": "I worked with technical presenters, internal partners, vendors, and motion studios to connect the environment with the content presented inside it.",
+    "outcome": "The broader MongoDB event program supported more than 2,000 attendees plus virtual audiences across MongoDB World, .local, and AWS re:Invent."
+  },
   "outcomes": [],
   "blocks": [
     {

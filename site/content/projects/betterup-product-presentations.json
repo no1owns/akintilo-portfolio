@@ -1,13 +1,20 @@
 {
   "slug": "betterup-product-presentations",
-  "title": "Executive Presentation Systems",
+  "title": "BetterUp Enterprise Presentation System",
   "category": "Communications",
-  "order": 17,
+  "order": 5,
   "published": true,
   "company": "BetterUp",
   "role": "Founder, Creative Director, Forge HQ",
-  "summary": "A presentation system for enterprise sales and product stories.",
-  "overview": "I developed enterprise sales decks, a template system, and an asset library for BetterUp. The work combined diagrams, photography, and infographics to support clear, reusable sales storytelling.",
+  "summary": "A reusable presentation system for BetterUp's enterprise sales and product storytelling.",
+  "overview": "Through Forge HQ, I developed enterprise sales decks, a template system, and an asset library for BetterUp. The system combined diagrams, photography, and infographics to support clear, reusable product storytelling.",
+  "projectBrief": {
+    "context": "BetterUp needed enterprise sales presentations that could explain its product clearly and remain useful across multiple conversations.",
+    "challenge": "The decks had to support detailed product stories while giving internal teams a consistent structure they could reuse.",
+    "contribution": "Through Forge HQ, I developed the sales decks, presentation templates, and supporting asset library.",
+    "approach": "I built a flexible slide system using diagrams, photography, infographics, and repeatable layouts for different narrative needs.",
+    "outcome": "The engagement delivered a reusable presentation framework and asset library for enterprise sales storytelling."
+  },
   "outcomes": [],
   "blocks": [
     {
@@ -165,6 +172,11 @@
   "cover": "/media/betterup/081a68a4f5407c3a.webp",
   "coverAlt": "Executive Presentation Systems project collage",
   "coverPosition": "center",
-  "featured": false,
+  "featured": true,
+  "relatedSlugs": [
+    "mongodb-internal",
+    "ai-assisted-design-systems",
+    "apollo-graphql"
+  ],
   "companyFolder": "betterup"
 }

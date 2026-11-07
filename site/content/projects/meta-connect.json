@@ -2,17 +2,17 @@
   "slug": "meta-connect",
   "title": "Meta Connect 2025 Developer Keynote",
   "category": "Brand Systems",
-  "order": 1,
+  "order": 0,
   "published": true,
   "company": "Meta",
   "role": "Creative Consultant, Keynote Storytelling",
-  "summary": "A single speaker-section assignment for Meta's 2025 developer keynote that grew into leading the design flow for the full presentation.",
-  "overview": "Meta Connect's developer keynote brings together multiple speakers, products, and technical ideas inside one live presentation. I joined to develop concepts for a single speaker section, and the engagement grew into leading the design flow across the full keynote.",
+  "summary": "Visual concept and presentation direction for Meta Connect 2025's developer keynote, beginning with one speaker section and expanding across the full presentation.",
+  "overview": "The brief and speaker stories were still evolving when I joined Meta Connect 2025. I developed the visual concept and presentation direction alongside that changing content, then expanded from one speaker section to leading the design flow across the full developer keynote.",
   "projectBrief": {
-    "context": "Meta Connect required a developer keynote that could connect multiple speakers, products, demonstrations, and technical ideas within one coherent experience.",
-    "challenge": "Each section needed its own purpose and pacing while still feeling like part of the same keynote. The presentation system also had to support speaker introductions, transitions, technical explanations, product moments, and motion.",
+    "context": "Meta Connect 2025 brought multiple speakers, products, demonstrations, and technical ideas into one live developer keynote.",
+    "challenge": "The brief and speaker stories were still taking shape. The visual direction needed to give emerging content structure while supporting different speakers, technical explanations, product moments, transitions, and motion.",
     "contribution": "I began with concept work for one speaker section. The engagement expanded to leading the design flow for the full developer keynote, including concept development, narrative structure, storyboarding, slide layouts, motion direction, and production alignment.",
-    "approach": "Establish visual and structural patterns that could carry across speakers and subjects while adapting to different content needs, using hierarchy, pacing, transitions, and repeatable layouts to help the audience follow the story.",
+    "approach": "I established repeatable title, section, and transition patterns, then adapted hierarchy, pacing, composition, and motion direction to each speaker's content.",
     "outcome": "The assignment grew from a single speaker section into leading the design flow for the full developer keynote."
   },
   "outcomes": [],
@@ -191,5 +191,10 @@
   "coverAlt": "Meta Connect 2025 developer keynote slide collage",
   "coverPosition": "center",
   "featured": true,
+  "relatedSlugs": [
+    "betterup-product-presentations",
+    "mongodb-web",
+    "apollo-graphql"
+  ],
   "companyFolder": "meta-connect"
 }

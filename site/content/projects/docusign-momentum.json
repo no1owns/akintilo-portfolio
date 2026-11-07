@@ -1,15 +1,22 @@
 {
   "slug": "docusign-momentum",
-  "title": "DocuSign Momentum",
+  "title": "DocuSign Momentum Conference",
   "category": "Events and Environments",
-  "order": 4.5,
+  "order": 13,
   "published": true,
   "company": "DocuSign",
   "companyFolder": "docusign",
   "collection": "docusign",
   "role": "Director of Creative Services",
-  "summary": "Momentum branding, event materials, digital experiences, and virtual-session support for DocuSign's Momentum conference.",
-  "overview": "I led creative direction and branding for DocuSign's Momentum conference, spanning event materials, digital experiences, website and app oversight, presentations, and virtual-session support.",
+  "summary": "Event branding and creative direction for DocuSign Momentum across venue, presentations, website, app, and virtual sessions.",
+  "overview": "I led the branding and creative direction for DocuSign Momentum. The work spanned event materials, presentations, digital experiences, website and app oversight, and support for virtual sessions.",
+  "projectBrief": {
+    "context": "DocuSign Momentum Conference brought customers, partners, and company leaders together around the product and its broader agreement story.",
+    "challenge": "The conference needed a consistent identity across the venue, presentations, digital tools, and virtual-session materials.",
+    "contribution": "I led the event branding and creative direction across physical materials, presentations, website and app oversight, digital experiences, and virtual-session support.",
+    "approach": "I used a shared visual system and presentation structure to connect attendee touchpoints before, during, and beyond the live event.",
+    "outcome": "The work delivered a coordinated conference experience across physical, presentation, web, app, and virtual formats."
+  },
   "outcomes": [],
   "blocks": [
     {

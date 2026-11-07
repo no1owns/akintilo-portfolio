@@ -2,13 +2,20 @@
   "slug": "dream-big",
   "title": "Dream Big: MongoDB Launch Experience",
   "category": "Brand Systems",
-  "order": 5,
+  "order": 14,
   "published": true,
   "company": "MongoDB",
   "role": "Creative Director",
-  "summary": "Connecting a developer-platform story across environment, presentation, and launch creative.",
-  "overview": "I directed brand and creative for MongoDB's Dream Big launch experience in San Francisco, working with technical presenters, marketing partners, and production teams to connect the product story across the environment and presentation design.",
+  "summary": "A MongoDB product launch experience connecting the venue, technical presentations, and supporting creative.",
+  "overview": "I directed the brand and creative for MongoDB's Dream Big launch experience in San Francisco. Working with technical presenters, marketing partners, and production teams, I connected the product story across the venue and presentation design.",
   "outcomes": [],
+  "projectBrief": {
+    "context": "MongoDB's Dream Big event introduced a product story to a live audience in San Francisco.",
+    "challenge": "The technical narrative needed to stay clear and engaging as it moved between the physical environment and on-stage presentation.",
+    "contribution": "I directed the event brand and creative, working with technical presenters, marketing partners, and production teams.",
+    "approach": "I aligned environmental graphics, stage presentation design, and supporting launch assets around one visual and narrative direction.",
+    "outcome": "The event delivered a connected launch experience across the venue, technical presentation, and supporting creative."
+  },
   "blocks": [
     {
       "type": "gallery",
@@ -99,7 +106,7 @@
   "cover": "/media/mongodb/dream-big/a02cfeea3168f96d.webp",
   "coverAlt": "A \"Dream Big, Build Tomorrow\" MongoDB campaign billboard mounted above a Los Angeles storefront",
   "coverPosition": "center",
-  "featured": true,
+  "featured": false,
   "companyFolder": "mongodb",
   "collection": "mongodb"
 }

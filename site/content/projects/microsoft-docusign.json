@@ -1,13 +1,20 @@
 {
   "slug": "microsoft-docusign",
-  "title": "Enterprise Integration Campaigns",
+  "title": "DocuSign x Microsoft Integration Campaigns",
   "category": "Partnerships",
-  "order": 8,
+  "order": 18,
   "published": true,
   "company": "DocuSign / Microsoft",
   "role": "Director of Creative Services",
-  "summary": "Making enterprise integrations understandable and useful.",
-  "overview": "I developed campaign and product storytelling for Microsoft integrations including Office 365, Dynamics 365, and SharePoint. The work connected co-marketing with how the DocuSign brand appeared inside partner platforms.",
+  "summary": "Campaign and product storytelling for DocuSign integrations with Office 365, Dynamics 365, and SharePoint.",
+  "overview": "I developed campaign and product storytelling for DocuSign integrations with Office 365, Dynamics 365, and SharePoint. The work connected co-marketing messages with the way DocuSign appeared inside Microsoft platforms.",
+  "projectBrief": {
+    "context": "DocuSign integrations brought e-signature workflows into Microsoft products used by enterprise customers.",
+    "challenge": "The campaigns needed to explain the value of each integration while respecting both companies' brands and showing how the product worked inside the partner ecosystem.",
+    "contribution": "I developed campaign and product storytelling for the Office 365, Dynamics 365, and SharePoint integrations.",
+    "approach": "I connected co-marketing messages to product visuals and platform-specific use cases rather than treating the partnership as a logo exercise.",
+    "outcome": "The work created a repeatable approach for presenting DocuSign integrations across multiple Microsoft products."
+  },
   "outcomes": [],
   "blocks": [
     {

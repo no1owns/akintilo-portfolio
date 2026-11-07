@@ -1,13 +1,20 @@
 {
   "slug": "lilt-ebook",
-  "title": "Translation Transformation eBook",
+  "title": "LILT Translation Transformation eBook",
   "category": "Technical Storytelling",
-  "order": 14,
+  "order": 23,
   "published": true,
   "company": "LILT",
   "role": "Founder, Creative Director, Forge HQ",
-  "summary": "Content design for an enterprise localization audience.",
-  "overview": "I designed ebook content for LILT, bringing structure, typography, and visual storytelling to a long-form format.",
+  "summary": "Editorial design for a long-form guide written for enterprise localization teams.",
+  "overview": "Through Forge HQ, I designed LILT's Translation Transformation eBook, using editorial structure, typography, and visual storytelling to make the long-form content easier to navigate.",
+  "projectBrief": {
+    "context": "LILT needed a long-form eBook for an enterprise localization audience.",
+    "challenge": "The content needed a clear reading structure that could hold attention across a dense digital format.",
+    "contribution": "Through Forge HQ, I designed the eBook and its editorial system.",
+    "approach": "I used typography, pacing, hierarchy, and supporting visuals to organize the content and guide readers through the narrative.",
+    "outcome": "The work produced a publication-ready eBook with a clear, consistent structure for enterprise readers."
+  },
   "outcomes": [],
   "blocks": [
     {
